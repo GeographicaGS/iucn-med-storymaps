@@ -1,14 +1,29 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>IUCNMedStoryMaps</title>
   <base href="/">
-
+  <title>ArtEmpire Backend</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.config({
+      transpiler: 'typescript'
+    });
+
+    System.import('app').catch(function(err){ console.error(err); });
+  </script>
+  <link href="/template/css/styles.css" rel="stylesheet">
 </head>
-<body>
-  <app-root>Loading...</app-root>
+</head>
+
+<body class="light">
+<app>Cargando...</app>
 </body>
 </html>

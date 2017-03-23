@@ -3,12 +3,16 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "build": "tsc -p src/",
+    "build:watch": "tsc -p src/ -w",
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "lite": "lite-server",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings",
+    "test:once": "karma start karma.conf.js --single-run",
+    "lint": "tslint ./src/**/*.ts -t verbose"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +26,9 @@
     "@angular/router": "^3.4.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
-    "zone.js": "^0.7.6"
+    "zone.js": "^0.7.6",
+    "systemjs": "0.19.40",
+    "angular-in-memory-web-api": "~0.2.4"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0-rc.4",
@@ -41,6 +47,10 @@
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
-    "typescript": "~2.0.0"
+    "concurrently": "^3.2.0",
+    "lite-server": "^2.2.2",
+    "typescript": "~2.0.10"
+
+
   }
 }
