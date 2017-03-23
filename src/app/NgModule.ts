@@ -1,8 +1,8 @@
 import {enableProdMode, NgModule} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {RouterModule, Routes, Router, ActivatedRoute} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
-import {HttpModule, JsonpModule, Http} from "@angular/http";
+import {HttpModule, JsonpModule} from "@angular/http";
 
 import {StoryService} from '../services/StoryService';
 
@@ -28,7 +28,7 @@ const appRoutes: Routes = [
     },
     {
         path: '**',
-        redirectTo: ['/not-found']
+        redirectTo: '/not-found'
     }
 ];
 
