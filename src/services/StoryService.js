@@ -8,15 +8,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 var core_1 = require('@angular/core');
-var AppService = (function () {
-    function AppService() {
+var http_1 = require("@angular/http");
+require('rxjs/add/operator/map');
+var rxjs_1 = require("rxjs");
+var StoryService = (function () {
+    function StoryService(_http) {
+        var _this = this;
+        this._http = _http;
+        this.stories = {};
+        this.storiesObservable = new rxjs_1.Observable(function (observer) {
+            _this.storiesObserver = observer;
+        });
+        this._http.get('data/stories.json').subscribe(function (response) {
+            _this.stories = response.json();
+            _this.storiesObserver.next(_this.stories);
+        });
     }
-    AppService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
-    ], AppService);
-    return AppService;
+    StoryService.prototype.getObservable = function () {
+        return this.storiesObservable;
+    };
+    StoryService.prototype.getStories = function () {
+        return this.stories;
+    };
+    StoryService = __decorate([
+        core_1.Injectable(),
+        __param(0, core_1.Inject(http_1.Http)), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], StoryService);
+    return StoryService;
 }());
-exports.AppService = AppService;
-//# sourceMappingURL=StoryService.jsjs.map
+exports.StoryService = StoryService;
+//# sourceMappingURL=StoryService.js.map

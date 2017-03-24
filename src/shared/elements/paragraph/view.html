@@ -1,0 +1,6 @@
+<div *ngIf="capitalized()">
+    <span class="capitalized">{{item.value[0]}}</span><span>{{item.value.substring(1)}}</span>
+</div>
+<div *ngIf="!capitalized()">
+    <span>{{item.value}}</span>
+</div>

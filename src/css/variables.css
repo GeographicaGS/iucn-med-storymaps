@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,500,600,700,800,900|Merriweather:300,400,400i,700,700i,900,900i');
+.fira_sans {
+  font-family: 'Fira Sans', sans-serif;
+}
+.merriweather {
+  font-family: 'Merriweather', serif;
+}
+/******** Palete colors ******/
+.bg_ng10 {
+  background-color: #e8e8e8;
+}
+.bg_blanco {
+  background-color: #ffffff;
+}
+.color_blanco {
+  color: #ffffff;
+}
+.color_azul_iucn {
+  color: #0079BA;
+}

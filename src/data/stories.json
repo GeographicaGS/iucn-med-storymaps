@@ -1,0 +1,75 @@
+{
+  "butterflies": {
+    "steps" :{
+      "cover": {
+        "background": {
+          "url": "assets/butterflies/cover.jpg",
+          "class": ""
+        },
+        "title": "Which animals have scaly wings?",
+        "subtitle": "Mediterranean Butterflies",
+        "credit" : "Breve pie de foto. AUTOR"
+      },
+      "intro": {
+        "elements":[
+          {
+            "type" : "paragraph",
+            "capitalize" : true,
+            "value" : "Butterflies provide a wide range of environmental benefits. In addition to their role as pollinators and food for others, some have even developed their own ways to deter predators and parasites, find a mate, or overcome the chemical defences of their host plant. Each of these butterfly chemicals has a potential value and could be exploited economically. Powerful antibiotics for example have been found in the Meadow Brown (Maniola jurtina), one common and widespread species."
+          },
+          {
+            "type" : "paragraph",
+            "capitalize" : false,
+            "value" : "The last 50 years have however seen a massive change in agricultural practices across the Mediterranean, with a loss of wildlife-rich habitats by increasing urbanization and tourism infrastructure. The growing chronic water shortages are also having a major socio-economic impact on large parts of the region, as many small-scale farmers feel forced to abandon their land to search for jobs elsewhere. Land abandonment leads to former grassland getting overgrown with shrubs, turning into secondary forests and therefore reducing suitable habitats for many butterfly species. Overgrazing can reduce the availability of nutritious plants and refuge for larvae too. These changes are leading to the disappearance of some of these colourful and unique creatures."
+          },
+          {
+            "type" : "image",
+            "url" : "",
+            "info" : {
+              "elements":[
+                {
+                  "type" : "paragraph",
+                  "capitalize" : false,
+                  "value" : "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
+                },
+                {
+                  "type" : "paragraph",
+                  "capitalize" : false,
+                  "value" : "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
+                },
+                {
+                  "type" : "paragraph",
+                  "capitalize" : false,
+                  "value" : "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+                }
+              ]
+            },
+            "credit" : "Rand eines Mottenflügels bei ca. 200 fach mit Polfilter. Ausschnitt ca: 600µm x 600µm. © JAN HOMANN"
+          },
+          {
+            "type" : "paragraph",
+            "capitalize" : false,
+            "value" : "The IUCN Centre for Mediterranean Cooperation is evaluating the state of conservation of a selection of taxonomic groups in the Mediterranean region. There are 463 butterflies native to the Mediterranean and the assessment recently published by IUCN reveals that 19 butterfly species are threatened with extinction, among which 15 endemic species."
+          },
+          {
+            "type" : "image",
+            "url" : "",
+            "credit" : "Resource: IUCN, Centre for Mediterranean Cooperation."
+          },
+          {
+            "type" : "paragraph",
+            "capitalize" : false,
+            "value" : "There is still an information gap on the geographic distribution of butterflies, the size and the reproduction trends of their populations, mostly for species south and east of the Mediterranean. Beyond further data collection and monitoring, a review of legislation affecting their protection and action plans for particular species and habitats are the main recommendations from experts to encourage the preservation of these winged creatures in the Mediterranean landscape."
+          }
+
+        ]
+      },
+      "map": {
+      },
+      "conclusion": {
+      },
+      "skip": {
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 72px;
+  background-color: #000;
+}
+menu .cover {
+  background-image: url('../../../assets/icon/cover.svg');
+}
+menu .cover.active {
+  background-image: url('../../../assets/icon/cover-h.svg');
+}

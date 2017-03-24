@@ -23,6 +23,7 @@
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
 
       'rxjs': 'npm:rxjs',
+      'ng2-scrollspy': 'npm:ng2-scrollspy/dist',
       'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
     },
     // packages tells the System loader how to load when no filename and/or no extension
@@ -37,7 +38,16 @@
       routes: {
         defaultExtension: 'ts'
       },
+      shared: {
+        defaultExtension: 'ts'
+      },
+
       rxjs: {
+        main: './Rx.js',
+        defaultExtension: 'js'
+      },
+      'ng2-scrollspy': {
+        main: './index.js',
         defaultExtension: 'js'
       },
       'angular2-in-memory-web-api': {

@@ -1,0 +1,66 @@
+html,
+body,
+.full-screen {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+
+.logo {
+  background-image: url('../assets/common/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: block;
+  &.small {
+    width: 45px;
+    height: 48px;
+  }
+}
+
+
+.btn{
+  background-position:center;
+  &.circle{
+    border-radius: 50%;
+    text-align: center;
+  }
+  &.small{
+    width: 32px;
+    height: 32px;
+  }
+  &.grey{
+    .bg_ng10();
+  }
+  &:hover{
+    cursor:pointer;
+  }
+}
+
+
+
+
+
+ng-component{
+  display: flex;
+  height: 100%;
+  .nav-bar{
+    flex:0 0 72px;
+  }
+  .main-container{
+    flex:1 0 auto;
+    height: 3500px;
+
+  }
+
+}
+
+body{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('../assets/butterflies/cover.jpg');
+}

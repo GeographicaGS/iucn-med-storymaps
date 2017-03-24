@@ -11,8 +11,8 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
-    "test:once": "karma start karma.conf.js --single-run",
-    "lint": "tslint ./src/**/*.ts -t verbose"
+    "lint": "tslint ./src/**/*.ts -t verbose",
+    "dist": "tsc -p src/ && gulp dist"
   },
   "private": true,
   "dependencies": {
@@ -24,11 +24,12 @@
     "@angular/platform-browser": "^2.4.0",
     "@angular/platform-browser-dynamic": "^2.4.0",
     "@angular/router": "^3.4.0",
+    "angular-in-memory-web-api": "~0.2.4",
     "core-js": "^2.4.1",
+    "ng2-scrollspy": "^0.3.9",
     "rxjs": "^5.1.0",
-    "zone.js": "^0.7.6",
     "systemjs": "0.19.40",
-    "angular-in-memory-web-api": "~0.2.4"
+    "zone.js": "^0.7.6"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0-rc.4",
@@ -49,8 +50,13 @@
     "tslint": "~4.5.0",
     "concurrently": "^3.2.0",
     "lite-server": "^2.2.2",
-    "typescript": "~2.0.10"
-
-
+    "typescript": "~2.0.10",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-html-replace": "^1.6.1",
+    "gulp-shell": "^0.5.2",
+    "run-sequence": "^1.2.2",
+    "systemjs-builder": "^0.15.31",
+    "typings": "^1.3.2"
   }
 }

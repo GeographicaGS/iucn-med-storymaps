@@ -1,56 +1,66 @@
-import {enableProdMode, NgModule} from '@angular/core';
+import {enableProdMode, NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {RouterModule, Routes} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpModule, JsonpModule} from "@angular/http";
+import {ScrollSpyModule} from 'ng2-scrollspy';
 
 import {StoryService} from '../services/StoryService';
 
-import {AppComponent} from "./App";
-import {HomeController} from '../routes/HomeController';
-import {StoryController} from "../routes/StoryController";
-import {NotFoundController} from "../routes/NotFoundController";
+import {MainComponent} from "./main/MainComponent";
+import {HomeController} from '../routes/home/HomeController';
+import {MenuComponent} from "../shared/menu/Menu";
+
+import {IntroStepComponent} from "../shared/steps/intro-step/IntroStep";
+import {CoverStepComponent} from "../shared/steps/cover-step/CoverStep";
+import {MapStepComponent} from "../shared/steps/map-step/MapStep";
+import {ConclusionStepComponent} from "../shared/steps/conclusion-step/ConclusionStep";
+import {SkipStepComponent} from "../shared/steps/skip-step/SkipStep";
+
+import {ImageComponent} from "../shared/elements/image/Image";
+import {ElementBlockComponent} from "../shared/elements/element-block/ElementBlock";
+import {ParagraphComponent} from "../shared/elements/paragraph/Paragraph";
 
 
 const appRoutes: Routes = [
     {
-        path: '',
+        path: ':type',
         component: HomeController
-    },
-
-    {
-        path: 'not-found',
-        component: NotFoundController
-    },
-    {
-        path: 'story/:type',
-        component: StoryController
     },
     {
         path: '**',
-        redirectTo: '/not-found'
+        component: HomeController
     }
 ];
 
 @NgModule({
-    schemas: [],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
     imports: [
         BrowserModule,
         HttpModule,
         JsonpModule,
+        ScrollSpyModule.forRoot(),
         RouterModule.forRoot(appRoutes),
     ],
     declarations: [
-        NotFoundController,
+        ParagraphComponent,
+        ElementBlockComponent,
+        ImageComponent,
+        IntroStepComponent,
+        CoverStepComponent,
+        MapStepComponent,
+        ConclusionStepComponent,
+        SkipStepComponent,
+        MenuComponent,
         HomeController,
-        StoryController,
-        AppComponent
+        MainComponent
     ],
     providers: [
         StoryService,
+        { provide: Window,  useValue: window }
     ],
     bootstrap: [
-        AppComponent
+        MainComponent
     ]
 })
 

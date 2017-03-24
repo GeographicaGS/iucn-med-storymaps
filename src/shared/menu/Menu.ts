@@ -1,11 +1,28 @@
-import {Component} from "@angular/core";
+import {Component, Inject} from "@angular/core";
+import {DOCUMENT} from "@angular/platform-browser";
 
 @Component({
     selector: 'menu',
-    templateUrl: '/template/views/components/menu.html'
+    templateUrl: './shared/menu/view.html',
 })
 export class MenuComponent {
-    constructor() {
+    constructor(@Inject(DOCUMENT) private document: Document) {
+
+    }
+
+    goHome() {
+
+    }
+
+    goTo() {
+
+    }
+
+    isActive(): boolean {
+        return false;
+    }
+
+    goNextStory() {
 
     }
 }

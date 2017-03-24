@@ -1,0 +1,15 @@
+<div class="component-container">
+    <div class="top">
+        <div class="logo small"></div>
+        <a class="btn back" (click)="goHome()"></a>
+    </div>
+    <div class="bottom">
+        <div>
+            <a class="btn cover {{isActive('cover') ? 'active' : ''}}" data-content="Cover" (click)="goTo('cover')"></a>
+            <a class="btn intro {{isActive('intro') ? 'active' : ''}}" (click)="goTo('intro')"></a>
+            <a class="btn map {{isActive('map') ? 'active' : ''}}" (click)="goTo('map')"></a>
+            <a class="btn conclusion {{isActive('conclusion') ? 'active' : ''}}" (click)="goTo('conclusion')"></a>
+            <a class="btn skip {{isActive('skip') ? 'active' : ''}}" (click)="goNextStory()"></a>
+        </div>
+    </div>
+</div>
