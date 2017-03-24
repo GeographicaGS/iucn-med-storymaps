@@ -1,0 +1,44 @@
+s3_id: <%= ENV['S3_IUCNWEBSITE_ID'] %>
+s3_secret: <%= ENV['S3_IUCNWEBSITE_SECRET'] %>
+s3_bucket: iucn-med-storymaps.geographica.io
+# cloudfront_distribution_id: XXXXXXXXXXXXXXXXXX
+
+# Below are examples of all the available configurations.
+# See README for more detailed info on each of them.
+
+# index_document: index.html
+# error_document: error.html
+
+site: public
+
+max_age: 300
+
+s3_endpoint: eu-west-1
+
+exclude_from_upload:
+  - .DS_Store
+  - .htaccess
+
+# ignore_on_server:
+#   - static
+
+gzip:
+  - .html
+  - .css
+  - .js
+
+cloudfront_distribution_config:
+  # default_cache_behavior:
+    # min_TTL: <%= 60 * 60 * 24 %>
+  aliases:
+    quantity: 1
+    items:
+      - iucn-med-storymaps.geographica.io
+
+routing_rules:
+  - condition:
+      http_error_code_returned_equals: "404"
+    redirect:
+      host_name: iucn-med-storymaps.geographica.io
+      replace_key_prefix_with: "#"
+      http_redirect_code: 301
