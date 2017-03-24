@@ -1,11 +1,9 @@
 (function (global) {
   System.config({
-
     paths: {
       // paths serve as alias
-      'npm:': './node_modules/',
-
-
+      'npm:': 'node_modules/',
+      'dist:': 'public/',
     },
     // map tells the System loader where to look for things
     map: {
@@ -22,11 +20,13 @@
       '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
-
       'rxjs': 'npm:rxjs',
-      'typescript': 'npm:typescript',
       'ng2-scrollspy': 'npm:ng2-scrollspy/dist',
       'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
+      'services': 'dist:services',
+      'routes': 'dist:routes',
+      'shared': 'dist:shared',
+      'app': 'dist:app',
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {

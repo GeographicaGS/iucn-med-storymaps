@@ -1,60 +1,62 @@
 var gulp = require('gulp');
-var shell = require('gulp-shell');
-var clean = require('gulp-clean');
-var htmlreplace = require('gulp-html-replace');
-var runSequence = require('run-sequence');
-var Builder = require('systemjs-builder');
-var builder = new Builder('', 'src/systemjs.config.js');
+const sysBuilder = require('systemjs-builder');
+const concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
+const tsc = require('gulp-typescript');
+const uglify = require('gulp-uglify');
+const tsconfig = require('tsconfig-glob');
 
-var bundleHash = new Date().getTime();
-var mainBundleName = bundleHash + '.main.bundle.js';
-var vendorBundleName = bundleHash + '.vendor.bundle.js';
-
-// This is main task for production use
-gulp.task('dist', function(done) {
-  runSequence('clean', 'compile_ts', 'bundle', 'copy_assets', function() {
-    done();
-  });
-});
-
-gulp.task('bundle', ['bundle:app'], function () {
-  return gulp.src('index.html')
-      .pipe(htmlreplace({
-        'app': mainBundleName,
-      }))
-      .pipe(gulp.dest('./dist'));
-});
-
-gulp.task('bundle:vendor', function () {
-  return builder
-      .buildStatic('app/vendor.js', './dist/' + vendorBundleName)
-      .catch(function (err) {
-        console.log('Vendor bundle error');
-        console.log(err);
-      });
-});
-
-gulp.task('bundle:app', function () {
-  return builder
-      .buildStatic('src/app/NgModule.js', './public/' + mainBundleName)
-      .catch(function (err) {
-        console.log('App bundle error');
-        console.log(err);
-      });
-});
-
-gulp.task('compile_ts', shell.task([
-  'tsc'
-]));
-
-gulp.task('copy_assets', function() {
-  return gulp.src(['./src/assets/**/*', './src/css/**/*'], {base:"."})
+// Bundle dependencies into vendors file
+gulp.task('bundle:libs', function () {
+  return gulp.src([
+    'node_modules/core-js/client/shim.min.js',
+    'node_modules/zone.js/dist/zone.js',
+    'node_modules/reflect-metadata/Reflect.js',
+    'node_modules/systemjs/dist/system.src.js',
+    'src/systemjs.config.js',
+  ])
+      .pipe(concat('vendors.min.js'))
+      .pipe(uglify())
       .pipe(gulp.dest('./public'));
 });
 
-gulp.task('clean', ['clean:public']);
-
-gulp.task('clean:public', function () {
-  return gulp.src(['./public'], {read: false})
-      .pipe(clean());
+// Copy static assets
+gulp.task('copy:assets', function() {
+  return gulp.src(['./src/assets/**/*','./src/css/styles.css','./src/index.html'], {base:"./src"})
+      .pipe(gulp.dest('./public'));
 });
+
+// Compile TypeScript to JS
+gulp.task('compile:ts', function () {
+  return gulp
+      .src([
+        "src/**/*.ts",
+        "typings/*.d.ts"
+      ])
+      .pipe(sourcemaps.init())
+      .pipe(tsc({
+        "module": "system",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "outDir": "public/dist/js",
+        "target": "ES5"
+      }))
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest('compile'));
+});
+
+// Generate systemjs-based builds
+gulp.task('bundle:js', function () {
+  var builder = new sysBuilder('src', './src/systemjs.config.js');
+  return builder.buildStatic('app', 'compile/app.min.js');
+});
+
+// Minify JS bundle
+gulp.task('minify:js', function () {
+  return gulp
+      .src('compile/app.min.js')
+      .pipe(uglify())
+      .pipe(gulp.dest('public'));
+});
+
+gulp.task('dist', ['bundle:libs', 'bundle:js', 'minify:js', 'copy:assets']);
