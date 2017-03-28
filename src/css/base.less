@@ -8,7 +8,6 @@ body {
   margin: 0;
 }
 
-
 .logo {
   background-image: url('../assets/common/logo.svg');
   background-repeat: no-repeat;
@@ -21,46 +20,71 @@ body {
   }
 }
 
-
-.btn{
-  background-position:center;
-  &.circle{
+.btn {
+  background-position: center;
+  &.circle {
     border-radius: 50%;
     text-align: center;
   }
-  &.small{
+  &.small {
     width: 32px;
     height: 32px;
+    display: inline-block;
   }
-  &.grey{
+  &.grey {
     .bg_ng10();
   }
-  &:hover{
-    cursor:pointer;
+  &:hover {
+    cursor: pointer;
   }
 }
 
-
-
-
-
-ng-component{
+body {
   display: flex;
   height: 100%;
-  .nav-bar{
-    flex:0 0 72px;
+  .nav-bar {
+    flex: 0 0 72px;
   }
-  .main-container{
-    flex:1 0 auto;
+  .main-container {
+    flex: 1 0 auto;
     height: 3500px;
 
   }
 
 }
 
-body{
+body {
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  position: relative;
+  overflow-x: hidden;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-attachment: fixed;
-  background-image: url('../assets/butterflies/cover.jpg');
+  &.kenburns{
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: -150px;
+      top: 0;
+      bottom: 0;
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 150%;
+      background-attachment: fixed;
+      background-image: inherit;
+      .kenburns();
+      .animated(60s, 0s, infinite);
+      z-index: -1;
+    }
+  }
+
+  &.locked{
+    overflow: hidden;
+  }
 }

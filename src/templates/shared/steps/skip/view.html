@@ -1,0 +1,26 @@
+<div class="component-container">
+    <div class="closing-story-container" [style.min-height.px]="getWindowHeight()">
+        <info [item]="step.info"></info>
+    </div>
+    <div class="skip-container">
+        <div class="component-container" [style.background-color]="getBackgroundColor()">
+            <div class="image"
+                 [style.background-image]="'url(' + step.next_story.background.url     + ')'"
+                 [ngClass]="showImage() ? 'fadeIn':'fadeOut'"
+            >
+
+            </div>
+            <h2
+                 [ngClass]="showTitle() ? 'fadeInUp':'fadeOutDown'"
+            >
+                {{step.next_story.title}}
+            </h2>
+            <div class="btn-row"
+                 [ngClass]="showButton() ? 'bounceInUp':'bounceOutDown'"
+            >
+                <a class="btn small circle"></a>
+                <span>Read this story</span>
+            </div>
+        </div>
+    </div>
+</div>

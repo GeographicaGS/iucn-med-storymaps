@@ -1,28 +1,24 @@
 import {Component, Inject} from "@angular/core";
-import {DOCUMENT} from "@angular/platform-browser";
+import {WindowService} from "../../services/WindowService";
 
 @Component({
     selector: 'menu',
-    templateUrl: './shared/menu/view.html',
+    templateUrl: '/templates/shared/menu/view.html',
 })
 export class MenuComponent {
-    constructor(@Inject(DOCUMENT) private document: Document) {
+    currentStep: string = 'cover';
 
+    constructor(@Inject(WindowService) private windowService: WindowService) {
+        this.windowService.getCurrentStepObservable().subscribe((nextStep) => {
+            this.currentStep = nextStep;
+        });
     }
 
-    goHome() {
-
+    isItemActive(item: string): boolean {
+        return item == this.currentStep;
     }
 
-    goTo() {
-
-    }
-
-    isActive(): boolean {
-        return false;
-    }
-
-    goNextStory() {
-
+    scrollTo(step: string) {
+        this.windowService.scrollToStep(step);
     }
 }

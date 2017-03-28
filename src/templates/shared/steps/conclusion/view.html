@@ -1,0 +1,4 @@
+<div class="component-container" [style.background-color]="getBackgroundColor()">
+    <h2 *ngIf="hasTitle()">{{step.title}}</h2>
+    <element-block [elements]="step.elements"></element-block>
+</div>

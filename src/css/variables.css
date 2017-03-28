@@ -3,7 +3,7 @@
   font-family: 'Fira Sans', sans-serif;
 }
 .merriweather {
-  font-family: 'Merriweather', serif;
+  font-family: 'Merriweather', sans-serif;
 }
 /******** Palete colors ******/
 .bg_ng10 {
@@ -12,9 +12,27 @@
 .bg_blanco {
   background-color: #ffffff;
 }
+.bg_azul_profundo {
+  background-color: #14406D;
+}
+.bg_n10 {
+  background-color: #e8e8e8;
+}
 .color_blanco {
   color: #ffffff;
 }
+.color_oscuro {
+  color: #212121;
+}
+.color_azul_profundo {
+  color: #14406D;
+}
+.color_azul_claro_iucn {
+  color: #66B7EA;
+}
 .color_azul_iucn {
   color: #0079BA;
+}
+.color_mbl4 {
+  color: #b1b1b1;
 }

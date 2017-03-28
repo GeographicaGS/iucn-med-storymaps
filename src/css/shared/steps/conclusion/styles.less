@@ -1,0 +1,95 @@
+conclusion-step {
+  .bg_azul_profundo();
+  > .component-container{
+    display: block;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 64px;
+  }
+
+  h2{
+    text-align: center;
+    .fira_sans();
+    .color_azul_claro_iucn();
+    font-size:24px;
+    line-height: 32px;
+    margin-bottom:25px;
+    font-weight: 800;
+  }
+  paragraph {
+    .fira_sans();
+    font-size: 16px;
+    line-height: 24px;
+    .color_blanco();
+    max-width: 740px;
+    width:95%;
+    display: block;
+    margin:0 auto 42px auto;
+    font-weight: 300;
+    .capitalized{
+      span{
+        &:first-of-type{
+          float:left;
+          position: relative;
+          font-size:156px;
+          font-weight: 900;
+          .color_blanco();
+          padding-top:54px;
+          padding-bottom:30px;
+          padding-right:10px;
+          .fira_sans();
+        }
+      }
+      clear:both;
+    }
+  }
+  el-quote{
+    .fira_sans();
+    .color_azul_claro_iucn();
+    text-align: center;
+    display: block;
+    max-width: 460px;
+    width:85%;
+    margin:56px auto 56px auto;
+    font-style: italic;
+    font-size:24px;
+    line-height:32px;
+    font-weight:300;
+    .component-container{
+        &:before,
+        &:after{
+          content:"";
+          display: block;
+          width: 64px;
+          height: 48px;
+          background:url('../../../../assets/icon/qumarks.svg') no-repeat center center;
+          margin:0 auto 0 auto;
+        }
+      &:before
+      {
+        margin-bottom: 32px;
+      }
+      &:after
+      {
+        margin-top: 32px;
+        margin-bottom: 0;
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+
+    .credit{
+      margin-top:16px;
+      font-style: normal;
+      display: inline-block;
+      position: relative;
+      &:before{
+        content:"-";
+        position: absolute;
+        left:-25px;
+      }
+
+    }
+  }
+}

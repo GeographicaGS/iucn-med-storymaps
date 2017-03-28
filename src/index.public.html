@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <base href="/">
+    <title>IUCN MED Story Map</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+</head>
+
+<body>
+
+<!-- build:vendor -->
+<script src="../node_modules/systemjs/dist/system.src.js"></script>
+<script src="systemjs.config.js"></script>
+<!-- endbuild -->
+
+<!-- build:app -->
+<script>
+  System.import('vendor').catch(function (err) {
+    System.import('app').catch(function (err) {
+      console.error(err);
+    });
+    console.error(err);
+  });
+</script>
+<!-- endbuild -->
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+.linear-gradient(@colorStart : rgba(0,0,0,0.6), @colorEnd: rgba(237,237,237,0.25), @start : 'left' , @end: 'right'){
+  background-color: @colorStart;
+  background-color: -moz-linear-gradient(@start, @colorStart 0%, @colorEnd 100%);
+  background-color: -webkit-gradient(@start top, @end top, color-stop(0%, @colorStart), color-stop(100%, @colorEnd));
+  background-color: -webkit-linear-gradient(@start, @colorStart 0%, @colorEnd 100%);
+  background-color: -o-linear-gradient(@start, @colorStart 0%, @colorEnd 100%);
+  background-color: -ms-linear-gradient(@start, @colorStart 0%, @colorEnd 100%);
+  background-color: linear-gradient(to @end, @colorStart 0%, @colorEnd 100%);
+}

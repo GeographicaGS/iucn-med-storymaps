@@ -21,13 +21,12 @@ var ParagraphComponent = (function (_super) {
         _super.apply(this, arguments);
     }
     ParagraphComponent.prototype.capitalized = function () {
-        console.log(this.item);
         return this.item.capitalize != undefined && this.item.capitalize;
     };
     ParagraphComponent = __decorate([
         core_1.Component({
             selector: 'paragraph',
-            templateUrl: '/shared/elements/paragraph/view.html',
+            templateUrl: '/templates/shared/elements/paragraph/view.html',
         }), 
         __metadata('design:paramtypes', [])
     ], ParagraphComponent);

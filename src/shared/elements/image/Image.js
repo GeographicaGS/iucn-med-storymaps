@@ -20,10 +20,13 @@ var ImageComponent = (function (_super) {
     function ImageComponent() {
         _super.apply(this, arguments);
     }
+    ImageComponent.prototype.getBackgroundSrc = function () {
+        return this.item.url != undefined ? this.item.url : 'none';
+    };
     ImageComponent = __decorate([
         core_1.Component({
             selector: 'image',
-            templateUrl: '/shared/elements/image/view.html',
+            templateUrl: '/templates/shared/elements/image/view.html',
         }), 
         __metadata('design:paramtypes', [])
     ], ImageComponent);

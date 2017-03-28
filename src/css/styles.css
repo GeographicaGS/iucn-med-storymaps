@@ -105,9 +105,9 @@ summary {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-/* Responsive images and other embedded objects
-   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
-   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+/* Responsive image and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground image as sprites.
+   If this default setting for image is causing issues, you might want to replace it with a .responsive class instead. */
 img,
 object,
 embed {
@@ -252,7 +252,7 @@ input[type=button] {
   width: auto;
   overflow: visible;
 }
-/* scale images in IE7 more attractively */
+/* scale image in IE7 more attractively */
 .ie7 img {
   -ms-interpolation-mode: bicubic;
 }
@@ -751,6 +751,76 @@ body {
   -moz-animation-name: bounceInUp;
   -o-animation-name: bounceInUp;
   animation-name: bounceInUp;
+}
+@-webkit-keyframes bounceInUpLittle {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(150px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-10px);
+  }
+  80% {
+    -webkit-transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes bounceInUpLittle {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(150px);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translateY(-10px);
+  }
+  80% {
+    -moz-transform: translateY(10px);
+  }
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes bounceInUpLittle {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(150px);
+  }
+  60% {
+    opacity: 1;
+    -o-transform: translateY(-10px);
+  }
+  80% {
+    -o-transform: translateY(10px);
+  }
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+@keyframes bounceInUpLittle {
+  0% {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.bounceInUpLittle {
+  -webkit-animation-name: bounceInUpLittle;
+  -moz-animation-name: bounceInUpLittle;
+  -o-animation-name: bounceInUpLittle;
+  animation-name: bounceInUpLittle;
 }
 @-webkit-keyframes bounceOut {
   0% {
@@ -3715,11 +3785,85 @@ body {
   -o-animation-name: wobble;
   animation-name: wobble;
 }
+@keyframes kenburns {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -80px, 0px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  100% {
+    transform: scale3d(2, 2, 2) translate3d(-170px, -70px, 0px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes kenburns {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    -webkit-transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -120px, 0px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
+    opacity: 0;
+  }
+}
+@-moz-keyframes kenburns {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    -moz-transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -120px, 0px);
+    -moz-animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
+    opacity: 0;
+  }
+}
+@-o-keyframes kenburns {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    -o-transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -120px, 0px);
+    -o-animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  100% {
+    -o-transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
+    opacity: 0;
+  }
+}
+.kenburns {
+  -webkit-animation-name: kenburns;
+  -moz-animation-name: kenburns;
+  -o-animation-name: kenburns;
+  animation-name: kenburns;
+}
 .fira_sans {
   font-family: 'Fira Sans', sans-serif;
 }
 .merriweather {
-  font-family: 'Merriweather', serif;
+  font-family: 'Merriweather', sans-serif;
 }
 /******** Palete colors ******/
 .bg_ng10 {
@@ -3728,11 +3872,29 @@ body {
 .bg_blanco {
   background-color: #ffffff;
 }
+.bg_azul_profundo {
+  background-color: #14406D;
+}
+.bg_n10 {
+  background-color: #e8e8e8;
+}
 .color_blanco {
   color: #ffffff;
 }
+.color_oscuro {
+  color: #212121;
+}
+.color_azul_profundo {
+  color: #14406D;
+}
+.color_azul_claro_iucn {
+  color: #66B7EA;
+}
 .color_azul_iucn {
   color: #0079BA;
+}
+.color_mbl4 {
+  color: #b1b1b1;
 }
 html,
 body,
@@ -3763,6 +3925,7 @@ body {
 .btn.small {
   width: 32px;
   height: 32px;
+  display: inline-block;
 }
 .btn.grey {
   background-color: #e8e8e8;
@@ -3770,25 +3933,88 @@ body {
 .btn:hover {
   cursor: pointer;
 }
-ng-component {
+body {
   display: flex;
   height: 100%;
 }
-ng-component .nav-bar {
+body .nav-bar {
   flex: 0 0 72px;
 }
-ng-component .main-container {
+body .main-container {
   flex: 1 0 auto;
   height: 3500px;
 }
 body {
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow-x: hidden;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-attachment: fixed;
-  background-image: url('../assets/butterflies/cover.jpg');
+}
+body.kenburns:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: -150px;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-attachment: fixed;
+  background-image: inherit;
+  -webkit-animation-name: kenburns;
+  -moz-animation-name: kenburns;
+  -o-animation-name: kenburns;
+  animation-name: kenburns;
+  -webkit-animation-duration: 60s;
+  -moz-animation-duration: 60s;
+  -o-animation-duration: 60s;
+  animation-duration: 60s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  z-index: -1;
+}
+body.locked {
+  overflow: hidden;
 }
 menu {
   position: fixed;
+  -webkit-animation-duration: 0.7s;
+  -moz-animation-duration: 0.7s;
+  -o-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
+  -o-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
   top: 0;
   left: 0;
   bottom: 0;
@@ -3810,28 +4036,53 @@ menu .component-container .bottom {
 menu .component-container .bottom {
   flex: 0 0 350px;
 }
+menu .component-container .bottom > div {
+  position: absolute;
+  bottom: 40px;
+  left: 18px;
+}
 menu .back,
 menu .cover,
 menu .map,
 menu .conclusion,
 menu .next-story,
+menu .skip,
 menu .intro {
   position: relative;
   display: block;
   background-repeat: no-repeat;
   margin: 0 auto 24px auto;
+  -webkit-transition: all 500ms ease-out 1s;
+  -moz-transition: all 500ms ease-out 1s;
+  -o-transition: all 500ms ease-out 1s;
+  transition: all 500ms ease-out 1s;
   background-position: center;
   width: 32px;
   height: 32px;
+  display: inline-block;
   border-radius: 50%;
   text-align: center;
   background-color: #e8e8e8;
+}
+menu .back:before,
+menu .cover:before,
+menu .map:before,
+menu .conclusion:before,
+menu .next-story:before,
+menu .skip:before,
+menu .intro:before {
+  -webkit-transition: all 500ms ease-out 1s;
+  -moz-transition: all 500ms ease-out 1s;
+  -o-transition: all 500ms ease-out 1s;
+  transition: all 500ms ease-out 1s;
+  opacity: 0;
 }
 menu .back.circle,
 menu .cover.circle,
 menu .map.circle,
 menu .conclusion.circle,
 menu .next-story.circle,
+menu .skip.circle,
 menu .intro.circle {
   border-radius: 50%;
   text-align: center;
@@ -3841,15 +4092,18 @@ menu .cover.small,
 menu .map.small,
 menu .conclusion.small,
 menu .next-story.small,
+menu .skip.small,
 menu .intro.small {
   width: 32px;
   height: 32px;
+  display: inline-block;
 }
 menu .back.grey,
 menu .cover.grey,
 menu .map.grey,
 menu .conclusion.grey,
 menu .next-story.grey,
+menu .skip.grey,
 menu .intro.grey {
   background-color: #e8e8e8;
 }
@@ -3858,29 +4112,41 @@ menu .cover:hover,
 menu .map:hover,
 menu .conclusion:hover,
 menu .next-story:hover,
+menu .skip:hover,
 menu .intro:hover {
   cursor: pointer;
 }
-menu .cover {
-  background-image: url('../../../assets/icon/cover.svg');
-}
-menu .cover:before {
+menu .back:hover:before,
+menu .cover:hover:before,
+menu .map:hover:before,
+menu .conclusion:hover:before,
+menu .next-story:hover:before,
+menu .skip:hover:before,
+menu .intro:hover:before,
+menu .back.active:before,
+menu .cover.active:before,
+menu .map.active:before,
+menu .conclusion.active:before,
+menu .next-story.active:before,
+menu .skip.active:before,
+menu .intro.active:before {
+  color: #0079BA;
   content: attr(data-content);
   position: absolute;
   font-size: 10px;
   font-family: 'Fira Sans', sans-serif;
-  bottom: -10px;
+  bottom: -15px;
   text-align: center;
-  width: 100%;
-  left: 0;
+  width: 72px;
+  left: -20px;
+  opacity: 1;
+}
+menu .cover {
+  background-image: url('../../../assets/icon/cover.svg');
 }
 menu .cover:hover,
 menu .cover.active {
   background-image: url('../../../assets/icon/cover-h.svg');
-}
-menu .cover:hover:before,
-menu .cover.active:before {
-  color: #0079BA;
 }
 menu .logo {
   margin-top: 16px;
@@ -3894,6 +4160,15 @@ menu .intro {
 menu .intro:hover,
 menu .intro.active {
   background-image: url('../../../assets/icon/intro-h.svg');
+}
+menu .back {
+  transform: rotate(180deg);
+  display: block;
+  background-image: url('../../../assets/icon/skip.svg');
+}
+menu .back:hover,
+menu .back.active {
+  background-image: url('../../../assets/icon/skip-h.svg');
 }
 menu .map {
   background-image: url('../../../assets/icon/map.svg');
@@ -3916,6 +4191,249 @@ menu .skip:hover,
 menu .skip.active {
   background-image: url('../../../assets/icon/skip-h.svg');
 }
+paragraph {
+  font-family: 'Merriweather', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #212121;
+  max-width: 740px;
+  width: 95%;
+  display: block;
+  margin: 0 auto 42px auto;
+  font-weight: 300;
+}
+paragraph .component-container {
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -o-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+paragraph .capitalized {
+  clear: both;
+}
+paragraph .capitalized span:first-of-type {
+  float: left;
+  position: relative;
+  font-size: 156px;
+  font-weight: 900;
+  color: #14406D;
+  padding-top: 54px;
+  padding-bottom: 30px;
+  padding-right: 10px;
+  font-family: 'Merriweather', sans-serif;
+}
+image {
+  display: block;
+  min-height: 540px;
+  position: relative;
+}
+image > .component-container {
+  position: relative;
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -o-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+image .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+image info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+}
+image .credit {
+  position: absolute;
+  bottom: 0;
+  font-family: 'Fira Sans', sans-serif;
+  color: #b1b1b1;
+  font-size: 12px;
+  line-height: 16px;
+}
+el-quote .component-container {
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -o-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+}
+info > .btn-row .btn {
+  left: 16px;
+  top: 16px;
+  display: block;
+  margin-bottom: 16px;
+  z-index: 10;
+  position: relative;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  background-image: url('../../../../assets/icon/close-white.svg');
+}
+info > .component-container {
+  padding-top: 64px;
+  padding-left: 16px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(33, 33, 33, 0.7) 0%, rgba(33, 33, 33, 0) 100%);
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -o-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+info > .component-container .info {
+  width: 400px;
+  padding-right: 60px;
+  max-height: 80%;
+  overflow-y: auto;
+  position: static;
+}
+info > .component-container .info paragraph {
+  padding: 0;
+  margin-left: 0;
+  font-family: 'Fira Sans', sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+info > .component-container .info > paragraph,
+info > .component-container .info > image {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+info > .component-container .info::-webkit-scrollbar {
+  width: 5px;
+  background-color: #ffffff;
+}
+info > .component-container .info::-webkit-scrollbar-thumb,
+info > .component-container .info::-webkit-scrollbar-thumb:hover,
+info > .component-container .info::-webkit-scrollbar-thumb:active {
+  background-color: rgba(33, 33, 33, 0.6);
+  border: 1px solid rgba(33, 33, 33, 0.4);
+  opacity: 1;
+}
+info > .component-container .info::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  opacity: 0.6;
+}
+info > .component-container .info::-webkit-scrollbar-track {
+  border: 1px #e8e8e8 solid;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 6px #e8e8e8 inset;
+}
+info > .component-container .credit {
+  display: block;
+  width: 320px;
+  padding: 0 0 16px 0;
+  font-family: 'Fira Sans', sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+}
+info.collapsed {
+  width: 32px;
+  height: 32px;
+  top: 0;
+  left: 0;
+}
+info.collapsed > .component-container {
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+  display: none;
+}
+info.collapsed .btn-row .btn {
+  border: 2px solid #0079BA;
+  background-color: #ffffff;
+  background-image: url('../../../../assets/icon/info-h.svg');
+  opacity: 1;
+}
+cover-step .component-container {
+  background: linear-gradient(180deg, rgba(33, 33, 33, 0) 40%, rgba(33, 33, 33, 0.75) 100%);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+}
 cover-step .shared-link,
 cover-step .button-row,
 cover-step h3,
@@ -3937,19 +4455,489 @@ cover-step h2 {
 cover-step h2 {
   font-size: 64px;
   line-height: 64px;
-  bottom: 373px;
+  bottom: 227px;
   font-weight: 900;
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 cover-step h3 {
   font-size: 24px;
   line-height: 24px;
-  bottom: 313px;
+  bottom: 169px;
   font-weight: 300;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+cover-step .shared-link {
+  -webkit-animation-duration: 0.2s;
+  -moz-animation-duration: 0.2s;
+  -o-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  position: fixed;
+  z-index: 100;
+  right: 34px;
+  top: 34px;
+  font-family: 'Fira Sans', sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  display: table;
+  height: 32px;
+}
+cover-step .shared-link > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+cover-step .shared-link span {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+cover-step .shared-link .btn {
+  border: 2px solid #ffffff;
+  width: 32px;
+  height: 32px;
+  margin-left: 14px;
+  display: inline-block;
+}
+cover-step .shared-link .btn.fb-link {
+  background-image: url('../../../assets/icon/bt-facebook.svg');
+}
+cover-step .shared-link .btn.tw-link {
+  background-image: url('../../../assets/icon/bt-twitter.svg');
+}
+cover-step .button-row {
+  -webkit-animation-duration: 0.2s;
+  -moz-animation-duration: 0.2s;
+  -o-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  font-family: 'Fira Sans', sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  height: 55px;
+  display: block;
+  bottom: 58px;
+  top: auto;
+}
+cover-step .button-row span {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0 auto;
+}
+cover-step .button-row .btn {
+  border: 2px solid #ffffff;
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+cover-step .button-row .btn.next-step {
+  background-image: url('../../../assets/icon/arrow_white.svg');
+}
+cover-step .credit-full {
+  background-color: #ffffff;
+  font-family: 'Fira Sans', sans-serif;
+  color: #212121;
+  display: block;
+  height: 40px;
+  padding-left: 40px;
+  background-image: url('../../../../assets/icon/photo.svg');
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  padding-top: 13px;
+}
+cover-step .credit-full .author {
+  font-weight: 700;
+  padding-left: 5px;
 }
 intro-step {
+  background-color: #ffffff;
+}
+intro-step > .component-container {
   display: block;
   width: 100%;
-  background-color: #ffffff;
   padding-top: 100px;
   padding-bottom: 64px;
+}
+intro-step paragraph {
+  font-family: 'Merriweather', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #212121;
+  max-width: 740px;
+  width: 95%;
+  display: block;
+  margin: 0 auto 42px auto;
+  font-weight: 300;
+}
+intro-step paragraph .capitalized {
+  clear: both;
+}
+intro-step paragraph .capitalized span:first-of-type {
+  float: left;
+  position: relative;
+  font-size: 156px;
+  font-weight: 900;
+  color: #14406D;
+  padding-top: 52px;
+  padding-bottom: 30px;
+  padding-right: 10px;
+  font-family: 'Fira Sans', sans-serif;
+}
+intro-step image {
+  max-width: 740px;
+  width: 95%;
+  margin: 0 auto 40px auto;
+}
+intro-step .button-row {
+  -webkit-animation-duration: 0.2s;
+  -moz-animation-duration: 0.2s;
+  -o-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  font-family: 'Fira Sans', sans-serif;
+  color: #0079BA;
+  font-size: 14px;
+  height: 55px;
+  display: block;
+  bottom: 45px;
+  top: auto;
+}
+intro-step .button-row span {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+intro-step .button-row .btn {
+  border: 2px solid #0079BA;
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+intro-step .button-row .btn.next-step {
+  background-image: url('../../../assets/icon/arrow-h.svg');
+}
+map-step {
+  position: relative;
+}
+map-step #map {
+  z-index: 5;
+  position: static;
+  width: 100%;
+  height: 100%;
+}
+map-step > .component-container.step-locked {
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: bounceInUpLittle;
+  -moz-animation-name: bounceInUpLittle;
+  -o-animation-name: bounceInUpLittle;
+  animation-name: bounceInUpLittle;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+map-step > .component-container > .btn-row {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  z-index: 100;
+  top: auto;
+}
+map-step > .component-container > .btn-row .btn {
+  border: 2px solid #ffffff;
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: 0 0 auto 0;
+}
+map-step > .component-container > .btn-row .btn.next-step {
+  background-color: #ffffff;
+  border-color: #0079BA;
+  background-image: url('../../../assets/icon/arrow-h.svg');
+}
+conclusion-step {
+  background-color: #14406D;
+}
+conclusion-step > .component-container {
+  display: block;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 64px;
+}
+conclusion-step h2 {
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  color: #66B7EA;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+conclusion-step paragraph {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  max-width: 740px;
+  width: 95%;
+  display: block;
+  margin: 0 auto 42px auto;
+  font-weight: 300;
+}
+conclusion-step paragraph .capitalized {
+  clear: both;
+}
+conclusion-step paragraph .capitalized span:first-of-type {
+  float: left;
+  position: relative;
+  font-size: 156px;
+  font-weight: 900;
+  color: #ffffff;
+  padding-top: 54px;
+  padding-bottom: 30px;
+  padding-right: 10px;
+  font-family: 'Fira Sans', sans-serif;
+}
+conclusion-step el-quote {
+  font-family: 'Fira Sans', sans-serif;
+  color: #66B7EA;
+  text-align: center;
+  display: block;
+  max-width: 460px;
+  width: 85%;
+  margin: 56px auto 56px auto;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 300;
+}
+conclusion-step el-quote .component-container:before,
+conclusion-step el-quote .component-container:after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 48px;
+  background: url('../../../../assets/icon/qumarks.svg') no-repeat center center;
+  margin: 0 auto 0 auto;
+}
+conclusion-step el-quote .component-container:before {
+  margin-bottom: 32px;
+}
+conclusion-step el-quote .component-container:after {
+  margin-top: 32px;
+  margin-bottom: 0;
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+conclusion-step el-quote .credit {
+  margin-top: 16px;
+  font-style: normal;
+  display: inline-block;
+  position: relative;
+}
+conclusion-step el-quote .credit:before {
+  content: "-";
+  position: absolute;
+  left: -25px;
+}
+skip-step .closing-story-container {
+  position: relative;
+}
+skip-step .skip-container {
+  background-color: #e8e8e8;
+}
+skip-step .skip-container > .component-container {
+  overflow: hidden;
+  padding-top: 96px;
+  padding-bottom: 117px;
+  display: block;
+  width: 100%;
+}
+skip-step .skip-container > .component-container .image {
+  display: block;
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  margin: 0 auto;
+  width: 240px;
+  height: 240px;
+  border-radius: 240px;
+  background-color: #000;
+  margin-bottom: 43px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+skip-step .skip-container > .component-container h2 {
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  font-family: 'Fira Sans', sans-serif;
+  color: #14406D;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 64px;
+  display: block;
+  margin: 0 auto;
+  max-width: 450px;
+  width: 95%;
+  text-align: center;
+  margin-bottom: 53px;
+}
+skip-step .skip-container > .component-container .btn-row {
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  color: #0079BA;
+  text-align: center;
+}
+skip-step .skip-container > .component-container .btn-row .btn {
+  border: 2px solid #0079BA;
+  position: relative;
+  display: block;
+  margin: 0 auto 13px auto;
+  background-image: url('../../../../assets/icon/skip-h.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+skip-step .skip-container > .component-container .btn-row span {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Fira Sans', sans-serif;
 }

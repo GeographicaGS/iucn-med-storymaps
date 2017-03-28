@@ -1,0 +1,7 @@
+map-step .component-container {
+  background: url('../../../assets/butterflies/visor_s-info.png') center no-repeat;
+}
+map-step .btn-row {
+  position: absolute;
+  bottom: 40px;
+}

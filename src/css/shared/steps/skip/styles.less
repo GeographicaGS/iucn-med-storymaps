@@ -1,0 +1,65 @@
+skip-step {
+  .closing-story-container {
+    position: relative;
+  }
+  .skip-container {
+    .bg_n10();
+    > .component-container {
+      overflow: hidden;
+      padding-top: 96px;
+      padding-bottom: 117px;
+      display: block;
+      width: 100%;
+      .image {
+        display: block;
+        .animated(0.6s);
+        margin: 0 auto;
+        width: 240px;
+        height: 240px;
+        border-radius: 240px;
+        background-color: #000;
+        margin-bottom: 43px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      h2 {
+        .animated(0.6s);
+        .fira_sans();
+        .color_azul_profundo();
+        font-weight: 900;
+        font-size: 64px;
+        line-height: 64px;
+        display: block;
+        margin: 0 auto;
+        max-width: 450px;
+        width: 95%;
+        text-align: center;
+        margin-bottom: 53px;
+      }
+      .btn-row {
+        .animated(0.6s);
+        .color_azul_iucn();
+        text-align: center;
+
+        .btn {
+          border: 2px solid @azul_iucn;
+          position: relative;
+          display: block;
+          margin: 0 auto 13px auto;
+          background-image: url('../../../../assets/icon/skip-h.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        span {
+          font-size: 14px;
+          letter-spacing: 1px;
+          font-weight: 500;
+          text-transform: uppercase;
+          .fira_sans();
+        }
+      }
+    }
+
+  }
+}

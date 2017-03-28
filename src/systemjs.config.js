@@ -1,37 +1,40 @@
 (function (global) {
   System.config({
-
-    paths: {
-      // paths serve as alias
-      'npm:': './node_modules/',
+    path: {
+      'app ' : 'src',
+      'assets' : 'app:/assets',
+      'templates' : 'app:/templates',
+      'node_modules/': '../../node_modules/'
 
 
     },
     // map tells the System loader where to look for things
     map: {
       // our app is within the app folder
-      app: 'app',
+      // app: 'app',
       // angular bundles
-      '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
-      '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
-      '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
-      '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
-      '@angular/flex-layout': 'npm:@angular/flex-layout/bundles/flex-layout.umd.js',
-      '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
-      '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
-      '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
-      '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
-      '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
-
-      'rxjs': 'npm:rxjs',
-      'typescript': 'npm:typescript',
-      'ng2-scrollspy': 'npm:ng2-scrollspy/dist',
-      'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
+      '@angular/core': 'node_modules/@angular/core/bundles/core.umd.js',
+      '@angular/common': 'node_modules/@angular/common/bundles/common.umd.js',
+      '@angular/compiler': 'node_modules/@angular/compiler/bundles/compiler.umd.js',
+      '@angular/platform-browser': 'node_modules/@angular/platform-browser/bundles/platform-browser.umd.js',
+      '@angular/platform-browser-dynamic': 'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+      '@angular/http': 'node_modules/@angular/http/bundles/http.umd.js',
+      '@angular/router': 'node_modules/@angular/router/bundles/router.umd.js',
+      'mapbox-gl': 'node_modules/mapbox-gl/dist',
+      'rxjs': 'node_modules/rxjs',
+      'core-js-shim':'node_modules/core-js/client/shim.js',
+      'zone':'node_modules/zone.js/dist/zone.js',
+      'reflect':'node_modules/reflect-metadata/Reflect.js',
+      'system-polyfills':'node_modules/systemjs/dist/system-polyfills.js',
+      'es6-promise':'node_modules/es6-promise/dist/es6-promise.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
       app: {
         main: './NgModule.js',
+        defaultExtension: 'js'
+      },
+      src: {
         defaultExtension: 'js'
       },
       services: {
@@ -48,12 +51,17 @@
         main: './Rx.js',
         defaultExtension: 'js'
       },
-      'ng2-scrollspy': {
-        main: './index.js',
+      'system-polyfills': {
         defaultExtension: 'js'
       },
-      'angular2-in-memory-web-api': {
-        main: './index.js',
+      'es6-promise': {
+        defaultExtension: 'js'
+      },
+      'core-js-shim': {
+        defaultExtension: 'js'
+      },
+      'mapbox-gl': {
+        main: './mapbox-gl.js',
         defaultExtension: 'js'
       }
     }

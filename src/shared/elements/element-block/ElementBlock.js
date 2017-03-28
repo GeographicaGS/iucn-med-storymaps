@@ -20,7 +20,7 @@ var ElementBlockComponent = (function () {
     ElementBlockComponent = __decorate([
         core_1.Component({
             selector: 'element-block',
-            templateUrl: '/shared/elements/element-block/view.html',
+            templateUrl: '/templates/shared/elements/element-block/view.html',
         }), 
         __metadata('design:paramtypes', [])
     ], ElementBlockComponent);

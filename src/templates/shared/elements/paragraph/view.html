@@ -1,0 +1,8 @@
+<div class="component-container" [ngClass]="showContent() ? 'fadeInUp' : 'fadeOutDown'" >
+    <div *ngIf="capitalized()" class="capitalized">
+        <span>{{item.value[0]}}</span><span>{{item.value.substring(1)}}</span>
+    </div>
+    <div *ngIf="!capitalized()">
+        <span>{{item.value}}</span>
+    </div>
+</div>

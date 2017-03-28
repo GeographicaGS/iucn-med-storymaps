@@ -1,0 +1,23 @@
+image {
+  display: block;
+  min-height: 540px;
+  position: relative;
+}
+image .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+image info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+}

@@ -1,50 +1,36 @@
-/// <reference path="../../typings/index.d.ts" />
-
 import {enableProdMode, NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {RouterModule, Routes} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
-import {HttpModule, JsonpModule} from "@angular/http";
-import {ScrollSpyModule} from 'ng2-scrollspy';
-
-
+import {HttpModule} from "@angular/http";
 
 import {MainComponent} from "./main/MainComponent";
-import {HomeController} from './../routes/home/HomeController';
 import {MenuComponent} from "./../shared/menu/Menu";
 
-import {IntroStepComponent} from "./../shared/steps/intro-step/IntroStep";
-import {CoverStepComponent} from "./../shared/steps/cover-step/CoverStep";
-import {MapStepComponent} from "./../shared/steps/map-step/MapStep";
-import {ConclusionStepComponent} from "../shared/steps/conclusion-step/ConclusionStep";
-import {SkipStepComponent} from "./../shared/steps/skip-step/SkipStep";
+import {IntroStepComponent} from "../shared/steps/intro/IntroStep";
+import {CoverStepComponent} from "../shared/steps/cover/CoverStep";
+import {MapStepComponent} from "../shared/steps/map/MapStep";
+import {ConclusionStepComponent} from "../shared/steps/conclusion/ConclusionStep";
+import {SkipStepComponent} from "../shared/steps/skip/SkipStep";
 
 import {ImageComponent} from "./../shared/elements/image/Image";
 import {ElementBlockComponent} from "./../shared/elements/element-block/ElementBlock";
 import {ParagraphComponent} from "./../shared/elements/paragraph/Paragraph";
-import {StoryService} from './../services/StoryService';
+import {QuoteComponent} from "../shared/elements/quote/Quote";
+import {InfoComponent} from "../shared/elements/info/Info";
 
-const appRoutes: Routes = [
-    {
-        path: ':type',
-        component: HomeController
-    },
-    {
-        path: '**',
-        component: HomeController
-    }
-];
+import {StoryService} from './../services/StoryService';
+import {MapService} from "../services/MapService";
+import {WindowService} from "../services/WindowService";
 
 @NgModule({
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     imports: [
         BrowserModule,
         HttpModule,
-        JsonpModule,
-        ScrollSpyModule.forRoot(),
-        RouterModule.forRoot(appRoutes),
     ],
     declarations: [
+        InfoComponent,
+        QuoteComponent,
         ParagraphComponent,
         ElementBlockComponent,
         ImageComponent,
@@ -54,12 +40,12 @@ const appRoutes: Routes = [
         ConclusionStepComponent,
         SkipStepComponent,
         MenuComponent,
-        HomeController,
         MainComponent
     ],
     providers: [
-        StoryService,
-        { provide: Window,  useValue: window }
+        WindowService,
+        MapService,
+        StoryService
     ],
     bootstrap: [
         MainComponent
@@ -71,9 +57,9 @@ export class AppModule {
 
 let productionMode = false;
 
-if (productionMode) {
-    enableProdMode();
-}
+// if (productionMode) {
+enableProdMode();
+// }
 
 const platform = platformBrowserDynamic();
 platform.bootstrapModule(AppModule);

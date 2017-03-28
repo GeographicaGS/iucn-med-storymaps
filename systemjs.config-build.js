@@ -1,61 +1,36 @@
-(function (global) {
-  System.config({
-    paths: {
-      // paths serve as alias
-      'npm:': 'node_modules/',
-      'dist:': 'public/',
-    },
-    // map tells the System loader where to look for things
-    map: {
-      // our app is within the app folder
-      app: 'app',
-      // angular bundles
-      '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
-      '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
-      '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
-      '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
-      '@angular/flex-layout': 'npm:@angular/flex-layout/bundles/flex-layout.umd.js',
-      '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
-      '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
-      '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
-      '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
-      '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
-      'rxjs': 'npm:rxjs',
-      'ng2-scrollspy': 'npm:ng2-scrollspy/dist',
-      'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
-      'services': 'dist:services',
-      'routes': 'dist:routes',
-      'shared': 'dist:shared',
-      'app': 'dist:app',
-    },
-    // packages tells the System loader how to load when no filename and/or no extension
-    packages: {
-      app: {
-        main: './NgModule.js',
-        defaultExtension: 'js'
-      },
-      services: {
-        defaultExtension: 'js'
-      },
-      routes: {
-        defaultExtension: 'js'
-      },
-      shared: {
-        defaultExtension: 'js'
-      },
+var map = {
+  'app':                                './',
+  'rxjs':                               '/',
+  'zonejs':                             '/',
+  'reflect-metadata':                   '/',
+  '@angular':                           '/'
+};
 
-      rxjs: {
-        main: './Rx.js',
-        defaultExtension: 'js'
-      },
-      'ng2-scrollspy': {
-        main: './index.js',
-        defaultExtension: 'js'
-      },
-      'angular2-in-memory-web-api': {
-        main: './index.js',
-        defaultExtension: 'js'
-      }
-    }
-  });
-})(this);
+var packages = {
+  'app':                                { main: 'app.bundle', defaultExtension: 'js' },
+  'rxjs':                               { main: 'vendor',defaultExtension: 'js' },
+  'zonejs':                             { main: 'app.bundle', defaultExtension: 'js' },
+  'reflect-metadata':                   { main: 'app.bundle', defaultExtension: 'js' }
+};
+
+var packageNames = [
+  '@angular/common',
+  '@angular/compiler',
+  '@angular/core',
+  '@angular/http',
+  '@angular/platform-browser',
+  '@angular/platform-browser-dynamic',
+  '@angular/router',
+  '@angular/router-deprecated',
+  '@angular/testing',
+  '@angular/upgrade',
+];
+
+packageNames.forEach(function(pkgName) {
+  packages[pkgName] = { main: 'app.bundle.js', defaultExtension: 'js' };
+});
+
+System.config({
+  map: map,
+  packages: packages
+});

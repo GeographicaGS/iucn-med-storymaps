@@ -10,32 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
-var router_1 = require('@angular/router');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require("@angular/http");
-var ng2_scrollspy_1 = require('ng2-scrollspy');
 var MainComponent_1 = require("./main/MainComponent");
-var HomeController_1 = require('./../routes/home/HomeController');
 var Menu_1 = require("./../shared/menu/Menu");
-var IntroStep_1 = require("./../shared/steps/intro-step/IntroStep");
-var CoverStep_1 = require("./../shared/steps/cover-step/CoverStep");
-var MapStep_1 = require("./../shared/steps/map-step/MapStep");
-var ConclusionStep_1 = require("../shared/steps/conclusion-step/ConclusionStep");
-var SkipStep_1 = require("./../shared/steps/skip-step/SkipStep");
+var IntroStep_1 = require("../shared/steps/intro/IntroStep");
+var CoverStep_1 = require("../shared/steps/cover/CoverStep");
+var MapStep_1 = require("../shared/steps/map/MapStep");
+var ConclusionStep_1 = require("../shared/steps/conclusion/ConclusionStep");
+var SkipStep_1 = require("../shared/steps/skip/SkipStep");
 var Image_1 = require("./../shared/elements/image/Image");
 var ElementBlock_1 = require("./../shared/elements/element-block/ElementBlock");
 var Paragraph_1 = require("./../shared/elements/paragraph/Paragraph");
+var Quote_1 = require("../shared/elements/quote/Quote");
+var Info_1 = require("../shared/elements/info/Info");
 var StoryService_1 = require('./../services/StoryService');
-var appRoutes = [
-    {
-        path: ':type',
-        component: HomeController_1.HomeController
-    },
-    {
-        path: '**',
-        component: HomeController_1.HomeController
-    }
-];
+var MapService_1 = require("../services/MapService");
+var WindowService_1 = require("../services/WindowService");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -45,11 +36,10 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
-                http_1.JsonpModule,
-                ng2_scrollspy_1.ScrollSpyModule.forRoot(),
-                router_1.RouterModule.forRoot(appRoutes),
             ],
             declarations: [
+                Info_1.InfoComponent,
+                Quote_1.QuoteComponent,
                 Paragraph_1.ParagraphComponent,
                 ElementBlock_1.ElementBlockComponent,
                 Image_1.ImageComponent,
@@ -59,12 +49,12 @@ var AppModule = (function () {
                 ConclusionStep_1.ConclusionStepComponent,
                 SkipStep_1.SkipStepComponent,
                 Menu_1.MenuComponent,
-                HomeController_1.HomeController,
                 MainComponent_1.MainComponent
             ],
             providers: [
-                StoryService_1.StoryService,
-                { provide: Window, useValue: window }
+                WindowService_1.WindowService,
+                MapService_1.MapService,
+                StoryService_1.StoryService
             ],
             bootstrap: [
                 MainComponent_1.MainComponent
@@ -76,9 +66,9 @@ var AppModule = (function () {
 }());
 exports.AppModule = AppModule;
 var productionMode = false;
-if (productionMode) {
-    core_1.enableProdMode();
-}
+// if (productionMode) {
+core_1.enableProdMode();
+// }
 var platform = platform_browser_dynamic_1.platformBrowserDynamic();
 platform.bootstrapModule(AppModule);
 //# sourceMappingURL=NgModule.js.map

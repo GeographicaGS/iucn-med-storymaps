@@ -12,27 +12,29 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
+var WindowService_1 = require("../../services/WindowService");
 var MenuComponent = (function () {
-    function MenuComponent(document) {
-        this.document = document;
+    function MenuComponent(windowService) {
+        var _this = this;
+        this.windowService = windowService;
+        this.currentStep = 'cover';
+        this.windowService.getCurrentStepObservable().subscribe(function (nextStep) {
+            _this.currentStep = nextStep;
+        });
     }
-    MenuComponent.prototype.goHome = function () {
+    MenuComponent.prototype.isItemActive = function (item) {
+        return item == this.currentStep;
     };
-    MenuComponent.prototype.goTo = function () {
-    };
-    MenuComponent.prototype.isActive = function () {
-        return false;
-    };
-    MenuComponent.prototype.goNextStory = function () {
+    MenuComponent.prototype.scrollTo = function (step) {
+        this.windowService.scrollToStep(step);
     };
     MenuComponent = __decorate([
         core_1.Component({
             selector: 'menu',
-            templateUrl: './shared/menu/view.html',
+            templateUrl: '/templates/shared/menu/view.html',
         }),
-        __param(0, core_1.Inject(platform_browser_1.DOCUMENT)), 
-        __metadata('design:paramtypes', [Document])
+        __param(0, core_1.Inject(WindowService_1.WindowService)), 
+        __metadata('design:paramtypes', [WindowService_1.WindowService])
     ], MenuComponent);
     return MenuComponent;
 }());

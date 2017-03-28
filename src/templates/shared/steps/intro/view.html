@@ -1,0 +1,7 @@
+<div class="component-container" [style.min-height.px]="getWindowHeight()" [style.background-color]="getBackgroundColor()">
+    <element-block [elements]="step.elements"></element-block>
+    <div class="button-row">
+        <a class="btn small circle next-step" (click)="goNextStep()" data-content="Read this history"></a>
+        <span>Explore map</span>
+    </div>
+</div>

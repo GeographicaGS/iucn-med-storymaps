@@ -1,0 +1,11 @@
+<div class="component-container" [style.height.px]="getWindowHeight()" [style.width.px]="getWindowWidth() +50"
+     [ngClass]="lockView() ? 'step-locked' : '' ">
+    <info *ngIf="hasInfo()" [item]="step.info"></info>
+    <div id="map" class="map">
+
+    </div>
+
+    <div class="btn-row">
+        <a class="btn small circle next-step" (click)="goNextStep()"></a>
+    </div>
+</div>

@@ -1,6 +1,0 @@
-<div *ngFor="let element of elements">
-    <div [ngSwitch]="element['type']">
-        <paragraph *ngSwitchCase="'paragraph'" [item]="element"></paragraph>
-        <image *ngSwitchCase="'image'" [item]="element"></image>
-    </div>
-</div>

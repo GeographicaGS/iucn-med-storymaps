@@ -1,0 +1,23 @@
+<div class="shared-link" [ngClass]="showButton() ? 'fadeIn' :'fadeOut'">
+    <div>
+        <span>share history</span>
+    </div>
+    <div>
+        <a class="btn small circle fb-link" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{document.location.href}}"></a>
+    </div>
+    <div>
+        <a class="btn small circle tw-link" target="_blank" href="http://twitter.com/share?&url={{document.location.href}}"></a>
+    </div>
+</div>
+<div class="component-container" [style.height.px]="getWindowHeight()" [style.width.px]="getWindowWidth()">
+    <h2 [ngClass]="showTitle() ? 'fadeIn' : 'fadeOut'">{{step.title}}</h2>
+    <h3 [ngClass]="showTitle() ? 'fadeInUp' : 'fadeOutDown'">{{step.subtitle}}</h3>
+    <div class="button-row" [ngClass]="showButton() ? 'fadeIn' :'fadeOut'">
+        <a class="btn small circle next-step" (click)="goNextStep()" data-content="Read this history"></a>
+        <span>Read this history</span>
+    </div>
+</div>
+<div *ngIf="hasBackgroundCredit();" class="credit-full">
+    <span class="credit">{{step.background.credit.footer}}</span>
+    <span class="author">{{step.background.credit.author}}</span>
+</div>

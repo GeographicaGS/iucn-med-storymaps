@@ -1,0 +1,7 @@
+<div *ngFor="let element of elements">
+    <div [ngSwitch]="element['type']">
+        <paragraph *ngSwitchCase="'paragraph'" [item]="element"></paragraph>
+        <image *ngSwitchCase="'image'" [item]="element"></image>
+        <el-quote *ngSwitchCase="'quote'" [item]="element"></el-quote>
+    </div>
+</div>

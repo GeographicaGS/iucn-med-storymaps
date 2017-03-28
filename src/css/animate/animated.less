@@ -2,7 +2,7 @@ body {
 	-webkit-backface-visibility: hidden;
 }
 
-.animated(@animationDurationTime: 1s; @animationDelayTime: 0s; @animationFillMode: both) {
+.animated(@animationDurationTime: 1s; @animationDelayTime: 0s; @animationIterationCount: 1; @animationFillMode: both) {
 	 -webkit-animation-duration: @animationDurationTime;
 	    -moz-animation-duration: @animationDurationTime;
 	      -o-animation-duration: @animationDurationTime;
@@ -15,4 +15,8 @@ body {
 	   -moz-animation-fill-mode: @animationFillMode;
 	     -o-animation-fill-mode: @animationFillMode;
 	        animation-fill-mode: @animationFillMode;
+-webkit-animation-iteration-count: @animationIterationCount;
+   -moz-animation-iteration-count: @animationIterationCount;
+	 -o-animation-iteration-count: @animationIterationCount;
+		animation-iteration-count: @animationIterationCount;
 }

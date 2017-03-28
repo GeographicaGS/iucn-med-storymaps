@@ -1,7 +1,7 @@
 s3_id: <%= ENV['S3_IUCNWEBSITE_ID'] %>
 s3_secret: <%= ENV['S3_IUCNWEBSITE_SECRET'] %>
 s3_bucket: iucn-med-storymaps.geographica.io
-# cloudfront_distribution_id: XXXXXXXXXXXXXXXXXX
+cloudfront_distribution_id: E3E3RY2DA0FYXN
 
 # Below are examples of all the available configurations.
 # See README for more detailed info on each of them.
@@ -41,4 +41,4 @@ routing_rules:
     redirect:
       host_name: iucn-med-storymaps.geographica.io
       replace_key_prefix_with: "#"
-      http_redirect_code: 301
+#      http_redirect_code: 301
