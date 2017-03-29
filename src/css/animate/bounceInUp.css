@@ -70,11 +70,9 @@
 }
 @-webkit-keyframes bounceInUpLittle {
   0% {
-    opacity: 0;
     -webkit-transform: translateY(150px);
   }
   60% {
-    opacity: 1;
     -webkit-transform: translateY(-10px);
   }
   80% {
@@ -86,11 +84,9 @@
 }
 @-moz-keyframes bounceInUpLittle {
   0% {
-    opacity: 0;
     -moz-transform: translateY(150px);
   }
   60% {
-    opacity: 1;
     -moz-transform: translateY(-10px);
   }
   80% {
@@ -102,11 +98,9 @@
 }
 @-o-keyframes bounceInUpLittle {
   0% {
-    opacity: 0;
     -o-transform: translateY(150px);
   }
   60% {
-    opacity: 1;
     -o-transform: translateY(-10px);
   }
   80% {
@@ -118,11 +112,9 @@
 }
 @keyframes bounceInUpLittle {
   0% {
-    opacity: 0;
     transform: translateY(150px);
   }
   60% {
-    opacity: 1;
     transform: translateY(-10px);
   }
   80% {

@@ -22,7 +22,7 @@ var ConclusionStepComponent = (function (_super) {
     }
     ConclusionStepComponent = __decorate([
         core_1.Component({
-            selector: 'conclusion-step',
+            selector: 'conclusion',
             templateUrl: '/templates/shared/steps/conclusion/view.html',
         }), 
         __metadata('design:paramtypes', [])

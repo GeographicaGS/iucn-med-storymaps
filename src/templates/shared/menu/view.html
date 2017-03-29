@@ -5,13 +5,7 @@
     </div>
     <div class="bottom">
         <div>
-            <a class="btn cover {{isItemActive('cover') ? 'active' : ''}}" data-content="Cover"
-               (click)="scrollTo('cover')"></a>
-            <a class="btn intro {{isItemActive('intro') ? 'active' : ''}}" (click)="scrollTo('intro')" data-content="Intro"></a>
-            <a class="btn map {{isItemActive('map') ? 'active' : ''}}" (click)="scrollTo('map')" data-content="Map"></a>
-            <a class="btn conclusion {{isItemActive('conclusion') ? 'active' : ''}} "
-               (click)="scrollTo('conclusion')" data-content="Conclusion"></a>
-            <a class="btn skip {{isItemActive('skip') ? 'active' : ''}}" (click)="scrollTo('skip')" data-content="Next history"></a>
+            <a *ngFor="let step of getStepsKeys()" class="btn {{step}} {{isItemActive(step) ? 'active' : ''}}"  [attr.data-content]="getStepName(step)" (click)="scrollTo(step)"></a>
         </div>
     </div>
 </div>

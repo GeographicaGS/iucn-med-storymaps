@@ -21,15 +21,33 @@ var BaseStepComponent = (function () {
         this.windowService = windowService;
     }
     BaseStepComponent.prototype.onScroll = function () {
+        this.checkStep();
+        this.checkBackground();
     };
     BaseStepComponent.prototype.onResize = function (event) {
     };
-    BaseStepComponent.prototype.ngAfterViewInit = function () {
+    BaseStepComponent.prototype.checkBackground = function () {
         var offset = this.element.nativeElement.getBoundingClientRect();
-        this.windowService.addStep(this.name, offset.top, offset.bottom);
-        this.onScroll();
+        if (this.windowService.scrollingDown() && (offset.top) < this.getWindowHeight() ||
+            !this.windowService.scrollingDown() && (offset.bottom) <= (this.getWindowHeight() + offset.height)) {
+            var _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
+            var _url = this.step.background != undefined && this.step.background.url != undefined ? this.step.background.url : '';
+            this.windowService.setBodyBgClass(_class);
+            this.windowService.setBodyBgUrl(_url);
+        }
     };
-    BaseStepComponent.prototype.checkEffects = function () {
+    BaseStepComponent.prototype.checkStep = function () {
+        var offset = this.getWindowHeight() * 0.3;
+        var top = this.element.nativeElement.getBoundingClientRect().top;
+        var bottom = this.element.nativeElement.getBoundingClientRect().bottom;
+        if (this.windowService.scrollingDown() && top > -20 && top < offset
+            || !this.windowService.scrollingDown() && bottom > 20 && bottom < offset) {
+            this.windowService.setCurrentStep(this.element.nativeElement.tagName.toLowerCase());
+        }
+    };
+    BaseStepComponent.prototype.ngAfterViewInit = function () {
+        this.windowService.addStep(this.element);
+        this.onScroll();
     };
     BaseStepComponent.prototype.getWindowHeight = function () {
         return document.documentElement.clientHeight;
@@ -46,8 +64,11 @@ var BaseStepComponent = (function () {
     BaseStepComponent.prototype.getBackgroundColor = function () {
         return this.step.backgroundColor != undefined ? this.step.backgroundColor : 'inherit';
     };
+    BaseStepComponent.prototype.hasBackgroundCredit = function () {
+        return this.step.background.credit != undefined;
+    };
     BaseStepComponent.prototype.goNextStep = function () {
-        this.windowService.scrollToNextStep(this.name);
+        this.windowService.scrollToNextStep(this.element);
     };
     __decorate([
         core_1.Input(), 

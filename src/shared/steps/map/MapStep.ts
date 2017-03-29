@@ -1,4 +1,4 @@
-import {Component, Inject, Renderer, ElementRef, AfterViewInit} from "@angular/core";
+import {Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding} from "@angular/core";
 import {BaseStepComponent} from "../base/BaseStep";
 import {Map} from 'mapbox-gl';
 import {MapService} from "../../../services/MapService";
@@ -6,11 +6,10 @@ import {DOCUMENT} from "@angular/platform-browser";
 import {WindowService} from "../../../services/WindowService";
 
 @Component({
-    selector: 'map-step',
+    selector: 'map',
     templateUrl: '/templates/shared/steps/map/view.html',
 })
 export class MapStepComponent extends BaseStepComponent {
-
     constructor(@Inject(ElementRef)  elem: ElementRef,
                 @Inject(DOCUMENT) protected document: any,
                 @Inject(WindowService) protected windowService: WindowService,
@@ -18,29 +17,37 @@ export class MapStepComponent extends BaseStepComponent {
         super(elem, document, windowService);
     }
 
-    onScroll() {
-        if (this.lockView()) {
-            this.windowService.setBodyBgClass('locked');
+    onResize(event: any) {
+        super.onResize(event);
+        this.mapService.map.resize();
+    }
+
+    lockMap() {
+        this.windowService.setBodyBgClass('locked');
+        if (this.mapService.map instanceof Map) {
             this.mapService.map.resize();
             this.mapService.map.scrollZoom.enable();
-        } else if (this.windowService.getBodyClass() == 'locked') {
-            this.windowService.setBodyBgClass('');
+        }
+    }
+
+    unlockMap() {
+        if (this.mapService.map instanceof Map) {
             this.mapService.map.scrollZoom.disable();
         }
     }
 
-    onResize(event: any) {
-        super.onResize(event);
-        this.mapService.map.resize();
-        if (this.windowService.getBodyClass() == 'locked') {
-            this.windowService.scrollToStep('map');
-        }
-
-    }
-
     lockView() {
         let offset = this.element.nativeElement.getBoundingClientRect();
-        return this.windowService.scrollingDown() && offset.top < 100 && offset.top > -20;
+        let locked = this.windowService.scrollingDown() && offset.top < 100 && offset.top > -20
+            || !this.windowService.isScrollingActive() && offset.top == 0;
+
+        if (locked) {
+            this.lockMap();
+        } else {
+            this.unlockMap();
+        }
+
+        return locked;
     }
 
     ngAfterViewInit() {

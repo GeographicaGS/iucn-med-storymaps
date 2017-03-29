@@ -13,17 +13,36 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 var core_1 = require("@angular/core");
 var WindowService_1 = require("../../services/WindowService");
+var StoryService_1 = require("../../services/StoryService");
 var MenuComponent = (function () {
-    function MenuComponent(windowService) {
+    function MenuComponent(windowService, storyService) {
         var _this = this;
         this.windowService = windowService;
+        this.storyService = storyService;
         this.currentStep = 'cover';
+        this.stories = {};
+        this.currentStory = {};
+        this.currentStory = this.windowService.getCurrentStory();
+        this.currentStep = this.windowService.getCurrentStep();
+        this.stories = this.storyService.getStories();
         this.windowService.getCurrentStepObservable().subscribe(function (nextStep) {
             _this.currentStep = nextStep;
+        });
+        this.windowService.getCurrentStoryObservable().subscribe(function (currentStory) {
+            _this.currentStory = currentStory;
+        });
+        this.storyService.getObservable().subscribe(function (stories) {
+            _this.stories = stories;
         });
     }
     MenuComponent.prototype.isItemActive = function (item) {
         return item == this.currentStep;
+    };
+    MenuComponent.prototype.getStepsKeys = function () {
+        return this.stories[this.currentStory] != undefined ? Object.keys(this.stories[this.currentStory]['steps']) : [];
+    };
+    MenuComponent.prototype.getStepName = function (step) {
+        return this.stories[this.currentStory]['steps'][step]['name'];
     };
     MenuComponent.prototype.scrollTo = function (step) {
         this.windowService.scrollToStep(step);
@@ -33,8 +52,9 @@ var MenuComponent = (function () {
             selector: 'menu',
             templateUrl: '/templates/shared/menu/view.html',
         }),
-        __param(0, core_1.Inject(WindowService_1.WindowService)), 
-        __metadata('design:paramtypes', [WindowService_1.WindowService])
+        __param(0, core_1.Inject(WindowService_1.WindowService)),
+        __param(1, core_1.Inject(StoryService_1.StoryService)), 
+        __metadata('design:paramtypes', [WindowService_1.WindowService, StoryService_1.StoryService])
     ], MenuComponent);
     return MenuComponent;
 }());

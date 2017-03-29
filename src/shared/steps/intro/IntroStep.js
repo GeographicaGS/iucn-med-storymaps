@@ -24,9 +24,12 @@ var IntroStepComponent = (function (_super) {
         var offset = this.element.nativeElement.getBoundingClientRect();
         return (this.getWindowHeight() * 0.8) > (offset.top);
     };
+    IntroStepComponent.prototype.onScroll = function () {
+        _super.prototype.onScroll.call(this);
+    };
     IntroStepComponent = __decorate([
         core_1.Component({
-            selector: 'intro-step',
+            selector: 'intro',
             templateUrl: '/templates/shared/steps/intro/view.html',
         }), 
         __metadata('design:paramtypes', [])

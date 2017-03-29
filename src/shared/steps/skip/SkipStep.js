@@ -20,15 +20,6 @@ var SkipStepComponent = (function (_super) {
     function SkipStepComponent() {
         _super.apply(this, arguments);
     }
-    SkipStepComponent.prototype.onScroll = function () {
-        var offset = this.element.nativeElement.getBoundingClientRect();
-        if (this.windowService.getBodyClass() !== 'locked' && this.windowService.getScrollTop() >= offset.top - 20 && this.windowService.getScrollTop() < offset.bottom + 25) {
-            this.windowService.setBodyBgUrl(this.step.background.url);
-            //Todo:: Detect why the offset when background is locked is top - 20px
-            this.windowService.setBodyBgClass(this.step.background.class);
-        }
-        _super.prototype.onScroll.call(this);
-    };
     SkipStepComponent.prototype.showImage = function () {
         return true;
         // let offset = this.element.nativeElement.getBoundingClientRect();
@@ -46,7 +37,7 @@ var SkipStepComponent = (function (_super) {
     };
     SkipStepComponent = __decorate([
         core_1.Component({
-            selector: 'skip-step',
+            selector: 'skip',
             templateUrl: '/templates/shared/steps/skip/view.html',
         }), 
         __metadata('design:paramtypes', [])

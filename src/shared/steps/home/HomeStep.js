@@ -14,7 +14,7 @@ var HomeStepComponent = (function () {
     }
     HomeStepComponent = __decorate([
         core_1.Component({
-            selector: 'home-step',
+            selector: 'home',
             templateUrl: '/templates/shared/steps/home/view.html',
         }), 
         __metadata('design:paramtypes', [])

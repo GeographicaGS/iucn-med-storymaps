@@ -21,7 +21,7 @@ var MainComponent = (function () {
         this.storyService = storyService;
         this.windowService = windowService;
         this.stories = {};
-        this.storyName = '';
+        this.currentStory = '';
         this.backgroundSrc = '';
         this.bodyClass = '';
         this.backgroundSrc = 'url(' + this.windowService.getBodyBgUrl() + ')';
@@ -30,27 +30,34 @@ var MainComponent = (function () {
         });
         this.bodyClass = this.windowService.getBodyClass();
         this.windowService.getBodyClassObservable().subscribe(function (_class) {
+            console.log(_class);
             _this.bodyClass = _class;
         });
-        this.storyName = 'butterflies';
+        this.currentStory = this.windowService.getCurrentStory();
+        this.storyService.getObservable().subscribe(function (stories) {
+            _this.stories = stories;
+        });
+        this.windowService.getCurrentStoryObservable().subscribe(function (currentStory) {
+            _this.currentStory = currentStory;
+        });
     }
     MainComponent.prototype.onScroll = function () {
         this.windowService.onScroll();
     };
     MainComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.storyService.getObservable().subscribe(function (stories) {
-            _this.stories = stories;
-        });
+        //Todo:: Remove when are implemented the home
+        if (this.currentStory == '') {
+            this.windowService.setCurrentStory('butterflies');
+        }
     };
     MainComponent.prototype.isStoryLoaded = function () {
-        return this.stories[this.storyName] != undefined;
+        return this.stories[this.currentStory] != undefined;
     };
     MainComponent.prototype.getStepsKeys = function () {
-        return this.stories[this.storyName] != undefined ? Object.keys(this.stories[this.storyName]['steps']) : [];
+        return this.stories[this.currentStory] != undefined ? Object.keys(this.stories[this.currentStory]['steps']) : [];
     };
     MainComponent.prototype.getStep = function (step) {
-        return this.stories[this.storyName]['steps'][step];
+        return this.stories[this.currentStory]['steps'][step];
     };
     __decorate([
         core_1.HostBinding("style.background-image"), 

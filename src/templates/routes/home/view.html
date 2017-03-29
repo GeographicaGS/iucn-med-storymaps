@@ -2,14 +2,14 @@
     <menu *ngIf="isStoryLoaded()"></menu>
 </div>
 <div class="main-container">
-    <home-step *ngIf="!isStoryLoaded()"></home-step>
+    <!--<home *ngIf="!isStoryLoaded()"></home>-->
     <div *ngFor="let step of getStepsKeys()">
         <div [ngSwitch]="step">
-            <cover-step *ngSwitchCase="'cover'" [step]="getStep(step)" [name]="step"></cover-step>
-            <intro-step *ngSwitchCase="'intro'" [step]="getStep(step)" [name]="step"></intro-step>
-            <map-step *ngSwitchCase="'map'" [step]="getStep(step)" [name]="step"></map-step>
-            <conclusion-step *ngSwitchCase="'conclusion'" [step]="getStep(step)" [name]="step"></conclusion-step>
-            <skip-step *ngSwitchCase="'skip'" [step]="getStep(step)" [name]="step"></skip-step>
+            <cover *ngSwitchCase="'cover'" [step]="getStep(step)" [name]="step"></cover>
+            <intro *ngSwitchCase="'intro'" [step]="getStep(step)" [name]="step"></intro>
+            <map *ngSwitchCase="'map'" [step]="getStep(step)" [name]="step"></map>
+            <conclusion *ngSwitchCase="'conclusion'" [step]="getStep(step)" [name]="step"></conclusion>
+            <skip *ngSwitchCase="'skip'" [step]="getStep(step)" [name]="step"></skip>
         </div>
     </div>
 </div>

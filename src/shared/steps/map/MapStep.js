@@ -30,27 +30,33 @@ var MapStepComponent = (function (_super) {
         this.windowService = windowService;
         this.mapService = mapService;
     }
-    MapStepComponent.prototype.onScroll = function () {
-        if (this.lockView()) {
-            this.windowService.setBodyBgClass('locked');
-            this.mapService.map.resize();
-            this.mapService.map.scrollZoom.enable();
-        }
-        else if (this.windowService.getBodyClass() == 'locked') {
-            this.windowService.setBodyBgClass('');
-            this.mapService.map.scrollZoom.disable();
-        }
-    };
     MapStepComponent.prototype.onResize = function (event) {
         _super.prototype.onResize.call(this, event);
         this.mapService.map.resize();
-        if (this.windowService.getBodyClass() == 'locked') {
-            this.windowService.scrollToStep('map');
+    };
+    MapStepComponent.prototype.lockMap = function () {
+        this.windowService.setBodyBgClass('locked');
+        if (this.mapService.map instanceof mapbox_gl_1.Map) {
+            this.mapService.map.resize();
+            this.mapService.map.scrollZoom.enable();
+        }
+    };
+    MapStepComponent.prototype.unlockMap = function () {
+        if (this.mapService.map instanceof mapbox_gl_1.Map) {
+            this.mapService.map.scrollZoom.disable();
         }
     };
     MapStepComponent.prototype.lockView = function () {
         var offset = this.element.nativeElement.getBoundingClientRect();
-        return this.windowService.scrollingDown() && offset.top < 100 && offset.top > -20;
+        var locked = this.windowService.scrollingDown() && offset.top < 100 && offset.top > -20
+            || !this.windowService.isScrollingActive() && offset.top == 0;
+        if (locked) {
+            this.lockMap();
+        }
+        else {
+            this.unlockMap();
+        }
+        return locked;
     };
     MapStepComponent.prototype.ngAfterViewInit = function () {
         _super.prototype.ngAfterViewInit.call(this);
@@ -65,7 +71,7 @@ var MapStepComponent = (function (_super) {
     };
     MapStepComponent = __decorate([
         core_1.Component({
-            selector: 'map-step',
+            selector: 'map',
             templateUrl: '/templates/shared/steps/map/view.html',
         }),
         __param(0, core_1.Inject(core_1.ElementRef)),

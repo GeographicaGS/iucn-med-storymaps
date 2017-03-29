@@ -24,6 +24,9 @@ var InfoComponent = (function (_super) {
     InfoComponent.prototype.toggleVisibility = function () {
         this.collapsed = !this.collapsed;
     };
+    InfoComponent.prototype.hasCredits = function () {
+        return this.item.credit != undefined;
+    };
     __decorate([
         core_1.HostBinding('class.collapsed'),
         core_1.Input(), 

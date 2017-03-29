@@ -1,4 +1,6 @@
-import {Component, Input, ElementRef, Inject, HostListener, Renderer, AfterViewInit} from "@angular/core";
+import {
+    Component, Input, ElementRef, Inject, HostListener, AfterViewInit,
+} from "@angular/core";
 import {DOCUMENT} from "@angular/platform-browser";
 import {WindowService} from "../../../services/WindowService";
 
@@ -21,19 +23,43 @@ export class BaseStepComponent implements AfterViewInit {
 
     @HostListener('window:scroll', [])
     onScroll() {
-
+        this.checkStep();
+        this.checkBackground();
     }
+
     @HostListener('window:resize', ['$event'])
-    onResize(event) {
+    onResize(event: any) {
 
     }
-    ngAfterViewInit() {
+
+    checkBackground() {
         let offset = this.element.nativeElement.getBoundingClientRect();
-        this.windowService.addStep(this.name, offset.top, offset.bottom);
-        this.onScroll();
+        if (
+            this.windowService.scrollingDown() && (offset.top) < this.getWindowHeight() ||
+            !this.windowService.scrollingDown() && (offset.bottom) <= (this.getWindowHeight() + offset.height)
+        ) {
+            let _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
+            let _url = this.step.background != undefined && this.step.background.url != undefined ? this.step.background.url : '';
+            this.windowService.setBodyBgClass(_class);
+            this.windowService.setBodyBgUrl(_url);
+        }
     }
 
-    checkEffects() {
+    checkStep() {
+        let offset = this.getWindowHeight() * 0.3;
+        let top = this.element.nativeElement.getBoundingClientRect().top;
+        let bottom = this.element.nativeElement.getBoundingClientRect().bottom;
+        if (
+            this.windowService.scrollingDown() && top > -20 && top < offset
+            || !this.windowService.scrollingDown() && bottom > 20 && bottom < offset
+        ) {
+            this.windowService.setCurrentStep(this.element.nativeElement.tagName.toLowerCase());
+        }
+    }
+
+    ngAfterViewInit() {
+        this.windowService.addStep(this.element);
+        this.onScroll();
     }
 
     getWindowHeight() {
@@ -56,8 +82,12 @@ export class BaseStepComponent implements AfterViewInit {
         return this.step.backgroundColor != undefined ? this.step.backgroundColor : 'inherit';
     }
 
+    hasBackgroundCredit(): boolean {
+        return this.step.background.credit != undefined;
+    }
+
     goNextStep() {
-        this.windowService.scrollToNextStep(this.name);
+        this.windowService.scrollToNextStep(this.element);
     }
 
 }

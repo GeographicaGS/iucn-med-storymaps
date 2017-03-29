@@ -1,9 +1,9 @@
-cover-step {
+cover {
   position: relative;
 }
-cover-step .shared-link,
-cover-step .button-row,
-cover-step h3,
-cover-step h2 {
+cover .shared-link,
+cover .button-row,
+cover h3,
+cover h2 {
   position: absolute;
 }

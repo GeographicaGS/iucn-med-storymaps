@@ -9,7 +9,7 @@ import {StoryService} from "../../services/StoryService";
 export class MainComponent implements OnInit {
 
     stories: any = {};
-    storyName: string = '';
+    currentStory: string = '';
 
     @HostBinding("style.background-image")
     backgroundSrc: string = '';
@@ -33,29 +33,38 @@ export class MainComponent implements OnInit {
 
         this.bodyClass = this.windowService.getBodyClass();
         this.windowService.getBodyClassObservable().subscribe((_class) => {
+            console.log(_class);
             this.bodyClass = _class;
         });
-        this.storyName = 'butterflies';
+
+        this.currentStory = this.windowService.getCurrentStory();
+
+        this.storyService.getObservable().subscribe(stories => {
+            this.stories = stories;
+        });
+        this.windowService.getCurrentStoryObservable().subscribe(currentStory => {
+            this.currentStory = currentStory;
+        });
     }
 
 
     ngOnInit() {
-        this.storyService.getObservable().subscribe(stories => {
-            this.stories = stories;
-        });
-
+        //Todo:: Remove when are implemented the home
+        if (this.currentStory == ''){
+            this.windowService.setCurrentStory('butterflies');
+        }
     }
 
     isStoryLoaded(): boolean {
-        return this.stories[this.storyName] != undefined
+        return this.stories[this.currentStory] != undefined
     }
 
     getStepsKeys() {
-        return this.stories[this.storyName] != undefined ? Object.keys(this.stories[this.storyName]['steps']) : []
+        return this.stories[this.currentStory] != undefined ? Object.keys(this.stories[this.currentStory]['steps']) : []
     }
 
     getStep(step: string): any {
-        return this.stories[this.storyName]['steps'][step]
+        return this.stories[this.currentStory]['steps'][step]
     }
 
 

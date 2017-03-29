@@ -2,6 +2,7 @@
   "butterflies": {
     "steps": {
       "cover": {
+        "name" : "Cover",
         "background": {
           "url": "assets/butterflies/Mottenflugel_in_Mikroskop.jpg",
           "class": "kenburns",
@@ -14,6 +15,7 @@
         "subtitle": "Mediterranean Butterflies"
       },
       "intro": {
+        "name" : "Intro",
         "elements": [
           {
             "type": "paragraph",
@@ -27,7 +29,7 @@
           },
           {
             "type": "image",
-            "url": "/assets/butterflies/chart-1.svg",
+            "url": "/assets/butterflies/Mottenflugel_in_Mikroskop.jpg",
             "info": {
               "elements": [
                 {
@@ -70,6 +72,7 @@
         ]
       },
       "map": {
+        "name" : "Map",
         "info": {
           "elements": [
             {
@@ -91,6 +94,7 @@
         }
       },
       "conclusion": {
+        "name" : "Conclusion",
         "title": "* Conclusion",
         "elements": [
           {
@@ -125,29 +129,30 @@
         ]
       },
       "skip": {
+        "name" : "Related",
         "background": {
-          "url": "assets/butterflies/visor_s-info.png",
+          "url": "assets/butterflies/Karpathosgrayling_463608896.jpg",
           "class": "",
-          "credit": "Breve descripcion. Foto de autor"
+          "credit": {
+            "footer": "Breve pie de foto. ",
+            "author": "AUTOR"
+          }
         },
         "info": {
           "elements": [
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
+              "value": "The highest diversity of butterflies is found in mountainous areas in southern Turkey, northern Greece and southern France."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+              "value": "79% of threatened species are endemic. Such is the case of  the Karpathos Grayling (Hipparchia christenseni) which is found on rocky slopes covered with open scrub and in clearings in coniferous woods, where the butterflies often rest on the trunks of trees. This species occurs only on the Greek island of Karpathos."
             }
-          ]
+          ],
+          "title": "Karpathos Grayling",
+          "credit": "© TOM NYGAARD KRISTENSEN"
         },
         "next_story": {
           "background": {

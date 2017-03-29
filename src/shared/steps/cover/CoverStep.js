@@ -28,20 +28,9 @@ var CoverStepComponent = (function (_super) {
         var offset = this.element.nativeElement.getBoundingClientRect();
         return offset.bottom > 200;
     };
-    CoverStepComponent.prototype.hasBackgroundCredit = function () {
-        return this.step.background.credit != undefined;
-    };
-    CoverStepComponent.prototype.onScroll = function () {
-        var offset = this.element.nativeElement.getBoundingClientRect();
-        if (this.windowService.getScrollTop() >= offset.top - 100 && this.windowService.getScrollTop() < offset.bottom + 25) {
-            this.windowService.setBodyBgUrl(this.step.background.url);
-            this.windowService.setBodyBgClass(this.step.background.class);
-        }
-        _super.prototype.onScroll.call(this);
-    };
     CoverStepComponent = __decorate([
         core_1.Component({
-            selector: 'cover-step',
+            selector: 'cover',
             templateUrl: '/templates/shared/steps/cover/view.html',
         }), 
         __metadata('design:paramtypes', [])

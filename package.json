@@ -12,7 +12,8 @@
     "tsc:w": "tsc -w",
     "typings": "typings",
     "lint": "tslint ./src/**/*.ts -t verbose",
-    "dist": "gulp dist"
+    "dist": "gulp dist",
+    "publish": "gulp dist && s3_website push"
   },
   "private": true,
   "dependencies": {
@@ -47,6 +48,8 @@
     "codelyzer": "~2.0.0",
     "concurrently": "^3.2.0",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-minify": "0.0.15",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-typescript": "^3.1.6",
     "gulp-uglifyjs": "^0.6.2",

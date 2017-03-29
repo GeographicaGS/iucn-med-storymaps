@@ -12,11 +12,13 @@ var bundleHash = new Date().getTime();
 var mainBundleName = bundleHash + '.main.bundle.js';
 var vendorBundleName = bundleHash + '.vendor.bundle.js';
 var rename = require("gulp-rename");
+var minify = require("gulp-minify");
+var cleanCSS = require('gulp-clean-css');
 var pump = require('pump');
 
 // This is main task for production use
 gulp.task('dist', function (done) {
-  runSequence('clean', 'compile_ts', 'bundle', 'copy:assets', 'minify:dist', function () {
+  runSequence('clean', 'compile_ts', 'bundle', 'copy:assets',  function () {
     done();
   });
 });
@@ -110,16 +112,33 @@ gulp.task('clean:dist', function () {
       .pipe(clean());
 });
 
+gulp.task('minify', ['minify:dist', 'minify:js', 'minify:css']);
 gulp.task('minify:dist', function (cb) {
   pump([
         gulp.src('./public/**/*.js'),
         uglify({
-
+          compress: true
         }),
         gulp.dest('./public')
+
       ],
       cb
   );
+});
+gulp.task('minify:js', function () {
+  return gulp.src('public/*.js')
+      .pipe(minify({
+        ext: {
+          min: 'bundle.js'
+        }
+      }))
+      .pipe(gulp.dest('public'));
+});
+gulp.task('minify:css', function () {
+  return gulp.src('public/css/*.css')
+      .pipe(cleanCSS({compatibility: 'ie8'}))
+      .pipe(gulp.dest('public/css/'))
+
 });
 
 gulp.task('clean:ts', function () {

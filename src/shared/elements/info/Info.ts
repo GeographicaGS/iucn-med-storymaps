@@ -12,4 +12,8 @@ export class InfoComponent extends BaseElementComponent {
     toggleVisibility() {
         this.collapsed = !this.collapsed;
     }
+
+    hasCredits(){
+        return this.item.credit != undefined;
+    }
 }

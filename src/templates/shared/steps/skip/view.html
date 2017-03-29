@@ -2,6 +2,10 @@
     <div class="closing-story-container" [style.min-height.px]="getWindowHeight()">
         <info [item]="step.info"></info>
     </div>
+    <div *ngIf="hasBackgroundCredit();" class="credit-full">
+        <span class="credit">{{step.background.credit.footer}}</span>
+        <span class="author">{{step.background.credit.author}}</span>
+    </div>
     <div class="skip-container">
         <div class="component-container" [style.background-color]="getBackgroundColor()">
             <div class="image"

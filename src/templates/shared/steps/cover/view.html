@@ -1,6 +1,6 @@
 <div class="shared-link" [ngClass]="showButton() ? 'fadeIn' :'fadeOut'">
     <div>
-        <span>share history</span>
+        <span>share story</span>
     </div>
     <div>
         <a class="btn small circle fb-link" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{document.location.href}}"></a>
@@ -14,7 +14,7 @@
     <h3 [ngClass]="showTitle() ? 'fadeInUp' : 'fadeOutDown'">{{step.subtitle}}</h3>
     <div class="button-row" [ngClass]="showButton() ? 'fadeIn' :'fadeOut'">
         <a class="btn small circle next-step" (click)="goNextStep()" data-content="Read this history"></a>
-        <span>Read this history</span>
+        <span>Read Story</span>
     </div>
 </div>
 <div *ngIf="hasBackgroundCredit();" class="credit-full">

@@ -41,16 +41,14 @@ menu {
     background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto 24px auto;
-    -webkit-transition: all 500ms ease-out 1s;
-    -moz-transition: all 500ms ease-out 1s;
-    -o-transition: all 500ms ease-out 1s;
-    transition: all 500ms ease-out 1s;
+    .animated(0.6s, 0.3s);
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
     &:before{
-      -webkit-transition: all 500ms ease-out 1s;
-      -moz-transition: all 500ms ease-out 1s;
-      -o-transition: all 500ms ease-out 1s;
-      transition: all 500ms ease-out 1s;
-      opacity:0;
+      visibility: hidden;
+      .fadeOut();
     }
     .btn();
     .small();
@@ -58,6 +56,10 @@ menu {
     .grey();
     &:hover,
     &.active {
+      -webkit-transition: all 0.6s ease-out;
+      -moz-transition: all 0.6s ease-out;
+      -o-transition: all 0.6s ease-out;
+      transition: all 0.6s ease-out;
       &:before {
         .color_azul_iucn();
         content: attr(data-content);
@@ -68,7 +70,8 @@ menu {
         text-align: center;
         width: 72px;
         left: -20px;
-        opacity:1;
+        .fadeIn();
+        visibility: visible;
       }
     }
 
@@ -94,12 +97,12 @@ menu {
     }
   }
   .back {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
     display: block;
-    background-image: url('../../../assets/icon/skip.svg');
+    background-image: url('../../../assets/icon/arrow.svg');
     &:hover,
     &.active {
-      background-image: url('../../../assets/icon/skip-h.svg');
+      background-image: url('../../../assets/icon/arrow-h.svg');
     }
   }
   .map {

@@ -1,15 +1,20 @@
-import {Injectable, Inject, HostListener} from "@angular/core";
+import {Injectable, Inject, HostListener, ElementRef} from "@angular/core";
 import {DOCUMENT} from "@angular/platform-browser";
 import {Observable, Observer} from "rxjs";
 
 @Injectable()
 export class WindowService {
+    scrollInterval: any;
     stepsMap: any = [];
-    scrollDown: boolean;
-    lastScroll: number = 0;
+    scrollDown: boolean = true;
+    lastScroll: number = -1;
     currentStep: string = '';
     currentStepObservable: Observable<string>;
     currentStepObserver: Observer<string>;
+
+    currentStory: string = '';
+    currentStoryObservable: Observable<string>;
+    currentStoryObserver: Observer<string>;
 
     bodyBgUrl: string = '';
     bodyBgUrlObservable: Observable<string>;
@@ -30,6 +35,9 @@ export class WindowService {
         this.bodyClassObservable = new Observable<string>((obs) => {
             this.bodyClassObserver = obs;
         });
+        this.currentStoryObservable = new Observable<string>((obs) => {
+            this.currentStoryObserver = obs;
+        });
     }
 
     getScrollTop(): number {
@@ -39,32 +47,6 @@ export class WindowService {
     @HostListener('window:scroll', [])
     onScroll() {
         this.setScrollingDirection();
-        this.updateCurrentStep();
-    }
-
-    updateCurrentStep() {
-        let currentIndex = 0;
-        let currentStep = this.stepsMap.filter((item: any, index: number) => {
-            if (item.name == this.currentStep) {
-                currentIndex = index;
-            }
-            return item.name == this.currentStep;
-        });
-        if (!currentStep.length) {
-            currentStep.push(this.stepsMap[0]);
-        }
-        currentStep = currentStep[0];
-
-        let limit = this.getWindowHeight() * 0.5;
-        if (this.scrollingDown() && (Number(this.document.scrollingElement.scrollTop) + limit) > currentStep.bottom) {
-            if (this.stepsMap[currentIndex + 1] != undefined) {
-                this.setCurrentStep(this.stepsMap[currentIndex + 1]['name']);
-            }
-        } else if (!this.scrollingDown() && (this.document.scrollingElement.scrollTop + limit) < currentStep.top) {
-            if (this.stepsMap[currentIndex - 1] != undefined) {
-                this.setCurrentStep(this.stepsMap[currentIndex - 1]['name']);
-            }
-        }
     }
 
     setScrollingDirection(): void {
@@ -87,6 +69,19 @@ export class WindowService {
     setCurrentStep(currentStep: string) {
         this.currentStep = currentStep;
         this.currentStepObserver.next(this.currentStep);
+    }
+
+    getCurrentStoryObservable(): Observable<string> {
+        return this.currentStoryObservable;
+    }
+
+    getCurrentStory(): string {
+        return this.currentStory;
+    }
+
+    setCurrentStory(currentStory: string) {
+        this.currentStory = currentStory;
+        this.currentStoryObserver.next(this.currentStory);
     }
 
     getCurrentStepObservable(): Observable<string> {
@@ -123,45 +118,36 @@ export class WindowService {
         this.bodyClassObserver.next(this.bodyClass);
     }
 
-    addStep(stepName: string, top: number, bottom: number) {
-        this.stepsMap.push({
-            top: top,
-            bottom: bottom,
-            name: stepName,
-        });
-        this.stepsMap.sort((a: any, b: any) => {
-            return a.top - b.top;
+    addStep(step: ElementRef) {
+        this.stepsMap.push(step);
+        this.stepsMap.sort((a: ElementRef, b: ElementRef) => {
+            return a.nativeElement.getBoundingClientRect().top - b.nativeElement.getBoundingClientRect().top;
         });
     }
 
-    scrollToNextStep(currentStep: string) {
-        let currentIndex = 0;
-        let step = this.stepsMap.filter((item: any, index: number) => {
-            if (item.name == currentStep) {
-                currentIndex = index;
+    scrollToNextStep(currentStep: ElementRef) {
+        for (let index in this.stepsMap) {
+            if (this.stepsMap[index].nativeElement.tagName == currentStep.nativeElement.tagName && this.stepsMap[Number(index) + 1] != undefined) {
+                let top = this.stepsMap[Number(index) + 1].nativeElement.getBoundingClientRect().top + this.getScrollTop();
+                this.clearScrolling();
+                this.scrollTo(top, 250);
+                break;
             }
-            return item.name == currentStep;
-        });
-        if (this.stepsMap[currentIndex] != undefined) {
-            this.scrollTo(this.stepsMap[currentIndex].bottom, 600);
         }
     }
 
-    scrollToStep(currentStep: string) {
-        let currentIndex = 0;
-        let step = this.stepsMap.filter((item: any, index: number) => {
-            if (item.name == currentStep) {
-                currentIndex = index;
+    scrollToStep(tagName: string) {
+        for (let index in this.stepsMap) {
+            if (this.stepsMap[index].nativeElement.tagName.toLowerCase() == tagName) {
+                let top = this.stepsMap[index].nativeElement.getBoundingClientRect().top + this.getScrollTop();
+                this.clearScrolling();
+                this.scrollTo(top);
+                break;
             }
-            return item.name == currentStep;
-        });
-        if (this.stepsMap[currentIndex] != undefined) {
-            this.scrollTo(this.stepsMap[currentIndex].top, 600);
         }
     }
 
-    scrollTo(to: number, duration: number) {
-
+    scrollTo(to: number, duration: number = 600) {
         if (this.document.scrollingElement.scrollTop == to)
             return;
 
@@ -169,15 +155,25 @@ export class WindowService {
         let diff = to - start;
         let scrollStep: number = Math.PI / (duration / 10);
         let count: number = 0, currPos: number;
+        this.scrollInterval = setInterval(() => {
 
-        let scrollInterval = setInterval(function () {
             if (this.document.scrollingElement.scrollTop !== to && (currPos == undefined || currPos < this.document.documentElement.scrollHeight)) {
                 count = count + 1;
                 currPos = start + diff * (0.5 - 0.5 * Math.cos(count * scrollStep));
                 this.document.scrollingElement.scrollTop = currPos;
             } else {
-                clearInterval(scrollInterval);
+                this.clearScrolling();
             }
         }, 10);
+
     };
+
+    clearScrolling() {
+        clearInterval(this.scrollInterval);
+        this.scrollInterval = undefined;
+    }
+
+    isScrollingActive() : boolean{
+        return this.scrollInterval != undefined;
+    }
 }
