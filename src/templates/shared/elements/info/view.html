@@ -2,11 +2,24 @@
     <a class="btn small circle" (click)="toggleVisibility()"></a>
 </div>
 <div class="component-container">
-    <div class="title">{{item.title}}</div>
-    <div class="info">
-        <element-block [elements]="item.elements"></element-block>
+	<div *ngIf="item.length > 1">
+		<div *ngFor='let info of item'>
+		    <div class="title" (click)="toggleLayer(info)">{{info.title}}</div>
+		    <div class="info" [ngClass]="{hidden: info.collapsed === true}">
+		        <element-block [elements]="info.elements"></element-block>
+		    </div>
+		    <div class="credit">
+		        {{info.credit}}
+		    </div>
+	    </div>
     </div>
-    <div class="credit">
-        {{item.credit}}
+    <div *ngIf="item.length === 1">
+		<div class="title" (click)="toggleLayer(item)">{{item.title}}</div>
+	    <div class="info" [ngClass]="{hidden: item.collapsed === true}">
+	        <element-block [elements]="item.elements"></element-block>
+	    </div>
+	    <div class="credit">
+	        {{item.credit}}
+	    </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-import {Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding} from "@angular/core";
+import {Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding, Input} from "@angular/core";
 import {BaseStepComponent} from "../base/BaseStep";
 import {Map} from 'mapbox-gl';
 import {MapService} from "../../../services/MapService";
@@ -10,6 +10,8 @@ import {WindowService} from "../../../services/WindowService";
     templateUrl: '/templates/shared/steps/map/view.html',
 })
 export class MapStepComponent extends BaseStepComponent {
+    @Input() activeLayer: any = false;
+
     constructor(@Inject(ElementRef)  elem: ElementRef,
                 @Inject(DOCUMENT) protected document: any,
                 protected windowService: WindowService,
@@ -57,11 +59,43 @@ export class MapStepComponent extends BaseStepComponent {
         this.mapService.map = new Map({
             trackResize: true,
             container: 'map',
-            style: 'mapbox://styles/mapbox/light-v9',
-            zoom: 5,
-            center: [6.328125, 40.78054143186033]
+            style: 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
+            zoom: 4.5,
+            center: [15.0, 38.0]
         });
         this.mapService.map.scrollZoom.disable();
+
+        this.setActiveLayer();
+    }
+
+    setActiveLayer() {
+        for (let layer in this.step.info) {
+            if (this.step.info[layer].collapsed === false) {
+                this.activeLayer = this.step.info[layer];
+                break;
+            }
+        }
+    }
+
+    toggleActiveLayer() {
+        if (!this.activeLayer.layer.subLayers.length) return;
+        
+        for (let sublayer of this.activeLayer.layer.subLayers) {
+            let visibility = this.mapService.map.getLayoutProperty(sublayer, 'visibility');
+            if (visibility === 'visible') {
+                this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'none');
+            } else {
+                this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'visible');
+            }
+        }
+    }
+
+    updateLayers(info: any = {}) {
+        if (this.activeLayer) {
+            this.toggleActiveLayer();
+        }
+        this.activeLayer = info;
+        this.toggleActiveLayer();
     }
 
 

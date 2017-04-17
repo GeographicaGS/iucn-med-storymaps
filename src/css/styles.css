@@ -4572,6 +4572,9 @@ info > .component-container .info::-webkit-scrollbar-track {
   border-radius: 10px;
   -webkit-box-shadow: 0 0 6px #e8e8e8 inset;
 }
+info > .component-container .info.hidden {
+  display: none;
+}
 info > .component-container .title {
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
