@@ -19,13 +19,19 @@ var InfoComponent = (function (_super) {
     __extends(InfoComponent, _super);
     function InfoComponent() {
         _super.apply(this, arguments);
-        this.collapsed = false;
+        this.collapsed = true;
     }
     InfoComponent.prototype.toggleVisibility = function () {
         this.collapsed = !this.collapsed;
     };
     InfoComponent.prototype.hasCredits = function () {
         return this.item.credit != undefined;
+    };
+    InfoComponent.prototype.ngAfterViewInit = function () {
+        if (this.item.collapsed != undefined) {
+            this.collapsed = this.item.collapsed;
+        }
+        _super.prototype.ngAfterViewInit.call(this);
     };
     __decorate([
         core_1.HostBinding('class.collapsed'),

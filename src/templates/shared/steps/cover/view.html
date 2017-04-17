@@ -14,7 +14,7 @@
     <h3 [ngClass]="showTitle() ? 'fadeInUp' : 'fadeOutDown'">{{step.subtitle}}</h3>
     <div class="button-row" [ngClass]="showButton() ? 'fadeIn' :'fadeOut'">
         <a class="btn small circle next-step" (click)="goNextStep()" data-content="Read this history"></a>
-        <span>Read Story</span>
+        <span>SCROLL DOWN TO READ</span>
     </div>
 </div>
 <div *ngIf="hasBackgroundCredit();" class="credit-full">

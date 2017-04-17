@@ -23,6 +23,9 @@ var ParagraphComponent = (function (_super) {
     ParagraphComponent.prototype.capitalized = function () {
         return this.item.capitalize != undefined && this.item.capitalize;
     };
+    ParagraphComponent.prototype.highlight = function () {
+        return this.item.highlight != undefined && this.item.highlight;
+    };
     ParagraphComponent = __decorate([
         core_1.Component({
             selector: 'paragraph',

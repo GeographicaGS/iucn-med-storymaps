@@ -51,9 +51,12 @@ var MapStepComponent = (function (_super) {
         var locked = this.windowService.scrollingDown() && offset.top < 100 && offset.top > -20
             || !this.windowService.isScrollingActive() && offset.top == 0;
         if (locked) {
+            this.windowService.setBodyBgUrl('');
+            this.windowService.setBodyBgClass('locked');
             this.lockMap();
         }
         else {
+            this.windowService.setBodyBgClass('');
             this.unlockMap();
         }
         return locked;
@@ -76,7 +79,6 @@ var MapStepComponent = (function (_super) {
         }),
         __param(0, core_1.Inject(core_1.ElementRef)),
         __param(1, core_1.Inject(platform_browser_1.DOCUMENT)),
-        __param(2, core_1.Inject(WindowService_1.WindowService)),
         __param(3, core_1.Inject(MapService_1.MapService)), 
         __metadata('design:paramtypes', [core_1.ElementRef, Object, WindowService_1.WindowService, MapService_1.MapService])
     ], MapStepComponent);

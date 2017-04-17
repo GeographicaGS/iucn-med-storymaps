@@ -8,17 +8,17 @@ skip {
     .color_oscuro();
     display: block;
     height: 40px;
-    padding-left:40px;
-    background-image:url('../../../../assets/icon/photo.svg');
+    padding-left: 40px;
+    background-image: url('../../../../assets/icon/photo.svg');
     background-repeat: no-repeat;
     background-position: 15px center;
-    font-size:14px;
-    line-height:18px;
-    font-weight:normal;
-    padding-top:13px;
-    .author{
-      font-weight:700;
-      padding-left:5px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    padding-top: 13px;
+    .author {
+      font-weight: 700;
+      padding-left: 5px;
     }
   }
   .skip-container {
@@ -80,5 +80,111 @@ skip {
       }
     }
 
+  }
+  .contact-info-container {
+    .bg_blanco();
+    padding-top:24px;
+    padding-bottom:64px;
+    .shared-link {
+      position: relative;
+      margin:0 auto 40px auto;
+      .animated(0.8s);
+      .bounceInDownLittle();
+      z-index: 0;
+      .fira_sans();
+      .color_azul_iucn();
+      font-size: 14px;
+      display: table;
+      height: 32px;
+      > * {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      span {
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .btn {
+        border: 2px solid @azul_iucn;
+        width: 32px;
+        height: 32px;
+        margin-left: 14px;
+        display: inline-block;
+        &.fb-link {
+          background-image: url('../../../assets/icon/bt-facebook-h.svg');
+        }
+        &.tw-link {
+          background-image: url('../../../assets/icon/bt-twitter-h.svg');
+        }
+      }
+    }
+    .pre-author{
+      text-align: center;
+      .color_mbl6();
+      .fira_sans();
+      font-size: 14px;
+      letter-spacing: 2px;
+      line-height: 16px;
+      margin-bottom:10px;
+    }
+    .author {
+      .name,
+      .departament {
+        text-align: center;
+        .color_oscuro();
+        .fira_sans();
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 24px;
+        text-align: center;
+      }
+      .departament {
+        font-size: 16px;
+      }
+      margin-bottom: 20px;
+    }
+    .contact-link {
+      text-align: center;
+      margin-top: 24px;
+    }
+    .address-container {
+      margin-top: 74px;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        margin-left: -75px;
+        height: 2px;
+        width: 150px;
+        transform: scaleY(-1);
+        .bg_ng10();
+        display: block;
+        top: -20px;
+      }
+      position: relative;
+      text-align: center;
+
+      .center-name {
+        .color_oscuro();
+        .fira_sans();
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom:10px;
+      }
+      .center-address{
+        .color_mbl6();
+        .fira_sans();
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+      }
+
+    }
+    a {
+      .color_azul_iucn();
+    }
   }
 }

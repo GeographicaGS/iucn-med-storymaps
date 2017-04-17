@@ -16,7 +16,7 @@ export class BaseStepComponent implements AfterViewInit {
 
     constructor(@Inject(ElementRef) protected element: ElementRef,
                 @Inject(DOCUMENT) protected document: any,
-                @Inject(WindowService) protected windowService: WindowService) {
+                protected windowService: WindowService) {
 
 
     }
@@ -35,8 +35,8 @@ export class BaseStepComponent implements AfterViewInit {
     checkBackground() {
         let offset = this.element.nativeElement.getBoundingClientRect();
         if (
-            this.windowService.scrollingDown() && (offset.top) < this.getWindowHeight() ||
-            !this.windowService.scrollingDown() && (offset.bottom) <= (this.getWindowHeight() + offset.height)
+            this.windowService.scrollingDown() && (offset.top) <= this.getWindowHeight() ||
+            !this.windowService.scrollingDown() && (offset.bottom) < (this.getWindowHeight() + offset.height)
         ) {
             let _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
             let _url = this.step.background != undefined && this.step.background.url != undefined ? this.step.background.url : '';

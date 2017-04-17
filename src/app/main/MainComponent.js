@@ -23,14 +23,12 @@ var MainComponent = (function () {
         this.stories = {};
         this.currentStory = '';
         this.backgroundSrc = '';
-        this.bodyClass = '';
+        this.bodyClass = 'full-screen';
         this.backgroundSrc = 'url(' + this.windowService.getBodyBgUrl() + ')';
         this.windowService.getBodyBgUrlObservable().subscribe(function (src) {
             _this.backgroundSrc = 'url(' + src + ')';
         });
-        this.bodyClass = this.windowService.getBodyClass();
         this.windowService.getBodyClassObservable().subscribe(function (_class) {
-            console.log(_class);
             _this.bodyClass = _class;
         });
         this.currentStory = this.windowService.getCurrentStory();
@@ -44,27 +42,26 @@ var MainComponent = (function () {
     MainComponent.prototype.onScroll = function () {
         this.windowService.onScroll();
     };
-    MainComponent.prototype.ngOnInit = function () {
-        //Todo:: Remove when are implemented the home
-        if (this.currentStory == '') {
-            this.windowService.setCurrentStory('butterflies');
-        }
-    };
     MainComponent.prototype.isStoryLoaded = function () {
-        return this.stories[this.currentStory] != undefined;
+        return this.stories['stories'] != undefined && this.stories['stories'][this.currentStory] != undefined;
+    };
+    MainComponent.prototype.areStoriesLoaded = function () {
+        return this.stories['home'] != undefined;
     };
     MainComponent.prototype.getStepsKeys = function () {
-        return this.stories[this.currentStory] != undefined ? Object.keys(this.stories[this.currentStory]['steps']) : [];
+        return this.stories['stories'] != undefined && this.stories['stories'][this.currentStory] != undefined ? Object.keys(this.stories['stories'][this.currentStory]['steps']) : [];
     };
     MainComponent.prototype.getStep = function (step) {
-        return this.stories[this.currentStory]['steps'][step];
+        return this.stories['stories'][this.currentStory]['steps'][step];
     };
     __decorate([
-        core_1.HostBinding("style.background-image"), 
+        core_1.HostBinding("style.background-image"),
+        core_1.Input(), 
         __metadata('design:type', String)
     ], MainComponent.prototype, "backgroundSrc", void 0);
     __decorate([
-        core_1.HostBinding("class"), 
+        core_1.HostBinding("class"),
+        core_1.Input(), 
         __metadata('design:type', String)
     ], MainComponent.prototype, "bodyClass", void 0);
     __decorate([
@@ -79,8 +76,7 @@ var MainComponent = (function () {
             templateUrl: '/templates/routes/home/view.html'
         }),
         __param(0, core_1.Inject(core_1.ElementRef)),
-        __param(1, core_1.Inject(StoryService_1.StoryService)),
-        __param(2, core_1.Inject(WindowService_1.WindowService)), 
+        __param(1, core_1.Inject(StoryService_1.StoryService)), 
         __metadata('design:paramtypes', [core_1.ElementRef, StoryService_1.StoryService, WindowService_1.WindowService])
     ], MainComponent);
     return MainComponent;

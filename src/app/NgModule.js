@@ -14,6 +14,7 @@ var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require("@angular/http");
 var MainComponent_1 = require("./main/MainComponent");
 var Menu_1 = require("./../shared/menu/Menu");
+var HomeStep_1 = require("../shared/steps/home/HomeStep");
 var IntroStep_1 = require("../shared/steps/intro/IntroStep");
 var CoverStep_1 = require("../shared/steps/cover/CoverStep");
 var MapStep_1 = require("../shared/steps/map/MapStep");
@@ -43,6 +44,7 @@ var AppModule = (function () {
                 Paragraph_1.ParagraphComponent,
                 ElementBlock_1.ElementBlockComponent,
                 Image_1.ImageComponent,
+                HomeStep_1.HomeStepComponent,
                 IntroStep_1.IntroStepComponent,
                 CoverStep_1.CoverStepComponent,
                 MapStep_1.MapStepComponent,

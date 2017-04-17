@@ -1,0 +1,50 @@
+@-webkit-keyframes scaleFull {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+  60% {
+    -webkit-transform: scale3d(15, 15, 15) translate3d(0, 0px, 0px);
+  }
+  100% {
+    -webkit-transform: scale3d(10, 10, 10) translate3d(0, 0px, 0px);
+  }
+}
+@-moz-keyframes scaleFull {
+  0% {
+    -moz-transform: scale3d(1, 1, 1);
+  }
+  60% {
+    -moz-transform: scale3d(15, 15, 15) translate3d(0, 0px, 0px);
+  }
+  100% {
+    -moz-transform: scale3d(10, 10, 10) translate3d(0, 0px, 0px);
+  }
+}
+@-o-keyframes scaleFull {
+  0% {
+    -o-transform: scale3d(1, 1, 1);
+  }
+  60% {
+    -o-transform: scale3d(15, 15, 15) translate3d(0, 0px, 0px);
+  }
+  100% {
+    -o-transform: scale3d(10, 10, 10) translate3d(0, 0px, 0px);
+  }
+}
+@keyframes scaleFull {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  60% {
+    transform: scale3d(15, 15, 15) translate3d(0, 0px, 0px);
+  }
+  100% {
+    transform: scale3d(10, 10, 10) translate3d(0, 0px, 0px);
+  }
+}
+.scaleFull {
+  -webkit-animation-name: scaleFull;
+  -moz-animation-name: scaleFull;
+  -o-animation-name: scaleFull;
+  animation-name: scaleFull;
+}

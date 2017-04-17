@@ -28,8 +28,8 @@ var BaseStepComponent = (function () {
     };
     BaseStepComponent.prototype.checkBackground = function () {
         var offset = this.element.nativeElement.getBoundingClientRect();
-        if (this.windowService.scrollingDown() && (offset.top) < this.getWindowHeight() ||
-            !this.windowService.scrollingDown() && (offset.bottom) <= (this.getWindowHeight() + offset.height)) {
+        if (this.windowService.scrollingDown() && (offset.top) <= this.getWindowHeight() ||
+            !this.windowService.scrollingDown() && (offset.bottom) < (this.getWindowHeight() + offset.height)) {
             var _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
             var _url = this.step.background != undefined && this.step.background.url != undefined ? this.step.background.url : '';
             this.windowService.setBodyBgClass(_class);
@@ -96,8 +96,7 @@ var BaseStepComponent = (function () {
             templateUrl: '/templates/shared/steps/base/view.html',
         }),
         __param(0, core_1.Inject(core_1.ElementRef)),
-        __param(1, core_1.Inject(platform_browser_1.DOCUMENT)),
-        __param(2, core_1.Inject(WindowService_1.WindowService)), 
+        __param(1, core_1.Inject(platform_browser_1.DOCUMENT)), 
         __metadata('design:paramtypes', [core_1.ElementRef, Object, WindowService_1.WindowService])
     ], BaseStepComponent);
     return BaseStepComponent;

@@ -1,4 +1,4 @@
-import {Component, Inject} from "@angular/core";
+import {Component, Inject, Input} from "@angular/core";
 import {WindowService} from "../../services/WindowService";
 import {StoryService} from "../../services/StoryService";
 
@@ -8,22 +8,16 @@ import {StoryService} from "../../services/StoryService";
 })
 export class MenuComponent {
     currentStep: string = 'cover';
+    @Input()
     stories: any = {};
+    @Input()
     currentStory: any = {};
 
-    constructor(@Inject(WindowService) private windowService: WindowService,
+    constructor(private windowService: WindowService,
                 @Inject(StoryService) private storyService: StoryService) {
-        this.currentStory = this.windowService.getCurrentStory();
         this.currentStep = this.windowService.getCurrentStep();
-        this.stories = this.storyService.getStories();
         this.windowService.getCurrentStepObservable().subscribe((nextStep) => {
             this.currentStep = nextStep;
-        });
-        this.windowService.getCurrentStoryObservable().subscribe((currentStory) => {
-            this.currentStory = currentStory;
-        });
-        this.storyService.getObservable().subscribe((stories) => {
-            this.stories = stories;
         });
     }
 
@@ -32,12 +26,19 @@ export class MenuComponent {
     }
 
     getStepsKeys(){
-        return this.stories[this.currentStory] != undefined ? Object.keys(this.stories[this.currentStory]['steps']) : [];
+        return this.stories['stories'][this.currentStory] != undefined ? Object.keys(this.stories['stories'][this.currentStory]['steps']) : [];
     }
     getStepName(step : string){
-        return this.stories[this.currentStory]['steps'][step]['name'];
+        return this.stories['stories'][this.currentStory]['steps'][step]['name'];
     }
     scrollTo(step: string) {
-        this.windowService.scrollToStep(step);
+        if (step.toLowerCase() == 'skip'){
+            this.windowService.scrollTo(9999);
+        }else{
+            this.windowService.scrollToStep(step);
+        }
+    }
+    goHome(){
+        this.windowService.goHome();
     }
 }

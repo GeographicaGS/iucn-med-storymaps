@@ -31,6 +31,8 @@ var BaseElementComponent = (function () {
         var offset = this.element.nativeElement.getBoundingClientRect();
         return !this.windowService.scrollingDown() || (this.windowService.getWindowHeight() * 0.9) > (offset.top);
     };
+    BaseElementComponent.prototype.ngAfterViewInit = function () {
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)

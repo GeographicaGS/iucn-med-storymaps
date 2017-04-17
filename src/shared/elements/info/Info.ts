@@ -7,13 +7,20 @@ import {BaseElementComponent} from "../base-element/BaseElement";
 })
 export class InfoComponent extends BaseElementComponent {
     @HostBinding('class.collapsed')
-    @Input() collapsed: boolean = false;
+    @Input() collapsed: boolean = true;
 
     toggleVisibility() {
         this.collapsed = !this.collapsed;
     }
 
-    hasCredits(){
+    hasCredits() {
         return this.item.credit != undefined;
+    }
+
+    ngAfterViewInit() {
+        if (this.item.collapsed != undefined) {
+            this.collapsed = this.item.collapsed;
+        }
+        super.ngAfterViewInit();
     }
 }

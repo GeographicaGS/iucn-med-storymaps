@@ -6,6 +6,7 @@ import {HttpModule} from "@angular/http";
 import {MainComponent} from "./main/MainComponent";
 import {MenuComponent} from "./../shared/menu/Menu";
 
+import {HomeStepComponent} from "../shared/steps/home/HomeStep";
 import {IntroStepComponent} from "../shared/steps/intro/IntroStep";
 import {CoverStepComponent} from "../shared/steps/cover/CoverStep";
 import {MapStepComponent} from "../shared/steps/map/MapStep";
@@ -34,6 +35,7 @@ import {WindowService} from "../services/WindowService";
         ParagraphComponent,
         ElementBlockComponent,
         ImageComponent,
+        HomeStepComponent,
         IntroStepComponent,
         CoverStepComponent,
         MapStepComponent,

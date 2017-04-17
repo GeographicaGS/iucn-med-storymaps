@@ -1,8 +1,8 @@
 <div class="nav-bar">
-    <menu *ngIf="isStoryLoaded()"></menu>
+    <menu *ngIf="isStoryLoaded()" [stories]="stories" [currentStory]="currentStory"></menu>
 </div>
 <div class="main-container">
-    <!--<home *ngIf="!isStoryLoaded()"></home>-->
+    <home *ngIf="areStoriesLoaded() && !isStoryLoaded()" [stories]="stories" [step]="stories.home" [name]="home"></home>
     <div *ngFor="let step of getStepsKeys()">
         <div [ngSwitch]="step">
             <cover *ngSwitchCase="'cover'" [step]="getStep(step)" [name]="step"></cover>

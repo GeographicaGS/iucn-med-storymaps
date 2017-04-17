@@ -35,6 +35,43 @@ var SkipStepComponent = (function (_super) {
         // let offset = this.element.nativeElement.getBoundingClientRect();
         // return !this.windowService.scrollingDown() || ((this.getWindowHeight() * -1.7)) > offset.top
     };
+    SkipStepComponent.prototype.goToNextStory = function () {
+        this.windowService.setCurrentStory(this.step.next_story.link);
+        this.windowService.scrollToStep('cover');
+    };
+    SkipStepComponent.prototype.hasAuthors = function () {
+        return this.step.contact_info != undefined && this.step.contact_info.authors != undefined && this.step.contact_info.authors.length > 0;
+    };
+    SkipStepComponent.prototype.getAuthors = function () {
+        if (this.hasAuthors()) {
+            return this.step.contact_info.authors;
+        }
+        return [];
+    };
+    SkipStepComponent.prototype.getAuthorsLink = function () {
+        if (this.hasAuthors()) {
+            return this.step.contact_info.author_link;
+        }
+        return '';
+    };
+    SkipStepComponent.prototype.hasContactInfo = function () {
+        return this.step.contact_info != undefined;
+    };
+    SkipStepComponent.prototype.hasAddress = function () {
+        return this.step.contact_info != undefined && this.step.contact_info.address != undefined;
+    };
+    SkipStepComponent.prototype.getCenterName = function () {
+        if (this.hasAddress()) {
+            return this.step.contact_info.address.center_name;
+        }
+        return '';
+    };
+    SkipStepComponent.prototype.getCenterContactInfo = function () {
+        if (this.hasAddress()) {
+            return this.step.contact_info.address.info;
+        }
+        return '';
+    };
     SkipStepComponent = __decorate([
         core_1.Component({
             selector: 'skip',

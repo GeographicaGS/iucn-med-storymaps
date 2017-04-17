@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/map-white</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 7.49975 0 0 12 0 12 7.49975 12 14.9995 0 14.9995 0 7.49975"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/map-white">
+            <g id="Page-1" transform="translate(4.000000, 3.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M6,7.9995 C4.896,7.9995 4,7.1045 4,5.9995 C4,4.8955 4.896,3.9995 6,3.9995 C7.104,3.9995 8,4.8955 8,5.9995 C8,7.1045 7.104,7.9995 6,7.9995 M10.242,1.7565 C9.108,0.6245 7.601,-0.0005 6,-0.0005 C4.399,-0.0005 2.893,0.6245 1.756,1.7565 C0.624,2.8895 0,4.3955 0,5.9995 C0,9.9995 5.259,14.6715 5.259,14.6715 C5.448,14.8805 5.717,14.9995 6,14.9995 C6.283,14.9995 6.552,14.8805 6.741,14.6705 C6.741,14.6705 12,9.9995 12,5.9995 C12,4.3975 11.376,2.8905 10.242,1.7565" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

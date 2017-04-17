@@ -22,37 +22,44 @@ var MenuComponent = (function () {
         this.currentStep = 'cover';
         this.stories = {};
         this.currentStory = {};
-        this.currentStory = this.windowService.getCurrentStory();
         this.currentStep = this.windowService.getCurrentStep();
-        this.stories = this.storyService.getStories();
         this.windowService.getCurrentStepObservable().subscribe(function (nextStep) {
             _this.currentStep = nextStep;
-        });
-        this.windowService.getCurrentStoryObservable().subscribe(function (currentStory) {
-            _this.currentStory = currentStory;
-        });
-        this.storyService.getObservable().subscribe(function (stories) {
-            _this.stories = stories;
         });
     }
     MenuComponent.prototype.isItemActive = function (item) {
         return item == this.currentStep;
     };
     MenuComponent.prototype.getStepsKeys = function () {
-        return this.stories[this.currentStory] != undefined ? Object.keys(this.stories[this.currentStory]['steps']) : [];
+        return this.stories['stories'][this.currentStory] != undefined ? Object.keys(this.stories['stories'][this.currentStory]['steps']) : [];
     };
     MenuComponent.prototype.getStepName = function (step) {
-        return this.stories[this.currentStory]['steps'][step]['name'];
+        return this.stories['stories'][this.currentStory]['steps'][step]['name'];
     };
     MenuComponent.prototype.scrollTo = function (step) {
-        this.windowService.scrollToStep(step);
+        if (step.toLowerCase() == 'skip') {
+            this.windowService.scrollTo(9999);
+        }
+        else {
+            this.windowService.scrollToStep(step);
+        }
     };
+    MenuComponent.prototype.goHome = function () {
+        this.windowService.goHome();
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], MenuComponent.prototype, "stories", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], MenuComponent.prototype, "currentStory", void 0);
     MenuComponent = __decorate([
         core_1.Component({
             selector: 'menu',
             templateUrl: '/templates/shared/menu/view.html',
         }),
-        __param(0, core_1.Inject(WindowService_1.WindowService)),
         __param(1, core_1.Inject(StoryService_1.StoryService)), 
         __metadata('design:paramtypes', [WindowService_1.WindowService, StoryService_1.StoryService])
     ], MenuComponent);

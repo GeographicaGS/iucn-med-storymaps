@@ -6,6 +6,31 @@
         <span class="credit">{{step.background.credit.footer}}</span>
         <span class="author">{{step.background.credit.author}}</span>
     </div>
+    <div class="contact-info-container" *ngIf="hasContactInfo()">
+        <div class="shared-link">
+            <div>
+                <span>share story</span>
+            </div>
+            <div>
+                <a class="btn small circle fb-link" target="_blank"
+                   href="https://www.facebook.com/sharer/sharer.php?u={{document.location.href}}"></a>
+            </div>
+            <div>
+                <a class="btn small circle tw-link" target="_blank"
+                   href="http://twitter.com/share?&url={{document.location.href}}"></a>
+            </div>
+        </div>
+        <div class="pre-author" *ngIf="hasAuthors()">By</div>
+        <div class="author" *ngFor="let author of getAuthors()">
+            <div class="name">{{author.name}}</div>
+            <div class="departament">{{author.departament}}</div>
+        </div>
+        <div class="contact-link" [innerHTML]="getAuthorsLink()"></div>
+        <div class="address-container" *ngIf="hasAddress()">
+            <div class="center-name">{{getCenterName()}}</div>
+            <p class="center-address" [innerHTML]="getCenterContactInfo()"></p>
+        </div>
+    </div>
     <div class="skip-container">
         <div class="component-container" [style.background-color]="getBackgroundColor()">
             <div class="image"
@@ -15,14 +40,14 @@
 
             </div>
             <h2
-                 [ngClass]="showTitle() ? 'fadeInUp':'fadeOutDown'"
+                    [ngClass]="showTitle() ? 'fadeInUp':'fadeOutDown'"
             >
                 {{step.next_story.title}}
             </h2>
             <div class="btn-row"
                  [ngClass]="showButton() ? 'bounceInUp':'bounceOutDown'"
             >
-                <a class="btn small circle"></a>
+                <a class="btn small circle" (click)="goToNextStory()"></a>
                 <span>Read this story</span>
             </div>
         </div>

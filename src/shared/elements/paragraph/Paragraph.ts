@@ -11,4 +11,8 @@ export class ParagraphComponent extends BaseElementComponent {
     capitalized() :boolean{
         return this.item.capitalize != undefined && this.item.capitalize;
     }
+
+    highlight() :boolean{
+        return this.item.highlight != undefined && this.item.highlight;
+    }
 }

@@ -12,7 +12,7 @@ import {WindowService} from "../../../services/WindowService";
 export class MapStepComponent extends BaseStepComponent {
     constructor(@Inject(ElementRef)  elem: ElementRef,
                 @Inject(DOCUMENT) protected document: any,
-                @Inject(WindowService) protected windowService: WindowService,
+                protected windowService: WindowService,
                 @Inject(MapService) private mapService: MapService) {
         super(elem, document, windowService);
     }
@@ -40,10 +40,12 @@ export class MapStepComponent extends BaseStepComponent {
         let offset = this.element.nativeElement.getBoundingClientRect();
         let locked = this.windowService.scrollingDown() && offset.top < 100 && offset.top > -20
             || !this.windowService.isScrollingActive() && offset.top == 0;
-
         if (locked) {
+            this.windowService.setBodyBgUrl('');
+            this.windowService.setBodyBgClass('locked');
             this.lockMap();
         } else {
+            this.windowService.setBodyBgClass('');
             this.unlockMap();
         }
 

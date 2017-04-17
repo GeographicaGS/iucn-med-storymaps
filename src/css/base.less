@@ -1,11 +1,6 @@
 html,
-body,
-.full-screen {
-  height: 100%;
-}
-
 body {
-  margin: 0;
+  height: 100%;
 }
 
 .logo {
@@ -22,6 +17,7 @@ body {
 
 .btn {
   background-position: center;
+  background-repeat: no-repeat;
   &.circle {
     border-radius: 50%;
     text-align: center;
@@ -40,34 +36,67 @@ body {
 }
 
 body {
+  margin: 0;
   display: flex;
   height: 100%;
-  .nav-bar {
-    flex: 0 0 72px;
-  }
-  .main-container {
-    flex: 1 0 auto;
-    height: 3500px;
 
-  }
-
-}
-
-body {
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   position: relative;
   overflow-x: hidden;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
-  &.kenburns{
+
+  .nav-bar {
+    flex: 0 0 72px;
+  }
+  .main-container {
+    flex: 1 0 auto;
+  }
+  &.full-screen {
+    position: relative;
+    z-index:-1;
+    .nav-bar {
+      flex: 0 0 0;
+    }
+  }
+  &.blur{
+    &:after{
+      z-index:-1;
+      content:"";
+      position:fixed;
+      left:-24px;
+      top:-24px;
+      right:-24px;
+      bottom:-24px;
+      background: inherit;
+      -webkit-filter: blur(24px);
+      -moz-filter: blur(24px);
+      -o-filter: blur(24px);
+      -ms-filter: blur(24px);
+      filter: blur(24px);
+    }
+  }
+  &.gradient{
+    &:before{
+      content:"";
+      position:fixed;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+      z-index:-2;
+      background: linear-gradient(180deg, fade(@oscuro, 0%) 0%, @oscuro 100%);
+    }
+
+  }
+  &.kenburns {
     &:before {
       content: "";
-      position: absolute;
+      position: fixed;
       left: 0;
       right: -150px;
       top: 0;
@@ -84,7 +113,8 @@ body {
     }
   }
 
-  &.locked{
+  &.locked {
     overflow: hidden;
   }
+
 }

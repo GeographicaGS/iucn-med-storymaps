@@ -1,1 +1,62 @@
-wee
+<div class="component-container">
+    <div class="shared-link">
+        <div>
+            <span>share story</span>
+        </div>
+        <div>
+            <a class="btn small circle fb-link" target="_blank"
+               href="https://www.facebook.com/sharer/sharer.php?u={{document.location.href}}"></a>
+        </div>
+        <div>
+            <a class="btn small circle tw-link" target="_blank"
+               href="http://twitter.com/share?&url={{document.location.href}}"></a>
+        </div>
+    </div>
+    <div class="logo" (click)="showPreview()">
+
+    </div>
+    <div class="content">
+        <div class="preview" *ngIf="isPreview()">
+            <div class="title">{{getPreviewTitle()}}</div>
+            <div class="subtitle">
+                <div class="separator"></div>
+                <div class="content-subtitle">{{getPreviewSubtitle()}}</div>
+                <div class="separator"></div>
+            </div>
+            <div class="image-map"><img [attr.src]="getPreviewImageSrc()"></div>
+            <div class="description">
+                {{getPreviewDescription()}}
+            </div>
+            <div class="btn-row">
+                <div class="btn view-stories" (click)="showStoryList()">See Stories</div>
+                <div class="btn more-info" (click)="showMoreInfo()">More Info</div>
+            </div>
+
+        </div>
+        <div class="list" *ngIf="!isPreview()">
+            <div class="title">{{getListTitle()}}</div>
+            <div class="separator"></div>
+            <div class="stories-container" [ngClass]="scaling != '' ? 'scale' : ''">
+                <div *ngFor="let story of getStoriesKeys(); let i = index" class="story-block">
+                    <div>
+                        <a class="image"
+                           [ngStyle]="{ 'background-image': 'url('+getStoryBackgroundSrc(story)+')' }"
+                           (click)="goToStory(story)"
+                           [ngClass]="isScaling(story) ? 'scale' : ''"
+                        ></a>
+                        <a class="title" (click)="goToStory(story)">{{getStoryTitle(story)}}</a>
+                        <div class="btn-row">
+                            <a (click)="goToStory(story)" class="btn small circle see-story"></a>
+                            <a (click)="goToMap(story)" class="btn small circle see-map"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="credit-container" *ngIf="showCredits()">
+        <span class="footer" [innerHTML]="step.background.credit.footer"></span>
+        <span class="credit">{{step.background.credit.author}}</span>
+
+    </div>
+</div>
