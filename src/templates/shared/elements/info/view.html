@@ -1,5 +1,15 @@
 <div class="btn-row">
     <a class="btn small circle" (click)="toggleVisibility()"></a>
+    <div class="summary" *ngIf="item.length > 1">
+		<div
+			class="btn small circle"
+			(click)="toggleLayer(info)"
+			[ngClass]="{selected: info.collapsed === false}"
+			*ngFor="let info of item || []; let i=index"
+		>
+			{{ i + 1 }}
+		</div>
+	</div>
 </div>
 <div class="component-container">
 	<div *ngIf="item.length > 1">
@@ -8,7 +18,11 @@
 		    <div class="info" [ngClass]="{hidden: info.collapsed === true}">
 		        <element-block [elements]="info.elements"></element-block>
 		    </div>
-		    <div class="credit">
+		    <div class="btn-row" [ngClass]="{hidden: info.collapsed === true}">
+		    	<div *ngIf="info.shp" class="btn download" (click)="downloadFile(info)">Download .SHP</div>
+		    	<div *ngIf="info.wms" class="btn download">Get WMS</div>
+		    </div>
+		    <div class="credit" [ngClass]="{hidden: info.collapsed === true}">
 		        {{info.credit}}
 		    </div>
 	    </div>

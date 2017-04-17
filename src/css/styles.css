@@ -4498,6 +4498,9 @@ info > .btn-row .btn {
   border: 2px solid #ffffff;
   background-image: url('../../../../assets/icon/close-white.svg');
 }
+info > .btn-row .summary {
+  display: none;
+}
 info > .component-container {
   padding-top: 64px;
   padding-left: 16px;
@@ -4527,6 +4530,48 @@ info > .component-container {
   -moz-animation-name: fadeIn;
   -o-animation-name: fadeIn;
   animation-name: fadeIn;
+}
+info > .component-container .btn-row .btn.download {
+  opacity: 1;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -o-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+  position: relative;
+  width: 120px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #0079BA;
+  border: 2px solid #0079BA;
+  line-height: 30px;
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 12px;
+}
+info > .component-container .btn-row.hidden .btn.download {
+  opacity: 0;
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
 }
 info > .component-container .info {
   width: 400px;
@@ -4605,6 +4650,9 @@ info > .component-container .credit:before {
   display: block;
   border-bottom: 1.5px solid #fff;
 }
+info > .component-container .credit.hidden {
+  display: none;
+}
 info.collapsed {
   width: 32px;
   height: 32px;
@@ -4623,6 +4671,23 @@ info.collapsed .btn-row .btn {
   background-color: #ffffff;
   background-image: url('../../../../assets/icon/info-h.svg');
   opacity: 1;
+}
+info.collapsed .btn-row .btn.download {
+  opacity: 0;
+}
+info.collapsed .btn-row .summary {
+  display: block;
+}
+info.collapsed .btn-row .summary .btn {
+  color: #0079BA;
+  font-weight: bold;
+  background-image: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+info.collapsed .btn-row .summary .btn.selected {
+  border: 2px solid transparent;
 }
 cover .component-container {
   background: linear-gradient(180deg, rgba(33, 33, 33, 0) 40%, rgba(33, 33, 33, 0.75) 100%);
@@ -5484,10 +5549,19 @@ map > .component-container .step-locked {
 }
 map > .component-container > div > .btn-row {
   position: absolute;
-  bottom: 32px;
-  left: 32px;
   z-index: 100;
-  top: auto;
+}
+map > .component-container > div > .btn-row:not(.top) {
+  bottom: 32px;
+}
+map > .component-container > div > .btn-row.top {
+  top: 16px;
+}
+map > .component-container > div > .btn-row:not(.right) {
+  left: 32px;
+}
+map > .component-container > div > .btn-row.right {
+  right: 88px;
 }
 map > .component-container > div > .btn-row .btn {
   border: 2px solid #ffffff;
@@ -5500,6 +5574,11 @@ map > .component-container > div > .btn-row .btn.next-step {
   background-color: #ffffff;
   border-color: #0079BA;
   background-image: url('../../../assets/icon/arrow_scroll-h.svg');
+}
+map > .component-container > div > .btn-row .btn.resetBbox {
+  background-color: #ffffff;
+  border-color: #0079BA;
+  background-image: url('../../../assets/icon/centermap.svg');
 }
 conclusion {
   background-color: #14406D;

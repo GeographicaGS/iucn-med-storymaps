@@ -98,6 +98,7 @@
             {
               "title": "Title here",
               "collapsed" : false,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
               "elements": [
                 {
                   "type": "paragraph",
@@ -129,6 +130,7 @@
             {
               "title": "Title here 2",
               "collapsed" : true,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
               "elements": [
                 {
                   "type": "paragraph",
@@ -160,6 +162,7 @@
             {
               "title": "Title here 3",
               "collapsed" : true,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
               "elements": [
                 {
                   "type": "paragraph",
@@ -362,6 +365,7 @@
             {
               "title": "Title here",
               "collapsed" : false,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
               "elements": [
                 {
                   "type": "paragraph",
@@ -393,6 +397,7 @@
             {
               "title": "Title here 2",
               "collapsed" : true,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
               "elements": [
                 {
                   "type": "paragraph",
@@ -424,6 +429,7 @@
             {
               "title": "Title here 3",
               "collapsed" : true,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
               "elements": [
                 {
                   "type": "paragraph",
@@ -626,6 +632,7 @@
             {
               "title": "Title here",
               "collapsed" : false,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
               "elements": [
                 {
                   "type": "paragraph",
@@ -657,6 +664,7 @@
             {
               "title": "Title here 2",
               "collapsed" : true,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
               "elements": [
                 {
                   "type": "paragraph",
@@ -688,6 +696,7 @@
             {
               "title": "Title here 3",
               "collapsed" : true,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
               "elements": [
                 {
                   "type": "paragraph",

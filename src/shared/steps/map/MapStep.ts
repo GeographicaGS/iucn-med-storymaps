@@ -11,6 +11,8 @@ import {WindowService} from "../../../services/WindowService";
 })
 export class MapStepComponent extends BaseStepComponent {
     @Input() activeLayer: any = false;
+    @Input() zoom: any = 4.5;
+    @Input() center: any = [15.0, 38.0];
 
     constructor(@Inject(ElementRef)  elem: ElementRef,
                 @Inject(DOCUMENT) protected document: any,
@@ -60,8 +62,8 @@ export class MapStepComponent extends BaseStepComponent {
             trackResize: true,
             container: 'map',
             style: 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
-            zoom: 4.5,
-            center: [15.0, 38.0]
+            zoom: this.zoom,
+            center: this.center
         });
         this.mapService.map.scrollZoom.disable();
 
@@ -79,7 +81,7 @@ export class MapStepComponent extends BaseStepComponent {
 
     toggleActiveLayer() {
         if (!this.activeLayer.layer.subLayers.length) return;
-        
+
         for (let sublayer of this.activeLayer.layer.subLayers) {
             let visibility = this.mapService.map.getLayoutProperty(sublayer, 'visibility');
             if (visibility === 'visible') {
@@ -98,5 +100,20 @@ export class MapStepComponent extends BaseStepComponent {
         this.toggleActiveLayer();
     }
 
+    resetBbox() {
+        this.mapService.map.flyTo({
+            center: this.center,
+            zoom: this.zoom,
+            speed: 0.6
+        });
+    }
+
+    getShpFile(info: any = {}) {
+        let anchor = document.createElement('a');
+        anchor.href = info.shp;
+        anchor.target = '_blank';
+        anchor.download = info.shp;
+        anchor.click();
+    }
 
 }

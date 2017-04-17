@@ -1,8 +1,17 @@
 <div class="component-container" [style.height.px]="getWindowHeight()" [style.width.px]="getWindowWidth() +50" >
     <div [ngClass]="lockView() ? 'step-locked' : ''">
-        <info *ngIf="hasInfo()" [item]="step.info" (manageLayers)="updateLayers($event)"></info>
+        <info
+            *ngIf="hasInfo()"
+            [item]="step.info"
+            (manageLayers)="updateLayers($event)"
+            (downloadShp)="getShpFile($event)"
+        ></info>
         <div id="map" class="map" [style.height.px]="getWindowHeight()">
 
+        </div>
+
+        <div class="btn-row top right">
+            <a class="btn small circle resetBbox" (click)="resetBbox()"></a>
         </div>
 
         <div class="btn-row">

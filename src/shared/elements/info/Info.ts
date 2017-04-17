@@ -9,8 +9,8 @@ export class InfoComponent extends BaseElementComponent {
     @HostBinding('class.collapsed')
     @Input() collapsed: boolean = true;
 
-    @Output()
-    manageLayers: EventEmitter<any> = new EventEmitter();
+    @Output() manageLayers: EventEmitter<any> = new EventEmitter();
+    @Output() downloadShp: EventEmitter<any> = new EventEmitter();
 
     toggleVisibility() {
         this.collapsed = !this.collapsed;
@@ -38,5 +38,9 @@ export class InfoComponent extends BaseElementComponent {
         info.collapsed = !info.collapsed;
 
         this.manageLayers.emit(info);
+    }
+
+    downloadFile(info: any = {}) {
+        this.downloadShp.emit(info);
     }
 }

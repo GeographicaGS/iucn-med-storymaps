@@ -18,10 +18,21 @@ map {
     > div {
       > .btn-row {
         position: absolute;
-        bottom: 32px;
-        left: 32px;
         z-index: 100;
-        top: auto;
+
+        &:not(.top) {
+          bottom: 32px;
+        }
+        &.top {
+          top: 16px;
+        }
+        &:not(.right) {
+          left: 32px;
+        }
+        &.right {
+          right: 88px;
+        }
+
         .btn {
           border: 2px solid @blanco;
           width: 32px;
@@ -32,6 +43,11 @@ map {
             .bg_blanco();
             border-color:@azul_iucn;
             background-image: url('../../../assets/icon/arrow_scroll-h.svg');
+          }
+          &.resetBbox {
+            .bg_blanco();
+            border-color:@azul_iucn;
+            background-image: url('../../../assets/icon/centermap.svg');
           }
         }
       }
