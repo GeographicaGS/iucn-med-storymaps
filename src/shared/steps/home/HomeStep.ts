@@ -9,6 +9,7 @@ export class HomeStepComponent extends BaseStepComponent {
     @Input() stories: any = {};
 
     scaling: string = '';
+    scalingInProgress: boolean = false;
 
     ngAfterViewInit() {
         this.checkBackground();
@@ -125,6 +126,7 @@ export class HomeStepComponent extends BaseStepComponent {
 
     goToStory(story: string) {
         this.scaling = story;
+        this.scalingInProgress = true;
         this.goTo(story, 'cover');
     }
 
@@ -133,7 +135,6 @@ export class HomeStepComponent extends BaseStepComponent {
     }
 
     goTo(story: string, step: string) {
-
         setTimeout(() => {
             this.unlockBackground();
             this.clearBackgroundBlur();
@@ -141,8 +142,10 @@ export class HomeStepComponent extends BaseStepComponent {
             this.clearBackgroundFullScreen();
             this.windowService.setBodyBgUrl(this.getStoryBackgroundSrc(story));
             this.windowService.setCurrentStory(story);
+            
             setTimeout(() => {
                 this.windowService.scrollToStep(step);
+                this.scalingInProgress = false;
             }, 25);
         }, 1000);
     }

@@ -252,6 +252,14 @@ home {
       .story-block {
         flex: 1 0 30%;
         padding-top: 124px;
+
+        &.hidden {
+          .animated(0.3s);
+          .fadeOut();
+          opacity: 0;
+          visibility: hidden;
+        }
+        
         &:nth-of-type(2n +1 ) {
           padding-top: 0;
         }

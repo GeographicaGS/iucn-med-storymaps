@@ -37,7 +37,7 @@
             <div class="title">{{getListTitle()}}</div>
             <div class="separator"></div>
             <div class="stories-container" [ngClass]="scaling != '' ? 'scale' : ''">
-                <div *ngFor="let story of getStoriesKeys(); let i = index" class="story-block">
+                <div *ngFor="let story of getStoriesKeys(); let i = index" class="story-block" [ngClass]="scalingInProgress && !isScaling(story) ? 'hidden' : ''">
                     <div>
                         <a class="image"
                            [ngStyle]="{ 'background-image': 'url('+getStoryBackgroundSrc(story)+')' }"
