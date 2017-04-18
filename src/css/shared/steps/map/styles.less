@@ -41,13 +41,37 @@ map {
           margin: 0 0 auto 0;
           &.next-step {
             .bg_blanco();
-            border-color:@azul_iucn;
+            border-color: @azul_iucn;
             background-image: url('../../../assets/icon/arrow_scroll-h.svg');
           }
           &.resetBbox {
             .bg_blanco();
-            border-color:@azul_iucn;
+            border: 2px solid fade(#212121, 50%);
             background-image: url('../../../assets/icon/centermap.svg');
+          }
+        }
+
+        .zoomControl {
+          box-sizing: border-box;
+          width: 32px;
+          border: 2px solid fade(#212121, 50%);
+          border-radius: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 16px;
+          .bg_blanco();
+
+          .zoomIn {
+            border: none;
+            background-image: url('../../../assets/icon/zoom-in.svg');
+            border-radius: 0;
+            border-bottom: 1px solid fade(#212121, 50%);
+          }
+          .zoomOut {
+            border: none;
+            background-image: url('../../../assets/icon/zoom-out.svg');
           }
         }
       }

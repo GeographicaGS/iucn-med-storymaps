@@ -11,7 +11,11 @@
         </div>
 
         <div class="btn-row top right">
-            <a class="btn small circle resetBbox" (click)="resetBbox()"></a>
+            <a class="btn small circle resetBbox" (click)="flyTo()"></a>
+            <div class="zoomControl">
+                <a class="btn small circle zoomIn" (click)="zoomIn()"></a>
+                <a class="btn small circle zoomOut" (click)="zoomOut()"></a>
+            </div>
         </div>
 
         <div class="btn-row">

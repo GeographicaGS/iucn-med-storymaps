@@ -11,7 +11,7 @@
 -------------------------------------------------------------------------------*/
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,500,600,700,800,900|Merriweather:300,400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,400i,500,600,600i,700,800,900|Merriweather:300,400,400i,700,700i,900,900i');
 html,
 body,
 body div,
@@ -3956,6 +3956,7 @@ body {
   animation-name: scaleFull;
 }
 .fira_sans {
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
 }
 .merriweather {
@@ -4298,6 +4299,7 @@ menu .intro.active:before {
   content: attr(data-content);
   position: absolute;
   font-size: 10px;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   bottom: -15px;
   text-align: center;
@@ -4389,8 +4391,8 @@ paragraph .component-container {
   animation-iteration-count: 1;
 }
 paragraph .component-container.highlight {
-  font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
   font-size: 24px;
   line-height: 32px;
 }
@@ -4401,11 +4403,11 @@ paragraph .capitalized span:first-of-type {
   float: left;
   position: relative;
   font-size: 156px;
-  font-weight: 900;
   color: #14406D;
   padding-top: 52px;
   padding-bottom: 30px;
   padding-right: 10px;
+  font-weight: 900;
   font-family: 'Fira Sans', sans-serif;
 }
 image {
@@ -4455,6 +4457,7 @@ image info {
 image .credit {
   position: absolute;
   bottom: 0;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   color: #b1b1b1;
   font-size: 12px;
@@ -4531,8 +4534,12 @@ info > .component-container {
   -o-animation-name: fadeIn;
   animation-name: fadeIn;
 }
+info > .component-container .btn-row:not(.hidden) {
+  padding-top: 36px;
+}
 info > .component-container .btn-row .btn.download {
   opacity: 1;
+  visibility: visible;
   -webkit-animation-duration: 0.3s;
   -moz-animation-duration: 0.3s;
   -o-animation-duration: 0.3s;
@@ -4554,24 +4561,31 @@ info > .component-container .btn-row .btn.download {
   -o-animation-name: fadeIn;
   animation-name: fadeIn;
   position: relative;
-  width: 120px;
+  width: auto;
   height: 32px;
+  padding: 0 10px;
   border-radius: 16px;
-  background-color: #0079BA;
   border: 2px solid #0079BA;
   line-height: 30px;
   text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: table;
+  letter-spacing: 1px;
+  margin: 0 0 16px 0;
+  background-color: #0079BA;
+  font-weight: 600;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
-  font-weight: 500;
-  font-size: 12px;
 }
 info > .component-container .btn-row.hidden .btn.download {
   opacity: 0;
+  visibility: hidden;
   -webkit-animation-name: fadeOut;
   -moz-animation-name: fadeOut;
   -o-animation-name: fadeOut;
   animation-name: fadeOut;
+  display: none;
 }
 info > .component-container .info {
   width: 400px;
@@ -4583,11 +4597,11 @@ info > .component-container .info {
 info > .component-container .info paragraph {
   padding: 0;
   margin-left: 0;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   font-size: 14px;
   line-height: 18px;
-  font-weight: normal;
   margin-bottom: 10px;
 }
 info > .component-container .info > paragraph,
@@ -4620,28 +4634,70 @@ info > .component-container .info::-webkit-scrollbar-track {
 info > .component-container .info.hidden {
   display: none;
 }
-info > .component-container .title {
+info > .component-container .allMapLayers {
+  max-height: 92%;
+  overflow-y: auto;
+}
+info > .component-container .allMapLayers .mapLayerWrapper {
+  width: 320px;
+}
+info > .component-container .allMapLayers .mapLayerWrapper:not(:last-child) {
+  border-bottom: 2px solid #0079BA;
+  margin-bottom: 10px;
+  padding-bottom: 22px;
+}
+info > .component-container .titleWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+info > .component-container .titleWrapper .btn {
+  background-color: white;
+  color: #0079BA;
+  border: 2px solid #0079BA;
+  background-image: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: 'Fira Sans', sans-serif;
+  margin-right: 8px;
+}
+info > .component-container .titleWrapper .btn.selected {
+  border: 2px solid transparent;
+}
+info > .component-container .titleWrapper .title {
+  font-weight: 600;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 800;
   font-style: italic;
-  margin-bottom: 8px;
+  display: inline-flex;
+  max-width: 279px;
+  cursor: pointer;
+}
+info > .component-container .titleWrapper .title.selected {
+  font-size: 24px;
+  line-height: 32px;
 }
 info > .component-container .credit {
   display: block;
   width: 320px;
   padding: 0 0 16px 0;
   margin-top: 15px;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   font-size: 14px;
   line-height: 18px;
-  font-weight: normal;
   position: relative;
 }
-info > .component-container .credit:before {
+info > .component-container .credit(:empty) {
+  display: none;
+}
+info > .component-container .credit:not(:empty):before {
   content: "";
   position: absolute;
   top: -6px;
@@ -4679,8 +4735,9 @@ info.collapsed .btn-row .summary {
   display: block;
 }
 info.collapsed .btn-row .summary .btn {
+  font-weight: 700;
+  font-family: 'Fira Sans', sans-serif;
   color: #0079BA;
-  font-weight: bold;
   background-image: none;
   display: flex;
   align-items: center;
@@ -4702,6 +4759,7 @@ cover .button-row,
 cover h3,
 cover h2 {
   position: absolute;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   opacity: 0;
@@ -4781,6 +4839,7 @@ cover .shared-link {
   z-index: 100;
   right: 34px;
   top: 34px;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   font-size: 14px;
@@ -4793,6 +4852,7 @@ cover .shared-link > * {
 }
 cover .shared-link span {
   font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -4826,6 +4886,7 @@ cover .button-row {
   -moz-animation-iteration-count: 1;
   -o-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   font-size: 14px;
@@ -4836,6 +4897,7 @@ cover .button-row {
 }
 cover .button-row span {
   font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: block;
@@ -4853,6 +4915,7 @@ cover .button-row .btn.next-step {
 }
 cover .credit-full {
   background-color: #ffffff;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   color: #212121;
   display: block;
@@ -4868,6 +4931,7 @@ cover .credit-full {
 }
 cover .credit-full .author {
   font-weight: 700;
+  font-family: 'Fira Sans', sans-serif;
   padding-left: 5px;
 }
 home .shared-link {
@@ -4895,6 +4959,7 @@ home .shared-link {
   z-index: 0;
   right: 34px;
   top: 34px;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   font-size: 14px;
@@ -4907,6 +4972,7 @@ home .shared-link > * {
 }
 home .shared-link span {
   font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -4994,13 +5060,13 @@ home .content .preview > .title {
   -moz-animation-name: fadeInDown;
   -o-animation-name: fadeInDown;
   animation-name: fadeInDown;
+  font-weight: 300;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   max-width: 540px;
   width: 75%;
   font-size: 64px;
   line-height: 64px;
-  font-weight: 300;
   position: relative;
   margin: 0 auto;
   text-align: center;
@@ -5010,11 +5076,11 @@ home .content .preview > .description {
   position: relative;
   margin: 0 auto;
   text-align: center;
+  font-weight: 500;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   font-size: 24px;
   line-height: 32px;
-  font-weight: 500;
   margin-bottom: 48px;
   -webkit-animation-duration: 0.6s;
   -moz-animation-duration: 0.6s;
@@ -5042,12 +5108,12 @@ home .content .preview > .subtitle {
   position: relative;
   margin: 0 auto;
   text-align: center;
+  font-weight: 500;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   font-size: 32px;
   line-height: 32px;
   text-transform: uppercase;
-  font-weight: 500;
   margin-bottom: 48px;
   -webkit-animation-duration: 0.6s;
   -moz-animation-duration: 0.6s;
@@ -5161,9 +5227,9 @@ home .content .preview .btn-row .btn.view-stories {
   border: 2px solid #0079BA;
   line-height: 30px;
   text-align: center;
+  font-weight: 500;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
-  font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -5195,10 +5261,10 @@ home .content .preview .btn-row .btn.more-info {
   border-radius: 16px;
   line-height: 30px;
   text-align: center;
+  font-weight: 500;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   border: 2px solid #ffffff;
-  font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -5227,13 +5293,13 @@ home .content .list > .title {
   -moz-animation-name: fadeIn;
   -o-animation-name: fadeIn;
   animation-name: fadeIn;
+  font-weight: 300;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   max-width: 540px;
   width: 100%;
   font-size: 32px;
   line-height: 64px;
-  font-weight: 300;
   letter-spacing: 2px;
   position: relative;
   margin: 0 auto;
@@ -5403,11 +5469,11 @@ home .content .stories-container .story-block a.image.scale {
 home .content .stories-container .story-block a.title {
   opacity: 0.75;
   text-align: center;
+  font-weight: 900;
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   font-size: 32px;
   line-height: 32px;
-  font-weight: 900;
   max-width: 340px;
   z-index: -1;
 }
@@ -5462,6 +5528,7 @@ home .credit-container {
   width: 100%;
   bottom: 8px;
   left: 8px;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   color: #909090;
   font-size: 12px;
@@ -5502,6 +5569,7 @@ intro .button-row {
   -moz-animation-iteration-count: 1;
   -o-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   color: #0079BA;
   font-size: 14px;
@@ -5512,6 +5580,7 @@ intro .button-row {
 }
 intro .button-row span {
   font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: block;
@@ -5577,8 +5646,30 @@ map > .component-container > div > .btn-row .btn.next-step {
 }
 map > .component-container > div > .btn-row .btn.resetBbox {
   background-color: #ffffff;
-  border-color: #0079BA;
+  border: 2px solid rgba(33, 33, 33, 0.5);
   background-image: url('../../../assets/icon/centermap.svg');
+}
+map > .component-container > div > .btn-row .zoomControl {
+  box-sizing: border-box;
+  width: 32px;
+  border: 2px solid rgba(33, 33, 33, 0.5);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  background-color: #ffffff;
+}
+map > .component-container > div > .btn-row .zoomControl .zoomIn {
+  border: none;
+  background-image: url('../../../assets/icon/zoom-in.svg');
+  border-radius: 0;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.5);
+}
+map > .component-container > div > .btn-row .zoomControl .zoomOut {
+  border: none;
+  background-image: url('../../../assets/icon/zoom-out.svg');
 }
 conclusion {
   background-color: #14406D;
@@ -5591,14 +5682,15 @@ conclusion > .component-container {
 }
 conclusion h2 {
   text-align: center;
+  font-weight: 800;
   font-family: 'Fira Sans', sans-serif;
   color: #66B7EA;
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 25px;
-  font-weight: 800;
 }
 conclusion paragraph {
+  font-weight: 300;
   font-family: 'Fira Sans', sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -5607,7 +5699,6 @@ conclusion paragraph {
   width: 95%;
   display: block;
   margin: 0 auto 24px auto;
-  font-weight: 300;
 }
 conclusion paragraph .capitalized {
   clear: both;
@@ -5616,11 +5707,11 @@ conclusion paragraph .capitalized span:first-of-type {
   float: left;
   position: relative;
   font-size: 156px;
-  font-weight: 900;
   color: #ffffff;
   padding-top: 54px;
   padding-bottom: 30px;
   padding-right: 10px;
+  font-weight: 900;
   font-family: 'Fira Sans', sans-serif;
 }
 conclusion el-quote {
@@ -5671,6 +5762,7 @@ skip .closing-story-container {
 }
 skip .credit-full {
   background-color: #ffffff;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   color: #212121;
   display: block;
@@ -5681,11 +5773,11 @@ skip .credit-full {
   background-position: 15px center;
   font-size: 14px;
   line-height: 18px;
-  font-weight: normal;
   padding-top: 13px;
 }
 skip .credit-full .author {
   font-weight: 700;
+  font-family: 'Fira Sans', sans-serif;
   padding-left: 5px;
 }
 skip .skip-container {
@@ -5743,9 +5835,9 @@ skip .skip-container > .component-container h2 {
   -moz-animation-iteration-count: 1;
   -o-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  font-weight: 900;
   font-family: 'Fira Sans', sans-serif;
   color: #14406D;
-  font-weight: 900;
   font-size: 64px;
   line-height: 64px;
   display: block;
@@ -5787,8 +5879,8 @@ skip .skip-container > .component-container .btn-row .btn {
 skip .skip-container > .component-container .btn-row span {
   font-size: 14px;
   letter-spacing: 1px;
-  font-weight: 500;
   text-transform: uppercase;
+  font-weight: 500;
   font-family: 'Fira Sans', sans-serif;
 }
 skip .contact-info-container {
@@ -5820,6 +5912,7 @@ skip .contact-info-container .shared-link {
   -o-animation-name: bounceInDownLittle;
   animation-name: bounceInDownLittle;
   z-index: 0;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   color: #0079BA;
   font-size: 14px;
@@ -5832,6 +5925,7 @@ skip .contact-info-container .shared-link > * {
 }
 skip .contact-info-container .shared-link span {
   font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -5851,6 +5945,7 @@ skip .contact-info-container .shared-link .btn.tw-link {
 skip .contact-info-container .pre-author {
   text-align: center;
   color: #909090;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
@@ -5863,9 +5958,9 @@ skip .contact-info-container .author {
 skip .contact-info-container .author .name,
 skip .contact-info-container .author .departament {
   color: #212121;
+  font-weight: 300;
   font-family: 'Fira Sans', sans-serif;
   font-size: 24px;
-  font-weight: 300;
   line-height: 24px;
   text-align: center;
 }
@@ -5895,15 +5990,16 @@ skip .contact-info-container .address-container:before {
 }
 skip .contact-info-container .address-container .center-name {
   color: #212121;
+  font-weight: 500;
   font-family: 'Fira Sans', sans-serif;
   font-size: 16px;
-  font-weight: 500;
   line-height: 24px;
   text-align: center;
   margin-bottom: 10px;
 }
 skip .contact-info-container .address-container .center-address {
   color: #909090;
+  font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   font-size: 12px;
   line-height: 16px;
@@ -5911,4 +6007,123 @@ skip .contact-info-container .address-container .center-address {
 }
 skip .contact-info-container a {
   color: #0079BA;
+}
+.modalOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalOverlay .modal {
+  width: 400px;
+  min-height: 120px;
+  max-height: 400px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  background-clip: padding-box;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+}
+.modalOverlay .modal .modal-header {
+  margin: 15px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+.modalOverlay .modal .modal-header .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #999;
+  line-height: 10px;
+  cursor: pointer;
+}
+.modalOverlay .modal .modal-body {
+  margin: 5px 15px 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalOverlay .modal .modal-footer {
+  margin: 15px;
+  text-align: center;
+  height: 19px;
+}
+.modalOverlay.open {
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  opacity: 1;
+  visibility: visible;
+  z-index: 101;
+}
+.modalOverlay.open .modal {
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  opacity: 1;
+  visibility: visible;
+}
+.modalOverlay.open .modal input.wmsInput {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 121, 186, 0.4);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+}
+.modalOverlay.open .modal input.wmsInput::-moz-focus-inner {
+  border: 0;
 }

@@ -1,6 +1,6 @@
 import {Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding, Input} from "@angular/core";
 import {BaseStepComponent} from "../base/BaseStep";
-import {Map, NavigationControl} from 'mapbox-gl';
+import {Map} from 'mapbox-gl';
 import {MapService} from "../../../services/MapService";
 import {DOCUMENT} from "@angular/platform-browser";
 import {WindowService} from "../../../services/WindowService";
@@ -59,7 +59,7 @@ export class MapStepComponent extends BaseStepComponent {
     ngAfterViewInit() {
         super.ngAfterViewInit();
         this.mapService.map = new Map({
-            trackResize: true,
+            trackResize: false,
             container: 'map',
             style: 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
             zoom: this.zoom,
@@ -100,12 +100,26 @@ export class MapStepComponent extends BaseStepComponent {
         this.toggleActiveLayer();
     }
 
-    resetBbox() {
+    zoomIn() {
+        let currentZoom = this.mapService.map.getZoom();
+        let currentCenter = this.mapService.map.getCenter();
+
+        this.flyTo(currentCenter, currentZoom + 1);
+    }
+
+    zoomOut() {
+        let currentZoom = this.mapService.map.getZoom();
+        let currentCenter = this.mapService.map.getCenter();
+
+        this.flyTo(currentCenter, currentZoom - 1);
+    }
+
+    flyTo(center: any = this.center, zoom: any = this.zoom) {
         if (!this.mapService.map) return;
 
         this.mapService.map.flyTo({
-            center: this.center,
-            zoom: this.zoom,
+            center: center,
+            zoom: zoom,
             speed: 0.6
         });
     }
