@@ -106,12 +106,18 @@ export class MapStepComponent extends BaseStepComponent {
 
             let properties = <any>{};
             properties = features[0].properties;
-            
+            let count = properties.count;
+
             if (this.popup) this.popup.remove();
+            if (!properties.count && properties.N_COUNT) {
+                count = properties.N_COUNT;
+            }
+
             this.popup = new Popup()
-                .setLngLat(e.lngLat)
-                .setHTML(properties.count)
-                .addTo(this.mapService.map);
+                    .setLngLat(e.lngLat)
+                    .setHTML(count)
+                    .addTo(this.mapService.map); 
+            
         });
     }
 

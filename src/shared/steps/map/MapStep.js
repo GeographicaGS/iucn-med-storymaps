@@ -113,11 +113,15 @@ var MapStepComponent = (function (_super) {
                 return;
             var properties = {};
             properties = features[0].properties;
+            var count = properties.count;
             if (_this.popup)
                 _this.popup.remove();
+            if (!properties.count && properties.N_COUNT) {
+                count = properties.N_COUNT;
+            }
             _this.popup = new mapbox_gl_1.Popup()
                 .setLngLat(e.lngLat)
-                .setHTML(properties.count)
+                .setHTML(count)
                 .addTo(_this.mapService.map);
         });
     };
