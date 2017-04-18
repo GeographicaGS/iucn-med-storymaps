@@ -5,7 +5,8 @@
       "class": "full-screen gradient locked",
       "credit": {
         "footer": "© 2017 <a href=\"#\">IUCN, International Union for Conservation of Nature</a>",
-        "author": "Centre for Mediterranean Cooperation"
+        "author": "Centre for Mediterranean Cooperation",
+        "description": "Photo: Descripción © AUTOR"
       }
     },
     "preview": {

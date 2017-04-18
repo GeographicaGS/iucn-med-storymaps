@@ -98,6 +98,14 @@ export class HomeStepComponent extends BaseStepComponent {
         return this.hasCredit() && this.isPreview();
     }
 
+    hasDescription(): boolean {
+        return this.hasCredit() && this.stories.home.background.credit.description != undefined
+    }
+
+    showDescription(): boolean {
+        return this.hasDescription() && this.isPreview();
+    }
+
     showPreview(): void {
         this.windowService.homeViewPreview = true;
         this.clearBackgroundBlur();
