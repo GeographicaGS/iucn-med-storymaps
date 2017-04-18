@@ -11,20 +11,28 @@
 		</div>
 	</div>
 </div>
+
 <div class="component-container">
-	<div *ngIf="item.length > 1">
-		<div *ngFor='let info of item'>
-		    <div class="title" (click)="toggleLayer(info)">{{info.title}}</div>
+	<div class="allMapLayers" *ngIf="item.length > 1">
+		<div class="mapLayerWrapper" *ngFor="let info of item|| []; let i=index">
+			<div class="titleWrapper">
+			    <div
+					class="btn small circle"
+					(click)="toggleLayer(info)"
+					[ngClass]="{selected: info.collapsed === false}"
+				>
+					{{ i + 1 }}
+				</div>
+				<div class="title" [ngClass]="{selected: info.collapsed === false}" (click)="toggleLayer(info)">{{info.title}}</div>
+			</div>
 		    <div class="info" [ngClass]="{hidden: info.collapsed === true}">
 		        <element-block [elements]="info.elements"></element-block>
 		    </div>
 		    <div class="btn-row" [ngClass]="{hidden: info.collapsed === true}">
-		    	<div *ngIf="info.shp" class="btn download" (click)="downloadFile(info)">Download .SHP</div>
-		    	<div *ngIf="info.wms" class="btn download">Get WMS</div>
+		    	<div *ngIf="info.shp" class="btn download" (click)="downloadFile(info)">Download spatial data [.SHP]</div>
+		    	<div *ngIf="info.shp" class="btn download" (click)="openModal(info)">Get WMS URL</div>
 		    </div>
-		    <div class="credit" [ngClass]="{hidden: info.collapsed === true}">
-		        {{info.credit}}
-		    </div>
+		    <div class="credit" [ngClass]="{hidden: info.collapsed === true}">{{info.credit}}</div>
 	    </div>
     </div>
     <div *ngIf="item.length === 1">
@@ -36,4 +44,27 @@
 	        {{item.credit}}
 	    </div>
     </div>
+</div>
+
+<div class="modalOverlay" [ngClass]="{open: modalOpen === true}" (click)="toggleModal();">
+	<div class="modal" (click)="$event.stopPropagation()">
+		<div class="modal-header">
+			<span (click)="copyWmsValue()">Copy WMS</span>
+			<div (click)="toggleModal();" class="close">X</div>
+		</div>
+		<div class="modal-body">
+			<input class="wmsInput" [ngClass]="{active: modalOpen === true}" type="text" value="{{wmsValue}}" (click)="copyWmsValue()" />
+		</div>
+		<div class="modal-footer">
+			<div *ngIf="wmsCopied !== null">
+				<div *ngIf="wmsCopied === true">
+					WMS copied to the clipboard successfully.
+				</div>
+
+				<div *ngIf="wmsCopied === false">
+					WMS could not be copied to the clipboard, please try it with "Ctrl + C".
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

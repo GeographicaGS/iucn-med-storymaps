@@ -1,6 +1,6 @@
 import {Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding, Input} from "@angular/core";
 import {BaseStepComponent} from "../base/BaseStep";
-import {Map} from 'mapbox-gl';
+import {Map, NavigationControl} from 'mapbox-gl';
 import {MapService} from "../../../services/MapService";
 import {DOCUMENT} from "@angular/platform-browser";
 import {WindowService} from "../../../services/WindowService";
@@ -80,7 +80,7 @@ export class MapStepComponent extends BaseStepComponent {
     }
 
     toggleActiveLayer() {
-        if (!this.activeLayer.layer.subLayers.length) return;
+        if (!this.activeLayer.layer.subLayers.length || !this.mapService.map) return;
 
         for (let sublayer of this.activeLayer.layer.subLayers) {
             let visibility = this.mapService.map.getLayoutProperty(sublayer, 'visibility');
@@ -101,6 +101,8 @@ export class MapStepComponent extends BaseStepComponent {
     }
 
     resetBbox() {
+        if (!this.mapService.map) return;
+
         this.mapService.map.flyTo({
             center: this.center,
             zoom: this.zoom,

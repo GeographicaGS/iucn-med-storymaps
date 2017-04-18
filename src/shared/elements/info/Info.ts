@@ -6,8 +6,13 @@ import {BaseElementComponent} from "../base-element/BaseElement";
     templateUrl: '/templates/shared/elements/info/view.html',
 })
 export class InfoComponent extends BaseElementComponent {
+
     @HostBinding('class.collapsed')
+
     @Input() collapsed: boolean = true;
+    @Input() modalOpen: boolean = false;
+    @Input() wmsValue: string = '';
+    @Input() wmsCopied: boolean = null;
 
     @Output() manageLayers: EventEmitter<any> = new EventEmitter();
     @Output() downloadShp: EventEmitter<any> = new EventEmitter();
@@ -42,5 +47,32 @@ export class InfoComponent extends BaseElementComponent {
 
     downloadFile(info: any = {}) {
         this.downloadShp.emit(info);
+    }
+
+    toggleModal() {
+        this.modalOpen = !this.modalOpen;
+    }
+
+    openModal(info: any = {}) {
+        this.wmsValue = info.shp;
+        this.modalOpen = true;
+        this.wmsCopied = null;
+    }
+
+    copyWmsValue() {
+        let copyTextarea = <HTMLInputElement>document.querySelector('.wmsInput.active');
+        copyTextarea.select();
+
+        try {
+            let successful = document.execCommand('copy');
+            if (successful) {
+                this.wmsCopied = true;
+            } else {
+                this.wmsCopied = false;
+            }
+        } catch (err) {
+            console.log('Oops, unable to copy');
+            this.wmsCopied = false;
+        }
     }
 }
