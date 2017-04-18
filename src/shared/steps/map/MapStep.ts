@@ -1,6 +1,6 @@
 import {Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding, Input} from "@angular/core";
 import {BaseStepComponent} from "../base/BaseStep";
-import {Map} from 'mapbox-gl';
+import {Map, Popup} from 'mapbox-gl';
 import {MapService} from "../../../services/MapService";
 import {DOCUMENT} from "@angular/platform-browser";
 import {WindowService} from "../../../services/WindowService";
@@ -13,6 +13,8 @@ export class MapStepComponent extends BaseStepComponent {
     @Input() activeLayer: any = false;
     @Input() zoom: any = 4.5;
     @Input() center: any = [15.0, 38.0];
+    @Input() popup: any = false;
+    @Input() currentLegend: string = '';
 
     constructor(@Inject(ElementRef)  elem: ElementRef,
                 @Inject(DOCUMENT) protected document: any,
@@ -77,10 +79,17 @@ export class MapStepComponent extends BaseStepComponent {
                 break;
             }
         }
+        this.mapService.map.on('load', () => {
+            this.updateLayers(this.activeLayer);
+        });
     }
 
     toggleActiveLayer() {
         if (!this.activeLayer.layer.subLayers.length || !this.mapService.map) return;
+
+        let activePopup: any = {};
+
+        if (this.popup) this.popup.remove();
 
         for (let sublayer of this.activeLayer.layer.subLayers) {
             let visibility = this.mapService.map.getLayoutProperty(sublayer, 'visibility');
@@ -90,6 +99,20 @@ export class MapStepComponent extends BaseStepComponent {
                 this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'visible');
             }
         }
+
+        this.mapService.map.on('click', (e: any) => {
+            let features = this.mapService.map.queryRenderedFeatures(e.point, {layers: this.activeLayer.layer.subLayers });
+            if (!features.length) return;
+
+            let properties = <any>{};
+            properties = features[0].properties;
+            
+            if (this.popup) this.popup.remove();
+            this.popup = new Popup()
+                .setLngLat(e.lngLat)
+                .setHTML(properties.count)
+                .addTo(this.mapService.map);
+        });
     }
 
     updateLayers(info: any = {}) {
@@ -97,6 +120,8 @@ export class MapStepComponent extends BaseStepComponent {
             this.toggleActiveLayer();
         }
         this.activeLayer = info;
+        this.currentLegend = this.activeLayer.legend;
+
         this.toggleActiveLayer();
     }
 

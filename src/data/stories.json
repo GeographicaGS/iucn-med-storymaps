@@ -96,9 +96,12 @@
           "collapsed": false,
           "info": [
             {
-              "title": "Title here",
+              "title": "Species richness of butterflies in the Mediterranean region",
+              "credit": "",
               "collapsed" : false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -128,9 +131,12 @@
               }
             },
             {
-              "title": "Title here 2",
+              "title": "Distribution of threatened butterflies in the Mediterranean region",
               "collapsed" : true,
+              "credit": "",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -160,9 +166,12 @@
               }
             },
             {
-              "title": "Title here 3",
+              "title": "Species richness of endemic butterflies in the Mediterranean region",
               "collapsed" : true,
+              "credit": "",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -363,9 +372,12 @@
           "collapsed": false,
           "info": [
             {
-              "title": "Title here",
+              "title": "Species richness of butterflies in the Mediterranean region",
+              "credit": "",
               "collapsed" : false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -395,9 +407,12 @@
               }
             },
             {
-              "title": "Title here 2",
+              "title": "Distribution of threatened butterflies in the Mediterranean region",
               "collapsed" : true,
+              "credit": "",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -427,9 +442,12 @@
               }
             },
             {
-              "title": "Title here 3",
+              "title": "Species richness of endemic butterflies in the Mediterranean region",
               "collapsed" : true,
+              "credit": "",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -630,9 +648,12 @@
           "collapsed": false,
           "info": [
             {
-              "title": "Title here",
+              "title": "Species richness of butterflies in the Mediterranean region",
+              "credit": "",
               "collapsed" : false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -662,9 +683,12 @@
               }
             },
             {
-              "title": "Title here 2",
+              "title": "Distribution of threatened butterflies in the Mediterranean region",
               "collapsed" : true,
+              "credit": "",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -694,9 +718,12 @@
               }
             },
             {
-              "title": "Title here 3",
+              "title": "Species richness of endemic butterflies in the Mediterranean region",
               "collapsed" : true,
+              "credit": "",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
               "elements": [
                 {
                   "type": "paragraph",

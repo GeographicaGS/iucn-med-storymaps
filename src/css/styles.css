@@ -12,6 +12,7 @@
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,400i,500,600,600i,700,800,900|Merriweather:300,400,400i,700,700i,900,900i');
+@import url('https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css');
 html,
 body,
 body div,
@@ -4648,7 +4649,7 @@ info > .component-container .allMapLayers .mapLayerWrapper:not(:last-child) {
 }
 info > .component-container .titleWrapper {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   margin-bottom: 8px;
 }
 info > .component-container .titleWrapper .btn {
@@ -5606,6 +5607,12 @@ map #map {
   width: 100%;
   height: 100%;
 }
+map .mapboxgl-control-container {
+  display: none !important;
+}
+map .mapboxgl-popup .mapboxgl-popup-content {
+  padding-top: 15px;
+}
 map > .component-container {
   position: relative;
 }
@@ -5622,6 +5629,9 @@ map > .component-container > div > .btn-row {
 }
 map > .component-container > div > .btn-row:not(.top) {
   bottom: 32px;
+}
+map > .component-container > div > .btn-row:not(.top).legend {
+  bottom: 12px;
 }
 map > .component-container > div > .btn-row.top {
   top: 16px;

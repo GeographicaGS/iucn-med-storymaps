@@ -32,6 +32,8 @@ var MapStepComponent = (function (_super) {
         this.activeLayer = false;
         this.zoom = 4.5;
         this.center = [15.0, 38.0];
+        this.popup = false;
+        this.currentLegend = '';
     }
     MapStepComponent.prototype.onResize = function (event) {
         _super.prototype.onResize.call(this, event);
@@ -77,16 +79,24 @@ var MapStepComponent = (function (_super) {
         this.setActiveLayer();
     };
     MapStepComponent.prototype.setActiveLayer = function () {
+        var _this = this;
         for (var layer in this.step.info) {
             if (this.step.info[layer].collapsed === false) {
                 this.activeLayer = this.step.info[layer];
                 break;
             }
         }
+        this.mapService.map.on('load', function () {
+            _this.updateLayers(_this.activeLayer);
+        });
     };
     MapStepComponent.prototype.toggleActiveLayer = function () {
+        var _this = this;
         if (!this.activeLayer.layer.subLayers.length || !this.mapService.map)
             return;
+        var activePopup = {};
+        if (this.popup)
+            this.popup.remove();
         for (var _i = 0, _a = this.activeLayer.layer.subLayers; _i < _a.length; _i++) {
             var sublayer = _a[_i];
             var visibility = this.mapService.map.getLayoutProperty(sublayer, 'visibility');
@@ -97,6 +107,19 @@ var MapStepComponent = (function (_super) {
                 this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'visible');
             }
         }
+        this.mapService.map.on('click', function (e) {
+            var features = _this.mapService.map.queryRenderedFeatures(e.point, { layers: _this.activeLayer.layer.subLayers });
+            if (!features.length)
+                return;
+            var properties = {};
+            properties = features[0].properties;
+            if (_this.popup)
+                _this.popup.remove();
+            _this.popup = new mapbox_gl_1.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML(properties.count)
+                .addTo(_this.mapService.map);
+        });
     };
     MapStepComponent.prototype.updateLayers = function (info) {
         if (info === void 0) { info = {}; }
@@ -104,6 +127,7 @@ var MapStepComponent = (function (_super) {
             this.toggleActiveLayer();
         }
         this.activeLayer = info;
+        this.currentLegend = this.activeLayer.legend;
         this.toggleActiveLayer();
     };
     MapStepComponent.prototype.zoomIn = function () {
@@ -147,6 +171,14 @@ var MapStepComponent = (function (_super) {
         core_1.Input(), 
         __metadata('design:type', Object)
     ], MapStepComponent.prototype, "center", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], MapStepComponent.prototype, "popup", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], MapStepComponent.prototype, "currentLegend", void 0);
     MapStepComponent = __decorate([
         core_1.Component({
             selector: 'map',
