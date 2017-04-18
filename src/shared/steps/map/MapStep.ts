@@ -1,4 +1,4 @@
-import {Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding, Input} from "@angular/core";
+import {Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding} from "@angular/core";
 import {BaseStepComponent} from "../base/BaseStep";
 import {Map, Popup} from 'mapbox-gl';
 import {MapService} from "../../../services/MapService";
@@ -10,11 +10,11 @@ import {WindowService} from "../../../services/WindowService";
     templateUrl: '/templates/shared/steps/map/view.html',
 })
 export class MapStepComponent extends BaseStepComponent {
-    @Input() activeLayer: any = false;
-    @Input() zoom: any = 4.5;
-    @Input() center: any = [15.0, 38.0];
-    @Input() popup: any = false;
-    @Input() currentLegend: string = '';
+    activeLayer: any = false;
+    zoom: any = 4.5;
+    center: any = [15.0, 38.0];
+    popup: any = false;
+    currentLegend: string = '';
 
     constructor(@Inject(ElementRef)  elem: ElementRef,
                 @Inject(DOCUMENT) protected document: any,

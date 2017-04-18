@@ -163,26 +163,6 @@ var MapStepComponent = (function (_super) {
         anchor.download = info.shp;
         anchor.click();
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], MapStepComponent.prototype, "activeLayer", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], MapStepComponent.prototype, "zoom", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], MapStepComponent.prototype, "center", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], MapStepComponent.prototype, "popup", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], MapStepComponent.prototype, "currentLegend", void 0);
     MapStepComponent = __decorate([
         core_1.Component({
             selector: 'map',
