@@ -8,6 +8,9 @@ var builder = new Builder('', 'src/systemjs.config.js');
 var sourcemaps = require('gulp-sourcemaps');
 var typescript = require('gulp-typescript');
 var uglify = require('gulp-uglifyjs');
+var less = require('gulp-less');
+var watchLess = require('gulp-watch-less');
+var cleanCSS = require('gulp-clean-css');
 var bundleHash = new Date().getTime();
 var mainBundleName = bundleHash + '.main.bundle.js';
 var vendorBundleName = bundleHash + '.vendor.bundle.js';
@@ -144,6 +147,24 @@ gulp.task('minify:css', function () {
 gulp.task('clean:ts', function () {
   return gulp.src(['./public/**/*.js', './public/**/*.js.map'], {read: false})
       .pipe(clean());
+});
+
+gulp.task('clean:css', function () {
+  return gulp.src(['./public/css/styles.css'], {read: false})
+      .pipe(clean());
+});
+
+gulp.task('less', ['clean:css', 'less:c']);
+
+gulp.task('less:c', function () {
+  return gulp.src(`src/css/styles.less`)
+  // .pipe(watchLess('src/css/styles.less'))
+  .pipe(less().on('error', function (err) {
+    console.log(err);
+    this.emit("end");
+  }))
+  // .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest(`src/css/`));
 });
 
 // This is main task for production use
