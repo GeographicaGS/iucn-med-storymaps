@@ -3,6 +3,7 @@
         <info
             *ngIf="hasInfo()"
             [item]="step.info"
+            [collapsed]="false"
             (manageLayers)="updateLayers($event)"
             (downloadShp)="getShpFile($event)"
         ></info>

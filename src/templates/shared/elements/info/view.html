@@ -12,8 +12,8 @@
 	</div>
 </div>
 
-<div class="component-container">
-	<div class="allMapLayers" *ngIf="item.length > 1">
+<div class="component-container" (click)="toggleVisibility()">
+	<div class="allMapLayers" *ngIf="item.length > 1" (click)="$event.stopPropagation()">
 		<div class="mapLayerWrapper" *ngFor="let info of item|| []; let i=index">
 			<div class="titleWrapper">
 			    <div
@@ -35,12 +35,12 @@
 		    <div class="credit" [ngClass]="{hidden: info.collapsed === true}">{{info.credit}}</div>
 	    </div>
     </div>
-    <div *ngIf="item.length === 1">
+    <div *ngIf="!item.length"  (click)="$event.stopPropagation()">
 		<div class="title" (click)="toggleLayer(item)">{{item.title}}</div>
 	    <div class="info" [ngClass]="{hidden: item.collapsed === true}">
 	        <element-block [elements]="item.elements"></element-block>
 	    </div>
-	    <div class="credit">
+	    <div class="credit" [ngClass]="{hidden: item.collapsed === true}">
 	        {{item.credit}}
 	    </div>
     </div>

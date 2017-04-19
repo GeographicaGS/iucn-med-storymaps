@@ -4638,6 +4638,7 @@ info > .component-container .info.hidden {
 info > .component-container .allMapLayers {
   max-height: 92%;
   overflow-y: auto;
+  width: 350px;
 }
 info > .component-container .allMapLayers .mapLayerWrapper {
   width: 320px;

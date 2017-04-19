@@ -67,6 +67,7 @@ var MapStepComponent = (function (_super) {
         return locked;
     };
     MapStepComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
         _super.prototype.ngAfterViewInit.call(this);
         this.mapService.map = new mapbox_gl_1.Map({
             trackResize: false,
@@ -76,16 +77,7 @@ var MapStepComponent = (function (_super) {
             center: this.center
         });
         this.mapService.map.scrollZoom.disable();
-        this.setActiveLayer();
-    };
-    MapStepComponent.prototype.setActiveLayer = function () {
-        var _this = this;
-        for (var layer in this.step.info) {
-            if (this.step.info[layer].collapsed === false) {
-                this.activeLayer = this.step.info[layer];
-                break;
-            }
-        }
+        this.activeLayer = this.step.info[0];
         this.mapService.map.on('load', function () {
             _this.updateLayers(_this.activeLayer);
         });
