@@ -52,7 +52,7 @@
       {
         "type": "paragraph",
         "capitalize": false,
-        "semibold": true,
+        "bold": true,
         "value": "Explore, discover relevant data and share it!!"
       }
     ],

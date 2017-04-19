@@ -13,6 +13,7 @@
 -------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,400i,500,600,600i,700,800,900|Merriweather:300,400,400i,700,700i,900,900i');
 @import url('https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
 html,
 body,
 body div,
@@ -6434,7 +6435,6 @@ iucnInfo .component-container .subtitle > div.separator:before {
 }
 iucnInfo .component-container .content {
   display: flex;
-  /*justify-content: center;*/
   flex-direction: column;
   max-height: 80%;
   overflow-y: auto;
@@ -6444,7 +6444,7 @@ iucnInfo .component-container .content .address-container {
   display: block;
 }
 iucnInfo .component-container .content .contact-person {
-  margin: 14px 0 10px 0;
+  margin: 24px 0;
 }
 iucnInfo .component-container .content .contact-person .name,
 iucnInfo .component-container .content .contact-person .email {
@@ -6501,6 +6501,53 @@ iucnInfo .component-container .content .address-container .center-address {
   line-height: 16px;
   text-align: center;
   margin-bottom: 20px;
+}
+iucnInfo .component-container .content .geographicaFooter {
+  margin-top: 40px;
+  position: relative;
+}
+iucnInfo .component-container .content .geographicaFooter .header {
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  color: #909090;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+iucnInfo .component-container .content .geographicaFooter .header:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: -75px;
+  height: 2px;
+  width: 150px;
+  transform: scaleY(-1);
+  background-color: #e8e8e8;
+  display: block;
+  top: -20px;
+}
+iucnInfo .component-container .content .geographicaFooter .geologo {
+  width: 104px;
+  height: 136px;
+  display: block;
+  margin: 10px auto;
+}
+iucnInfo .component-container .content .geographicaFooter .slogan {
+  font-family: "Space Mono", monospace;
+  color: #0C2247;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+iucnInfo .component-container .content .geographicaFooter .web {
+  text-align: center;
+  margin-bottom: 8px;
+}
+iucnInfo .component-container .content .geographicaFooter .web a {
+  font-family: "Space Mono", monospace;
+  color: #15B750;
+  font-size: 12px;
+  line-height: 17px;
 }
 iucnInfo .component-container .content a {
   color: #0079BA;
