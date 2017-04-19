@@ -1,3 +1,5 @@
+@import url('https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css');
+
 map {
   .bg_blanco();
   #map {
@@ -6,6 +8,16 @@ map {
     width: 100%;
     height: 100%;
   }
+
+  .mapboxgl-control-container {
+    display: none !important;
+  }
+  .mapboxgl-popup {
+    .mapboxgl-popup-content {
+      padding-top: 15px;
+    }  
+  }
+  
   > .component-container{
     position: relative;
     .step-locked {
@@ -18,10 +30,24 @@ map {
     > div {
       > .btn-row {
         position: absolute;
-        bottom: 32px;
-        left: 32px;
         z-index: 100;
-        top: auto;
+
+        &:not(.top) {
+          bottom: 32px;
+          &.legend {
+            bottom: 12px;
+          }
+        }
+        &.top {
+          top: 16px;
+        }
+        &:not(.right) {
+          left: 32px;
+        }
+        &.right {
+          right: 88px;
+        }
+
         .btn {
           border: 2px solid @blanco;
           width: 32px;
@@ -30,8 +56,37 @@ map {
           margin: 0 0 auto 0;
           &.next-step {
             .bg_blanco();
-            border-color:@azul_iucn;
+            border-color: @azul_iucn;
             background-image: url('../../../assets/icon/arrow_scroll-h.svg');
+          }
+          &.resetBbox {
+            .bg_blanco();
+            border: 2px solid fade(#212121, 50%);
+            background-image: url('../../../assets/icon/centermap.svg');
+          }
+        }
+
+        .zoomControl {
+          box-sizing: border-box;
+          width: 32px;
+          border: 2px solid fade(#212121, 50%);
+          border-radius: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 16px;
+          .bg_blanco();
+
+          .zoomIn {
+            border: none;
+            background-image: url('../../../assets/icon/zoom-in.svg');
+            border-radius: 0;
+            border-bottom: 1px solid fade(#212121, 50%);
+          }
+          .zoomOut {
+            border: none;
+            background-image: url('../../../assets/icon/zoom-out.svg');
           }
         }
       }

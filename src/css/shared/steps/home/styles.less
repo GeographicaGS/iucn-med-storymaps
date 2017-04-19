@@ -21,7 +21,7 @@ home {
       vertical-align: middle;
     }
     span {
-      font-weight: 500;
+      .font(medium);
       text-transform: uppercase;
       letter-spacing: 1px;
     }
@@ -78,13 +78,12 @@ home {
         text-transform: uppercase;
         .animated(0.8s, 0.3s);
         .fadeInDown();
-        .fira_sans();
+        .font(light);
         .color_blanco();
         max-width: 540px;
         width: 75%;
         font-size: 64px;
         line-height: 64px;
-        font-weight: 300;
         position: relative;
         margin: 0 auto;
         text-align: center;
@@ -94,11 +93,10 @@ home {
         position: relative;
         margin: 0 auto;
         text-align: center;
-        .fira_sans();
+        .font(medium);
         .color_blanco();
         font-size: 24px;
         line-height: 32px;
-        font-weight: 500;
         margin-bottom: 48px;
         .animated(0.6s, 0.5s);
         .fadeInUp();
@@ -109,12 +107,11 @@ home {
         position: relative;
         margin: 0 auto;
         text-align: center;
-        .fira_sans();
+        .font(medium);
         .color_blanco();
         font-size: 32px;
         line-height: 32px;
         text-transform: uppercase;
-        font-weight: 500;
         margin-bottom: 48px;
         .animated(0.6s, 0.5s);
         .fadeInUp();
@@ -177,9 +174,8 @@ home {
             border:2px solid @azul_iucn;
             line-height: 30px;
             text-align: center;
-            .fira_sans();
+            .font(medium);
             .color_blanco();
-            font-weight: 500;
             font-size: 12px;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -195,10 +191,9 @@ home {
             border-radius: 16px;
             line-height: 30px;
             text-align: center;
-            .fira_sans();
+            .font(medium);
             .color_blanco();
             border:2px solid @blanco;
-            font-weight: 500;
             font-size: 12px;
             text-transform: uppercase;
           }
@@ -211,13 +206,12 @@ home {
       > .title {
         .animated(0.6s, 0.5s);
         .fadeIn();
-        .fira_sans();
+        .font(light);
         .color_blanco();
         max-width: 540px;
         width: 100%;
         font-size: 32px;
         line-height: 64px;
-        font-weight: 300;
         letter-spacing: 2px;
         position: relative;
         margin: 0 auto;
@@ -338,11 +332,10 @@ home {
           &.title {
             opacity: 0.75;
             text-align: center;
-            .fira_sans();
+            .font(ultrabold);
             .color_blanco();
             font-size: 32px;
             line-height: 32px;
-            font-weight: 900;
             max-width: 340px;
             z-index: -1;
           }

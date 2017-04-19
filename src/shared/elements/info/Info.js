@@ -20,6 +20,11 @@ var InfoComponent = (function (_super) {
     function InfoComponent() {
         _super.apply(this, arguments);
         this.collapsed = true;
+        this.modalOpen = false;
+        this.wmsValue = '';
+        this.wmsCopied = null;
+        this.manageLayers = new core_1.EventEmitter();
+        this.downloadShp = new core_1.EventEmitter();
     }
     InfoComponent.prototype.toggleVisibility = function () {
         this.collapsed = !this.collapsed;
@@ -33,11 +38,73 @@ var InfoComponent = (function (_super) {
         }
         _super.prototype.ngAfterViewInit.call(this);
     };
+    InfoComponent.prototype.toggleLayer = function (info) {
+        if (info === void 0) { info = {}; }
+        if (info.collapsed === false)
+            return;
+        var item = {};
+        for (var _i = 0, _a = this.item; _i < _a.length; _i++) {
+            item = _a[_i];
+            item.collapsed = true;
+        }
+        info.collapsed = !info.collapsed;
+        this.manageLayers.emit(info);
+    };
+    InfoComponent.prototype.downloadFile = function (info) {
+        if (info === void 0) { info = {}; }
+        this.downloadShp.emit(info);
+    };
+    InfoComponent.prototype.toggleModal = function () {
+        this.modalOpen = !this.modalOpen;
+    };
+    InfoComponent.prototype.openModal = function (info) {
+        if (info === void 0) { info = {}; }
+        this.wmsValue = info.shp;
+        this.modalOpen = true;
+        this.wmsCopied = null;
+    };
+    InfoComponent.prototype.copyWmsValue = function () {
+        var copyTextarea = document.querySelector('.wmsInput.active');
+        copyTextarea.select();
+        try {
+            var successful = document.execCommand('copy');
+            if (successful) {
+                this.wmsCopied = true;
+            }
+            else {
+                this.wmsCopied = false;
+            }
+        }
+        catch (err) {
+            console.log('Oops, unable to copy');
+            this.wmsCopied = false;
+        }
+    };
     __decorate([
         core_1.HostBinding('class.collapsed'),
         core_1.Input(), 
         __metadata('design:type', Boolean)
     ], InfoComponent.prototype, "collapsed", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
+    ], InfoComponent.prototype, "modalOpen", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], InfoComponent.prototype, "wmsValue", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
+    ], InfoComponent.prototype, "wmsCopied", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], InfoComponent.prototype, "manageLayers", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], InfoComponent.prototype, "downloadShp", void 0);
     InfoComponent = __decorate([
         core_1.Component({
             selector: 'info',

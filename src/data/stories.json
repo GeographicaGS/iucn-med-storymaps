@@ -144,26 +144,116 @@
         },
         "map": {
           "name": "Map",
-          "info": {
-            "collapsed" : false,
-            "elements": [
-              {
-                "type": "paragraph",
-                "capitalize": false,
-                "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
-              },
-              {
-                "type": "paragraph",
-                "capitalize": false,
-                "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
-              },
-              {
-                "type": "paragraph",
-                "capitalize": false,
-                "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+          "collapsed": false,
+          "info": [
+            {
+              "title": "Species richness of butterflies in the Mediterranean region",
+              "credit": "",
+              "collapsed" : false,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
+              "elements": [
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+                }
+              ],
+              "layer": {
+                "id": "butterflies_total",
+                "hidden": false,
+                "subLayers": [
+                  "butterflies_all-species_less50",
+                  "butterflies_all-species_50_100",
+                  "butterflies_all-species_100_150",
+                  "butterflies_all-species_more150"
+                ]
               }
-            ]
-          }
+            },
+            {
+              "title": "Distribution of threatened butterflies in the Mediterranean region",
+              "collapsed" : true,
+              "credit": "",
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
+              "elements": [
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+                }
+              ],
+              "layer": {
+                "id": "butterflies_threatened",
+                "hidden": true,
+                "subLayers": [
+                  "butterflies_threatened_1",
+                  "butterflies_threatened_2",
+                  "butterflies_threatened_3",
+                  "butterflies_threatened_4"
+                ]
+              }
+            },
+            {
+              "title": "Species richness of endemic butterflies in the Mediterranean region",
+              "collapsed" : true,
+              "credit": "",
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
+              "elements": [
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+                }
+              ],
+              "layer": {
+                "id": "butterflies_threatened",
+                "hidden": true,
+                "subLayers": [
+                  "butterflies_endemic_less5",
+                  "butterflies_endemic_5_10",
+                  "butterflies_endemic_10_15",
+                  "butterflies_endemic_15_20",
+                  "butterflies_endemic_20_25",
+                  "butterflies_endemic_more25"
+                ]
+              }
+            }
+          ]
         },
         "conclusion": {
           "name": "Conclusion",
@@ -330,25 +420,116 @@
         },
         "map": {
           "name": "Map",
-          "info": {
-            "elements": [
-              {
-                "type": "paragraph",
-                "capitalize": false,
-                "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
-              },
-              {
-                "type": "paragraph",
-                "capitalize": false,
-                "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
-              },
-              {
-                "type": "paragraph",
-                "capitalize": false,
-                "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+          "collapsed": false,
+          "info": [
+            {
+              "title": "Species richness of butterflies in the Mediterranean region",
+              "credit": "",
+              "collapsed" : false,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
+              "elements": [
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+                }
+              ],
+              "layer": {
+                "id": "butterflies_total",
+                "hidden": false,
+                "subLayers": [
+                  "butterflies_all-species_less50",
+                  "butterflies_all-species_50_100",
+                  "butterflies_all-species_100_150",
+                  "butterflies_all-species_more150"
+                ]
               }
-            ]
-          }
+            },
+            {
+              "title": "Distribution of threatened butterflies in the Mediterranean region",
+              "collapsed" : true,
+              "credit": "",
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
+              "elements": [
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+                }
+              ],
+              "layer": {
+                "id": "butterflies_threatened",
+                "hidden": true,
+                "subLayers": [
+                  "butterflies_threatened_1",
+                  "butterflies_threatened_2",
+                  "butterflies_threatened_3",
+                  "butterflies_threatened_4"
+                ]
+              }
+            },
+            {
+              "title": "Species richness of endemic butterflies in the Mediterranean region",
+              "collapsed" : true,
+              "credit": "",
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
+              "elements": [
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+                }
+              ],
+              "layer": {
+                "id": "butterflies_threatened",
+                "hidden": true,
+                "subLayers": [
+                  "butterflies_endemic_less5",
+                  "butterflies_endemic_5_10",
+                  "butterflies_endemic_10_15",
+                  "butterflies_endemic_15_20",
+                  "butterflies_endemic_20_25",
+                  "butterflies_endemic_more25"
+                ]
+              }
+            }
+          ]
         },
         "conclusion": {
           "name": "Conclusion",
@@ -515,25 +696,116 @@
         },
         "map": {
           "name": "Map",
-          "info": {
-            "elements": [
-              {
-                "type": "paragraph",
-                "capitalize": false,
-                "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
-              },
-              {
-                "type": "paragraph",
-                "capitalize": false,
-                "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
-              },
-              {
-                "type": "paragraph",
-                "capitalize": false,
-                "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+          "collapsed": false,
+          "info": [
+            {
+              "title": "Species richness of butterflies in the Mediterranean region",
+              "credit": "",
+              "collapsed" : false,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
+              "elements": [
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+                }
+              ],
+              "layer": {
+                "id": "butterflies_total",
+                "hidden": false,
+                "subLayers": [
+                  "butterflies_all-species_less50",
+                  "butterflies_all-species_50_100",
+                  "butterflies_all-species_100_150",
+                  "butterflies_all-species_more150"
+                ]
               }
-            ]
-          }
+            },
+            {
+              "title": "Distribution of threatened butterflies in the Mediterranean region",
+              "collapsed" : true,
+              "credit": "",
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
+              "elements": [
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+                }
+              ],
+              "layer": {
+                "id": "butterflies_threatened",
+                "hidden": true,
+                "subLayers": [
+                  "butterflies_threatened_1",
+                  "butterflies_threatened_2",
+                  "butterflies_threatened_3",
+                  "butterflies_threatened_4"
+                ]
+              }
+            },
+            {
+              "title": "Species richness of endemic butterflies in the Mediterranean region",
+              "collapsed" : true,
+              "credit": "",
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "legend": "/assets/maps/legend_map.svg",
+              "elements": [
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+                }
+              ],
+              "layer": {
+                "id": "butterflies_threatened",
+                "hidden": true,
+                "subLayers": [
+                  "butterflies_endemic_less5",
+                  "butterflies_endemic_5_10",
+                  "butterflies_endemic_10_15",
+                  "butterflies_endemic_15_20",
+                  "butterflies_endemic_20_25",
+                  "butterflies_endemic_more25"
+                ]
+              }
+            }
+          ]
         },
         "conclusion": {
           "name": "Conclusion",

@@ -1,12 +1,30 @@
 <div class="component-container" [style.height.px]="getWindowHeight()" [style.width.px]="getWindowWidth() +50" >
     <div [ngClass]="lockView() ? 'step-locked' : ''">
-        <info *ngIf="hasInfo()" [item]="step.info"></info>
+        <info
+            *ngIf="hasInfo()"
+            [item]="step.info"
+            [collapsed]="false"
+            (manageLayers)="updateLayers($event)"
+            (downloadShp)="getShpFile($event)"
+        ></info>
         <div id="map" class="map" [style.height.px]="getWindowHeight()">
 
         </div>
 
+        <div class="btn-row top right">
+            <a class="btn small circle resetBbox" (click)="flyTo()"></a>
+            <div class="zoomControl">
+                <a class="btn small circle zoomIn" (click)="zoomIn()"></a>
+                <a class="btn small circle zoomOut" (click)="zoomOut()"></a>
+            </div>
+        </div>
+
         <div class="btn-row">
             <a class="btn small circle next-step" (click)="goNextStep()"></a>
+        </div>
+
+        <div class="btn-row right legend">
+            <img src="{{currentLegend}}" />
         </div>
     </div>
 </div>

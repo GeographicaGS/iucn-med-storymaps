@@ -29,6 +29,11 @@ var MapStepComponent = (function (_super) {
         this.document = document;
         this.windowService = windowService;
         this.mapService = mapService;
+        this.activeLayer = false;
+        this.zoom = 4.5;
+        this.center = [15.0, 38.0];
+        this.popup = false;
+        this.currentLegend = '';
     }
     MapStepComponent.prototype.onResize = function (event) {
         _super.prototype.onResize.call(this, event);
@@ -62,15 +67,93 @@ var MapStepComponent = (function (_super) {
         return locked;
     };
     MapStepComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
         _super.prototype.ngAfterViewInit.call(this);
         this.mapService.map = new mapbox_gl_1.Map({
-            trackResize: true,
+            trackResize: false,
             container: 'map',
-            style: 'mapbox://styles/mapbox/light-v9',
-            zoom: 5,
-            center: [6.328125, 40.78054143186033]
+            style: 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
+            zoom: this.zoom,
+            center: this.center
         });
         this.mapService.map.scrollZoom.disable();
+        this.activeLayer = this.step.info[0];
+        this.mapService.map.on('load', function () {
+            _this.updateLayers(_this.activeLayer);
+        });
+    };
+    MapStepComponent.prototype.toggleActiveLayer = function () {
+        var _this = this;
+        if (!this.activeLayer.layer.subLayers.length || !this.mapService.map)
+            return;
+        var activePopup = {};
+        if (this.popup)
+            this.popup.remove();
+        for (var _i = 0, _a = this.activeLayer.layer.subLayers; _i < _a.length; _i++) {
+            var sublayer = _a[_i];
+            var visibility = this.mapService.map.getLayoutProperty(sublayer, 'visibility');
+            if (visibility === 'visible') {
+                this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'none');
+            }
+            else {
+                this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'visible');
+            }
+        }
+        this.mapService.map.on('click', function (e) {
+            var features = _this.mapService.map.queryRenderedFeatures(e.point, { layers: _this.activeLayer.layer.subLayers });
+            if (!features.length)
+                return;
+            var properties = {};
+            properties = features[0].properties;
+            var count = properties.count;
+            if (_this.popup)
+                _this.popup.remove();
+            if (!properties.count && properties.N_COUNT) {
+                count = properties.N_COUNT;
+            }
+            _this.popup = new mapbox_gl_1.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML(count)
+                .addTo(_this.mapService.map);
+        });
+    };
+    MapStepComponent.prototype.updateLayers = function (info) {
+        if (info === void 0) { info = {}; }
+        if (this.activeLayer) {
+            this.toggleActiveLayer();
+        }
+        this.activeLayer = info;
+        this.currentLegend = this.activeLayer.legend;
+        this.toggleActiveLayer();
+    };
+    MapStepComponent.prototype.zoomIn = function () {
+        var currentZoom = this.mapService.map.getZoom();
+        var currentCenter = this.mapService.map.getCenter();
+        this.flyTo(currentCenter, currentZoom + 1);
+    };
+    MapStepComponent.prototype.zoomOut = function () {
+        var currentZoom = this.mapService.map.getZoom();
+        var currentCenter = this.mapService.map.getCenter();
+        this.flyTo(currentCenter, currentZoom - 1);
+    };
+    MapStepComponent.prototype.flyTo = function (center, zoom) {
+        if (center === void 0) { center = this.center; }
+        if (zoom === void 0) { zoom = this.zoom; }
+        if (!this.mapService.map)
+            return;
+        this.mapService.map.flyTo({
+            center: center,
+            zoom: zoom,
+            speed: 0.6
+        });
+    };
+    MapStepComponent.prototype.getShpFile = function (info) {
+        if (info === void 0) { info = {}; }
+        var anchor = document.createElement('a');
+        anchor.href = info.shp;
+        anchor.target = '_blank';
+        anchor.download = info.shp;
+        anchor.click();
     };
     MapStepComponent = __decorate([
         core_1.Component({

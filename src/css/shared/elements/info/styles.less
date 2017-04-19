@@ -18,7 +18,10 @@ info {
       background-color:transparent;
       border: 2px solid @blanco;
       background-image: url('../../../../assets/icon/close-white.svg');
+    }
 
+    .summary {
+      display: none;
     }
   }
 
@@ -33,6 +36,43 @@ info {
     background: linear-gradient(90deg, fade(@oscuro, 70%) 0%, fade(@oscuro, 0%) 100%);
     .animated(0.6s, 0.1s);
     .fadeIn();
+
+    .btn-row {
+      &:not(.hidden) {
+        padding-top: 36px;  
+      }
+      .btn.download {
+        opacity: 1;
+        visibility: visible;
+        .animated(0.3s, 0.2s);
+        .fadeIn();
+        position: relative;
+        width: auto;
+        height: 32px;
+        padding: 0 10px;
+        border-radius: 16px;
+        border: 2px solid @azul_iucn;
+        line-height: 30px;
+        text-align: center;
+        font-size: 12px;
+        text-transform: uppercase;
+        display: table;
+        letter-spacing: 1px;
+        margin: 0 0 16px 0;
+        .bg_azul_iucn();
+        .font(semibold);
+        .color_blanco();
+      }
+      &.hidden {
+        .btn.download {
+          opacity: 0;
+          visibility: hidden;
+          .fadeOut();
+          display: none;
+        }
+      }
+    }
+
     .info {
       width: 400px;
       padding-right:60px;
@@ -43,7 +83,6 @@ info {
         .color_blanco();
         font-size: 14px;
         line-height: 18px;
-        font-weight: normal;
         margin-bottom: 10px;
       }
       > paragraph,
@@ -77,17 +116,61 @@ info {
         border-radius: 10px;
         -webkit-box-shadow: 0 0 6px @n10 inset;
       }
+
+      &.hidden {
+        display: none;
+      }
     }
 
-    .title{
-      .fira_sans();
-      .color_blanco();
-      font-size:24px;
-      line-height:32px;
-      font-weight: 800;
-      font-style: italic;
-      margin-bottom:8px;
+    .allMapLayers {
+      max-height: 92%;
+      overflow-y: auto;
+      width: 350px;
+      .mapLayerWrapper {
+        width: 320px;
+        &:not(:last-child) {
+          border-bottom: 2px solid @azul_iucn;
+          margin-bottom: 10px;
+          padding-bottom: 22px;
+        }
+      }
     }
+
+    .titleWrapper {
+      display: flex;
+      margin-bottom: 8px;
+      .btn {
+        background-color: white;
+        color: @azul_iucn;
+        border: 2px solid @azul_iucn;
+        background-image: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        .font(bold);
+        margin-right: 8px;
+        &.selected {
+          border: 2px solid transparent;
+        }
+      }
+      .title {
+        .font(semibolditalic);
+        .color_blanco();
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 800;
+        font-style: italic;
+        display: inline-flex;
+        max-width: 279px;
+        cursor: pointer;
+
+        &.selected {
+          font-size:24px;
+          line-height:32px;
+        }
+      }
+    }
+    
     .credit {
       display: block;
       width: 320px;
@@ -97,17 +180,25 @@ info {
       .color_blanco();
       font-size: 14px;
       line-height: 18px;
-      font-weight: normal;
-
       position: relative;
-      &:before{
-        content: "";
-        position: absolute;
-        top: -6px;
-        left: 0px;
-        width: 8px;
-        display: block;
-        border-bottom: 1.5px solid #fff;
+
+      &(:empty) {
+        display: none;
+      }
+
+      &:not(:empty) {
+        &:before {
+          content: "";
+          position: absolute;
+          top: -6px;
+          left: 0px;
+          width: 8px;
+          display: block;
+          border-bottom: 1.5px solid #fff;
+        }
+      }
+      &.hidden {
+        display: none;
       }
     }
 
@@ -127,6 +218,25 @@ info {
         .bg_blanco();
         background-image: url('../../../../assets/icon/info-h.svg');
         opacity: 1;
+
+        &.download {
+          opacity: 0
+        }
+      }
+      .summary {
+        display: block;
+        .btn {
+          .font(bold);
+          color: @azul_iucn;
+          background-image: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &.selected {
+            border: 2px solid transparent;
+          }
+        }
       }
     }
   }

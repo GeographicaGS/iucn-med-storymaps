@@ -5,17 +5,8 @@ import {Map} from 'mapbox-gl';
 @Injectable()
 export class MapService {
     map: Map;
-    baseMaps: any;
 
     constructor() {
-        (mapboxgl as any).accessToken = 'pk.eyJ1IjoiZHozMTY0MjQiLCJhIjoiNzI3NmNkOTcyNWFlNGQxNzU2OTA1N2EzN2FkNWIwMTcifQ.NS8KWg47FzfLPlKY0JMNiQ';
-
-        this.baseMaps = [
-            { name: 'Street', id: 'street' },
-            { name: 'Bright', id: 'bright' },
-            { name: 'Light', id: 'light' },
-            { name: 'Satellite', id: 'satellite' }
-        ];
-
+        (mapboxgl as any).accessToken = 'pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q'
     }
 }
