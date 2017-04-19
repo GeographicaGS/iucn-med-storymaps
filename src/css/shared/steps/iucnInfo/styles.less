@@ -130,18 +130,22 @@ iucnInfo {
     }
 
     .content {
-      display: flex;
-      flex-direction: column;
-      max-height: 80%;
+      height: 80%;
       overflow-y: auto;
+
+      element-block {
+        display: block;
+        position: relative;
+      }
 
       .contact-person,
       .address-container {
+        position: relative;
         display: block;
       }
 
       .contact-person {
-        margin: 24px 0;
+        margin: 50px 0 0 0;
         .name,
         .email {
           text-align: center;
@@ -163,19 +167,7 @@ iucnInfo {
         .fira_sans();
       }
       .address-container {
-        margin-top: 24px;
-        &:before {
-          content: "";
-          position: absolute;
-          left: 50%;
-          margin-left: -75px;
-          height: 2px;
-          width: 150px;
-          transform: scaleY(-1);
-          .bg_ng10();
-          display: block;
-          top: -20px;
-        }
+        margin-top: 18px;
         position: relative;
         text-align: center;
 
@@ -194,12 +186,12 @@ iucnInfo {
           font-size: 12px;
           line-height: 16px;
           text-align: center;
-          margin-bottom: 20px;
+          margin-bottom: 60px;
         }
       }
 
       .geographicaFooter {
-        margin-top: 40px;
+        margin-top: 20px;
         position: relative;
         .header {
           .font();
@@ -235,13 +227,12 @@ iucnInfo {
         }
         .web {
           text-align: center;
-          margin-bottom: 8px;
+          margin-bottom: 40px;
           a {
             font-family: "Space Mono", monospace;
             color: #15B750;
             font-size: 12px;
             line-height: 17px;  
-
           }
         }
       }

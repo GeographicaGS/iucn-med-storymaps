@@ -4661,6 +4661,7 @@ info > .component-container .info.hidden {
 info > .component-container .allMapLayers {
   max-height: 92%;
   overflow-y: auto;
+  overflow-x: hidden;
   width: 350px;
 }
 info > .component-container .allMapLayers .mapLayerWrapper {
@@ -6113,8 +6114,9 @@ skip .contact-info-container a {
 }
 .modalOverlay .modal {
   width: 400px;
+  height: auto;
   min-height: 120px;
-  max-height: 400px;
+  max-height: 600px;
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
@@ -6126,6 +6128,9 @@ skip .contact-info-container a {
   font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
 }
 .modalOverlay .modal .modal-header {
   margin: 15px;
@@ -6150,7 +6155,6 @@ skip .contact-info-container a {
 .modalOverlay .modal .modal-footer {
   margin: 15px;
   text-align: center;
-  height: 19px;
 }
 .modalOverlay.open {
   -webkit-animation-duration: 0.8s;
@@ -6435,17 +6439,20 @@ iucnInfo .component-container .subtitle > div.separator:before {
   width: 100%;
 }
 iucnInfo .component-container .content {
-  display: flex;
-  flex-direction: column;
-  max-height: 80%;
+  height: 80%;
   overflow-y: auto;
+}
+iucnInfo .component-container .content element-block {
+  display: block;
+  position: relative;
 }
 iucnInfo .component-container .content .contact-person,
 iucnInfo .component-container .content .address-container {
+  position: relative;
   display: block;
 }
 iucnInfo .component-container .content .contact-person {
-  margin: 24px 0;
+  margin: 50px 0 0 0;
 }
 iucnInfo .component-container .content .contact-person .name,
 iucnInfo .component-container .content .contact-person .email {
@@ -6468,21 +6475,9 @@ iucnInfo .component-container .content .contact-link {
   font-family: 'Fira Sans', sans-serif;
 }
 iucnInfo .component-container .content .address-container {
-  margin-top: 24px;
+  margin-top: 18px;
   position: relative;
   text-align: center;
-}
-iucnInfo .component-container .content .address-container:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  margin-left: -75px;
-  height: 2px;
-  width: 150px;
-  transform: scaleY(-1);
-  background-color: #e8e8e8;
-  display: block;
-  top: -20px;
 }
 iucnInfo .component-container .content .address-container .center-name {
   color: #212121;
@@ -6501,10 +6496,10 @@ iucnInfo .component-container .content .address-container .center-address {
   font-size: 12px;
   line-height: 16px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 iucnInfo .component-container .content .geographicaFooter {
-  margin-top: 40px;
+  margin-top: 20px;
   position: relative;
 }
 iucnInfo .component-container .content .geographicaFooter .header {
@@ -6542,7 +6537,7 @@ iucnInfo .component-container .content .geographicaFooter .slogan {
 }
 iucnInfo .component-container .content .geographicaFooter .web {
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 40px;
 }
 iucnInfo .component-container .content .geographicaFooter .web a {
   font-family: "Space Mono", monospace;

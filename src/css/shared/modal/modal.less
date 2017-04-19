@@ -16,8 +16,9 @@
 
 	.modal {
 		width: 400px;
+		height: auto;
 		min-height: 120px;
-		max-height: 400px;
+		max-height: 600px;
 		overflow-y: auto;
 		opacity: 0;
 		visibility: hidden;	
@@ -30,6 +31,10 @@
 	    .fira_sans();
 	    font-size: 14px;
 
+	    display: flex;
+	    flex-direction: column;
+	    flex: 0 0 auto;
+	    
 		.modal-header {
 			margin: 15px;
 			text-align: center;
@@ -55,7 +60,6 @@
 		.modal-footer {
 		    margin: 15px;
 		    text-align: center;
-		    height: 19px;
 		}
 	}
 
