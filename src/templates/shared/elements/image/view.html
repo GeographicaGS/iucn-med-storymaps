@@ -1,5 +1,5 @@
 <div class="container-component" [ngClass]="showContent() ? 'fadeInUp' : 'fadeOutDown'" >
-    <info *ngIf="hasInfo()" [item]="item.info"></info>
+    <info *ngIf="hasInfo()" [collapsed]="true" [item]="item.info"></info>
     <div class="image" [style.background-image]="'url(' + getBackgroundSrc() + ')'"></div>
 </div>
 <div *ngIf="hasCredit()" class="credit-container">
