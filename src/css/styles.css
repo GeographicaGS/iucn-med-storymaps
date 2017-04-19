@@ -4054,6 +4054,7 @@ body .nav-bar {
 }
 body .main-container {
   flex: 1 0 auto;
+  height: 100%;
 }
 body.full-screen {
   position: relative;

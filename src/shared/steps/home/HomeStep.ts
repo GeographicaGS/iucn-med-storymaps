@@ -10,9 +10,12 @@ export class HomeStepComponent extends BaseStepComponent {
 
     scaling: string = '';
     scalingInProgress: boolean = false;
-
+    
     ngAfterViewInit() {
-        this.checkBackground();
+        // setting a timeout so that it works on safari .... 
+        setTimeout(()=> {
+            this.checkBackground();
+        }, 100);
     }
 
     checkBackground() {

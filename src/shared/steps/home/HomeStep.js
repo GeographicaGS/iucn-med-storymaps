@@ -24,7 +24,11 @@ var HomeStepComponent = (function (_super) {
         this.scalingInProgress = false;
     }
     HomeStepComponent.prototype.ngAfterViewInit = function () {
-        this.checkBackground();
+        var _this = this;
+        // setting a timeout so that it works on safari .... 
+        setTimeout(function () {
+            _this.checkBackground();
+        }, 100);
     };
     HomeStepComponent.prototype.checkBackground = function () {
         var _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
