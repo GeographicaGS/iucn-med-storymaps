@@ -15,6 +15,7 @@ var http_1 = require("@angular/http");
 var MainComponent_1 = require("./main/MainComponent");
 var Menu_1 = require("./../shared/menu/Menu");
 var HomeStep_1 = require("../shared/steps/home/HomeStep");
+var IucnInfoStep_1 = require("../shared/steps/iucnInfo/IucnInfoStep");
 var IntroStep_1 = require("../shared/steps/intro/IntroStep");
 var CoverStep_1 = require("../shared/steps/cover/CoverStep");
 var MapStep_1 = require("../shared/steps/map/MapStep");
@@ -45,6 +46,7 @@ var AppModule = (function () {
                 ElementBlock_1.ElementBlockComponent,
                 Image_1.ImageComponent,
                 HomeStep_1.HomeStepComponent,
+                IucnInfoStep_1.IucnInfoStepComponent,
                 IntroStep_1.IntroStepComponent,
                 CoverStep_1.CoverStepComponent,
                 MapStep_1.MapStepComponent,

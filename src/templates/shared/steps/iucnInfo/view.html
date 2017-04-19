@@ -1,0 +1,45 @@
+<div class="component-container">
+    <div class="shared-link">
+        <div>
+            <span>share</span>
+        </div>
+        <div>
+            <a class="btn small circle fb-link" target="_blank"
+               href="https://www.facebook.com/sharer/sharer.php?u={{document.location.href}}"></a>
+        </div>
+        <div>
+            <a class="btn small circle tw-link" target="_blank"
+               href="http://twitter.com/share?&url={{document.location.href}}"></a>
+        </div>
+    </div>
+    <div class="logo" (click)="goHome()">
+
+    </div>
+
+    <div [ngClass]="showTitle() ? 'fadeIn title' : 'fadeOut'">{{step.title}}</div>
+    <div [ngClass]="showTitle() ? 'fadeIn subtitle' : 'fadeOut'">
+        <div class="separator"></div>
+        <div class="content-subtitle">{{step.subtitle}}</div>
+        <div class="separator"></div>
+    </div>
+
+    <div class="content">
+	    <element-block [elements]="step.elements"></element-block>
+
+	    <div class="contact-person" *ngFor="let person of getContactPerson()">
+            <div class="name">{{ person.name }}</div>
+            <div class="email" [innerHTML]="person.contact_link"></div>
+        </div>
+
+	    <div class="address-container" *ngIf="hasAddress()">
+            <div class="center-name">{{getCenterName()}}</div>
+            <p class="center-address" [innerHTML]="getCenterContactInfo()"></p>
+        </div>
+    </div>
+
+    <div class="btn-row">
+        <div class="btn view-stories" (click)="showStoryList()">See Stories</div>
+        <div class="btn go-home" (click)="goHome()">Home</div>
+    </div>
+
+</div>

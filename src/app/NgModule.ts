@@ -7,6 +7,7 @@ import {MainComponent} from "./main/MainComponent";
 import {MenuComponent} from "./../shared/menu/Menu";
 
 import {HomeStepComponent} from "../shared/steps/home/HomeStep";
+import {IucnInfoStepComponent} from "../shared/steps/iucnInfo/IucnInfoStep";
 import {IntroStepComponent} from "../shared/steps/intro/IntroStep";
 import {CoverStepComponent} from "../shared/steps/cover/CoverStep";
 import {MapStepComponent} from "../shared/steps/map/MapStep";
@@ -36,6 +37,7 @@ import {WindowService} from "../services/WindowService";
         ElementBlockComponent,
         ImageComponent,
         HomeStepComponent,
+        IucnInfoStepComponent,
         IntroStepComponent,
         CoverStepComponent,
         MapStepComponent,

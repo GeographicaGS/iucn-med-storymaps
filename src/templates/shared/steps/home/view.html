@@ -1,7 +1,7 @@
 <div class="component-container">
     <div class="shared-link">
         <div>
-            <span>share story</span>
+            <span>share</span>
         </div>
         <div>
             <a class="btn small circle fb-link" target="_blank"
@@ -15,8 +15,8 @@
     <div class="logo" (click)="showPreview()">
 
     </div>
-    <div class="content">
-        <div class="preview" *ngIf="isPreview()">
+    <div class="content" [ngClass]="isPreview() === false ? 'fullWidth' : ''">
+        <div class="preview" *ngIf="isPreview()" >
             <div class="title">{{getPreviewTitle()}}</div>
             <div class="subtitle">
                 <div class="separator"></div>
@@ -37,7 +37,7 @@
             <div class="title">{{getListTitle()}}</div>
             <div class="separator"></div>
             <div class="stories-container" [ngClass]="scaling != '' ? 'scale' : ''">
-                <div *ngFor="let story of getStoriesKeys(); let i = index" class="story-block">
+                <div *ngFor="let story of getStoriesKeys(); let i = index" class="story-block" [ngClass]="scalingInProgress && !isScaling(story) ? 'hidden' : ''">
                     <div>
                         <a class="image"
                            [ngStyle]="{ 'background-image': 'url('+getStoryBackgroundSrc(story)+')' }"
@@ -54,9 +54,13 @@
             </div>
         </div>
     </div>
+
+    <div class="rightPhotoDescription" *ngIf="showDescription()">
+        {{step.background.credit.description}}
+    </div>
+
     <div class="credit-container" *ngIf="showCredits()">
         <span class="footer" [innerHTML]="step.background.credit.footer"></span>
         <span class="credit">{{step.background.credit.author}}</span>
-
     </div>
 </div>

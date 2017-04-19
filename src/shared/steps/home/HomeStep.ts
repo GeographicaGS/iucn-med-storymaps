@@ -9,6 +9,7 @@ export class HomeStepComponent extends BaseStepComponent {
     @Input() stories: any = {};
 
     scaling: string = '';
+    scalingInProgress: boolean = false;
 
     ngAfterViewInit() {
         this.checkBackground();
@@ -66,8 +67,8 @@ export class HomeStepComponent extends BaseStepComponent {
         }, 10);
     }
 
-    showMoreInfo() {
-        //Todo:: See where it must go this link
+    showMoreInfo(): boolean {
+        return this.stories.iucnInfo.show = true;
     }
 
     isPreview(): boolean {
@@ -98,6 +99,14 @@ export class HomeStepComponent extends BaseStepComponent {
         return this.hasCredit() && this.isPreview();
     }
 
+    hasDescription(): boolean {
+        return this.hasCredit() && this.stories.home.background.credit.description != undefined
+    }
+
+    showDescription(): boolean {
+        return this.hasDescription() && this.isPreview();
+    }
+
     showPreview(): void {
         this.windowService.homeViewPreview = true;
         this.clearBackgroundBlur();
@@ -117,6 +126,7 @@ export class HomeStepComponent extends BaseStepComponent {
 
     goToStory(story: string) {
         this.scaling = story;
+        this.scalingInProgress = true;
         this.goTo(story, 'cover');
     }
 
@@ -125,7 +135,6 @@ export class HomeStepComponent extends BaseStepComponent {
     }
 
     goTo(story: string, step: string) {
-
         setTimeout(() => {
             this.unlockBackground();
             this.clearBackgroundBlur();
@@ -133,8 +142,10 @@ export class HomeStepComponent extends BaseStepComponent {
             this.clearBackgroundFullScreen();
             this.windowService.setBodyBgUrl(this.getStoryBackgroundSrc(story));
             this.windowService.setCurrentStory(story);
+            
             setTimeout(() => {
                 this.windowService.scrollToStep(step);
+                this.scalingInProgress = false;
             }, 25);
         }, 1000);
     }

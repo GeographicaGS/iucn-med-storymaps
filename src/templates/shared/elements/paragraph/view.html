@@ -1,4 +1,4 @@
-<div class="component-container" [ngClass]="{'highlight' : highlight(), 'fadeInUp' : showContent(), 'fadeOutDown' : !showContent()}" >
+<div class="component-container" [ngClass]="{'highlight' : highlight(), 'bold': bold(), 'semibold': semibold(), 'fadeInUp' : showContent(), 'fadeOutDown' : !showContent()}" >
     <div *ngIf="capitalized()" class="capitalized">
         <span>{{item.value[0]}}</span><span [innerHTML]="item.value.substring(1)"></span>
     </div>

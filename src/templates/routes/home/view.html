@@ -2,7 +2,16 @@
     <menu *ngIf="isStoryLoaded()" [stories]="stories" [currentStory]="currentStory"></menu>
 </div>
 <div class="main-container">
+
     <home *ngIf="areStoriesLoaded() && !isStoryLoaded()" [stories]="stories" [step]="stories.home" [name]="home"></home>
+    
+    <iucnInfo
+        *ngIf="isIucnInfoLoaded()"
+        [stories]="stories"
+        [step]="stories.iucnInfo"
+        [name]="iucnInfo"
+    ></iucnInfo>
+    
     <div *ngFor="let step of getStepsKeys()">
         <div [ngSwitch]="step">
             <cover *ngSwitchCase="'cover'" [step]="getStep(step)" [name]="step"></cover>
