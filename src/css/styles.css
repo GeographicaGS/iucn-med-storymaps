@@ -4907,7 +4907,7 @@ home .content {
   justify-content: center;
 }
 home .content.fullWidth {
-  max-width: none;
+  max-width: 1000px;
 }
 home .content .preview {
   max-width: 740px;
@@ -5845,6 +5845,7 @@ skip .contact-info-container .author .departament {
 skip .contact-info-container .contact-link {
   text-align: center;
   margin-top: 24px;
+  font-family: 'Fira Sans', sans-serif;
 }
 skip .contact-info-container .address-container {
   margin-top: 74px;

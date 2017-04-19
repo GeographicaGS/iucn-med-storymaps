@@ -21,6 +21,7 @@ var HomeStepComponent = (function (_super) {
         _super.apply(this, arguments);
         this.stories = {};
         this.scaling = '';
+        this.scalingInProgress = false;
     }
     HomeStepComponent.prototype.ngAfterViewInit = function () {
         this.checkBackground();
@@ -95,6 +96,12 @@ var HomeStepComponent = (function (_super) {
     HomeStepComponent.prototype.showCredits = function () {
         return this.hasCredit() && this.isPreview();
     };
+    HomeStepComponent.prototype.hasDescription = function () {
+        return this.hasCredit() && this.stories.home.background.credit.description != undefined;
+    };
+    HomeStepComponent.prototype.showDescription = function () {
+        return this.hasDescription() && this.isPreview();
+    };
     HomeStepComponent.prototype.showPreview = function () {
         this.windowService.homeViewPreview = true;
         this.clearBackgroundBlur();
@@ -110,6 +117,7 @@ var HomeStepComponent = (function (_super) {
     };
     HomeStepComponent.prototype.goToStory = function (story) {
         this.scaling = story;
+        this.scalingInProgress = true;
         this.goTo(story, 'cover');
     };
     HomeStepComponent.prototype.goToMap = function (story) {
@@ -126,6 +134,7 @@ var HomeStepComponent = (function (_super) {
             _this.windowService.setCurrentStory(story);
             setTimeout(function () {
                 _this.windowService.scrollToStep(step);
+                _this.scalingInProgress = false;
             }, 25);
         }, 1000);
     };

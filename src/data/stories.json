@@ -117,7 +117,7 @@
         },
         "conclusion": {
           "name": "Conclusion",
-          "title": "* Conclusion",
+          "title": "* What's new",
           "elements": [
             {
               "type": "paragraph",
@@ -181,7 +181,7 @@
             "authors" : [
               {
                 "name": "Catherine Numa",
-                "departament": "Mediterranena Species Programme Coordinator"
+                "departament": "Med Species Programme Coordinator"
               },
               {
                 "name": "Violeta Barrios",
@@ -302,7 +302,7 @@
         },
         "conclusion": {
           "name": "Conclusion",
-          "title": "* Conclusion",
+          "title": "* What's new",
           "elements": [
             {
               "type": "paragraph",
@@ -366,7 +366,7 @@
             "authors" : [
               {
                 "name": "Catherine Numa",
-                "departament": "Mediterranena Species Programme Coordinator"
+                "departament": "Med Species Programme Coordinator"
               },
               {
                 "name": "Violeta Barrios",
@@ -487,7 +487,7 @@
         },
         "conclusion": {
           "name": "Conclusion",
-          "title": "* Conclusion",
+          "title": "* What's new",
           "elements": [
             {
               "type": "paragraph",
