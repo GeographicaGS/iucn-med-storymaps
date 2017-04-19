@@ -46,7 +46,10 @@ var MainComponent = (function () {
         return this.stories['stories'] != undefined && this.stories['stories'][this.currentStory] != undefined;
     };
     MainComponent.prototype.areStoriesLoaded = function () {
-        return this.stories['home'] != undefined;
+        return this.stories['home'] != undefined && this.stories['iucnInfo'].show != true;
+    };
+    MainComponent.prototype.isIucnInfoLoaded = function () {
+        return this.stories['iucnInfo'] !== undefined && this.stories['iucnInfo'].show == true;
     };
     MainComponent.prototype.getStepsKeys = function () {
         return this.stories['stories'] != undefined && this.stories['stories'][this.currentStory] != undefined ? Object.keys(this.stories['stories'][this.currentStory]['steps']) : [];

@@ -53,7 +53,11 @@ export class MainComponent {
     }
 
     areStoriesLoaded(): boolean {
-        return this.stories['home'] != undefined
+        return this.stories['home'] != undefined && this.stories['iucnInfo'].show != true
+    }
+
+    isIucnInfoLoaded(): boolean {
+        return this.stories['iucnInfo'] !== undefined && this.stories['iucnInfo'].show == true
     }
 
     getStepsKeys() {

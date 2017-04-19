@@ -15,4 +15,12 @@ export class ParagraphComponent extends BaseElementComponent {
     highlight() :boolean{
         return this.item.highlight != undefined && this.item.highlight;
     }
+
+    bold() :boolean{
+        return this.item.bold != undefined && this.item.bold;
+    }
+
+    semibold() :boolean{
+        return this.item.semibold != undefined && this.item.semibold;
+    }
 }

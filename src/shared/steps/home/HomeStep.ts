@@ -67,8 +67,8 @@ export class HomeStepComponent extends BaseStepComponent {
         }, 10);
     }
 
-    showMoreInfo() {
-        //Todo:: See where it must go this link
+    showMoreInfo(): boolean {
+        return this.stories.iucnInfo.show = true;
     }
 
     isPreview(): boolean {

@@ -19,6 +19,56 @@
       "title": "Story maps"
     }
   },
+  "iucnInfo": {
+    "name": "iucnInfo",
+    "background": {
+      "color": "white",
+      "class": "full-screen gradient locked"
+    },
+    "title": "Story Maps about nature & conservation",
+    "subtitle": "In the mediterranean",
+    "elements": [
+      {
+        "type": "paragraph",
+        "capitalize": false,
+        "highlight": true,
+        "value": "IUCN advances conservation science and knowledge in the Mediterranean region by generating, maintaining and integrating data, and working in synergy with peer conservation science networks."
+      },
+      {
+        "type": "paragraph",
+        "capitalize": false,
+        "value": "Click on a map to explore an interactive, web-based map viewer created by the IUCN Centre for Mediterranean Cooperation as to share knowledge and scientific information for the best approaches to conservation."
+      },
+      {
+        "type": "paragraph",
+        "capitalize": false,
+        "value": "This platform is also open to other partners interesting in sharing geo-referenced information on natural features and human activities and their pressures and impacts on nature and ecosystems, as well as conservation and protection actions undertaken or proposed in the Mediterranean region."
+      },
+      {
+        "type": "paragraph",
+        "capitalize": false,
+        "value": "The geo-referenced maps (GIS files) are available for download, and also displayed to be harvested by other geoportals as long as the source is cited."
+      },
+      {
+        "type": "paragraph",
+        "capitalize": false,
+        "semibold": true,
+        "value": "Explore, discover relevant data and share it!!"
+      }
+    ],
+    "contact_info" :{
+      "persons" : [
+        {
+          "name": "Lourdes Lázaro",
+          "contact_link":"<a href=\"mailto:lourdes.lazaro@iucn.org\">lourdes.lazaro@iucn.org</a>"
+        }
+      ],
+      "address": {
+        "center_name" :"IUCN Centre for Mediterranean Cooperation",
+        "info":"C/ Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tél +34 352 02 84 30<br>Fax +34 352 02 84 30<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
+      }
+    }
+  },
   "stories": {
     "butterflies": {
       "steps": {

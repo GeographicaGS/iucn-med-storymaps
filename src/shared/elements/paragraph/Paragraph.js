@@ -26,6 +26,12 @@ var ParagraphComponent = (function (_super) {
     ParagraphComponent.prototype.highlight = function () {
         return this.item.highlight != undefined && this.item.highlight;
     };
+    ParagraphComponent.prototype.bold = function () {
+        return this.item.bold != undefined && this.item.bold;
+    };
+    ParagraphComponent.prototype.semibold = function () {
+        return this.item.semibold != undefined && this.item.semibold;
+    };
     ParagraphComponent = __decorate([
         core_1.Component({
             selector: 'paragraph',

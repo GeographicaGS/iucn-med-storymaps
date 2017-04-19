@@ -73,7 +73,7 @@ var HomeStepComponent = (function (_super) {
         }, 10);
     };
     HomeStepComponent.prototype.showMoreInfo = function () {
-        //Todo:: See where it must go this link
+        return this.stories.iucnInfo.show = true;
     };
     HomeStepComponent.prototype.isPreview = function () {
         return this.windowService.homeViewPreview;
