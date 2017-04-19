@@ -4045,7 +4045,7 @@ body {
   overflow-x: hidden;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-attachment: fixed;
 }
 body .nav-bar {
@@ -4084,7 +4084,7 @@ body.gradient:before {
   right: 0;
   bottom: 0;
   z-index: -2;
-  background: linear-gradient(180deg, rgba(33, 33, 33, 0) 0%, #212121 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 body.kenburns:before {
   content: "";
@@ -4397,6 +4397,15 @@ paragraph .component-container.highlight {
   font-size: 24px;
   line-height: 32px;
 }
+paragraph .component-container.semibold {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+}
+paragraph .component-container.bold {
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+}
 paragraph .capitalized {
   clear: both;
 }
@@ -4650,7 +4659,6 @@ info > .component-container .allMapLayers .mapLayerWrapper:not(:last-child) {
 }
 info > .component-container .titleWrapper {
   display: flex;
-  /*align-items: center;*/
   margin-bottom: 8px;
 }
 info > .component-container .titleWrapper .btn {
@@ -4936,6 +4944,12 @@ cover .credit-full .author {
   font-family: 'Fira Sans', sans-serif;
   padding-left: 5px;
 }
+home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 home .shared-link {
   -webkit-animation-duration: 0.8s;
   -moz-animation-duration: 0.8s;
@@ -5015,10 +5029,10 @@ home .logo {
   position: absolute;
   left: 24px;
   top: 24px;
-  background-image: url('../../../../assets/common/logo_blanco.svg');
+  background-image: url('../../../../assets/common/IUCN_white.svg');
   background-repeat: no-repeat;
   background-center: center;
-  width: 262px;
+  width: 96px;
   height: 96px;
   z-index: 0;
 }
@@ -5026,13 +5040,18 @@ home .logo:hover {
   cursor: pointer;
 }
 home .content {
-  position: absolute;
-  bottom: auto;
-  top: 20%;
+  /* position: absolute; */
+  /* bottom: auto; */
+  /* top: 20%; */
+  /* left: 50%; */
+  /* margin-left: -42.5%; */
   min-height: 80%;
-  width: 85%;
-  left: 50%;
-  margin-left: -42.5%;
+  max-width: 660px;
+  display: flex;
+  justify-content: center;
+}
+home .content.fullWidth {
+  max-width: 1000px;
 }
 home .content .preview {
   max-width: 740px;
@@ -5233,6 +5252,7 @@ home .content .preview .btn-row .btn.view-stories {
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   font-size: 12px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 home .content .preview .btn-row .btn.more-info {
@@ -5258,6 +5278,7 @@ home .content .preview .btn-row .btn.more-info {
   -o-animation-name: fadeIn;
   animation-name: fadeIn;
   position: relative;
+  letter-spacing: 1px;
   width: 110px;
   height: 32px;
   border-radius: 16px;
@@ -5358,11 +5379,11 @@ home .content .stories-container {
   -moz-animation-name: bounceInUpLittle;
   -o-animation-name: bounceInUpLittle;
   animation-name: bounceInUpLittle;
-  padding-top: 80px;
+  padding-top: 60px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  height: 700px;
+  height: 600px;
   width: 100%;
 }
 home .content .stories-container:not(.scale) {
@@ -5372,7 +5393,34 @@ home .content .stories-container:not(.scale) {
 home .content .stories-container .story-block {
   flex: 1 0 30%;
   padding-top: 124px;
+  /*&:nth-of-type(4) {
+          padding-top: 12px !important;
+        }*/
   position: relative;
+}
+home .content .stories-container .story-block.hidden {
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+  opacity: 0;
+  visibility: hidden;
 }
 home .content .stories-container .story-block:nth-of-type(2n +1 ) {
   padding-top: 0;
@@ -5539,6 +5587,19 @@ home .credit-container {
 }
 home .credit-container a {
   color: #0079BA;
+}
+home .rightPhotoDescription {
+  right: 30px;
+  height: 30px;
+  top: 45%;
+  transform: rotate(-90deg);
+  transform-origin: 100% 0;
+  position: absolute;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  color: #909090;
+  font-size: 12px;
 }
 intro {
   background-color: #ffffff;
@@ -5981,6 +6042,8 @@ skip .contact-info-container .author .departament {
 skip .contact-info-container .contact-link {
   text-align: center;
   margin-top: 24px;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
 }
 skip .contact-info-container .address-container {
   margin-top: 74px;
@@ -6137,4 +6200,378 @@ skip .contact-info-container a {
 }
 .modalOverlay.open .modal input.wmsInput::-moz-focus-inner {
   border: 0;
+}
+iucnInfo {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  background: white;
+}
+iucnInfo.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+iucnInfo .component-container {
+  height: 80%;
+}
+iucnInfo .component-container paragraph {
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+}
+iucnInfo .component-container .shared-link {
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: bounceInDownLittle;
+  -moz-animation-name: bounceInDownLittle;
+  -o-animation-name: bounceInDownLittle;
+  animation-name: bounceInDownLittle;
+  position: absolute;
+  z-index: 0;
+  right: 34px;
+  top: 34px;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  color: #0079BA;
+  font-size: 14px;
+  display: table;
+  height: 32px;
+}
+iucnInfo .component-container .shared-link > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+iucnInfo .component-container .shared-link span {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+iucnInfo .component-container .shared-link .btn {
+  border: 2px solid #0079BA;
+  width: 32px;
+  height: 32px;
+  margin-left: 14px;
+  display: inline-block;
+}
+iucnInfo .component-container .shared-link .btn.fb-link {
+  background-image: url('../../../assets/icon/bt-facebook-h.svg');
+}
+iucnInfo .component-container .shared-link .btn.tw-link {
+  background-image: url('../../../assets/icon/bt-twitter-h.svg');
+}
+iucnInfo .component-container .logo {
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: bounceInDownLittle;
+  -moz-animation-name: bounceInDownLittle;
+  -o-animation-name: bounceInDownLittle;
+  animation-name: bounceInDownLittle;
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  background-image: url('../../../../assets/common/logo.svg');
+  background-repeat: no-repeat;
+  background-center: center;
+  width: 96px;
+  height: 96px;
+  z-index: 0;
+}
+iucnInfo .component-container .logo:hover {
+  cursor: pointer;
+}
+iucnInfo .component-container .title {
+  text-transform: uppercase;
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  color: #0079BA;
+  max-width: 540px;
+  width: 75%;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 300;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 16px;
+}
+iucnInfo .component-container .subtitle {
+  margin: 16px auto;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  color: #0079BA;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 28px;
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  display: table;
+  width: 100%;
+}
+iucnInfo .component-container .subtitle > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+iucnInfo .component-container .subtitle > div.separator {
+  position: relative;
+  width: 25%;
+}
+iucnInfo .component-container .subtitle > div.separator:before {
+  content: "";
+  height: 2px;
+  background-color: rgba(0, 121, 186, 0.25);
+  transform: scaleY(-1);
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 100%;
+}
+iucnInfo .component-container .content {
+  display: flex;
+  /*justify-content: center;*/
+  flex-direction: column;
+  max-height: 80%;
+  overflow-y: auto;
+}
+iucnInfo .component-container .content .contact-person,
+iucnInfo .component-container .content .address-container {
+  display: block;
+}
+iucnInfo .component-container .content .contact-person {
+  margin: 14px 0 10px 0;
+}
+iucnInfo .component-container .content .contact-person .name,
+iucnInfo .component-container .content .contact-person .email {
+  color: #212121;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+}
+iucnInfo .component-container .content .contact-person .email {
+  font-size: 16px;
+  color: #0079BA;
+}
+iucnInfo .component-container .content .contact-link {
+  text-align: center;
+  margin-top: 24px;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+}
+iucnInfo .component-container .content .address-container {
+  margin-top: 24px;
+  position: relative;
+  text-align: center;
+}
+iucnInfo .component-container .content .address-container:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: -75px;
+  height: 2px;
+  width: 150px;
+  transform: scaleY(-1);
+  background-color: #e8e8e8;
+  display: block;
+  top: -20px;
+}
+iucnInfo .component-container .content .address-container .center-name {
+  color: #212121;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+iucnInfo .component-container .content .address-container .center-address {
+  color: #909090;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+iucnInfo .component-container .content a {
+  color: #0079BA;
+}
+iucnInfo .component-container .btn-row {
+  margin-top: 18px;
+  text-align: center;
+}
+iucnInfo .component-container .btn-row .btn {
+  display: inline-block;
+  margin: 0 10px;
+}
+iucnInfo .component-container .btn-row .btn.view-stories {
+  opacity: 0;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+  position: relative;
+  width: 120px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #0079BA;
+  border: 2px solid #0079BA;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+iucnInfo .component-container .btn-row .btn.go-home {
+  opacity: 0;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+  position: relative;
+  letter-spacing: 1px;
+  width: 110px;
+  height: 32px;
+  border-radius: 16px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  color: #0079BA;
+  border: 2px solid #0079BA;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
 }
