@@ -256,8 +256,8 @@
           ]
         },
         "conclusion": {
-          "name": "Conclusion",
-          "title": "* What's new",
+          "name": "What next",
+          "title": "What next",
           "elements": [
             {
               "type": "paragraph",
@@ -532,8 +532,8 @@
           ]
         },
         "conclusion": {
-          "name": "Conclusion",
-          "title": "* What's new",
+          "name": "What next",
+          "title": "What next",
           "elements": [
             {
               "type": "paragraph",
@@ -808,8 +808,8 @@
           ]
         },
         "conclusion": {
-          "name": "Conclusion",
-          "title": "* What's new",
+          "name": "What next",
+          "title": "What next",
           "elements": [
             {
               "type": "paragraph",
