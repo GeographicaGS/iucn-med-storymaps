@@ -153,7 +153,9 @@ var MapStepComponent = (function (_super) {
         anchor.href = info.shp;
         anchor.target = '_blank';
         anchor.download = info.shp;
+        document.body.appendChild(anchor);
         anchor.click();
+        document.body.removeChild(anchor);
     };
     MapStepComponent = __decorate([
         core_1.Component({
