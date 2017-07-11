@@ -4,7 +4,8 @@ import {Observable, Observer} from "rxjs";
 
 @Injectable()
 export class WindowService {
-    homeViewPreview : boolean = true;
+    homeViewPreview: boolean = true;
+    aboutView: boolean = false;
     scrollInterval: any;
     stepsMap: any = [];
     scrollDown: boolean = true;
@@ -130,6 +131,10 @@ export class WindowService {
         this.bodyBgUrlObserver.next(this.bodyBgUrl);
     }
 
+    clearBodyUrl() {
+        this.setBodyBgUrl('none');
+    }
+
     getBodyClassObservable(): Observable<string> {
         if (this.bodyClassObservable == undefined) {
             this.bodyClassObservable = new Observable<string>((obs) => {
@@ -164,7 +169,8 @@ export class WindowService {
             return a.nativeElement.getBoundingClientRect().top - b.nativeElement.getBoundingClientRect().top;
         });
     }
-    getStepOffset(step: string){
+
+    getStepOffset(step: string) {
         let offset = {};
         for (let index in this.stepsMap) {
             if (this.stepsMap[index].nativeElement.tagName.toLowerCase() == step) {
@@ -174,6 +180,7 @@ export class WindowService {
         }
         return offset;
     }
+
     scrollToNextStep(currentStep: ElementRef) {
         for (let index in this.stepsMap) {
             if (this.stepsMap[index].nativeElement.tagName == currentStep.nativeElement.tagName && this.stepsMap[Number(index) + 1] != undefined) {
@@ -195,24 +202,35 @@ export class WindowService {
     }
 
     scrollTo(to: number, duration: number = 600) {
-        if (this.document.scrollingElement.scrollTop == to)
-            return;
 
-        let start: number = this.document.scrollingElement.scrollTop;
-        let diff = to - start;
-        let scrollStep: number = Math.PI / (duration / 10);
-        let count: number = 0, currPos: number;
-        this.clearScrolling();
-        this.scrollInterval = setInterval(() => {
+        try {
+            window.scroll({
+                top: to,
+                behavior: 'smooth'
+            });
+        } catch (e) {
+            if (this.document.scrollingElement.scrollTop == to)
+                return;
 
-            if (this.document.scrollingElement.scrollTop !== to && (currPos == undefined || currPos < this.document.documentElement.scrollHeight)) {
-                count = count + 1;
-                currPos = start + diff * (0.5 - 0.5 * Math.cos(count * scrollStep));
-                this.document.scrollingElement.scrollTop = currPos;
-            } else {
-                this.clearScrolling();
-            }
-        }, 10);
+            let start: number = this.document.scrollingElement.scrollTop;
+            let diff = to - start;
+            let scrollStep: number = Math.PI / (duration / 10);
+            let count: number = 0, currPos: number;
+            this.clearScrolling();
+            this.scrollInterval = setInterval(() => {
+
+                if (
+                    this.document.scrollingElement.scrollTop !== to && (currPos == undefined ||
+                    currPos < this.document.documentElement.scrollHeight)
+                ) {
+                    count = count + 1;
+                    currPos = start + diff * (0.5 - 0.5 * Math.cos(count * scrollStep));
+                    this.document.scrollingElement.scrollTop = currPos;
+                } else {
+                    this.clearScrolling();
+                }
+            }, 10);
+        }
 
     };
 
@@ -226,6 +244,7 @@ export class WindowService {
     }
 
     goHome() {
+        this.aboutView = false;
         this.setCurrentStory('');
         this.scrollTo(1, 0);
     }

@@ -3,7 +3,7 @@
 </div>
 <div class="main-container">
 
-    <home *ngIf="areStoriesLoaded() && !isStoryLoaded()" [stories]="stories" [step]="stories.home" [name]="home"></home>
+    <home *ngIf="isHomeView()" [stories]="stories" [step]="stories.home" [name]="home"></home>
     
     <iucnInfo
         *ngIf="isIucnInfoLoaded()"

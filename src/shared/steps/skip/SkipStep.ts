@@ -72,4 +72,8 @@ export class SkipStepComponent extends BaseStepComponent {
         return '';
 
     }
+
+    hasCredit() : boolean{
+        return this.step.credit != undefined;
+    }
 }

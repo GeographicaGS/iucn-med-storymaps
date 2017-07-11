@@ -56,12 +56,11 @@ var MapStepComponent = (function (_super) {
         var locked = this.windowService.scrollingDown() && offset.top < 100 && offset.top > -20
             || !this.windowService.isScrollingActive() && offset.top == 0;
         if (locked) {
-            this.windowService.setBodyBgUrl('');
+            this.windowService.setBodyBgUrl('none');
             this.windowService.setBodyBgClass('locked');
             this.lockMap();
         }
         else {
-            this.windowService.setBodyBgClass('');
             this.unlockMap();
         }
         return locked;
@@ -72,7 +71,7 @@ var MapStepComponent = (function (_super) {
         this.mapService.map = new mapbox_gl_1.Map({
             trackResize: false,
             container: 'map',
-            style: 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
+            style: this.step.mapStyle || 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
             zoom: this.zoom,
             center: this.center
         });

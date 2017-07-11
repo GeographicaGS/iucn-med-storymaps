@@ -72,6 +72,9 @@ var SkipStepComponent = (function (_super) {
         }
         return '';
     };
+    SkipStepComponent.prototype.hasCredit = function () {
+        return this.step.credit != undefined;
+    };
     SkipStepComponent = __decorate([
         core_1.Component({
             selector: 'skip',

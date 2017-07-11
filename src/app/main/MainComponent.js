@@ -26,9 +26,17 @@ var MainComponent = (function () {
         this.bodyClass = 'full-screen';
         this.backgroundSrc = 'url(' + this.windowService.getBodyBgUrl() + ')';
         this.windowService.getBodyBgUrlObservable().subscribe(function (src) {
-            _this.backgroundSrc = 'url(' + src + ')';
+            _this.backgroundSrc = src;
         });
         this.windowService.getBodyClassObservable().subscribe(function (_class) {
+            console.group(_class);
+            try {
+                throw new Error('getBodyClassObservable');
+            }
+            catch (e) {
+                console.log(e.stack);
+            }
+            console.groupEnd();
             _this.bodyClass = _class;
         });
         this.currentStory = this.windowService.getCurrentStory();
@@ -48,8 +56,11 @@ var MainComponent = (function () {
     MainComponent.prototype.areStoriesLoaded = function () {
         return this.stories['home'] != undefined && this.stories['iucnInfo'].show != true;
     };
+    MainComponent.prototype.isHomeView = function () {
+        return this.areStoriesLoaded() && !this.isStoryLoaded() && !this.windowService.aboutView;
+    };
     MainComponent.prototype.isIucnInfoLoaded = function () {
-        return this.stories['iucnInfo'] !== undefined && this.stories['iucnInfo'].show == true;
+        return this.stories['iucnInfo'] !== undefined && this.windowService.aboutView;
     };
     MainComponent.prototype.getStepsKeys = function () {
         return this.stories['stories'] != undefined && this.stories['stories'][this.currentStory] != undefined ? Object.keys(this.stories['stories'][this.currentStory]['steps']) : [];

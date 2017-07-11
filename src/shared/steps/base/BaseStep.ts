@@ -41,7 +41,7 @@ export class BaseStepComponent implements AfterViewInit {
             let _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
             let _url = this.step.background != undefined && this.step.background.url != undefined ? this.step.background.url : '';
             this.windowService.setBodyBgClass(_class);
-            this.windowService.setBodyBgUrl(_url);
+            this.windowService.setBodyBgUrl('url(' + _url + ')');
         }
     }
 

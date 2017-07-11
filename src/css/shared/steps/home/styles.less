@@ -69,6 +69,20 @@ home {
     &.fullWidth {
       max-width: 1000px;
     }
+
+    .btn {
+      &.view-stories,
+      &.see-story {
+        background-image: url('../../../../assets/icon/see-white.svg');
+      }
+      &.see-map {
+        background-image: url('../../../../assets/icon/map-white.svg');
+      }
+      &.more-info {
+        background-image: url('../../../../assets/icon/plus-white.svg');
+      }
+    }
+
     .preview {
       max-width: 740px;
       width: 100%;
@@ -102,6 +116,7 @@ home {
         .fadeInUp();
 
       }
+      > .separator-row,
       > .subtitle {
         margin: 16px auto;
         position: relative;
@@ -111,18 +126,19 @@ home {
         .color_blanco();
         font-size: 32px;
         line-height: 32px;
-        text-transform: uppercase;
         margin-bottom: 48px;
         .animated(0.6s, 0.5s);
         .fadeInUp();
         display: table;
         width: 100%;
+        text-transform: uppercase;
+
         > div {
           display: table-cell;
           vertical-align: middle;
           &.separator {
             position: relative;
-            width: 25%;
+            width: 43%;
             &:before{
               content:"";
               height: 2px;
@@ -135,6 +151,13 @@ home {
             }
           }
         }
+
+      }
+      > .separator-row{
+        font-size: 24px;
+        text-transform: none;
+        .fontweight(400);
+        margin-bottom:17px;
 
       }
       > .separator {
@@ -167,7 +190,10 @@ home {
             .animated(0.3s, 1.5s);
             .fadeIn();
             position: relative;
-            width: 120px;
+            background-position: 12px;
+            padding-left: 30px;
+            padding-right: 9px;
+            width: 134px;
             height: 32px;
             border-radius: 16px;
             .bg_azul_iucn();
@@ -186,7 +212,9 @@ home {
             .fadeIn();
             position: relative;
             letter-spacing: 1px;
-            width: 110px;
+            width: 97px;
+            padding-left: 17px;
+            background-position: 10px;
             height: 32px;
             border-radius: 16px;
             line-height: 30px;
@@ -235,7 +263,7 @@ home {
       .animated(0.8s);
       .bounceInUpLittle();
       padding-top: 10px;
-      margin-top: 50px;
+      margin-top: 0;
       position: relative;
       display: flex;
       flex-wrap: wrap;
@@ -318,7 +346,9 @@ home {
             height: 240px;
             border-radius: 240px;
             margin-bottom: 16px;
-            background-size: cover;
+            background-size: 180%;
+            background-position: center;
+            background-repeat: no-repeat;
             border: 4px solid transparent;
 
             &.scale {
@@ -340,21 +370,17 @@ home {
             max-width: 340px;
             z-index: -1;
           }
-          &.btn {
-            border: 2px solid @blanco;
-            display: inline-block;
-            margin: 20px 10px 0 10px;
-            opacity: 0;
-            z-index: 0;
-            &.see-story {
-              background-image: url('../../../../assets/icon/see-white.svg');
-            }
-            &.see-map {
-              background-image: url('../../../../assets/icon/map-white.svg');
-            }
-          }
 
         }
+        .btn {
+          border: 2px solid @blanco;
+          display: inline-block;
+          margin: 20px 10px 0 10px;
+          opacity: 0;
+          z-index: 0;
+
+        }
+
         &.center {
           left: 50%;
           margin-left: -170px;
@@ -378,6 +404,8 @@ home {
       &::-webkit-scrollbar-thumb:hover,
       &::-webkit-scrollbar-thumb:active {
         background-color: fade(@blanco, 25%);
+        -moz-appearance: none !important;
+
 
         border: 1px solid fade(@blanco, 25%);
         opacity: 1;
@@ -385,14 +413,24 @@ home {
       &::-webkit-scrollbar-thumb {
         border-radius: 10px;
         opacity: 0.6;
+        -moz-appearance: none !important;
+        background-color: transparent;
+
       }
       &::-webkit-scrollbar-track {
         border: 0px fade(@n10, 25%) solid;
         border-radius: 10px;
         //-webkit-box-shadow: 0 0 6px fade(@n10, 25%) inset;
         margin: 10px auto;
+        -moz-appearance: none !important;
+        background-color: transparent;
+
       }
+
     }
+  }
+  scrollbar[orient="vertical"] {
+    color:silver;
   }
   .credit-container {
     position: absolute;

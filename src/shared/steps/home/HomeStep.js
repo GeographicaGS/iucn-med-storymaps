@@ -34,8 +34,8 @@ var HomeStepComponent = (function (_super) {
         var _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
         var _url = this.step.background != undefined && this.step.background.url != undefined ? this.step.background.url : '';
         this.windowService.setBodyBgClass(_class);
-        this.windowService.setBodyBgUrl(_url);
-        if (!this.windowService.homeViewPreview) {
+        this.windowService.setBodyBgUrl('url( ' + _url + ')');
+        if (!this.windowService.homeViewPreview && !this.windowService.aboutView) {
             this.addBackgroundBlur();
         }
     };
@@ -69,21 +69,24 @@ var HomeStepComponent = (function (_super) {
         return this.stories.home.list.title;
     };
     HomeStepComponent.prototype.showStoryList = function () {
-        var _this = this;
-        this.windowService.scrollTo(0, 10);
-        this.addBackgroundBlur();
-        setTimeout(function () {
-            _this.windowService.homeViewPreview = false;
-        }, 10);
+        this.windowService.homeViewPreview = false;
+        this.windowService.goHome();
     };
     HomeStepComponent.prototype.showMoreInfo = function () {
-        return this.stories.iucnInfo.show = true;
+        this.windowService.clearBodyUrl();
+        this.unlockBackground();
+        this.clearBackgroundBlur();
+        this.clearBackgroundGradient();
+        this.windowService.aboutView = true;
     };
     HomeStepComponent.prototype.isPreview = function () {
         return this.windowService.homeViewPreview;
     };
     HomeStepComponent.prototype.isScaling = function (story) {
         return this.scaling == story;
+    };
+    HomeStepComponent.prototype.hasSomeScaling = function () {
+        return this.scaling != '';
     };
     HomeStepComponent.prototype.getPreviewDescription = function () {
         return this.stories.home.preview.description;
@@ -141,6 +144,9 @@ var HomeStepComponent = (function (_super) {
                 _this.scalingInProgress = false;
             }, 25);
         }, 1000);
+    };
+    HomeStepComponent.prototype.showDescriptionImage = function () {
+        return this.getWindowWidth() > 800 && this.getWindowHeight() > 750;
     };
     __decorate([
         core_1.Input(), 

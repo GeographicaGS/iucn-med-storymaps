@@ -24,6 +24,7 @@
       'rxjs': 'node_modules/rxjs',
       'core-js-shim':'node_modules/core-js/client/shim.js',
       'zone':'node_modules/zone.js/dist/zone.js',
+      'core-js':'node_modules/core-js/',
       'reflect':'node_modules/reflect-metadata/Reflect.js',
       'system-polyfills':'node_modules/systemjs/dist/system-polyfills.js',
       'es6-promise':'node_modules/es6-promise/dist/es6-promise.js'
@@ -58,6 +59,9 @@
         defaultExtension: 'js'
       },
       'core-js-shim': {
+        defaultExtension: 'js'
+      },
+      'core-js': {
         defaultExtension: 'js'
       },
       'mapbox-gl': {

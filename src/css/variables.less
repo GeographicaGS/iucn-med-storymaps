@@ -8,8 +8,7 @@
   font-family: @ffamily;
 }
 
-
-.font(@style) when(@style=light) {
+.font(@style) when (@style=light) {
   .fontweight(300);
 }
 
@@ -17,32 +16,32 @@
   .fontweight(400);
 }
 
-.font(@style) when(@style=medium) {
+.font(@style) when (@style=medium) {
   .fontweight(500);
 }
 
-.font(@style) when(@style=semibold) {
+.font(@style) when (@style=semibold) {
   .fontweight(600);
 }
 
-.font(@style) when(@style=bold) {
+.font(@style) when (@style=bold) {
   .fontweight(700);
 }
 
-.font(@style) when(@style=extrabold) {
+.font(@style) when (@style=extrabold) {
   .fontweight(800);
 }
 
-.font(@style) when(@style=ultrabold) {
+.font(@style) when (@style=ultrabold) {
   .fontweight(900);
 }
 
-.font(@style) when(@style=italic) {
+.font(@style) when (@style=italic) {
   .fontweight(400);
   font-style: italic;
 }
 
-.font(@style) when(@style=semibolditalic) {
+.font(@style) when (@style=semibolditalic) {
   .fontweight(600);
   font-style: italic;
 }
@@ -54,7 +53,6 @@
 .merriweather {
   font-family: 'Merriweather', sans-serif;
 }
-
 
 /******** Palete colors ******/
 
@@ -75,48 +73,70 @@
 @mbl5: #6b6b6b;
 @mbl6: #909090;
 
-.bg_ng10{
+@mbl7: #8B572A;
+@mbl8: #F5A623;
+@mbl9: #417505;
+
+.bg_mbl7 {
+  background-color: @mbl7;
+}
+
+.bg_mbl8 {
+  background-color: @mbl8;
+}
+
+.bg_mbl9 {
+  background-color: @mbl9;
+}
+
+.bg_ng10 {
   background-color: @n10;
 }
-.bg_blanco{
+
+.bg_blanco {
   background-color: @blanco;
 }
 
-.bg_azul_profundo{
+.bg_azul_profundo {
   background-color: @azul_profundo;
 }
 
-.bg_azul_iucn{
+.bg_azul_iucn {
   background-color: @azul_iucn;
 }
 
-.bg_n10{
+.bg_n10 {
   background-color: @n10;
 }
 
+.bg_mbl6 {
+  background-color: @mbl6;
+}
 
-
-
-.color_blanco{
+.color_blanco {
   color: @blanco;
 }
-.color_oscuro{
+
+.color_oscuro {
   color: @oscuro;
 }
-.color_azul_profundo{
+
+.color_azul_profundo {
   color: @azul_profundo;
 }
 
-.color_azul_claro_iucn{
+.color_azul_claro_iucn {
   color: @azul_claro_iucn;
 }
 
-.color_azul_iucn{
+.color_azul_iucn {
   color: @azul_iucn;
 }
-.color_mbl4{
+
+.color_mbl4 {
   color: @mbl4;
 }
-.color_mbl6{
+
+.color_mbl6 {
   color: @mbl6;
 }

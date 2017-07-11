@@ -10,10 +10,10 @@ export class HomeStepComponent extends BaseStepComponent {
 
     scaling: string = '';
     scalingInProgress: boolean = false;
-    
+
     ngAfterViewInit() {
         // setting a timeout so that it works on safari .... 
-        setTimeout(()=> {
+        setTimeout(() => {
             this.checkBackground();
         }, 100);
     }
@@ -22,8 +22,8 @@ export class HomeStepComponent extends BaseStepComponent {
         let _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
         let _url = this.step.background != undefined && this.step.background.url != undefined ? this.step.background.url : '';
         this.windowService.setBodyBgClass(_class);
-        this.windowService.setBodyBgUrl(_url);
-        if (!this.windowService.homeViewPreview) {
+        this.windowService.setBodyBgUrl( 'url( '+_url+ ')');
+        if (!this.windowService.homeViewPreview && !this.windowService.aboutView) {
             this.addBackgroundBlur();
         }
     }
@@ -37,14 +37,17 @@ export class HomeStepComponent extends BaseStepComponent {
         let _class = this.windowService.getBodyClass();
         this.windowService.setBodyBgClass(_class.replace('blur', ''));
     }
+
     clearBackgroundFullScreen() {
         let _class = this.windowService.getBodyClass();
         this.windowService.setBodyBgClass(_class.replace('full-screen', ''));
     }
+
     clearBackgroundGradient() {
         let _class = this.windowService.getBodyClass();
         this.windowService.setBodyBgClass(_class.replace('gradient', ''));
     }
+
     unlockBackground() {
         let _class = this.windowService.getBodyClass();
         this.windowService.setBodyBgClass(_class.replace('locked', ''));
@@ -63,15 +66,16 @@ export class HomeStepComponent extends BaseStepComponent {
     }
 
     showStoryList() {
-        this.windowService.scrollTo(0, 10);
-        this.addBackgroundBlur();
-        setTimeout(() => {
-            this.windowService.homeViewPreview = false;
-        }, 10);
+        this.windowService.homeViewPreview = false;
+        this.windowService.goHome();
     }
 
-    showMoreInfo(): boolean {
-        return this.stories.iucnInfo.show = true;
+    showMoreInfo() {
+        this.windowService.clearBodyUrl();
+        this.unlockBackground();
+        this.clearBackgroundBlur();
+        this.clearBackgroundGradient();
+        this.windowService.aboutView = true;
     }
 
     isPreview(): boolean {
@@ -80,6 +84,9 @@ export class HomeStepComponent extends BaseStepComponent {
 
     isScaling(story: string): boolean {
         return this.scaling == story;
+    }
+    hasSomeScaling(): boolean {
+        return this.scaling != '';
     }
 
     getPreviewDescription(): string {
@@ -145,12 +152,16 @@ export class HomeStepComponent extends BaseStepComponent {
             this.clearBackgroundFullScreen();
             this.windowService.setBodyBgUrl(this.getStoryBackgroundSrc(story));
             this.windowService.setCurrentStory(story);
-            
+
             setTimeout(() => {
                 this.windowService.scrollToStep(step);
                 this.scalingInProgress = false;
             }, 25);
         }, 1000);
+    }
+
+    showDescriptionImage(): boolean {
+        return this.getWindowWidth() > 800 && this.getWindowHeight() > 750;
     }
 
 }

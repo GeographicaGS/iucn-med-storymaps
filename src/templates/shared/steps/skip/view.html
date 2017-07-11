@@ -1,10 +1,13 @@
 <div class="component-container">
     <div class="closing-story-container" [style.min-height.px]="getWindowHeight()">
-        <info [item]="step.info"></info>
+        <!--<info [item]="step.info"></info>-->
     </div>
-    <div *ngIf="hasBackgroundCredit();" class="credit-full">
-        <span class="credit">{{step.background.credit.footer}}</span>
-        <span class="author">{{step.background.credit.author}}</span>
+    <div *ngIf="hasCredit()" class="credit-full">
+        <span class="credit">{{step.credit.footer}}</span>
+        <span class="author">{{step.credit.author}}</span>
+    </div>
+    <div *ngIf="hasInfo()" class="credit-info">
+        <element-block [elements]="step.info.elements"></element-block>
     </div>
     <div class="contact-info-container" *ngIf="hasContactInfo()">
         <div class="shared-link">

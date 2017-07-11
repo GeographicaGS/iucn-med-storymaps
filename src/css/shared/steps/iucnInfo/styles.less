@@ -3,21 +3,21 @@
 iucnInfo {
   .animated(1s);
   .fadeInUp();
-
+  width: 100%;
   .fira_sans();
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  position: relative;
-  background: white;
-
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  //height: 100%;
+  //position: relative;
+  //background: white;
+  //overflow-y: scroll;
   &.hidden {
     opacity: 0;
     visibility: hidden;
   }
   .component-container {
-    height: 80%;
+    width: 100%;
 
     paragraph {
       .fira_sans();
@@ -28,7 +28,7 @@ iucnInfo {
       .bounceInDownLittle();
 
       position: absolute;
-      z-index: 0;
+      z-index: 999;
       right: 34px;
       top: 34px;
       .fira_sans();
@@ -70,9 +70,9 @@ iucnInfo {
       background-center: center;
       width: 96px;
       height: 96px;
-      z-index: 0;
-      &:hover{
-        cursor:pointer;
+      z-index: 999;
+      &:hover {
+        cursor: pointer;
       }
     }
 
@@ -93,14 +93,15 @@ iucnInfo {
       margin-bottom: 16px;
     }
 
+    .separator-row,
     .subtitle {
       margin: 16px auto;
       position: relative;
       margin: 0 auto;
       text-align: center;
       .fira_sans();
-      .color_azul_iucn();
-      font-size: 24px;
+      .color_azul_profundo();
+      font-size: 18px;
       line-height: 24px;
       text-transform: uppercase;
       font-weight: 500;
@@ -114,31 +115,115 @@ iucnInfo {
         vertical-align: middle;
         &.separator {
           position: relative;
-          width: 25%;
-          &:before{
-            content:"";
+          width: 43%;
+          &:before {
+            content: "";
             height: 2px;
             background-color: fade(@azul_iucn, 25%);
             transform: scaleY(-1);
-            position:absolute;
-            top:16px;
-            left:0;
-            width:100%;
+            position: absolute;
+            top: 16px;
+            left: 0;
+            width: 100%;
           }
         }
       }
     }
-
+    .description {
+      .fira_sans();
+      .color_azul_claro_iucn();
+      .animated(0.6s, 0.5s);
+      .fadeInUp();
+      font-size: 24px;
+      text-align: center;
+      .fontweight(300);
+    }
+    .separator-row {
+      font-weight: normal;
+      font-size: 12px;
+      text-transform: none;
+      .color_azul_iucn();
+    }
     .content {
-      height: 80%;
-      overflow-y: auto;
       position: relative;
-      
-      element-block {
-        display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .wrapper {
+        width: 80%;
+        max-width: 740px;
+        margin: 0 auto;
+      }
+      .columns {
+        padding-top: 32px;
+        width: 80%;
+        margin: 0 auto;
         position: relative;
+        display: flex;
+        justify-content: space-between;
+        .col-md-4 {
+          flex: 0 0 30%;
+          text-align: center;
+          .animated(0.6s, 0.5s);
+          .fadeInUp();
+          i {
+            display: block;
+            height: 32px;
+            width: 32px;
+            border-radius: 32px;
+            margin: 0 auto 16px auto;
+            &:before {
+              content: "";
+              background-position: center;
+              display: block;
+              height: 32px;
+              width: 32px;
+              background-repeat: no-repeat;
+
+            }
+
+          }
+          .column-info {
+            .fira_sans();
+            font-size: 14px;
+            line-height: 24px;
+          }
+          &:nth-of-type(1) {
+            i {
+              .bg_mbl7();
+              &:before {
+                background-image: url('../../../../assets/icon/map-white.svg');
+
+              }
+            }
+          }
+          &:nth-of-type(2) {
+            i {
+              .bg_mbl8();
+              &:before {
+                background-image: url('../../../../assets/icon/user-white.svg');
+
+              }
+            }
+          }
+          &:nth-of-type(3) {
+            i {
+              .bg_mbl9();
+              &:before {
+                background-image: url('../../../../assets/icon/arrow_scroll-white.svg');
+
+              }
+            }
+          }
+        }
       }
 
+    }
+    .contact-content {
+      width: 100%;
+      padding-top: 56px;
+      padding-bottom: 68px;
+      background-color: rgba(102, 183, 234, 0.1);
       .contact-person,
       .address-container {
         position: relative;
@@ -146,7 +231,7 @@ iucnInfo {
       }
 
       .contact-person {
-        margin: 60px 0 0 0;
+        margin-bottom: 40px;
         .name,
         .email {
           text-align: center;
@@ -179,19 +264,19 @@ iucnInfo {
           font-weight: 500;
           line-height: 24px;
           text-align: center;
-          margin-bottom:10px;
+          margin-bottom: 10px;
         }
-        .center-address{
+        .center-address {
           .color_mbl6();
           .fira_sans();
           font-size: 12px;
           line-height: 16px;
           text-align: center;
-          margin-bottom: 60px;
+          margin-bottom: 20px;
         }
       }
 
-      .geographicaFooter {
+      .geographicaFooter  {
         margin-top: 20px;
         position: relative;
         .header {
@@ -215,7 +300,7 @@ iucnInfo {
         }
         .geologo {
           width: 104px;
-          height: 136px;
+          height: 96px;
           display: block;
           margin: 10px auto;
         }
@@ -233,7 +318,7 @@ iucnInfo {
             font-family: "Space Mono", monospace;
             color: #15B750;
             font-size: 12px;
-            line-height: 17px;  
+            line-height: 17px;
           }
         }
       }
@@ -242,13 +327,13 @@ iucnInfo {
         .color_azul_iucn();
       }
     }
-
     .btn-row {
-      margin-top: 18px;
+      padding-top: 18px;
+      padding-bottom: 18px;
       text-align: center;
       .btn {
         display: inline-block;
-        margin:0 10px;
+        margin: 0 10px;
         &.view-stories {
           opacity: 0;
           .animated(0.3s, 1.5s);
@@ -258,7 +343,7 @@ iucnInfo {
           height: 32px;
           border-radius: 16px;
           .bg_azul_iucn();
-          border:2px solid @azul_iucn;
+          border: 2px solid @azul_iucn;
           line-height: 30px;
           text-align: center;
           .fira_sans();
@@ -281,7 +366,7 @@ iucnInfo {
           text-align: center;
           .fira_sans();
           color: @azul_iucn;
-          border:2px solid @azul_iucn;
+          border: 2px solid @azul_iucn;
           font-weight: 500;
           font-size: 12px;
           text-transform: uppercase;

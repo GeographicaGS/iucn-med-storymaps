@@ -1,4 +1,4 @@
-import {Component, Inject, Input, HostBinding} from "@angular/core";
+import {Component, Inject, Input, HostBinding, AfterViewInit} from "@angular/core";
 import {BaseStepComponent} from "../base/BaseStep";
 
 @Component({
@@ -6,7 +6,7 @@ import {BaseStepComponent} from "../base/BaseStep";
     templateUrl: '/templates/shared/steps/iucnInfo/view.html',
 })
 export class IucnInfoStepComponent extends BaseStepComponent {
-	@Input() stories: any = {};
+    @Input() stories: any = {};
 
     showTitle(): boolean {
         let offset = this.element.nativeElement.getBoundingClientRect();
@@ -19,25 +19,20 @@ export class IucnInfoStepComponent extends BaseStepComponent {
     }
 
     goHome() {
-    	this.stories.iucnInfo.show = false;
+        this.windowService.goHome();
     }
 
     showStoryList() {
-    	this.stories.iucnInfo.show = false;
-        this.windowService.scrollTo(0, 10);
-        setTimeout(() => {
-            this.windowService.homeViewPreview = false;
-        	this.addBackgroundBlur();
-        }, 10);
-    }
-
-    addBackgroundBlur() {
-        let _class = this.windowService.getBodyClass();
-        this.windowService.setBodyBgClass(_class + ' blur');
+        this.windowService.homeViewPreview = false;
+        this.windowService.goHome();
     }
 
     hasContactPersons(): boolean {
         return this.step.contact_info != undefined && this.step.contact_info.persons != undefined && this.step.contact_info.persons.length > 0
+    }
+
+    aboutHasColumns(): boolean {
+        return this.step.columns != undefined && this.step.columns.length > 0
     }
 
     getContactPerson(): any {
@@ -64,5 +59,10 @@ export class IucnInfoStepComponent extends BaseStepComponent {
         }
         return '';
     }
+
+    hasDescription(): boolean {
+        return this.stories.iucnInfo.description != undefined
+    }
+
 
 }

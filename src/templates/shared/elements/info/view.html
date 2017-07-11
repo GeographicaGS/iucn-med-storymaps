@@ -13,8 +13,8 @@
 </div>
 
 <div class="component-container" (click)="toggleVisibility()">
-	<div class="allMapLayers" *ngIf="item.length > 1" (click)="$event.stopPropagation()">
-		<div class="mapLayerWrapper" *ngFor="let info of item|| []; let i=index">
+	<div class="allMapLayers" *ngIf="item.length > 0" (click)="$event.stopPropagation()">
+		<div class="mapLayerWrapper" *ngFor="let info of item || []; let i=index">
 			<div class="titleWrapper">
 			    <div
 					class="btn small circle"

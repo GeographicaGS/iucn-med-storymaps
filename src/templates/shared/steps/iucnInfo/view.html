@@ -16,34 +16,46 @@
 
     </div>
 
-    <div [ngClass]="showTitle() ? 'fadeIn title' : 'fadeOut'">{{step.title}}</div>
-    <div [ngClass]="showTitle() ? 'fadeIn subtitle' : 'fadeOut'">
-        <div class="separator"></div>
-        <div class="content-subtitle">{{step.subtitle}}</div>
-        <div class="separator"></div>
-    </div>
+    <div class="content" [style.minHeight.px]="windowService.getWindowHeight()"
+         [style.width.px]="windowService.getWindowWidth()">
+        <div class="wrapper">
+            <div [ngClass]="'fadeIn title'">{{step.title}}</div>
+            <div [ngClass]="'fadeIn separator-row'">
+                <div class="separator"></div>
+                <div class="content-separator">on</div>
+                <div class="separator"></div>
+            </div>
+            <div [ngClass]="'fadeIn subtitle'">
+                <div class="content-subtitle">{{step.subtitle}}</div>
+            </div>
+            <div [ngClass]="'fadeIn description'">
+                {{step.description}}
+            </div>
 
-    <div class="content">
-	    <element-block [elements]="step.elements"></element-block>
-
-	    <div class="contact-person" *ngFor="let person of getContactPerson()">
-            <div class="name">{{ person.name }}</div>
-            <div class="email" [innerHTML]="person.contact_link"></div>
+        </div>
+        <div class="columns" *ngIf="aboutHasColumns()">
+            <div class="col-md-4" *ngFor="let column of step.columns">
+                <i [ngClass]="column.ico"></i>
+                <div [innerHTML]="column.value" class="column-info"></div>
+            </div>
         </div>
 
-	    <div class="address-container" *ngIf="hasAddress()">
+    </div>
+    <div class="contact-content">
+        <div class="address-container" *ngIf="hasAddress()">
             <div class="center-name">{{getCenterName()}}</div>
             <p class="center-address" [innerHTML]="getCenterContactInfo()"></p>
         </div>
-
+        <div class="contact-person" *ngFor="let person of getContactPerson()">
+            <div class="email" [innerHTML]="person.contact_link"></div>
+        </div>
         <div class="geographicaFooter">
             <div class="header">Design & Development by</div>
-            <img class="geologo" src="/assets/common/geographica_green.svg" />
-            <div class="slogan">Make data count</div>
+            <img class="geologo" src="/assets/common/geographica_green.svg"/>
+            <div class="slogan">Location inteligence</div>
             <div class="web"><a target="_blank" href="http://geographica.gs">geographica.gs</a></div>
         </div>
     </div>
-
     <div class="btn-row">
         <div class="btn view-stories" (click)="showStoryList()">See Stories</div>
         <div class="btn go-home" (click)="goHome()">Home</div>

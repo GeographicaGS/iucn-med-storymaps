@@ -30,10 +30,17 @@ export class MainComponent {
 
         this.backgroundSrc = 'url(' + this.windowService.getBodyBgUrl() + ')';
         this.windowService.getBodyBgUrlObservable().subscribe((src) => {
-            this.backgroundSrc = 'url(' + src + ')';
+            this.backgroundSrc = src;
         });
 
         this.windowService.getBodyClassObservable().subscribe((_class) => {
+            console.group(_class);
+            try{
+                throw new Error('getBodyClassObservable')
+            }catch(e){
+                console.log(e.stack);
+            }
+            console.groupEnd();
             this.bodyClass = _class;
         });
 
@@ -56,8 +63,12 @@ export class MainComponent {
         return this.stories['home'] != undefined && this.stories['iucnInfo'].show != true
     }
 
+    isHomeView() {
+        return this.areStoriesLoaded() && !this.isStoryLoaded() && !this.windowService.aboutView;
+    }
+
     isIucnInfoLoaded(): boolean {
-        return this.stories['iucnInfo'] !== undefined && this.stories['iucnInfo'].show == true
+        return this.stories['iucnInfo'] !== undefined && this.windowService.aboutView;
     }
 
     getStepsKeys() {

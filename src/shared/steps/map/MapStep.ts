@@ -47,11 +47,10 @@ export class MapStepComponent extends BaseStepComponent {
         let locked = this.windowService.scrollingDown() && offset.top < 100 && offset.top > -20
             || !this.windowService.isScrollingActive() && offset.top == 0;
         if (locked) {
-            this.windowService.setBodyBgUrl('');
+            this.windowService.setBodyBgUrl('none');
             this.windowService.setBodyBgClass('locked');
             this.lockMap();
         } else {
-            this.windowService.setBodyBgClass('');
             this.unlockMap();
         }
 
@@ -63,7 +62,7 @@ export class MapStepComponent extends BaseStepComponent {
         this.mapService.map = new Map({
             trackResize: false,
             container: 'map',
-            style: 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
+            style: this.step.mapStyle || 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
             zoom: this.zoom,
             center: this.center
         });
