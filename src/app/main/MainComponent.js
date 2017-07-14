@@ -29,14 +29,6 @@ var MainComponent = (function () {
             _this.backgroundSrc = src;
         });
         this.windowService.getBodyClassObservable().subscribe(function (_class) {
-            console.group(_class);
-            try {
-                throw new Error('getBodyClassObservable');
-            }
-            catch (e) {
-                console.log(e.stack);
-            }
-            console.groupEnd();
             _this.bodyClass = _class;
         });
         this.currentStory = this.windowService.getCurrentStory();
