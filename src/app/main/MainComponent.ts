@@ -34,13 +34,6 @@ export class MainComponent {
         });
 
         this.windowService.getBodyClassObservable().subscribe((_class) => {
-            console.group(_class);
-            try{
-                throw new Error('getBodyClassObservable')
-            }catch(e){
-                console.log(e.stack);
-            }
-            console.groupEnd();
             this.bodyClass = _class;
         });
 

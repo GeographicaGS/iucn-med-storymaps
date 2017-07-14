@@ -4090,14 +4090,14 @@ body.blur:after {
   -ms-filter: blur(24px);
   filter: blur(24px);
 }
-body.gradient:before {
+body.gradient:after {
   content: "";
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: -2;
+  z-index: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 body.kenburns:before {
