@@ -2,6 +2,7 @@ import {enableProdMode, NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpModule} from "@angular/http";
+import {FormsModule} from '@angular/forms';
 
 import {MainComponent} from "./main/MainComponent";
 import {MenuComponent} from "./../shared/menu/Menu";
@@ -27,6 +28,7 @@ import {WindowService} from "../services/WindowService";
 @NgModule({
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     imports: [
+        FormsModule,
         BrowserModule,
         HttpModule,
     ],

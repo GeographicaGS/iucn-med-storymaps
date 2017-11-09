@@ -48,7 +48,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; 
+  background-attachment: fixed;
 
   .nav-bar {
     flex: 0 0 72px;
@@ -59,20 +59,20 @@ body {
   }
   &.full-screen {
     position: relative;
-    z-index:-1;
+    z-index: -1;
     .nav-bar {
       flex: 0 0 0;
     }
   }
-  &.blur{
-    &:after{
-      z-index:-1;
-      content:"";
-      position:fixed;
-      left:-24px;
-      top:-24px;
-      right:-24px;
-      bottom:-24px;
+  &.blur {
+    &:after {
+      z-index: -1;
+      content: "";
+      position: fixed;
+      left: -24px;
+      top: -24px;
+      right: -24px;
+      bottom: -24px;
       background: inherit;
       -webkit-filter: blur(24px);
       -moz-filter: blur(24px);
@@ -81,16 +81,16 @@ body {
       filter: blur(24px);
     }
   }
-  &.gradient{
-    &:after{
-      content:"";
-      position:fixed;
-      left:0;
-      top:0;
-      right:0;
-      bottom:0;
-      z-index:-1;
-      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%);
+  &.gradient {
+    &:after {
+      content: "";
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
     }
 
   }
@@ -116,6 +116,151 @@ body {
 
   &.locked {
     overflow: hidden;
+  }
+  h3.title {
+    .fontweight(400);
+    font-family: 'Merriweather', sans-serif;
+    font-size: 22px;
+    line-height: 28px;
+    color: #212121;
+    max-width: 740px;
+    width: 95%;
+    display: block;
+    margin: 0 auto 24px auto;
+    font-weight: 300;
+  }
+  ul {
+    list-style: circle;
+    padding-left: 20px;
+  }
+  .footer {
+    padding-top: 24px;
+    position: relative;
+    margin-top: 72px;
+    height: 270px;
+    background-color: #0079BA;
+    .block {
+      .color_blanco();
+      .fira_sans();
+      display: flex;
+      justify-content: center;
+      width: 80%;
+      max-width: 580px;
+      margin: 0 auto;
+      font-size: 12px;
+      line-height: 24px;
+      > div {
+        padding: 0 10px;
+        flex: 1 0 auto;
+        flex-direction: column;
+        justify-content: center;
+        height: 180px;
+        display: flex;
+        align-items: start;
+        &.img {
+          position: relative;
+          flex: 1 0 105px;
+          span {
+            position: absolute;
+            top: 0;
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+        &.address-container {
+          line-height: 16px;
+          .center-name {
+            font-weight: bold;
+            margin-bottom: 16px;
+          }
+          .center-address {
+            color: #E2E2E2;
+          }
+        }
+      }
+    }
+    .credit-container {
+      position: absolute;
+      width: 100%;
+      bottom: 24px;
+      left: 0;
+      right: 0;
+      .fira_sans();
+      .color_blanco();
+      font-size: 12px;
+      text-shadow: 0 1px 4px 0 fade(@oscuro, 50%);
+      line-height: 16px;
+      .right-link {
+        position: absolute;
+        right: 48px;
+        text-align: right;
+
+      }
+      .left-link {
+        position: absolute;
+        left: 24px;
+        text-align: left;
+      }
+      .geo {
+        position: relative;
+        right: 0;
+        bottom: 30px;
+        > a{
+          position: absolute;
+          top: 0;
+          right: -48px;
+          width: 36px;
+          height: 36px;
+          border-radius: 2px 0 0 0;
+          background-color: #15B750;
+        }
+        &:hover {
+          .big {
+            width: 52px;
+            height: 68px;
+            background: #fff;
+            opacity: 1;
+            transform: translateY(0);
+          }
+          .small {
+            opacity: 0;
+            transform: translateY(5px);
+          }
+          .arrow {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .big, .small, .arrow {
+          transition: opacity .25s ease, transform .25s ease;
+        }
+        .small {
+          width: 100%;
+          height: 100%;
+        }
+        .big {
+          position: absolute;
+          width: 0;
+          height: 0;
+          background-color: #FFF;
+          top: -65px;
+          right: -35px;
+          opacity: 0;
+          transform: translateY(5px);
+          box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.15);
+        }
+        .arrow {
+          position: absolute;
+          top: 0;
+          right: 0;
+          stroke: #FFF;
+          stroke-width: 2;
+          fill: none;
+          opacity: 0;
+          transform: translateY(-5px);
+        }
+      }
+    }
   }
 
 }

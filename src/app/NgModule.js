@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require("@angular/http");
+var forms_1 = require('@angular/forms');
 var MainComponent_1 = require("./main/MainComponent");
 var Menu_1 = require("./../shared/menu/Menu");
 var HomeStep_1 = require("../shared/steps/home/HomeStep");
@@ -36,6 +37,7 @@ var AppModule = (function () {
         core_1.NgModule({
             schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA],
             imports: [
+                forms_1.FormsModule,
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
             ],

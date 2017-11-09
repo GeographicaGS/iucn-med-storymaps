@@ -22,17 +22,8 @@ export class IucnInfoStepComponent extends BaseStepComponent {
         this.windowService.goHome();
     }
 
-    showStoryList() {
-        this.windowService.homeViewPreview = false;
-        this.windowService.goHome();
-    }
-
-    hasContactPersons(): boolean {
-        return this.step.contact_info != undefined && this.step.contact_info.persons != undefined && this.step.contact_info.persons.length > 0
-    }
-
-    aboutHasColumns(): boolean {
-        return this.step.columns != undefined && this.step.columns.length > 0
+    aboutHasBlocks(): boolean {
+        return this.step.blocks != undefined && this.step.blocks instanceof Array;
     }
 
     getContactPerson(): any {
@@ -42,27 +33,32 @@ export class IucnInfoStepComponent extends BaseStepComponent {
         return [];
     }
 
-    hasAddress(): boolean {
-        return this.step.contact_info != undefined && this.step.contact_info.address != undefined;
-    }
-
-    getCenterName(): string {
-        if (this.hasAddress()) {
-            return this.step.contact_info.address.center_name;
-        }
-        return '';
-    }
-
-    getCenterContactInfo(): string {
-        if (this.hasAddress()) {
-            return this.step.contact_info.address.info;
-        }
-        return '';
-    }
-
     hasDescription(): boolean {
         return this.stories.iucnInfo.description != undefined
     }
 
+    hasCredit(): boolean {
+        return this.stories.home.footer.credit != undefined
+    }
 
+    showCredits(): boolean {
+        return this.hasCredit();
+    }
+
+    getCenterContactInfo(): string {
+        return this.stories.home.footer.address.info;
+    }
+
+    hasAddress(): boolean {
+        return this.stories.home.footer.address !== undefined;
+    }
+
+    getCenterName(): string {
+        return this.stories.home.footer.address.center_name;
+    }
+
+    showStoryList() {
+        this.windowService.homeViewPreview = false;
+        this.windowService.goHome();
+    }
 }

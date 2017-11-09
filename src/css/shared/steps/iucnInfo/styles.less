@@ -5,13 +5,6 @@ iucnInfo {
   .fadeInUp();
   width: 100%;
   .fira_sans();
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
-  //height: 100%;
-  //position: relative;
-  //background: white;
-  //overflow-y: scroll;
   &.hidden {
     opacity: 0;
     visibility: hidden;
@@ -105,7 +98,7 @@ iucnInfo {
       line-height: 24px;
       text-transform: uppercase;
       font-weight: 500;
-      margin-bottom: 28px;
+      margin-bottom: 5px;
       .animated(0.6s, 0.5s);
       .fadeInUp();
       display: table;
@@ -129,15 +122,6 @@ iucnInfo {
         }
       }
     }
-    .description {
-      .fira_sans();
-      .color_azul_claro_iucn();
-      .animated(0.6s, 0.5s);
-      .fadeInUp();
-      font-size: 24px;
-      text-align: center;
-      .fontweight(300);
-    }
     .separator-row {
       font-weight: normal;
       font-size: 12px;
@@ -146,79 +130,52 @@ iucnInfo {
     }
     .content {
       position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      margin-top: 140px;
       .wrapper {
         width: 80%;
         max-width: 740px;
         margin: 0 auto;
       }
-      .columns {
-        padding-top: 32px;
+      .blocks {
+        max-width: 740px;
         width: 80%;
-        margin: 0 auto;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        .col-md-4 {
-          flex: 0 0 30%;
+        margin: 90px auto 0 auto;
+        .title {
+          .color_azul_profundo();
+          .fontweight(bold);
+          font-size: 24px;
+          line-height: 32px;
           text-align: center;
-          .animated(0.6s, 0.5s);
-          .fadeInUp();
-          i {
-            display: block;
-            height: 32px;
-            width: 32px;
-            border-radius: 32px;
-            margin: 0 auto 16px auto;
-            &:before {
-              content: "";
-              background-position: center;
-              display: block;
-              height: 32px;
-              width: 32px;
-              background-repeat: no-repeat;
-
-            }
-
-          }
-          .column-info {
-            .fira_sans();
-            font-size: 14px;
-            line-height: 24px;
-          }
-          &:nth-of-type(1) {
-            i {
-              .bg_mbl7();
-              &:before {
-                background-image: url('../../../../assets/icon/map-white.svg');
-
-              }
-            }
-          }
-          &:nth-of-type(2) {
-            i {
-              .bg_mbl8();
-              &:before {
-                background-image: url('../../../../assets/icon/user-white.svg');
-
-              }
-            }
-          }
-          &:nth-of-type(3) {
-            i {
-              .bg_mbl9();
-              &:before {
-                background-image: url('../../../../assets/icon/arrow_scroll-white.svg');
-
-              }
-            }
+          text-transform: none;
+        }
+        element-block {
+          display: block;
+          padding-bottom: 12px;
+          margin-top: 24px;
+          border-bottom: 2px solid fade(@azul_iucn, 25%);
+          &:last-of-type {
+            border: 0;
           }
         }
+        a {
+          .color_azul_claro_iucn();
+        }
       }
-
+      .close-subtitle {
+        max-width: 740px;
+        margin: 0 auto;
+        width: 80%;
+        color: #0C64AC;
+        font-family: Merriweather;
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 32px;
+        text-align: center;
+        margin-bottom: 48px;
+      }
     }
+
     .contact-content {
       width: 100%;
       padding-top: 56px;
@@ -334,12 +291,17 @@ iucnInfo {
       .btn {
         display: inline-block;
         margin: 0 10px;
+
         &.view-stories {
           opacity: 0;
           .animated(0.3s, 1.5s);
           .fadeIn();
           position: relative;
-          width: 120px;
+          background-image: url('../../../../assets/icon/see-white.svg');
+          background-position: 12px;
+          padding-left: 30px;
+          padding-right: 9px;
+          width: 134px;
           height: 32px;
           border-radius: 16px;
           .bg_azul_iucn();
@@ -359,8 +321,6 @@ iucnInfo {
           .fadeIn();
           position: relative;
           letter-spacing: 1px;
-          width: 110px;
-          height: 32px;
           border-radius: 16px;
           line-height: 30px;
           text-align: center;
@@ -370,8 +330,28 @@ iucnInfo {
           font-weight: 500;
           font-size: 12px;
           text-transform: uppercase;
+          padding-left: 17px;
+          height: 32px;
+          width: 97px;
+          &:before {
+            content: "";
+            -moz-transform: scaleX(-1);
+            background-image: url(../../../../assets/icon/skip-h.svg);
+            background-position: center;
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+            position: absolute;
+            height: 16px;
+            width: 17px;
+            left: 11px;
+            top: 6px;
+          }
         }
       }
     }
   }
+
 }

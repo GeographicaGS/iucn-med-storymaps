@@ -2,7 +2,7 @@
     <!--<info *ngIf="hasInfo()" [collapsed]="true" [item]="item.info"></info>-->
     <img width="100%" [src]="getBackgroundSrc()">
     <div *ngIf="hasCredit()" class="credit-full">
-        <span class="credit">{{item.credit.footer}}</span>
+        <span class="credit" [innerHTML]="item.credit.footer"></span>
         <span class="author">{{item.credit.author}}</span>
     </div>
     <div *ngIf="hasInfo()" class="credit-info">

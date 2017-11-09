@@ -37,12 +37,14 @@
     <div class="skip-container">
         <div class="component-container" [style.background-color]="getBackgroundColor()">
             <div class="image"
+                 (click)="goToNextStory()"
                  [style.background-image]="'url(' + step.next_story.background.url     + ')'"
                  [ngClass]="showImage() ? 'fadeIn':'fadeOut'"
             >
 
             </div>
             <h2
+                    (click)="goToNextStory()"
                     [ngClass]="showTitle() ? 'fadeInUp':'fadeOutDown'"
             >
                 {{step.next_story.title}}

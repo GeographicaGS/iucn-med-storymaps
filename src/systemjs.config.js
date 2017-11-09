@@ -20,6 +20,7 @@
       '@angular/platform-browser-dynamic': 'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
       '@angular/http': 'node_modules/@angular/http/bundles/http.umd.js',
       '@angular/router': 'node_modules/@angular/router/bundles/router.umd.js',
+      '@angular/forms': 'node_modules/@angular/forms/bundles/forms.umd.js',
       'mapbox-gl': 'node_modules/mapbox-gl/dist',
       'rxjs': 'node_modules/rxjs',
       'core-js-shim':'node_modules/core-js/client/shim.js',

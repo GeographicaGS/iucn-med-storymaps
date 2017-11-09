@@ -22,6 +22,7 @@ var HomeStepComponent = (function (_super) {
         this.stories = {};
         this.scaling = '';
         this.scalingInProgress = false;
+        this.search = '';
     }
     HomeStepComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
@@ -94,17 +95,35 @@ var HomeStepComponent = (function (_super) {
     HomeStepComponent.prototype.getPreviewSubtitle = function () {
         return this.stories.home.preview.subtitle;
     };
+    HomeStepComponent.prototype.getPreviewSubtitle2 = function () {
+        return this.stories.home.preview.subtitle2;
+    };
+    HomeStepComponent.prototype.getHomeAfterButton = function () {
+        return this.stories.home.afterButtons;
+    };
+    HomeStepComponent.prototype.getCenterContactInfo = function () {
+        return this.stories.home.footer.address.info;
+    };
+    HomeStepComponent.prototype.hasAddress = function () {
+        return this.stories.home.footer.address !== undefined;
+    };
+    HomeStepComponent.prototype.getCenterName = function () {
+        return this.stories.home.footer.address.center_name;
+    };
     HomeStepComponent.prototype.getPreviewImageSrc = function () {
         return this.stories.home.preview.img;
     };
+    HomeStepComponent.prototype.homeHasColumns = function () {
+        return this.stories.home.columns instanceof Array;
+    };
     HomeStepComponent.prototype.hasCredit = function () {
-        return this.stories.home.background.credit != undefined;
+        return this.stories.home.footer.credit != undefined;
     };
     HomeStepComponent.prototype.showCredits = function () {
         return this.hasCredit() && this.isPreview();
     };
     HomeStepComponent.prototype.hasDescription = function () {
-        return this.hasCredit() && this.stories.home.background.credit.description != undefined;
+        return this.hasCredit() && this.stories.home.footer.credit.description != undefined;
     };
     HomeStepComponent.prototype.showDescription = function () {
         return this.hasDescription() && this.isPreview();
@@ -114,7 +133,14 @@ var HomeStepComponent = (function (_super) {
         this.clearBackgroundBlur();
     };
     HomeStepComponent.prototype.getStoriesKeys = function () {
-        return Object.keys(this.stories['stories']);
+        var _this = this;
+        var keys = Object.keys(this.stories['stories']);
+        if (this.search !== '') {
+            keys = keys.filter(function (name) {
+                return _this.getStoryTitle(name).indexOf(_this.search) > -1;
+            });
+        }
+        return keys;
     };
     HomeStepComponent.prototype.getStoryTitle = function (story) {
         return this.stories['stories'][story].steps.cover.title;
@@ -147,6 +173,18 @@ var HomeStepComponent = (function (_super) {
     };
     HomeStepComponent.prototype.showDescriptionImage = function () {
         return this.getWindowWidth() > 800 && this.getWindowHeight() > 750;
+    };
+    HomeStepComponent.prototype.hasAuthors = function (story) {
+        return this.stories['stories'][story].steps.skip.contact_info.authors instanceof Array;
+    };
+    HomeStepComponent.prototype.getAuthors = function (story) {
+        var authors = [];
+        if (this.stories['stories'][story].steps.skip.contact_info.authors instanceof Array) {
+            authors = this.stories['stories'][story].steps.skip.contact_info.authors.map(function (item) {
+                return item.name;
+            });
+        }
+        return authors;
     };
     __decorate([
         core_1.Input(), 

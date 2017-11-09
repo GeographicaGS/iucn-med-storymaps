@@ -1,6 +1,6 @@
 intro {
   .bg_blanco();
-  > .component-container{
+  > .component-container {
     display: block;
     width: 100%;
     padding-top: 100px;
@@ -43,5 +43,43 @@ intro {
       }
     }
 
+  }
+  el-quote {
+    .merriweather();
+    text-align: center;
+    display: block;
+    max-width: 460px;
+    width: 85%;
+    margin: 56px auto 56px auto;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 300;
+    .component-container {
+      .color_azul_profundo();
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        width: 64px;
+        height: 48px;
+        background: url('../../../../assets/icon/qumarks.svg') no-repeat center center;
+        margin: 0 auto 0 auto;
+      }
+      &:before {
+        margin-bottom: 32px;
+      }
+      &:after {
+        margin-top: 32px;
+        margin-bottom: 0;
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+      .credit {
+        font-size: 18px;
+        margin-top: 18px;
+      }
+    }
   }
 }

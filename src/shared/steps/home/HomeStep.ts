@@ -10,6 +10,7 @@ export class HomeStepComponent extends BaseStepComponent {
 
     scaling: string = '';
     scalingInProgress: boolean = false;
+    search: string = '';
 
     ngAfterViewInit() {
         // setting a timeout so that it works on safari .... 
@@ -22,7 +23,7 @@ export class HomeStepComponent extends BaseStepComponent {
         let _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
         let _url = this.step.background != undefined && this.step.background.url != undefined ? this.step.background.url : '';
         this.windowService.setBodyBgClass(_class);
-        this.windowService.setBodyBgUrl( 'url( '+_url+ ')');
+        this.windowService.setBodyBgUrl('url( ' + _url + ')');
         if (!this.windowService.homeViewPreview && !this.windowService.aboutView) {
             this.addBackgroundBlur();
         }
@@ -85,6 +86,7 @@ export class HomeStepComponent extends BaseStepComponent {
     isScaling(story: string): boolean {
         return this.scaling == story;
     }
+
     hasSomeScaling(): boolean {
         return this.scaling != '';
     }
@@ -97,12 +99,36 @@ export class HomeStepComponent extends BaseStepComponent {
         return this.stories.home.preview.subtitle
     }
 
+    getPreviewSubtitle2(): string {
+        return this.stories.home.preview.subtitle2
+    }
+
+    getHomeAfterButton(): string {
+        return this.stories.home.afterButtons
+    }
+
+    getCenterContactInfo(): string {
+        return this.stories.home.footer.address.info;
+    }
+
+    hasAddress(): boolean {
+        return this.stories.home.footer.address !== undefined;
+    }
+
+    getCenterName(): string {
+        return this.stories.home.footer.address.center_name;
+    }
+
     getPreviewImageSrc(): string {
         return this.stories.home.preview.img
     }
 
+    homeHasColumns() {
+        return this.stories.home.columns instanceof Array;
+    }
+
     hasCredit(): boolean {
-        return this.stories.home.background.credit != undefined
+        return this.stories.home.footer.credit != undefined
     }
 
     showCredits(): boolean {
@@ -110,7 +136,7 @@ export class HomeStepComponent extends BaseStepComponent {
     }
 
     hasDescription(): boolean {
-        return this.hasCredit() && this.stories.home.background.credit.description != undefined
+        return this.hasCredit() && this.stories.home.footer.credit.description != undefined
     }
 
     showDescription(): boolean {
@@ -123,7 +149,13 @@ export class HomeStepComponent extends BaseStepComponent {
     }
 
     getStoriesKeys(): string[] {
-        return Object.keys(this.stories['stories']);
+        let keys = Object.keys(this.stories['stories']);
+        if (this.search !== '') {
+            keys = keys.filter((name: string) => {
+                return this.getStoryTitle(name).indexOf(this.search) > -1;
+            })
+        }
+        return keys;
     }
 
     getStoryTitle(story: string): string {
@@ -164,4 +196,17 @@ export class HomeStepComponent extends BaseStepComponent {
         return this.getWindowWidth() > 800 && this.getWindowHeight() > 750;
     }
 
+    hasAuthors(story: string) {
+        return this.stories['stories'][story].steps.skip.contact_info.authors instanceof Array;
+    }
+
+    getAuthors(story: string) {
+        let authors = [];
+        if (this.stories['stories'][story].steps.skip.contact_info.authors instanceof Array) {
+            authors = this.stories['stories'][story].steps.skip.contact_info.authors.map((item: any) => {
+                return item.name;
+            })
+        }
+        return authors;
+    }
 }
