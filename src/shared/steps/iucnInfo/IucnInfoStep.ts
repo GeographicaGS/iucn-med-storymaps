@@ -26,13 +26,6 @@ export class IucnInfoStepComponent extends BaseStepComponent {
         return this.step.blocks != undefined && this.step.blocks instanceof Array;
     }
 
-    getContactPerson(): any {
-        if (this.hasContactPersons()) {
-            return this.step.contact_info.persons;
-        }
-        return [];
-    }
-
     hasDescription(): boolean {
         return this.stories.iucnInfo.description != undefined
     }

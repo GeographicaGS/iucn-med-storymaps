@@ -1,7 +1,7 @@
 <div class="container-component" [ngClass]="showContent() ? 'fadeInUp' : 'fadeOutDown'" >
     <!--<info *ngIf="hasInfo()" [collapsed]="true" [item]="item.info"></info>-->
     <img width="100%" [src]="getBackgroundSrc()">
-    <div *ngIf="hasCredit()" class="credit-full">
+    <div *ngIf="hasCredit()" class="credit-full" [ngClass]="{'no-ico': !hasIco()}">
         <span class="credit" [innerHTML]="item.credit.footer"></span>
         <span class="author">{{item.credit.author}}</span>
     </div>

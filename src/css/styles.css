@@ -6095,6 +6095,9 @@ map > .component-container > div > .btn-row .zoomControl .zoomOut {
 conclusion {
   background-color: #14406D;
 }
+conclusion h3.title {
+  color: #66B7EA;
+}
 conclusion > .component-container {
   display: block;
   width: 100%;

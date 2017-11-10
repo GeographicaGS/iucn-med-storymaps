@@ -1,6 +1,9 @@
 conclusion {
   .bg_azul_profundo();
-  > .component-container{
+  h3.title {
+    .color_azul_claro_iucn();
+  }
+  > .component-container {
     display: block;
     width: 100%;
     padding-top: 100px;
@@ -21,53 +24,51 @@ conclusion {
     line-height: 24px;
     .color_blanco();
     max-width: 740px;
-    width:95%;
+    width: 95%;
     display: block;
-    margin:0 auto 24px auto;
-    .capitalized{
-      span{
-        &:first-of-type{
-          float:left;
+    margin: 0 auto 24px auto;
+    .capitalized {
+      span {
+        &:first-of-type {
+          float: left;
           position: relative;
-          font-size:156px;
+          font-size: 156px;
           .color_blanco();
-          padding-top:54px;
-          padding-bottom:30px;
-          padding-right:10px;
+          padding-top: 54px;
+          padding-bottom: 30px;
+          padding-right: 10px;
           .font(ultrabold);
         }
       }
-      clear:both;
+      clear: both;
     }
   }
-  el-quote{
+  el-quote {
     .merriweather();
     .color_azul_claro_iucn();
     text-align: center;
     display: block;
     max-width: 460px;
-    width:85%;
-    margin:56px auto 56px auto;
+    width: 85%;
+    margin: 56px auto 56px auto;
     font-style: italic;
-    font-size:24px;
-    line-height:32px;
-    font-weight:300;
-    .component-container{
-        &:before,
-        &:after{
-          content:"";
-          display: block;
-          width: 64px;
-          height: 48px;
-          background:url('../../../../assets/icon/qumarks.svg') no-repeat center center;
-          margin:0 auto 0 auto;
-        }
-      &:before
-      {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 300;
+    .component-container {
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        width: 64px;
+        height: 48px;
+        background: url('../../../../assets/icon/qumarks.svg') no-repeat center center;
+        margin: 0 auto 0 auto;
+      }
+      &:before {
         margin-bottom: 32px;
       }
-      &:after
-      {
+      &:after {
         margin-top: 32px;
         margin-bottom: 0;
         -ms-transform: rotate(180deg);
@@ -76,15 +77,15 @@ conclusion {
       }
     }
 
-    .credit{
-      margin-top:16px;
+    .credit {
+      margin-top: 16px;
       font-style: normal;
       display: inline-block;
       position: relative;
-      &:before{
-        content:"-";
+      &:before {
+        content: "-";
         position: absolute;
-        left:-25px;
+        left: -25px;
       }
 
     }

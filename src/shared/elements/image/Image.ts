@@ -10,4 +10,8 @@ export class ImageComponent extends BaseElementComponent {
         return this.item.url != undefined ? this.item.url : 'none';
     }
 
+    hasIco() {
+        return this.item.ico == undefined || this.item.ico;
+    }
+
 }

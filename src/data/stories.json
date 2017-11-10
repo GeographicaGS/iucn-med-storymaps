@@ -304,11 +304,10 @@
           },
           "next_story": {
             "background": {
-              "url": "assets/plants/image.jpg",
-              "credit": "Breve descripcion. Foto de autor"
+              "url": "assets/butterflies/image.jpg"
             },
-            "link": "plants",
-            "title": "Why are plants so important?"
+            "link": "butterflies",
+            "title": "The case of the disappearing butteflies"
           }
         }
       }
@@ -347,7 +346,11 @@
             },
             {
               "type": "image",
-              "url": "/assets/butterflies/image.jpg"
+              "url": "/assets/butterflies/image.jpg",
+              "credit": {
+                "footer": "Hespericus.",
+                "author": ""
+              }
             },
             {
               "type": "paragraph",
@@ -364,7 +367,8 @@
               "url": "/assets/butterflies/chart-1.svg",
               "credit": {
                 "footer": "Resource: IUCN, Centre for Mediterranean Cooperation.",
-                "author": ""
+                "author": "",
+                "ico": false
               }
             },
             {
@@ -576,10 +580,10 @@
           },
           "next_story": {
             "background": {
-              "url": "assets/corals/image.jpg"
+              "url": "assets/sharks/image.jpg"
             },
-            "link": "corals",
-            "title": "Do you know where the most beautiful Mediterranean diving secrets are?"
+            "link": "sharks",
+            "title": "the Mediterranean eating its sharks?"
           }
         }
       }
@@ -596,8 +600,8 @@
               "author": "AUTOR"
             }
           },
-          "title": "Is the Mediterranean eating its sharks?",
-          "subtitle": "Mediterranean Butterflies"
+          "title": "Is the Mediterranean eating sharks away?",
+          "subtitle": "Mediterranean Sea"
         },
         "intro": {
           "background": {
@@ -609,44 +613,26 @@
             {
               "type": "paragraph",
               "capitalize": true,
-              "value": "Butterflies provide a wide range of environmental benefits. In addition to their role as pollinators and food for others, some have even developed their own ways to deter predators and parasites, find a mate, or overcome the chemical defences of their host plant. Each of these butterfly chemicals has a potential value and could be exploited economically. Powerful antibiotics for example have been found in the Meadow Brown (Maniola jurtina), one common and widespread species."
+              "value": "Sharks play an important role in the <b>food chain</b> of the oceans, but the numbers of these species in the Mediterranean are decreasing at an alarming rate."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The last 50 years have however seen a massive change in agricultural practices across the Mediterranean, with a loss of wildlife-rich habitats by increasing urbanization and tourism infrastructure. The growing chronic water shortages are also having a major socio-economic impact on large parts of the region, as many small-scale farmers feel forced to abandon their land to search for jobs elsewhere. Land abandonment leads to former grassland getting overgrown with shrubs, turning into secondary forests and therefore reducing suitable habitats for many butterfly species. Overgrazing can reduce the availability of nutritious plants and refuge for larvae too. These changes are leading to the disappearance of some of these colourful and unique creatures."
-            },
-            {
-              "type": "image",
-              "url": "/assets/butterflies/Mottenflugel_in_Mikroskop.jpg",
-              "info": {
-                "elements": [
-                  {
-                    "type": "paragraph",
-                    "capitalize": false,
-                    "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
-                  },
-                  {
-                    "type": "paragraph",
-                    "capitalize": false,
-                    "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
-                  },
-                  {
-                    "type": "paragraph",
-                    "capitalize": false,
-                    "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
-                  }
-                ]
-              },
-              "credit": {
-                "footer": "Rand eines Mottenflügels bei ca. 200 fach mit Polfilter. Ausschnitt ca: 600µm x 600µm.",
-                "author": "© JAN HOMANN"
-              }
+              "value": "Beyond the global culinary demand for a whole array of sharks, rays and chimaeras, these species are commonly caught in nets during fishing expeditions."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The IUCN Centre for Mediterranean Cooperation is evaluating the state of conservation of a selection of taxonomic groups in the Mediterranean region. There are 463 butterflies native to the Mediterranean and the assessment recently published by IUCN reveals that 19 butterfly species are threatened with extinction, among which 15 endemic species."
+              "value": "The northwestern part of the Mediterranean has recently experienced an intensive increase in fishing activity, and as a result, bycatch has become a major issue."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "<b>Overfishing</b>, accidentally or on purpose, is also contributing to the disappearance of shark species in the Mediterranean. Current counts are quite low, and the sharks do not have ample time to mature and reproduce, so the conservation community is focused on reducing <b>accidental catch</b> and uncontrolled fishing behaviors."
+            },
+            {
+              "type": "title",
+              "value": "Facts and Figure"
             },
             {
               "type": "image",
@@ -659,288 +645,87 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "There is still an information gap on the geographic distribution of butterflies, the size and the reproduction trends of their populations, mostly for species south and east of the Mediterranean. Beyond further data collection and monitoring, a review of legislation affecting their protection and action plans for particular species and habitats are the main recommendations from experts to encourage the preservation of these winged creatures in the Mediterranean landscape."
-            }
-          ]
-        },
-        "map": {
-          "name": "Map",
-          "collapsed": false,
-          "info": [
-            {
-              "title": "Species richness of butterflies in the Mediterranean region",
-              "credit": "",
-              "collapsed": false,
-              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
-              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
-              "legend": "/assets/maps/legend_map.svg",
-              "elements": [
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
-                },
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
-                },
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
-                }
-              ],
-              "layer": {
-                "id": "butterflies_total",
-                "hidden": false,
-                "subLayers": [
-                  "butterflies_all-species_less50",
-                  "butterflies_all-species_50_100",
-                  "butterflies_all-species_100_150",
-                  "butterflies_all-species_more150"
-                ]
-              }
-            },
-            {
-              "title": "Distribution of threatened butterflies in the Mediterranean region",
-              "collapsed": true,
-              "credit": "",
-              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
-              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
-              "legend": "/assets/maps/legend_map.svg",
-              "elements": [
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
-                },
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
-                },
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
-                }
-              ],
-              "layer": {
-                "id": "butterflies_threatened",
-                "hidden": true,
-                "subLayers": [
-                  "butterflies_threatened_1",
-                  "butterflies_threatened_2",
-                  "butterflies_threatened_3",
-                  "butterflies_threatened_4"
-                ]
-              }
-            },
-            {
-              "title": "Species richness of endemic butterflies in the Mediterranean region",
-              "collapsed": true,
-              "credit": "",
-              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
-              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
-              "legend": "/assets/maps/legend_map.svg",
-              "elements": [
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
-                },
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
-                },
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
-                }
-              ],
-              "layer": {
-                "id": "butterflies_threatened",
-                "hidden": true,
-                "subLayers": [
-                  "butterflies_endemic_less5",
-                  "butterflies_endemic_5_10",
-                  "butterflies_endemic_10_15",
-                  "butterflies_endemic_15_20",
-                  "butterflies_endemic_20_25",
-                  "butterflies_endemic_more25"
-                ]
-              }
-            }
-          ]
-        },
-        "conclusion": {
-          "name": "What next",
-          "title": "What next",
-          "elements": [
-            {
-              "type": "paragraph",
-              "value": "Butterflies are considered good indicators for the state of the environment and due to their short cycle, narrow niches and relatively low mobility, they are very sensitive to land-use changes."
+              "value": "The most recent regional study conducted by the <b>IUCN Red List of Threatened Species</b> in 2016 raised a red flag on this alarming situation. Of the 73 shark species assessed during the last 10 years, 11 of them have seen their status worsen."
             },
             {
               "type": "paragraph",
-              "value": "Despite the percentage of threatened butterflies being lower than in other groups in the region, there is a lack of information on the distribution, population size and trends for several species, which could mean an increased number of threatened species. Agricultural intensification, overgrazing and land abandonment are a threat to Mediterranean butterfly diversity."
-            },
-            {
-              "type": "paragraph",
-              "value": "At present there are 22 countries where butterflies are monitored. However, most of them are not situated in the Mediterranean region, with the exception of Spain and France. There is therefore a need to increase data collection and monitoring on the southern and eastern shores of the Mediterranean, where many endemic species inhabit, as a first step to ensure their protection through better legislation and concrete action plans."
-            },
-            {
-              "type": "paragraph",
-              "value": "Butterflies have been for a long time a symbol for transformation and evolution. One also talks about the \"butterfly effect\" when small causes can have large effects.  Indeed, despite their small size, butterflies are key pieces in the Mediterranean landscape. They participate in the essential ecosystems functioning as pollinators and as prey for other species during their different life cycles. Aesthetic and cultural values are also associated to their presence in the region, adding colour and beauty to Mediterranean mountains, grasslands and landscapes."
-            },
-            {
-              "type": "paragraph",
-              "value": "Agricultural intensification, overgrazing and land abandonment are a threat to Mediterranean butterfly diversity. Forest fires and climate change are also risks to their survival."
-            },
-            {
-              "type": "paragraph",
-              "value": "Conservation actions necessary for their protection are the review of national and international legislation to include threatened species, and the device of species/habitat action plans where most needed. Field work and data monitoring for Data Deficient species, with strong regional cooperation as the basis, are also needed all along the Mediterranean."
+              "capitalize": false,
+              "value": "At least half of the rays (50%, 16 of 32 species) currently face an elevated risk of extinction, as well as 54% of sharks (22 of 41), whereas the only chimaera species (<i>Chimaera monstrosa</i>) is considered of Least Concern in the Mediterranean Sea. However, the threat level faced by these species may be worse than we think because of 13 remain Data Deficient. This means that their status needs to be further studied in order to evaluate appropriate protection measures."
             },
             {
               "type": "quote",
-              "value": "a flower knows, when its butterfly will return, and if the moon walks out, the sky will understand; but now it hurts, to watch you leave so soon,when I don't know, if you will ever come back.",
-              "credit": "Sanober Khan"
-            }
-          ]
-        },
-        "skip": {
-          "name": "Related",
-          "background": {
-            "url": "assets/butterflies/Karpathosgrayling_463608896.jpg",
-            "class": "",
-            "credit": {
-              "footer": "Breve pie de foto. ",
-              "author": "AUTOR"
-            }
-          },
-          "info": {
-            "collapsed": false,
-            "elements": [
-              {
-                "type": "paragraph",
-                "capitalize": false,
-                "value": "The highest diversity of butterflies is found in mountainous areas in southern Turkey, northern Greece and southern France."
-              },
-              {
-                "type": "paragraph",
-                "capitalize": false,
-                "value": "79% of threatened species are endemic. Such is the case of  the Karpathos Grayling (Hipparchia christenseni) which is found on rocky slopes covered with open scrub and in clearings in coniferous woods, where the butterflies often rest on the trunks of trees. This species occurs only on the Greek island of Karpathos."
-              }
-            ],
-            "title": "Karpathos Grayling",
-            "credit": "© TOM NYGAARD KRISTENSEN"
-          },
-          "contact_info": {
-            "authors": [
-              {
-                "name": "Catherine Numa",
-                "departament": "Med Species Programme Coordinator"
-              },
-              {
-                "name": "Violeta Barrios",
-                "departament": "Med Species Programme Officer"
-              }
-            ],
-            "author_link": "<a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a>",
-            "address": {
-              "center_name": "IUCN Centre for Mediterranean Cooperation",
-              "info": "C/ Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tél +34 352 02 84 30<br>Fax +34 352 02 84 30<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
-            }
-          },
-          "next_story": {
-            "background": {
-              "url": "assets/butterflies/image.jpg"
+              "value": "Governments need to support catch monitoring and data collection, regulate gears and establish fishing quotas and protected areas at domestic level. Consumers on the other hand need to be aware of the risk of what buying these products entails",
+              "credit": "<b>Dr. Nick Dulvy</b>, Co-chair of the IUCN Shark Specialist Group and researcher at Simon Fraser University in Vancouver."
             },
-            "link": "butterflies",
-            "title": "Which animals have scaly wings?"
-          }
-        }
-      }
-    },
-    "plants": {
-      "steps": {
-        "cover": {
-          "name": "Cover",
-          "background": {
-            "url": "assets/plants/image.jpg",
-            "class": "kenburns",
-            "credit": {
-              "footer": "Breve pie de foto. ",
-              "author": "AUTOR"
-            }
-          },
-          "title": "Why are plants so important?",
-          "subtitle": "Mediterranean Butterflies"
-        },
-        "intro": {
-          "name": "Intro",
-          "background": {
-            "url": "assets/plants/image.jpg",
-            "class": "kenburns"
-          },
-          "elements": [
             {
-              "type": "paragraph",
-              "capitalize": true,
-              "value": "Butterflies provide a wide range of environmental benefits. In addition to their role as pollinators and food for others, some have even developed their own ways to deter predators and parasites, find a mate, or overcome the chemical defences of their host plant. Each of these butterfly chemicals has a potential value and could be exploited economically. Powerful antibiotics for example have been found in the Meadow Brown (Maniola jurtina), one common and widespread species."
+              "type": "title",
+              "value": "Conservation curiosities"
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The last 50 years have however seen a massive change in agricultural practices across the Mediterranean, with a loss of wildlife-rich habitats by increasing urbanization and tourism infrastructure. The growing chronic water shortages are also having a major socio-economic impact on large parts of the region, as many small-scale farmers feel forced to abandon their land to search for jobs elsewhere. Land abandonment leads to former grassland getting overgrown with shrubs, turning into secondary forests and therefore reducing suitable habitats for many butterfly species. Overgrazing can reduce the availability of nutritious plants and refuge for larvae too. These changes are leading to the disappearance of some of these colourful and unique creatures."
-            },
-            {
-              "type": "image",
-              "url": "/assets/butterflies/Mottenflugel_in_Mikroskop.jpg",
-              "info": {
-                "elements": [
-                  {
-                    "type": "paragraph",
-                    "capitalize": false,
-                    "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
-                  },
-                  {
-                    "type": "paragraph",
-                    "capitalize": false,
-                    "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
-                  },
-                  {
-                    "type": "paragraph",
-                    "capitalize": false,
-                    "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
-                  }
-                ]
-              },
-              "credit": {
-                "footer": "Rand eines Mottenflügels bei ca. 200 fach mit Polfilter. Ausschnitt ca: 600µm x 600µm.",
-                "author": "© JAN HOMANN"
-              }
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "The IUCN Centre for Mediterranean Cooperation is evaluating the state of conservation of a selection of taxonomic groups in the Mediterranean region. There are 463 butterflies native to the Mediterranean and the assessment recently published by IUCN reveals that 19 butterfly species are threatened with extinction, among which 15 endemic species."
+              "value": "The most commonly assumed  feature of sharks is their supposedly fierce nature. There are even initiatives recording <a href='https://www.flmnh.ufl.edu/fish/isaf/contributing-factors/highlight-white-sharks/mediterranean/' target='blank'>killings by sharks in the Mediterranean.</a> But these species do play an important part in maintaining the balance of life in the sea: their biology makes them natural predators that can be found in many restaurants along the Mediterranean. Mediterranean sharks, rays and chimaeras also serve to keep the oceans clean and form part of our natural heritage in need of protection."
             },
             {
               "type": "image",
               "url": "/assets/butterflies/chart-1.svg",
               "credit": {
-                "footer": "Resource: IUCN, Centre for Mediterranean Cooperation.",
+                "footer": "https://www.dreamstime.com/stock-photo-shark-fin-soup-chinese-food-cuisine-casserole-image43443367",
                 "author": ""
               }
             },
             {
+              "type": "title",
+              "value": "Lamniformes, the most threatened order"
+            },
+            {
               "type": "paragraph",
               "capitalize": false,
-              "value": "There is still an information gap on the geographic distribution of butterflies, the size and the reproduction trends of their populations, mostly for species south and east of the Mediterranean. Beyond further data collection and monitoring, a review of legislation affecting their protection and action plans for particular species and habitats are the main recommendations from experts to encourage the preservation of these winged creatures in the Mediterranean landscape."
+              "value": "The Lamniformes (from the Greek word Lamna or 'fish of prey') are an order of sharks commonly known as mackerel sharks. This order includes some of the most familiar species of shark, such as the great white shark."
+            },
+            {
+              "type": "image",
+              "url": "/assets/butterflies/chart-1.svg",
+              "credit": {
+                "footer": "https://www.dreamstime.com/royalty-free-stock-images-little-sharks-wholesale-auction-floor-fresh-fish-market-thailand-image32623819",
+                "author": ""
+              }
+            },
+            {
+              "type": "title",
+              "value": "Only in the mediterranean"
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "Three species (<i>Leucoraja melitensis, Raja polystigma and Raja radula</i>) can be found nowhere else but inside the Mediterranean Sea."
+            },
+            {
+              "type": "title",
+              "value": "Leucoraja melitensis"
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "<ul><li>Maltese Skate, Maltese Ray</li><li>Critically Endangered</li></ul>"
+            },
+            {
+              "type": "title",
+              "value": "Raja radula"
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "<ul><li>Skate</li><li>Endangered</li></ul>"
+            },
+            {
+              "type": "title",
+              "value": "Raja polystigma"
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "<ul><li>Speckled Skate, Speckled Ray</li><li>Least Concern</li></ul>"
             }
           ]
         },
@@ -949,175 +734,102 @@
           "collapsed": false,
           "info": [
             {
-              "title": "Species richness of butterflies in the Mediterranean region",
+              "title": "Distribution of threatened (CR, EN, and VU) Chondrichthyans within the Mediterranean Sea",
               "credit": "",
               "collapsed": false,
-              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
-              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_thrt.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_thrt.zip",
               "legend": "/assets/maps/legend_map.svg",
               "elements": [
                 {
                   "type": "paragraph",
                   "capitalize": false,
-                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
-                },
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
-                },
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+                  "value": "Over the past half-century 13 species have become locally extinct in various places. Geographically, local extinctions have been most prevalent in the northwestern Mediterranean waters of Spain, France, and Italy, and in the waters of the countries bordering the Adriatic Sea and northwestern African countries."
                 }
               ],
               "layer": {
-                "id": "butterflies_total",
+                "id": "chondrichthyans_thrt",
                 "hidden": false,
                 "subLayers": [
-                  "butterflies_all-species_less50",
-                  "butterflies_all-species_50_100",
-                  "butterflies_all-species_100_150",
-                  "butterflies_all-species_more150"
+                  "chondrichthyans_thrt_8",
+                  "chondrichthyans_thrt_18",
+                  "chondrichthyans_thrt_28",
+                  "chondrichthyans_thrt_33",
+                  "chondrichthyans_thrt_38"
                 ]
               }
             },
             {
-              "title": "Distribution of threatened butterflies in the Mediterranean region",
+              "title": "Distribution of Data Deficient Chondrichthyans within the Mediterranean Sean",
               "collapsed": true,
               "credit": "",
-              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
-              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
               "legend": "/assets/maps/legend_map.svg",
               "elements": [
                 {
                   "type": "paragraph",
                   "capitalize": false,
-                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
-                },
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
-                },
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
+                  "value": "The principal driver of decline and local extinction is overfishing. Most species are taken as retained valuable bycatch in small-scale and large-scale trawl and net multispecies fisheries. Historically, the number of threatened species was very high with as many as 33 to 38 threatened species found in 100 km2 cells in the coastal waters of the western and central Mediterranean Sea."
                 }
               ],
               "layer": {
-                "id": "butterflies_threatened",
-                "hidden": true,
+                "id": "chondrichthyans_dd",
+                "hidden": false,
                 "subLayers": [
-                  "butterflies_threatened_1",
-                  "butterflies_threatened_2",
-                  "butterflies_threatened_3",
-                  "butterflies_threatened_4"
-                ]
-              }
-            },
-            {
-              "title": "Species richness of endemic butterflies in the Mediterranean region",
-              "collapsed": true,
-              "credit": "",
-              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
-              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
-              "legend": "/assets/maps/legend_map.svg",
-              "elements": [
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for  \"scales\" and ptera means \"wings\". Their scaly wings are different from those of any other insects."
-                },
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Scales play an important part in their natural history. They enable the development of vivid or indistinct patterns to help them conceal, camouflage, for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility to prevent a predator from preying on it."
-                },
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "Scales are also present on the thorax and other parts of the butterfly to  contribute to maintaining the high body temperatures required during flight."
-                }
-              ],
-              "layer": {
-                "id": "butterflies_threatened",
-                "hidden": true,
-                "subLayers": [
-                  "butterflies_endemic_less5",
-                  "butterflies_endemic_5_10",
-                  "butterflies_endemic_10_15",
-                  "butterflies_endemic_15_20",
-                  "butterflies_endemic_20_25",
-                  "butterflies_endemic_more25"
+                  "chondrichthyans_dd_3",
+                  "chondrichthyans_dd_5",
+                  "chondrichthyans_dd_7",
+                  "chondrichthyans_dd_9",
+                  "chondrichthyans_dd_12"
                 ]
               }
             }
           ]
         },
         "conclusion": {
-          "name": "What next",
-          "title": "What next",
+          "name": "Taking action",
+          "title": "Taking action",
           "elements": [
             {
               "type": "paragraph",
-              "value": "Butterflies are considered good indicators for the state of the environment and due to their short cycle, narrow niches and relatively low mobility, they are very sensitive to land-use changes."
+              "value": "Most sharks and rays are exceptionally vulnerable to overfishing, even if accidentally, because they tend to grow slowly, mature late, and produce few young.Market demands push fishermen to maintain interest in these species, even if only as bycatch, due to the common use of certain fishing gear. "
             },
             {
               "type": "paragraph",
-              "value": "Despite the percentage of threatened butterflies being lower than in other groups in the region, there is a lack of information on the distribution, population size and trends for several species, which could mean an increased number of threatened species. Agricultural intensification, overgrazing and land abandonment are a threat to Mediterranean butterfly diversity."
+              "value": "In order to address these concerns, <b>governments</b> should provide increased  support for catch monitoring and data collection, regulate fishing gear, and establish fishing quotas and protected areas at the domestic level. Consumer awareness campaigns should be implemented to communicate the problems and challenges related to shark products. "
             },
             {
               "type": "paragraph",
-              "value": "At present there are 22 countries where butterflies are monitored. However, most of them are not situated in the Mediterranean region, with the exception of Spain and France. There is therefore a need to increase data collection and monitoring on the southern and eastern shores of the Mediterranean, where many endemic species inhabit, as a first step to ensure their protection through better legislation and concrete action plans."
+              "value": "<b>Fishermen communities</b> should also be made aware of alternative fish and their uses in order to promote conservation of the Mediterranean heritage."
             },
             {
               "type": "paragraph",
-              "value": "Butterflies have been for a long time a symbol for transformation and evolution. One also talks about the \"butterfly effect\" when small causes can have large effects.  Indeed, despite their small size, butterflies are key pieces in the Mediterranean landscape. They participate in the essential ecosystems functioning as pollinators and as prey for other species during their different life cycles. Aesthetic and cultural values are also associated to their presence in the region, adding colour and beauty to Mediterranean mountains, grasslands and landscapes."
+              "value": "In 2013, the European Union (EU) banned <b>removal of shark fins</b> on board vessels through Regulation No. 605/2013, in order to enhance enforcement of the 2003 EU ban on shark finning (Regulation No. 1185/2003) and facilitate improved shark fishery data collection."
             },
             {
               "type": "paragraph",
-              "value": "Agricultural intensification, overgrazing and land abandonment are a threat to Mediterranean butterfly diversity. Forest fires and climate change are also risks to their survival."
+              "value": "The General Fisheries Commission for the Mediterranean from <b>FAO</b> also recommended Mediterranean and Black Sea countries to invest in scientific research programmes aimed at identifying potential nursery areas and to consider time and area closures to protect juveniles of sharks and rays from fishing activities."
             },
             {
               "type": "paragraph",
-              "value": "Conservation actions necessary for their protection are the review of national and international legislation to include threatened species, and the device of species/habitat action plans where most needed. Field work and data monitoring for Data Deficient species, with strong regional cooperation as the basis, are also needed all along the Mediterranean."
+              "value": "The IUCN Red List promotes urgent actions towards these endangered species. With the use of better fishing gear and putting into practice protection measures to control bycatch, shark populations can be sustained while contributing to preservation of the whole Mediterranean ecosystem. "
             },
             {
-              "type": "quote",
-              "value": "a flower knows, when its butterfly will return, and if the moon walks out, the sky will understand; but now it hurts, to watch you leave so soon,when I don't know, if you will ever come back.",
-              "credit": "Sanober Khan"
+              "type": "title",
+              "value": "Do you want to learn more?"
+            },
+            {
+              "type": "paragraph",
+              "value": "<ul><li><a href='https://www.iucn.org/sites/dev/files/content/documents/brochure_medredlist_sharks.pdf' target='blank'>The IUCN Mediterranean Red List of Sharks, Rays and Chimaeras </a></li><li><a href='http://www.iucnredlist.org/initiatives/mediterranean/assessment-process' target='blank'>How is an IUCN Red List made?</a></li><li><a href='https://www.iucn.org/regions/mediterranean/our-work/mediterranean-species-programme' target='blank'>What is IUCN-Med doing on species protection?</a></li><li><a href='https://www.youtube.com/watch?v=EV0Wev-lWhw' target='blank'>Mediterranean biodiversity assessments video</a></li><li><a href='https://www.ranker.com/g00/list/shark-facts/michaelgraff?i10c.encReferrer=' target='blank'>Things you did not know about sharks</a></li></ul>"
             }
           ]
         },
         "skip": {
           "name": "Related",
           "background": {
-            "url": "assets/butterflies/Karpathosgrayling_463608896.jpg",
-            "class": "",
-            "credit": {
-              "footer": "Breve pie de foto. ",
-              "author": "AUTOR"
-            }
-          },
-          "info": {
-            "collapsed": false,
-            "elements": [
-              {
-                "type": "paragraph",
-                "capitalize": false,
-                "value": "The highest diversity of butterflies is found in mountainous areas in southern Turkey, northern Greece and southern France."
-              },
-              {
-                "type": "paragraph",
-                "capitalize": false,
-                "value": "79% of threatened species are endemic. Such is the case of  the Karpathos Grayling (Hipparchia christenseni) which is found on rocky slopes covered with open scrub and in clearings in coniferous woods, where the butterflies often rest on the trunks of trees. This species occurs only on the Greek island of Karpathos."
-              }
-            ],
-            "title": "Karpathos Grayling",
-            "credit": "© TOM NYGAARD KRISTENSEN"
+            "url": "assets/sharks/image.jpg",
+            "class": ""
           },
           "contact_info": {
             "authors": [
@@ -1130,7 +842,7 @@
                 "departament": "Med Species Programme Officer"
               }
             ],
-            "author_link": "<a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a>",
+            "author_link": "<a href=\"mailto:medspecies@iucn.org\">IUCN Mediterranean Species Programme </a>",
             "address": {
               "center_name": "IUCN Centre for Mediterranean Cooperation",
               "info": "C/ Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tél +34 352 02 84 30<br>Fax +34 352 02 84 30<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
@@ -1138,10 +850,10 @@
           },
           "next_story": {
             "background": {
-              "url": "assets/sharks/image.jpg"
+              "url": "assets/corals/image.jpg"
             },
-            "link": "sharks",
-            "title": "Is the Mediterranean eating its sharks?"
+            "link": "corals",
+            "title": "Do you know where the most beautiful Mediterranean diving secrets are?"
           }
         }
       }

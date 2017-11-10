@@ -1,6 +1,5 @@
 <div class="component-container" [ngClass]="showContent() ? 'fadeIn' : 'fadeOut'">
     <div>{{item.value}}</div>
-    <div class="credit">
-        {{item.credit}}
+    <div class="credit" [innerHTML]="item.credit">
     </div>
 </div>

@@ -178,13 +178,12 @@ var HomeStepComponent = (function (_super) {
         return this.stories['stories'][story].steps.skip.contact_info.authors instanceof Array;
     };
     HomeStepComponent.prototype.getAuthors = function (story) {
-        var authors = [];
         if (this.stories['stories'][story].steps.skip.contact_info.authors instanceof Array) {
-            authors = this.stories['stories'][story].steps.skip.contact_info.authors.map(function (item) {
+            return this.stories['stories'][story].steps.skip.contact_info.authors.map(function (item) {
                 return item.name;
             });
         }
-        return authors;
+        return [];
     };
     __decorate([
         core_1.Input(), 

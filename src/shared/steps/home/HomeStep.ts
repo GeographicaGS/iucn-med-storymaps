@@ -201,12 +201,11 @@ export class HomeStepComponent extends BaseStepComponent {
     }
 
     getAuthors(story: string) {
-        let authors = [];
         if (this.stories['stories'][story].steps.skip.contact_info.authors instanceof Array) {
-            authors = this.stories['stories'][story].steps.skip.contact_info.authors.map((item: any) => {
+            return this.stories['stories'][story].steps.skip.contact_info.authors.map((item: any) => {
                 return item.name;
             })
         }
-        return authors;
+        return [];
     }
 }
