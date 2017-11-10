@@ -11,7 +11,7 @@ export class ImageComponent extends BaseElementComponent {
     }
 
     hasIco() {
-        return this.item.ico == undefined || this.item.ico;
+        return this.item.credit.ico == undefined || this.item.credit.ico;
     }
 
 }

@@ -4638,6 +4638,10 @@ image .credit-full .author {
   font-family: 'Fira Sans', sans-serif;
   padding-left: 5px;
 }
+image .credit-full.no-ico {
+  background-image: none;
+  padding-left: 0;
+}
 image .credit-info {
   position: relative;
 }

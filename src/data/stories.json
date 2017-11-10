@@ -173,7 +173,9 @@
               "url": "/assets/corals/chart-1.svg",
               "credit": {
                 "footer": "European Red List of Habitats, EIONET",
-                "author": ""
+                "author": "",
+                "ico":false
+
               }
             },
             {
@@ -368,7 +370,7 @@
               "credit": {
                 "footer": "Resource: IUCN, Centre for Mediterranean Cooperation.",
                 "author": "",
-                "ico": false
+                "ico":false
               }
             },
             {
@@ -639,7 +641,8 @@
               "url": "/assets/butterflies/chart-1.svg",
               "credit": {
                 "footer": "Resource: IUCN, Centre for Mediterranean Cooperation.",
-                "author": ""
+                "author": "",
+                "ico":false
               }
             },
             {
@@ -668,9 +671,9 @@
             },
             {
               "type": "image",
-              "url": "/assets/butterflies/chart-1.svg",
+              "url": "/assets/sharks/shark-fin-soup-chinese-food-cuisine-casserole-43443367.jpg",
               "credit": {
-                "footer": "https://www.dreamstime.com/stock-photo-shark-fin-soup-chinese-food-cuisine-casserole-image43443367",
+                "footer": "",
                 "author": ""
               }
             },
@@ -685,9 +688,9 @@
             },
             {
               "type": "image",
-              "url": "/assets/butterflies/chart-1.svg",
+              "url": "/assets/sharks/little-sharks-wholesale-auction-floor-fresh-fish-market-thailand-32623819.jpg",
               "credit": {
-                "footer": "https://www.dreamstime.com/royalty-free-stock-images-little-sharks-wholesale-auction-floor-fresh-fish-market-thailand-image32623819",
+                "footer": "",
                 "author": ""
               }
             },
@@ -732,6 +735,7 @@
         "map": {
           "name": "Map",
           "collapsed": false,
+          "mapStyle": "mapbox://styles/cayetanobv/cj9sajpjj1uzs2srqx2he0yl6",
           "info": [
             {
               "title": "Distribution of threatened (CR, EN, and VU) Chondrichthyans within the Mediterranean Sea",
@@ -775,7 +779,7 @@
               ],
               "layer": {
                 "id": "chondrichthyans_dd",
-                "hidden": false,
+                "hidden": true,
                 "subLayers": [
                   "chondrichthyans_dd_3",
                   "chondrichthyans_dd_5",

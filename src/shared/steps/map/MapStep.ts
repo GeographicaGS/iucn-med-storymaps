@@ -80,7 +80,6 @@ export class MapStepComponent extends BaseStepComponent {
         let activePopup: any = {};
 
         if (this.popup) this.popup.remove();
-
         for (let sublayer of this.activeLayer.layer.subLayers) {
             let visibility = this.mapService.map.getLayoutProperty(sublayer, 'visibility');
             if (visibility === 'visible') {
