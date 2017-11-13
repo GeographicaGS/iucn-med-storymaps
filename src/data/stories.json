@@ -174,8 +174,7 @@
               "credit": {
                 "footer": "European Red List of Habitats, EIONET",
                 "author": "",
-                "ico":false
-
+                "ico": false
               }
             },
             {
@@ -370,7 +369,7 @@
               "credit": {
                 "footer": "Resource: IUCN, Centre for Mediterranean Cooperation.",
                 "author": "",
-                "ico":false
+                "ico": false
               }
             },
             {
@@ -634,15 +633,15 @@
             },
             {
               "type": "title",
-              "value": "Facts and Figure"
+              "value": "Summary of the Read List status of Chondrycthyans in the Mediterranean Sea."
             },
             {
               "type": "image",
-              "url": "/assets/butterflies/chart-1.svg",
+              "url": "/assets/sharks/sharks_bars.svg",
               "credit": {
-                "footer": "Resource: IUCN, Centre for Mediterranean Cooperation.",
+                "footer": "This table doesn not include the four vagrant or Lesseipsian migrant species that have been considered Not Applicable (NA) for the Mediterranean region.",
                 "author": "",
-                "ico":false
+                "ico": false
               }
             },
             {
@@ -847,6 +846,455 @@
               }
             ],
             "author_link": "<a href=\"mailto:medspecies@iucn.org\">IUCN Mediterranean Species Programme </a>",
+            "address": {
+              "center_name": "IUCN Centre for Mediterranean Cooperation",
+              "info": "C/ Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tél +34 352 02 84 30<br>Fax +34 352 02 84 30<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
+            }
+          },
+          "next_story": {
+            "background": {
+              "url": "assets/antelopees/image.png"
+            },
+            "link": "antelopees",
+            "title": "How many antelope species occur in North Africa"
+          }
+        }
+      }
+    },
+    "antelopees": {
+      "steps": {
+        "cover": {
+          "name": "Cover",
+          "background": {
+            "url": "assets/antelopees/image.png",
+            "class": "kenburns"
+          },
+          "title": "How many antelope species occur in North Africa",
+          "subtitle": "North Africa Savanna"
+        },
+        "intro": {
+          "background": {
+            "url": "assets/antelopees/image.png",
+            "class": "kenburns"
+          },
+          "name": "Intro",
+          "elements": [
+            {
+              "type": "paragraph",
+              "capitalize": true,
+              "value": "Antelopes are among the <b>best-known animals of the deserts of North Africa</b>. These species have adapted to some of the most extreme desert environments in the world and they have always been celebrated for their grace and beauty in the art and poetry of the region. "
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "These species form an important <b>part of the natural and cultural heritage</b> of North Africa, therefore it is vitally important to conserve all of them for future generations."
+            },
+            {
+              "type": "image",
+              "url": "/assets/antelopees/image.png",
+              "credit": {
+                "footer": "",
+                "author": ""
+              }
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "Six species Gazelle family can be found throughout Africa. Many of these small, horned creatures <b>are endangered</b>, and their populations in the deserts, plains, and savannas of Africa are threatened due to hunting, farming, and loss of habitat."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "Many projects have been initiated to improve the conservation status of gazelles in the region. Concentrating conservation efforts on wild populations in their natural habitat provides the best guarantee of long-term success."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "In situations where species have become extinct in the wild, or their ranges have been severely reduced, reintroductions may be the only option."
+            },
+            {
+              "type": "title",
+              "value": "Facts."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "At Mediterranean level, the latest edition of the IUCN Red List (2008) shows that approximately 19% of Mediterranean known species are endangered and 1% is already extinct at regional level. "
+            },
+            {
+              "type": "quote",
+              "value": "Antelopes of North Africa and those of the Arabian Peninsula are distinct species that have evolved separately.This is why it is strongly recommended that all these gazelles are conserved and managed separately in order to maintain intact the regional biodiversity and individual character of both North Africa and the Arabian Peninsula. Therefore, species from both regions should neither be mixed nor diluted",
+              "credit": "<b>David Mallon</b>, co-chair of the IUCN Species Survival Commission - Antelope Specialist Group (SSC-ASG)."
+            },
+            {
+              "type": "title",
+              "value": "Conservation curiosities"
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "The largest antelopes of both regions, the Arabian Oryx in Arabia and the Scimitar-horned Oryx of North Africa."
+            },
+            {
+              "type": "image",
+              "url": "/assets/antelopees/image2.png",
+              "credit": {
+                "footer": "",
+                "author": ""
+              }
+            },
+            {
+              "type": "title",
+              "value": "Some confusion"
+            },
+            {
+              "type": "image",
+              "url": "/assets/antelopees/image3.png",
+              "credit": {
+                "footer": "",
+                "author": ""
+              }
+            },
+            {
+              "type": "image",
+              "url": "/assets/antelopees/image4.png",
+              "credit": {
+                "footer": "",
+                "author": ""
+              }
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "These species may be both called Idmi, but they are in fact two different species. The Arabian Gazelle is the idmi of the Arabian Peninsula, while Cuvier’s Gazelle is the <b>idmi</b> of North Africa."
+            },
+            {
+              "type": "image",
+              "url": "/assets/antelopees/image5.png",
+              "credit": {
+                "footer": "",
+                "author": "",
+                "ico": false
+              }
+            }
+          ]
+        },
+        "map": {
+          "name": "Map",
+          "collapsed": false,
+          "mapStyle": "mapbox://styles/cayetanobv/cj9seijg51yr32roxztm8bw67",
+          "info": [
+            {
+              "title": "Distribution of threatened (CR, EN, and VU) Chondrichthyans within the Mediterranean Sea",
+              "credit": "",
+              "collapsed": false,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/gazella.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/gazella.zip",
+              "legend": "/assets/maps/legend_map.svg",
+              "elements": [
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Antelope species distribution map: Concentrating conservation efforts on wild populations in their natural habitat provides the best guarantee of long-term success."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "In total, 11 species of antelopes occur: five in the Arabian Peninsula and six in North Africa."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Although well-known in a general sense, close similarity between some of the smaller species of North Africa and Arabia has led to confusion."
+                }
+              ],
+              "layer": {
+                "id": "gazellas",
+                "hidden": false,
+                "subLayers": [
+                  "gazella-marica",
+                  "gazella-cuvieri",
+                  "gazella-arabica",
+                  "gazella-leptoceros",
+                  "gazella-dorcas"
+                ]
+              }
+            }
+          ]
+        },
+        "conclusion": {
+          "name": "Taking action",
+          "title": "Taking action",
+          "elements": [
+            {
+              "type": "paragraph",
+              "value": "Conservation Strategies are useful tools to assess the conservation status of species and their habitats, and define <b>conservation priorities</b>. However, a main issue in Maghreb countries is the lack of experience, training and capacities for the design and implementation of Species Conservation Strategies for threatened species. "
+            },
+            {
+              "type": "paragraph",
+              "value": "The project implemented by IUCN  <b>‘Improving Capacity for Species Conservation in the Mediterranean Region’</b> tries to address these shortcomings’."
+            },
+            {
+              "type": "paragraph",
+              "value": "Several capacity workshops with the involvement of national authorities and some material such as a new fact sheet are helping conserve antelope species that occur naturally in North Africa and Arabia in order to preserve their genetic integrity and keep them apart."
+            },
+            {
+              "type": "paragraph",
+              "value": "IUCN and experts are also recommending that all these gazelles are conserved and managed separately in order to maintain the regional biodiversity and individual character of both North Africa and the Arabian Peninsula."
+            },
+            {
+              "type": "paragraph",
+              "value": "Furthermore, most of North Africa countries has included these species in their legislation on nature protection as threatened species."
+            },
+            {
+              "type": "paragraph",
+              "value": "Also, some NGOs, such as the <a href='https://www.facebook.com/Tunisia-Wildlife-Conservation-Society-TWCS-222687077830464/' target='blank'>Tunisian Wildlife Conservation Society</a>, are developing reintroduction monitoring programme for the Gazella cuvieri. "
+            },
+            {
+              "type": "title",
+              "value": "Do you want to learn more?"
+            },
+            {
+              "type": "paragraph",
+              "value": "<ul><li>FACT SHEET: Antelopes of North Africa and the Arabian Peninsula <a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/2017/en_gacelas_web_160_media_1.pdf'><b>English</b></a>, <a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/fr_gacelas_web_160_media.pdf'><b>French</b></a> and <a href='https://www.iucn.org/sites/dev/files/content/documents/iucn_2017_antelopes_nafricaarabia_ar.pdf' target='blank'><b>Arabic</b></li><li>IUCN has published <b>Guidelines on Reintroductions (2013)</b> that should be followed in all cases involving antelope species reintroductions and other conservation translocations in the region.</li></ul>"
+            }
+          ]
+        },
+        "skip": {
+          "name": "Related",
+          "background": {
+            "url": "assets/antelopees/image.png",
+            "class": ""
+          },
+          "contact_info": {
+            "authors": [
+              {
+                "name": "Catherine Numa",
+                "departament": "Med Species Programme Coordinator"
+              },
+              {
+                "name": "Violeta Barrios",
+                "departament": "Med Species Programme Officer"
+              }
+            ],
+            "author_link": "<a href=\"mailto:medspecies@iucn.org\">IUCN Mediterranean Species Programme </a>",
+            "address": {
+              "center_name": "IUCN Centre for Mediterranean Cooperation",
+              "info": "C/ Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tél +34 352 02 84 30<br>Fax +34 352 02 84 30<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
+            }
+          },
+          "next_story": {
+            "background": {
+              "url": "assets/plants/image.jpg"
+            },
+            "link": "plants",
+            "title": "Why are plants so important?"
+          }
+        }
+      }
+    },
+    "plants": {
+      "steps": {
+        "cover": {
+          "name": "Cover",
+          "background": {
+            "url": "assets/plants/image.jpg",
+            "class": "kenburns"
+          },
+          "title": "Why are plants so important?",
+          "subtitle": "Mediterranean plants"
+        },
+        "intro": {
+          "background": {
+            "url": "assets/plants/image.jpg",
+            "class": "kenburns"
+          },
+          "name": "Intro",
+          "elements": [
+            {
+              "type": "paragraph",
+              "capitalize": true,
+              "value": "Plants - their roots, branches, leaves, flowers and fruits, provide <b>essential goods and services</b> for humans and animals. They make oxygen into the atmosphere and capture carbon. They are a source of food, medicine, teas and spice. They offer shade and shelter and various habitats for many species, either big or small."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "Plants design the landscape, confirming crucial sceneries for the well-being of people."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "However, despite their fundamental <b>role in society and a live land</b>, not to say in the economy, important but disregarded plant areas are <b>disappearing</b> for various reasons, mostly because of changes in the use of land towards development."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "<b>Mediterranean habitats</b> including the most precious areas of plant diversity."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "To protect this amazing biodiversity, a conservation tool is promoted, the identification of <b>Important Plant Areas</b> (IPAs). Through this tool internationally important sites for wild plants and fungi are identified at national level using standard criteria.  The designation of IPAs aims to ensure that they are adequately protected and managed to allow the survival of their plants and habitats. "
+            },
+            {
+              "type": "title",
+              "value": "Facts and Figure"
+            },
+            {
+              "type": "image",
+              "url": "/assets/butterflies/chart-1.svg",
+              "credit": {
+                "footer": "",
+                "author": "",
+                "ico": false
+              }
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "The Mediterranean is in fact a biodiversity hotspot mostly because of its plant diversity.  Around 10% of the world’s vascular plants (25,000) are found in the Mediterranean Basin on less than 2% of the Earth’s surface."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "Half of the plant species found in the Mediterranean exist nowhere else on earth."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "About the 1st Mediterranean Plant Conservation Week held in Ulcinj (Montenegro) in October 2016."
+            },
+            {
+              "type": "quote",
+              "value": "This highly interactive meeting provides an excellent opportunity to discuss the essential role of local people in conserving the Mediterranean flora and to explore cooperation across the region on supporting cultural practices of conservation and community conserved areas",
+              "credit": "<b>Gary Martin</b>, director of the Global Diversity Foundation."
+            },
+            {
+              "type": "image",
+              "url": "/assets/plants/every_flowes_is_a_sould_blossoming.png",
+              "credit": {
+                "footer": "",
+                "author": ""
+              }
+            },
+            {
+              "type": "title",
+              "value": "Conservation curiosities. New discoveries"
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "The 2016 summer during one of the monitoring sessions at Prespa Lake IPA, volunteers of the Macedonian Ecological Society have found a rare carnivorous plant species <i>Aldrovanda vesiculosa</i> (waterwheel plant) that has not been sighted in this locality for over 20 years."
+            },
+            {
+              "type": "title",
+              "value": "Lessons learnt from the pilot Important Plant Areas in Egypt"
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "As part of IPA-Med project, Dr. Karim Omar, environmental researcher and IUCN Red List Global Assessor, with the support of his team, has investigated environmental threats to the natural resources in two Egyptian Important Plant Areas (IPAs) and has provided some recommendations to address these ongoing issues.   <a target='blank' href='https://www.iucn.org/sites/dev/files/import/downloads/ipaegyptconsersuggestions_actionplans_finalversion.pdf'>Click here</a> to go to the report."
+            },
+            {
+              "type": "image",
+              "url": "/assets/plants/image3.png",
+              "credit": {
+                "footer": "",
+                "author": "",
+                "ico": false
+              }
+            }
+          ]
+        },
+        "map": {
+          "name": "Map",
+          "collapsed": false,
+          "mapStyle": "mapbox://styles/cayetanobv/cj1oxmm42004q2ss6fa6g6b1v",
+          "info": [
+            {
+              "title": "Important Plant Areas identified to date in Mediterranean countries",
+              "credit": "",
+              "collapsed": false,
+              "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/ipas.zip",
+              "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/ipas.zip",
+              "legend": "/assets/maps/legend_map.svg",
+              "elements": [
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Green dots indicate the 207 IPAs identified in current project. Some 40% of the IPAs identified coincide with <b>key biodiversity areas</b> (KBA) in the region; which means that these sites are also vital for other species such as mammals, birds, freshwater fish and amphibians. Since 2016, a great majority of IPAs are also recognised as KBA"
+                }
+              ],
+              "layer": {
+                "id": "ipasgeojson",
+                "hidden": false,
+                "subLayers": [
+                  "ipasgeojson"
+                ]
+              }
+            }
+          ]
+        },
+        "conclusion": {
+          "name": "Taking action",
+          "title": "Taking action",
+          "elements": [
+            {
+              "type": "paragraph",
+              "value": "But what can be done to halt and reverse the decline of the Mediterranean’s plants on which so much of our own well-being depends?"
+            },
+            {
+              "type": "paragraph",
+              "value": "Public authorities can also <b>use Important Plants Areas</b> (IPA) as a knowledge and decision-making tool to help them integrate biodiversity considerations in urban and rural planning."
+            },
+            {
+              "type": "paragraph",
+              "value": "For countries either part of the EU or seeking accession as in the case of the Balkans, the <b>EU Nature Directives</b> provide powerful protection measures for IPAs that are also (or are likely to become) Natura 2000 sites. Always as far as they have been designed as such, and managed to reach its objective."
+            },
+            {
+              "type": "paragraph",
+              "value": "The IUCN Centre for Mediterranean Cooperation and <a href='https://www.plantlife.org.uk/uk' target='blank'><b>Plantlife</b></a> together with scientists and expert conservationist organizations are filling the <b>information gaps and taking action</b> in various priority areas to help conserve Mediterranean plant diversity."
+            },
+            {
+              "type": "paragraph",
+              "value": "A database containing information about biodiversity, threats, habitat and species status in IPAs in the Mediterranean region is gathering the work of the network’s members."
+            },
+            {
+              "type": "paragraph",
+              "value": "Furthermore, <b>traditional practices</b> related to the harvest and management of food plants and fodder plants are a type of human intervention with a positive impact on preserving local biodiversity."
+            },
+            {
+              "type": "paragraph",
+              "value": "You as a scientist or as a plant conservation professional could <b>join IUCN Mediterranean Plant Specialist Group (IUCN/SSC)</b>. If you are interested in becoming a member of on the IUCN Mediterranean Plant Specialist Group (IUCN/SSC), please contact <a href='mailto:bertrand@montmollin.me' target='blank'>Bertrand Montmollin</a>"
+            },
+            {
+              "type": "title",
+              "value": "Do you want to learn more?"
+            },
+            {
+              "type": "paragraph",
+              "value": "<ul><li><a href='http://www.medplantsnetwork.net/' target='blank'>Mediterranean Plant Network</a></li><li><b>Important Plant Areas of the south east Mediterranean region: priority sites for conservation</b>. To download this publication, please<a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_EN.pdf' target='blank'>click here</a>Available in <a target='blank' href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_EN.pdf'>English</a>, <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_FR.pdf' target='blank'>French</a> and <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_AR.pdf' target='blank'>Arabic</a>.</li><li><a href='http://top50.iucn-mpsg.org/' target='blank'>The Top 50 Mediterranean Island Plants UPDATE 2017</a></li></ul>"
+            }
+          ]
+        },
+        "skip": {
+          "name": "Related",
+          "background": {
+            "url": "assets/plants/image.jpg",
+            "class": ""
+          },
+          "contact_info": {
+            "authors": [
+              {
+                "name": "Teresa Gil",
+                "departament": "Med Species Programme Coordinator"
+              },
+              {
+                "name": "Marcos Valderrabano",
+                "departament": "Med Species Programme Officer"
+              }
+            ],
+            "author_link": "<a href=\"mailto:teresa.gil@iucn.org\">IUCN Mediterranean Ecosystems Programme </a>",
             "address": {
               "center_name": "IUCN Centre for Mediterranean Cooperation",
               "info": "C/ Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tél +34 352 02 84 30<br>Fax +34 352 02 84 30<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
