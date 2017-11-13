@@ -144,8 +144,8 @@
               "type": "image",
               "url": "/assets/corals/intro.jpg",
               "credit": {
-                "footer": "Yellow cluster anemone (<i>Parazoanthus axinellae</i>).",
-                "author": ""
+                "footer": "Breve nota de pie",
+                "author": "Author"
               }
             },
             {
@@ -411,7 +411,11 @@
             },
             {
               "type": "image",
-              "url": "/assets/butterflies/Mottenflugel_in_Mikroskop.jpg"
+              "url": "/assets/butterflies/Mottenflugel_in_Mikroskop.jpg",
+              "credit": {
+                "footer": "Breve nota de pie",
+                "author": "Author"
+              }
             },
             {
               "type": "title",
@@ -424,7 +428,11 @@
             },
             {
               "type": "image",
-              "url": "/assets/butterflies/Karpathosgrayling_463608896.jpg"
+              "url": "/assets/butterflies/Karpathosgrayling_463608896.jpg",
+              "credit": {
+                "footer": "Breve nota de pie",
+                "author": "Author"
+              }
             }
           ]
         },
@@ -672,8 +680,8 @@
               "type": "image",
               "url": "/assets/sharks/shark-fin-soup-chinese-food-cuisine-casserole-43443367.jpg",
               "credit": {
-                "footer": "",
-                "author": ""
+                "footer": "Breve nota de pie",
+                "author": "Author"
               }
             },
             {
@@ -689,8 +697,8 @@
               "type": "image",
               "url": "/assets/sharks/little-sharks-wholesale-auction-floor-fresh-fish-market-thailand-32623819.jpg",
               "credit": {
-                "footer": "",
-                "author": ""
+                "footer": "Breve nota de pie",
+                "author": "Author"
               }
             },
             {
@@ -893,8 +901,8 @@
               "type": "image",
               "url": "/assets/antelopees/image.png",
               "credit": {
-                "footer": "",
-                "author": ""
+                "footer": "Breve nota de pie",
+                "author": "Author"
               }
             },
             {
@@ -939,8 +947,8 @@
               "type": "image",
               "url": "/assets/antelopees/image2.png",
               "credit": {
-                "footer": "",
-                "author": ""
+                "footer": "Breve nota de pie",
+                "author": "Author"
               }
             },
             {
@@ -951,16 +959,16 @@
               "type": "image",
               "url": "/assets/antelopees/image3.png",
               "credit": {
-                "footer": "",
-                "author": ""
+                "footer": "Breve nota de pie",
+                "author": "Author"
               }
             },
             {
               "type": "image",
               "url": "/assets/antelopees/image4.png",
               "credit": {
-                "footer": "",
-                "author": ""
+                "footer": "Breve nota de pie",
+                "author": "Author"
               }
             },
             {
@@ -972,7 +980,7 @@
               "type": "image",
               "url": "/assets/antelopees/image5.png",
               "credit": {
-                "footer": "",
+                "footer": "Breve nota de pie",
                 "author": "",
                 "ico": false
               }
@@ -985,7 +993,7 @@
           "mapStyle": "mapbox://styles/cayetanobv/cj9seijg51yr32roxztm8bw67",
           "info": [
             {
-              "title": "Distribution of threatened (CR, EN, and VU) Chondrichthyans within the Mediterranean Sea",
+              "title": "Antelope species distribution map",
               "credit": "",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/gazella.zip",
@@ -995,7 +1003,7 @@
                 {
                   "type": "paragraph",
                   "capitalize": false,
-                  "value": "Antelope species distribution map: Concentrating conservation efforts on wild populations in their natural habitat provides the best guarantee of long-term success."
+                  "value": "Concentrating conservation efforts on wild populations in their natural habitat provides the best guarantee of long-term success."
                 },
                 {
                   "type": "paragraph",
@@ -1142,9 +1150,9 @@
             },
             {
               "type": "image",
-              "url": "/assets/butterflies/chart-1.svg",
+              "url": "/assets/plants/piechart_IPA_traz.svg",
               "credit": {
-                "footer": "",
+                "footer": "Breve nota de pie",
                 "author": "",
                 "ico": false
               }
@@ -1173,8 +1181,8 @@
               "type": "image",
               "url": "/assets/plants/every_flowes_is_a_sould_blossoming.png",
               "credit": {
-                "footer": "",
-                "author": ""
+                "footer": "Breve nota de pie",
+                "author": "Author"
               }
             },
             {
@@ -1199,7 +1207,7 @@
               "type": "image",
               "url": "/assets/plants/image3.png",
               "credit": {
-                "footer": "",
+                "footer": "Breve nota de pie",
                 "author": "",
                 "ico": false
               }

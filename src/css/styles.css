@@ -5409,6 +5409,9 @@ home .content .preview .subtitle2 {
   font-family: 'Fira Sans', sans-serif;
   margin-bottom: 0;
 }
+home .content .preview .subtitle2 > div {
+  text-transform: none;
+}
 home .content .preview > .separator {
   max-width: 360px;
   width: 80%;
