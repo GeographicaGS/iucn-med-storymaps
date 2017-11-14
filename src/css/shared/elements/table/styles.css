@@ -1,0 +1,11 @@
+el-table.table {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  max-width: 740px;
+  width: 80%;
+}
+el-table.table thead > tr {
+  border-bottom: 2px solid #000;
+  text-align: left;
+}

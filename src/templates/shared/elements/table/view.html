@@ -1,0 +1,18 @@
+<div class="container-component" [ngClass]="showContent() ? 'fadeInUp' : 'fadeOutDown'">
+    <h4 class="title">{{item.title}}</h4>
+    <table>
+        <thead>
+        <tr>
+            <th *ngFor="let header of getHeaders()">{{header}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let row of getRows()">
+            <td *ngFor="let key of getHeadersKeys()">{{getRowValue(row, key)}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="credit">
+        <span [innerHTML]="item.credit.footer"></span>
+    </div>
+</div>

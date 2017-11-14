@@ -28,7 +28,8 @@ export class SkipStepComponent extends BaseStepComponent {
 
     goToNextStory() {
         this.windowService.setCurrentStory(this.step.next_story.link);
-        this.windowService.scrollToStep('cover');
+        this.windowService.currentStep = 'cover';
+        this.windowService.scrollTo(1, 0);
     }
 
     hasAuthors(): boolean {

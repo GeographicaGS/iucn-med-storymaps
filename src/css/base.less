@@ -119,19 +119,29 @@ body {
   }
   h3.title {
     .fontweight(400);
-    font-family: 'Merriweather', sans-serif;
-    font-size: 22px;
+    .color_azul_profundo();
+    font-size: 18px;
     line-height: 28px;
-    color: #212121;
     max-width: 740px;
     width: 95%;
     display: block;
-    margin: 0 auto 24px auto;
-    font-weight: 300;
+    margin: 0 auto 12px auto;
   }
   ul {
-    list-style: circle;
+    list-style: none;
     padding-left: 20px;
+    li {
+      padding-left: 15px;
+      position: relative;
+      &:before {
+        content: "• ";
+        .color_azul_profundo();
+        font-size: 42px;
+        position: absolute;
+        left: -6px;
+        top: -1px;
+      }
+    }
   }
   .footer {
     padding-top: 24px;
@@ -205,7 +215,7 @@ body {
         position: relative;
         right: 0;
         bottom: 30px;
-        > a{
+        > a {
           position: absolute;
           top: 0;
           right: -48px;

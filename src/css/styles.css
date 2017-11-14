@@ -11,7 +11,7 @@
 -------------------------------------------------------------------------------*/
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,400i,500,600,600i,700,800,900|Merriweather:300,400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,400i,500,500i,600,600i,700,800,900|Merriweather:300,400,400i,700,700i,900,900i');
 @import url('https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css');
 @import url('https://fonts.googleapis.com/css?family=Space+Mono');
 html,
@@ -4144,19 +4144,29 @@ body.locked {
 body h3.title {
   font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
-  font-family: 'Merriweather', sans-serif;
-  font-size: 22px;
+  color: #14406D;
+  font-size: 18px;
   line-height: 28px;
-  color: #212121;
   max-width: 740px;
   width: 95%;
   display: block;
-  margin: 0 auto 24px auto;
-  font-weight: 300;
+  margin: 0 auto 12px auto;
 }
 body ul {
-  list-style: circle;
+  list-style: none;
   padding-left: 20px;
+}
+body ul li {
+  padding-left: 15px;
+  position: relative;
+}
+body ul li:before {
+  content: "• ";
+  color: #14406D;
+  font-size: 42px;
+  position: absolute;
+  left: -6px;
+  top: -1px;
 }
 body .footer {
   padding-top: 24px;
@@ -4486,6 +4496,9 @@ menu .cover.active {
 menu .logo {
   margin-top: 16px;
 }
+menu .logo:hover {
+  cursor: pointer;
+}
 menu .back {
   margin-top: 32px;
 }
@@ -4504,6 +4517,11 @@ menu .back {
 menu .back:hover,
 menu .back.active {
   background-image: url('../../../assets/icon/arrow-h.svg');
+}
+menu .back:before {
+  transform: rotate(-90deg);
+  bottom: 9px !important;
+  left: 6px !important;
 }
 menu .map {
   background-image: url('../../../assets/icon/map.svg');
@@ -4640,6 +4658,12 @@ image .credit-full .author {
 image .credit-full.no-ico {
   background-image: none;
   padding-left: 0;
+  color: #909090;
+  font-weight: normal;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 5px;
 }
 image .credit-info {
   position: relative;
@@ -4958,6 +4982,72 @@ info.collapsed .btn-row .summary .btn {
 }
 info.collapsed .btn-row .summary .btn.selected {
   border: 2px solid transparent;
+}
+el-table.table {
+  display: block;
+  margin: 48px auto;
+  position: relative;
+  max-width: 740px;
+  width: 80%;
+}
+el-table.table .title {
+  color: #14406D;
+  font-weight: normal;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+}
+el-table.table table {
+  table-layout: fixed;
+  margin-top: 28px;
+  width: 100%;
+}
+el-table.table table thead > tr {
+  border-bottom: 2px solid #66B7EA;
+  text-align: left;
+}
+el-table.table table thead > tr th {
+  color: #14406D;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+}
+el-table.table table tbody {
+  border-bottom: 1px solid #66B7EA;
+}
+el-table.table table tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #EAEAEA;
+}
+el-table.table table tbody tr:nth-child(odd) {
+  background-color: rgba(102, 183, 234, 0.1);
+}
+el-table.table table tbody tr td {
+  padding-left: 12px;
+  font-weight: normal;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  vertical-align: middle;
+}
+el-table.table table tbody tr td:nth-child(even) {
+  font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
+  font-style: italic;
+}
+el-table.table table tbody tr:last-of-type {
+  border-bottom: 0;
+}
+el-table.table .credit {
+  color: #909090;
+  font-weight: normal;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 5px;
 }
 cover .component-container {
   background: linear-gradient(180deg, rgba(33, 33, 33, 0) 40%, rgba(33, 33, 33, 0.75) 100%);
@@ -6010,8 +6100,12 @@ intro el-quote .component-container:after {
   transform: rotate(180deg);
 }
 intro el-quote .component-container .credit {
-  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
   margin-top: 18px;
+  font-size: 18px;
+  line-height: 20px;
+  font-style: normal;
 }
 map {
   background-color: #ffffff;
@@ -6177,15 +6271,22 @@ conclusion el-quote .component-container:after {
   transform: rotate(180deg);
 }
 conclusion el-quote .credit {
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
   margin-top: 16px;
-  font-style: normal;
   display: inline-block;
   position: relative;
+  font-size: 18px;
+  line-height: 20px;
+  font-style: normal;
 }
 conclusion el-quote .credit:before {
   content: "-";
   position: absolute;
   left: -25px;
+}
+conclusion ul li:before {
+  color: #66B7EA;
 }
 skip .closing-story-container {
   position: relative;

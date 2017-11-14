@@ -191,11 +191,11 @@ export class WindowService {
         }
     }
 
-    scrollToStep(tagName: string) {
+    scrollToStep(tagName: string, duration: number = 600) {
         for (let index in this.stepsMap) {
             if (this.stepsMap[index].nativeElement.tagName.toLowerCase() == tagName) {
                 let top = this.stepsMap[index].nativeElement.getBoundingClientRect().top + this.getScrollTop();
-                this.scrollTo(top);
+                this.scrollTo(top, duration);
                 break;
             }
         }

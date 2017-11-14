@@ -128,17 +128,7 @@
             {
               "type": "paragraph",
               "capitalize": true,
-              "value": "Coralligenous habitats are often called <b>'coral gardens or forests'</b>. These colourful landscapes can be found growing on a variety of locations and at depths ranging from <b>20 to 200 meters.</b>"
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "They are however known to be <b>decreasing in quality and quantity</b>, despite not counting with exhaustive information. They are <b>threatened</b> by pollution and various fishing techniques and gears that get entangled in the corals."
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "The designation of <b>Marine Protected Areas<b/> and specific measures like the ban of trawling should help protect these submarine gardens."
+              "value": "Coralligenous habitats are often called <b>'coral gardens or forests'</b>. These colourful landscapes can be found growing on a variety of locations and at depths ranging from <b>20 to 200 meters.</b>. They are however known to be <b>decreasing in quality and quantity</b>, despite not counting with exhaustive information. They are <b>threatened</b> by pollution and various fishing techniques and gears that get entangled in the corals. The designation of <b>Marine Protected Areas<b/> and specific measures like the ban of trawling should help protect these submarine gardens."
             },
             {
               "type": "image",
@@ -338,12 +328,7 @@
             {
               "type": "paragraph",
               "capitalize": true,
-              "value": "Since ancient times, people have recognized the wide range of environmental benefits provided by a thriving butterfly population. In fact, visual representations honoring butterflies from 3,500 years ago can be  seen in Ancient Egyptian frescoes."
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "In addition to their role as pollinators and food sources for other species, some butterflies have even developed their own strategies to deter predators and parasites, find mates, or overcome their host plant´s chemical defenses."
+              "value": "Since ancient times, people have recognized the wide range of environmental benefits provided by a thriving butterfly population. In fact, visual representations honoring butterflies from 3,500 years ago can be  seen in Ancient Egyptian frescoes. In addition to their role as pollinators and food sources for other species, some butterflies have even developed their own strategies to deter predators and parasites, find mates, or overcome their host plant´s chemical defenses."
             },
             {
               "type": "image",
@@ -622,17 +607,7 @@
             {
               "type": "paragraph",
               "capitalize": true,
-              "value": "Sharks play an important role in the <b>food chain</b> of the oceans, but the numbers of these species in the Mediterranean are decreasing at an alarming rate."
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "Beyond the global culinary demand for a whole array of sharks, rays and chimaeras, these species are commonly caught in nets during fishing expeditions."
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "The northwestern part of the Mediterranean has recently experienced an intensive increase in fishing activity, and as a result, bycatch has become a major issue."
+              "value": "Sharks play an important role in the <b>food chain</b> of the oceans, but the numbers of these species in the Mediterranean are decreasing at an alarming rate. Beyond the global culinary demand for a whole array of sharks, rays and chimaeras, these species are commonly caught in nets during fishing expeditions. The northwestern part of the Mediterranean has recently experienced an intensive increase in fishing activity, and as a result, bycatch has become a major issue."
             },
             {
               "type": "paragraph",
@@ -890,13 +865,14 @@
             {
               "type": "paragraph",
               "capitalize": true,
-              "value": "Antelopes are among the <b>best-known animals of the deserts of North Africa</b>. These species have adapted to some of the most extreme desert environments in the world and they have always been celebrated for their grace and beauty in the art and poetry of the region. "
+              "value": "Antelopes are among the <b>best-known animals of the deserts of North Africa</b>. These species have adapted to some of the most extreme desert environments in the world and they have always been celebrated for their grace and beauty in the art and poetry of the region. These species form an important <b>part of the natural and cultural heritage</b> of North Africa, therefore it is vitally important to conserve all of them for future generations."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "These species form an important <b>part of the natural and cultural heritage</b> of North Africa, therefore it is vitally important to conserve all of them for future generations."
+              "value": "Six species Gazelle family can be found throughout Africa. Many of these small, horned creatures <b>are endangered</b>, and their populations in the deserts, plains, and savannas of Africa are threatened due to hunting, farming, and loss of habitat."
             },
+
             {
               "type": "image",
               "url": "/assets/antelopees/image.png",
@@ -904,11 +880,6 @@
                 "footer": "Breve nota de pie",
                 "author": "Author"
               }
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "Six species Gazelle family can be found throughout Africa. Many of these small, horned creatures <b>are endangered</b>, and their populations in the deserts, plains, and savannas of Africa are threatened due to hunting, farming, and loss of habitat."
             },
             {
               "type": "paragraph",
@@ -977,12 +948,81 @@
               "value": "These species may be both called Idmi, but they are in fact two different species. The Arabian Gazelle is the idmi of the Arabian Peninsula, while Cuvier’s Gazelle is the <b>idmi</b> of North Africa."
             },
             {
-              "type": "image",
-              "url": "/assets/antelopees/image5.png",
+              "type": "table",
+              "title": "Arabian Peninsula",
+              "headers": {
+                "english": "English name",
+                "scientific": "Scientific name",
+                "arabic": "Arabic name"
+              },
+              "rows": [
+                {
+                  "english": "Arabian San Gazelle",
+                  "scientific": "Gazella marica",
+                  "arabic": "Reem"
+                },
+                {
+                  "english": "Arabian / Mountain Gazelle",
+                  "scientific": "Gazella arabica, Gazella gazella",
+                  "arabic": "Idmi, Dumani"
+                },
+                {
+                  "english": "Saudi Gazelle",
+                  "scientific": "Gazella saudiya",
+                  "arabic": "Afri"
+                },
+                {
+                  "english": "Arabian Oryx",
+                  "scientific": "Oryx leucoryx",
+                  "arabic": "Al Maha"
+                }
+              ],
               "credit": {
-                "footer": "Breve nota de pie",
-                "author": "",
-                "ico": false
+                "footer": "Resource: IUCN, Centre for Mediterranean Cooperation."
+              }
+            },
+            {
+              "type": "table",
+              "title": "North Africa",
+              "headers": {
+                "english": "English name",
+                "scientific": "Scientific name",
+                "arabic": "Arabic name"
+              },
+              "rows": [
+                {
+                  "english": "Slender-horned Gazelle",
+                  "scientific": "Gazella leptoceros",
+                  "arabic": "Reem, Ghazal abiad"
+                },
+                {
+                  "english": "Curvier's Gazelle",
+                  "scientific": "Gazella cuvieri",
+                  "arabic": "Edmi"
+                },
+                {
+                  "english": "Doscas Gazelle",
+                  "scientific": "Gazella dorcas",
+                  "arabic": "Ghazal, Afri"
+                },
+                {
+                  "english": "Scimitar-horned Oryx",
+                  "scientific": "Oryx dammah",
+                  "arabic": "Watch, Beggar al Quach"
+                },
+                {
+                  "english": "Addax",
+                  "scientific": "Addax nasomaculatus",
+                  "arabic": "Akash, Beggar al Ouach"
+                },
+                {
+                  "english": "Dama Gazelle",
+                  "scientific": "Nanger dama",
+                  "arabic": "Addra, Mhorr"
+                }
+              ],
+              "credit": {
+                "footer": "Resource: IUCN, Centre for Mediterranean Cooperation."
               }
             }
           ]
@@ -1122,17 +1162,7 @@
             {
               "type": "paragraph",
               "capitalize": true,
-              "value": "Plants - their roots, branches, leaves, flowers and fruits, provide <b>essential goods and services</b> for humans and animals. They make oxygen into the atmosphere and capture carbon. They are a source of food, medicine, teas and spice. They offer shade and shelter and various habitats for many species, either big or small."
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "Plants design the landscape, confirming crucial sceneries for the well-being of people."
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "However, despite their fundamental <b>role in society and a live land</b>, not to say in the economy, important but disregarded plant areas are <b>disappearing</b> for various reasons, mostly because of changes in the use of land towards development."
+              "value": "Plants - their roots, branches, leaves, flowers and fruits, provide <b>essential goods and services</b> for humans and animals. They make oxygen into the atmosphere and capture carbon. They are a source of food, medicine, teas and spice. They offer shade and shelter and various habitats for many species, either big or small. Plants design the landscape, confirming crucial sceneries for the well-being of people. However, despite their fundamental <b>role in society and a live land</b>, not to say in the economy, important but disregarded plant areas are <b>disappearing</b> for various reasons, mostly because of changes in the use of land towards development."
             },
             {
               "type": "paragraph",

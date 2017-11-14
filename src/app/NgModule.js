@@ -27,6 +27,7 @@ var ElementBlock_1 = require("./../shared/elements/element-block/ElementBlock");
 var Paragraph_1 = require("./../shared/elements/paragraph/Paragraph");
 var Quote_1 = require("../shared/elements/quote/Quote");
 var Info_1 = require("../shared/elements/info/Info");
+var Table_1 = require("../shared/elements/table/Table");
 var StoryService_1 = require('./../services/StoryService');
 var MapService_1 = require("../services/MapService");
 var WindowService_1 = require("../services/WindowService");
@@ -43,6 +44,7 @@ var AppModule = (function () {
             ],
             declarations: [
                 Info_1.InfoComponent,
+                Table_1.TableComponent,
                 Quote_1.QuoteComponent,
                 Paragraph_1.ParagraphComponent,
                 ElementBlock_1.ElementBlockComponent,

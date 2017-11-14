@@ -78,16 +78,28 @@ conclusion {
     }
 
     .credit {
+      .fira_sans();
       margin-top: 16px;
-      font-style: normal;
       display: inline-block;
       position: relative;
+      font-size: 18px;
+      line-height: 20px;
+      font-style: normal;
+
       &:before {
         content: "-";
         position: absolute;
         left: -25px;
       }
 
+    }
+  }
+
+  ul {
+    li {
+      &:before {
+        .color_azul_claro_iucn();
+      }
     }
   }
 }

@@ -37,7 +37,8 @@ var SkipStepComponent = (function (_super) {
     };
     SkipStepComponent.prototype.goToNextStory = function () {
         this.windowService.setCurrentStory(this.step.next_story.link);
-        this.windowService.scrollToStep('cover');
+        this.windowService.currentStep = 'cover';
+        this.windowService.scrollTo(1, 0);
     };
     SkipStepComponent.prototype.hasAuthors = function () {
         return this.step.contact_info != undefined && this.step.contact_info.authors != undefined && this.step.contact_info.authors.length > 0;

@@ -20,6 +20,7 @@ import {ElementBlockComponent} from "./../shared/elements/element-block/ElementB
 import {ParagraphComponent} from "./../shared/elements/paragraph/Paragraph";
 import {QuoteComponent} from "../shared/elements/quote/Quote";
 import {InfoComponent} from "../shared/elements/info/Info";
+import {TableComponent} from "../shared/elements/table/Table";
 
 import {StoryService} from './../services/StoryService';
 import {MapService} from "../services/MapService";
@@ -34,6 +35,7 @@ import {WindowService} from "../services/WindowService";
     ],
     declarations: [
         InfoComponent,
+        TableComponent,
         QuoteComponent,
         ParagraphComponent,
         ElementBlockComponent,
