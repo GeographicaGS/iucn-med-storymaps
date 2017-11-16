@@ -13,12 +13,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 var core_1 = require("@angular/core");
 var BaseStep_1 = require("../base/BaseStep");
+var platform_browser_1 = require("@angular/platform-browser");
+var WindowService_1 = require("../../../services/WindowService");
+var MapService_1 = require("../../../services/MapService");
 var SkipStepComponent = (function (_super) {
     __extends(SkipStepComponent, _super);
-    function SkipStepComponent() {
-        _super.apply(this, arguments);
+    function SkipStepComponent(element, document, windowService, mapService) {
+        _super.call(this, element, document, windowService);
+        this.element = element;
+        this.document = document;
+        this.windowService = windowService;
+        this.mapService = mapService;
     }
     SkipStepComponent.prototype.showImage = function () {
         return true;
@@ -39,6 +49,7 @@ var SkipStepComponent = (function (_super) {
         this.windowService.setCurrentStory(this.step.next_story.link);
         this.windowService.currentStep = 'cover';
         this.windowService.scrollTo(1, 0);
+        this.mapService.reload();
     };
     SkipStepComponent.prototype.hasAuthors = function () {
         return this.step.contact_info != undefined && this.step.contact_info.authors != undefined && this.step.contact_info.authors.length > 0;
@@ -80,8 +91,10 @@ var SkipStepComponent = (function (_super) {
         core_1.Component({
             selector: 'skip',
             templateUrl: '/templates/shared/steps/skip/view.html',
-        }), 
-        __metadata('design:paramtypes', [])
+        }),
+        __param(0, core_1.Inject(core_1.ElementRef)),
+        __param(1, core_1.Inject(platform_browser_1.DOCUMENT)), 
+        __metadata('design:paramtypes', [core_1.ElementRef, Object, WindowService_1.WindowService, MapService_1.MapService])
     ], SkipStepComponent);
     return SkipStepComponent;
 }(BaseStep_1.BaseStepComponent));

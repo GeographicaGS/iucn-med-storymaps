@@ -616,7 +616,13 @@
             },
             {
               "type": "title",
-              "value": "Summary of the Read List status of Chondrycthyans in the Mediterranean Sea."
+              "value": "Summary of the Read List status of Chondrycthyans in the Mediterranean Sea"
+            },
+
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "The most recent regional study conducted by the <b>IUCN Red List of Threatened Species</b> in 2016 raised a red flag on this alarming situation. Of the 73 shark species assessed during the last 10 years, 11 of them have seen their status worsen."
             },
             {
               "type": "image",
@@ -626,11 +632,6 @@
                 "author": "",
                 "ico": false
               }
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "The most recent regional study conducted by the <b>IUCN Red List of Threatened Species</b> in 2016 raised a red flag on this alarming situation. Of the 73 shark species assessed during the last 10 years, 11 of them have seen their status worsen."
             },
             {
               "type": "paragraph",
@@ -660,13 +661,9 @@
               }
             },
             {
-              "type": "title",
-              "value": "Lamniformes, the most threatened order"
-            },
-            {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The Lamniformes (from the Greek word Lamna or 'fish of prey') are an order of sharks commonly known as mackerel sharks. This order includes some of the most familiar species of shark, such as the great white shark."
+              "value": "<div><b>Lamniformes, the most threatened order</b></div>The Lamniformes (from the Greek word Lamna or 'fish of prey') are an order of sharks commonly known as mackerel sharks. This order includes some of the most familiar species of shark, such as the great white shark."
             },
             {
               "type": "image",
@@ -677,40 +674,24 @@
               }
             },
             {
-              "type": "title",
-              "value": "Only in the mediterranean"
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "<div><b>Only in the mediterranean</b></div>Three species (<i>Leucoraja melitensis, Raja polystigma and Raja radula</i>) can be found nowhere else but inside the Mediterranean Sea."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "Three species (<i>Leucoraja melitensis, Raja polystigma and Raja radula</i>) can be found nowhere else but inside the Mediterranean Sea."
-            },
-            {
-              "type": "title",
-              "value": "Leucoraja melitensis"
+              "value": "<div><i>Leucoraja melitensis</i>:</div><ul><li>Maltese Skate, Maltese Ray</li><li>Critically Endangered</li></ul>"
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "<ul><li>Maltese Skate, Maltese Ray</li><li>Critically Endangered</li></ul>"
-            },
-            {
-              "type": "title",
-              "value": "Raja radula"
+              "value": "<div><i>Raja radula</i>:</div><ul><li>Skate</li><li>Endangered</li></ul>"
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "<ul><li>Skate</li><li>Endangered</li></ul>"
-            },
-            {
-              "type": "title",
-              "value": "Raja polystigma"
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "<ul><li>Speckled Skate, Speckled Ray</li><li>Least Concern</li></ul>"
+              "value": "<div><i>Raja polystigma</i>:</div><ul><li>Speckled Skate, Speckled Ray</li><li>Least Concern</li></ul>"
             }
           ]
         },
@@ -1178,15 +1159,7 @@
               "type": "title",
               "value": "Facts and Figure"
             },
-            {
-              "type": "image",
-              "url": "/assets/plants/piechart_IPA_traz.svg",
-              "credit": {
-                "footer": "Breve nota de pie",
-                "author": "",
-                "ico": false
-              }
-            },
+
             {
               "type": "paragraph",
               "capitalize": false,
@@ -1198,9 +1171,19 @@
               "value": "Half of the plant species found in the Mediterranean exist nowhere else on earth."
             },
             {
+              "type": "image",
+              "url": "/assets/plants/piechart_IPA_traz.svg",
+              "credit": {
+                "footer": "Breve nota de pie",
+                "author": "",
+                "ico": false
+              }
+            },
+
+            {
               "type": "paragraph",
               "capitalize": false,
-              "value": "About the 1st Mediterranean Plant Conservation Week held in Ulcinj (Montenegro) in October 2016."
+              "value": "About the 1st Mediterranean Plant Conservation Week held in Ulcinj (Montenegro) in October 2016:"
             },
             {
               "type": "quote",

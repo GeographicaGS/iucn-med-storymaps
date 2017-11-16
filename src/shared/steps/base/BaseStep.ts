@@ -3,6 +3,7 @@ import {
 } from "@angular/core";
 import {DOCUMENT} from "@angular/platform-browser";
 import {WindowService} from "../../../services/WindowService";
+import {MapService} from "../../../services/MapService";
 
 @Component({
     selector: 'base-step',

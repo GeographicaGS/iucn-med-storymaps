@@ -21,6 +21,9 @@ export class MapStepComponent extends BaseStepComponent {
                 protected windowService: WindowService,
                 @Inject(MapService) private mapService: MapService) {
         super(elem, document, windowService);
+        this.mapService.changes.subscribe(() => {
+            this.initMap();
+        })
     }
 
     onResize(event: any) {
@@ -59,6 +62,13 @@ export class MapStepComponent extends BaseStepComponent {
 
     ngAfterViewInit() {
         super.ngAfterViewInit();
+        this.initMap();
+    }
+
+    initMap() {
+        this.zoom = 4.5;
+        this.center = [15.0, 38.0];
+
         this.mapService.map = new Map({
             trackResize: false,
             container: 'map',
@@ -90,7 +100,7 @@ export class MapStepComponent extends BaseStepComponent {
         }
 
         this.mapService.map.on('click', (e: any) => {
-            let features = this.mapService.map.queryRenderedFeatures(e.point, {layers: this.activeLayer.layer.subLayers });
+            let features = this.mapService.map.queryRenderedFeatures(e.point, {layers: this.activeLayer.layer.subLayers});
             if (!features.length) return;
 
             let properties = <any>{};
@@ -103,10 +113,10 @@ export class MapStepComponent extends BaseStepComponent {
             }
 
             this.popup = new Popup()
-                    .setLngLat(e.lngLat)
-                    .setHTML(count)
-                    .addTo(this.mapService.map); 
-            
+                .setLngLat(e.lngLat)
+                .setHTML(count)
+                .addTo(this.mapService.map);
+
         });
     }
 

@@ -25,6 +25,7 @@ var WindowService_1 = require("../../../services/WindowService");
 var MapStepComponent = (function (_super) {
     __extends(MapStepComponent, _super);
     function MapStepComponent(elem, document, windowService, mapService) {
+        var _this = this;
         _super.call(this, elem, document, windowService);
         this.document = document;
         this.windowService = windowService;
@@ -34,6 +35,9 @@ var MapStepComponent = (function (_super) {
         this.center = [15.0, 38.0];
         this.popup = false;
         this.currentLegend = '';
+        this.mapService.changes.subscribe(function () {
+            _this.initMap();
+        });
     }
     MapStepComponent.prototype.onResize = function (event) {
         _super.prototype.onResize.call(this, event);
@@ -66,8 +70,13 @@ var MapStepComponent = (function (_super) {
         return locked;
     };
     MapStepComponent.prototype.ngAfterViewInit = function () {
-        var _this = this;
         _super.prototype.ngAfterViewInit.call(this);
+        this.initMap();
+    };
+    MapStepComponent.prototype.initMap = function () {
+        var _this = this;
+        this.zoom = 4.5;
+        this.center = [15.0, 38.0];
         this.mapService.map = new mapbox_gl_1.Map({
             trackResize: false,
             container: 'map',

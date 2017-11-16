@@ -1,5 +1,8 @@
-import {Component} from "@angular/core";
+import {Component, ElementRef, Inject} from "@angular/core";
 import {BaseStepComponent} from "../base/BaseStep";
+import {DOCUMENT} from "@angular/platform-browser";
+import {WindowService} from "../../../services/WindowService";
+import {MapService} from "../../../services/MapService";
 
 @Component({
     selector: 'skip',
@@ -7,7 +10,14 @@ import {BaseStepComponent} from "../base/BaseStep";
 })
 export class SkipStepComponent extends BaseStepComponent {
 
+    constructor(@Inject(ElementRef) protected element: ElementRef,
+                @Inject(DOCUMENT) protected document: any,
+                protected windowService: WindowService,
+                protected mapService: MapService) {
+            super(element, document, windowService);
 
+
+    }
     showImage() {
         return true;
         // let offset = this.element.nativeElement.getBoundingClientRect();
@@ -30,6 +40,7 @@ export class SkipStepComponent extends BaseStepComponent {
         this.windowService.setCurrentStory(this.step.next_story.link);
         this.windowService.currentStep = 'cover';
         this.windowService.scrollTo(1, 0);
+        this.mapService.reload();
     }
 
     hasAuthors(): boolean {
