@@ -6056,7 +6056,7 @@ intro > .component-container {
   padding-top: 100px;
   padding-bottom: 64px;
 }
-intro a {
+intro a:not(.btn) {
   position: relative;
   display: inline-block;
   -webkit-animation-duration: 0.6s;
@@ -6077,7 +6077,7 @@ intro a {
   animation-iteration-count: 1;
   color: #14406D;
 }
-intro a:before {
+intro a:not(.btn):before {
   -webkit-animation-name: fadeIn;
   -moz-animation-name: fadeIn;
   -o-animation-name: fadeIn;
@@ -6185,6 +6185,9 @@ intro el-quote .component-container .credit {
 }
 map {
   background-color: #ffffff;
+}
+map .mapboxgl-canvas-container.mapboxgl-interactive canvas {
+  outline: none;
 }
 map #map {
   z-index: 5;

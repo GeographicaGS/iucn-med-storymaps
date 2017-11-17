@@ -1,6 +1,9 @@
 @import url('https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css');
 
 map {
+  .mapboxgl-canvas-container.mapboxgl-interactive canvas {
+    outline: none;
+  }
   .bg_blanco();
   #map {
     z-index: 5;
