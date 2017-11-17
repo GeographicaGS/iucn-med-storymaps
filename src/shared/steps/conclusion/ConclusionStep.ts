@@ -7,9 +7,11 @@ import {BaseStepComponent} from "../base/BaseStep";
 })
 export class ConclusionStepComponent extends BaseStepComponent {
 
-    // onScroll() {
-    //     let offset = this.element.nativeElement.getBoundingClientRect();
-    // }
+    hasIco(): boolean {
+        return this.step.ico !== undefined;
+    }
 
-
+    getIco(): string {
+        return this.step.ico || '';
+    }
 }

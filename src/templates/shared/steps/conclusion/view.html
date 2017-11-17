@@ -1,4 +1,5 @@
 <div class="component-container" [style.background-color]="getBackgroundColor()">
-    <h2 *ngIf="hasTitle()">{{step.title}}</h2>
+    <h2 *ngIf="hasTitle()" [innerHTML]="step.title"></h2>
+    <img class="ico" [src]="getIco()" *ngIf="hasIco()" height="48">
     <element-block [elements]="step.elements"></element-block>
 </div>

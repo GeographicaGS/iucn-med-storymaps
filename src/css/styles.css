@@ -3986,11 +3986,17 @@ body {
 .bg_azul_iucn {
   background-color: #0079BA;
 }
+.bg_azul_claro_iucn {
+  background-color: #66B7EA;
+}
 .bg_n10 {
   background-color: #e8e8e8;
 }
 .bg_mbl6 {
   background-color: #909090;
+}
+.bg_n6 {
+  background-color: #56A7E5;
 }
 .color_blanco {
   color: #ffffff;
@@ -5649,6 +5655,41 @@ home .content .preview .after-buttons {
   font-family: 'Fira Sans', sans-serif;
   text-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
   margin-top: 24px;
+  position: relative;
+}
+home .content .preview .after-buttons a {
+  position: relative;
+  display: inline-block;
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+home .content .preview .after-buttons a:hover:before {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  content: "";
+  left: 0;
+  bottom: 0px;
+  background-color: #56A7E5;
 }
 home .content .list {
   width: 100%;
@@ -6015,6 +6056,41 @@ intro > .component-container {
   padding-top: 100px;
   padding-bottom: 64px;
 }
+intro a {
+  position: relative;
+  display: inline-block;
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  color: #14406D;
+}
+intro a:before {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  content: "";
+  left: 0;
+  bottom: 3px;
+  background-color: #14406D;
+}
 intro image {
   max-width: 740px;
   width: 95%;
@@ -6194,6 +6270,21 @@ map > .component-container > div > .btn-row .zoomControl .zoomOut {
 }
 conclusion {
   background-color: #14406D;
+  position: relative;
+  display: block;
+}
+conclusion:before {
+  content: "";
+  background-image: url(../../../../assets/common/ilustracion_linea_mediterraneo.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  position: absolute;
+  width: 75%;
+  height: 750px;
+  left: 10%;
+  top: 0;
+  opacity: 0.05;
 }
 conclusion h3.title {
   color: #66B7EA;
@@ -6206,12 +6297,19 @@ conclusion > .component-container {
 }
 conclusion h2 {
   text-align: center;
-  font-weight: 800;
+  font-weight: 300;
   font-family: 'Fira Sans', sans-serif;
   color: #66B7EA;
-  font-size: 24px;
-  line-height: 32px;
-  margin-bottom: 25px;
+  font-size: 48px;
+  line-height: 46px;
+  margin-bottom: 5px;
+}
+conclusion h2 b {
+  display: block;
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: extrabold;
+  font-family: 'Fira Sans', sans-serif;
 }
 conclusion paragraph {
   font-weight: 300;
@@ -6223,6 +6321,18 @@ conclusion paragraph {
   width: 95%;
   display: block;
   margin: 0 auto 24px auto;
+}
+conclusion paragraph .highlight {
+  color: #56A7E5;
+  font-family: "Fira Sans";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 32px;
+  text-align: center;
+  max-width: 550px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 conclusion paragraph .capitalized {
   clear: both;
@@ -6285,8 +6395,47 @@ conclusion el-quote .credit:before {
   position: absolute;
   left: -25px;
 }
+conclusion img.ico {
+  margin: 5px auto 36px auto;
+  display: block;
+}
 conclusion ul li:before {
   color: #66B7EA;
+}
+conclusion a {
+  position: relative;
+  display: inline-block;
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  color: #66B7EA;
+}
+conclusion a:before {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  content: "";
+  left: 0;
+  bottom: 3px;
+  background-color: #66B7EA;
 }
 skip .closing-story-container {
   position: relative;

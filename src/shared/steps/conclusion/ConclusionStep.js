@@ -20,6 +20,12 @@ var ConclusionStepComponent = (function (_super) {
     function ConclusionStepComponent() {
         _super.apply(this, arguments);
     }
+    ConclusionStepComponent.prototype.hasIco = function () {
+        return this.step.ico !== undefined;
+    };
+    ConclusionStepComponent.prototype.getIco = function () {
+        return this.step.ico || '';
+    };
     ConclusionStepComponent = __decorate([
         core_1.Component({
             selector: 'conclusion',

@@ -28,11 +28,17 @@
 .bg_azul_iucn {
   background-color: #0079BA;
 }
+.bg_azul_claro_iucn {
+  background-color: #66B7EA;
+}
 .bg_n10 {
   background-color: #e8e8e8;
 }
 .bg_mbl6 {
   background-color: #909090;
+}
+.bg_n6 {
+  background-color: #56A7E5;
 }
 .color_blanco {
   color: #ffffff;
