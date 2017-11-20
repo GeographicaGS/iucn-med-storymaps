@@ -38,7 +38,7 @@ export class SkipStepComponent extends BaseStepComponent {
 
     goToNextStory() {
         this.windowService.setCurrentStory(this.step.next_story.link);
-        this.windowService.currentStep = 'cover';
+        this.windowService.setCurrentStep('cover');
         this.windowService.scrollTo(1, 0);
         this.mapService.reload();
     }

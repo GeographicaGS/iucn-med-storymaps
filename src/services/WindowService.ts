@@ -245,6 +245,7 @@ export class WindowService {
 
     goHome() {
         this.aboutView = false;
+        this.setCurrentStep('cover');
         this.setCurrentStory('');
         this.scrollTo(1, 0);
     }

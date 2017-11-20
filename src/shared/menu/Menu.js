@@ -16,19 +16,14 @@ var WindowService_1 = require("../../services/WindowService");
 var StoryService_1 = require("../../services/StoryService");
 var MenuComponent = (function () {
     function MenuComponent(windowService, storyService) {
-        var _this = this;
         this.windowService = windowService;
         this.storyService = storyService;
         this.currentStep = 'cover';
         this.stories = {};
         this.currentStory = {};
-        this.currentStep = this.windowService.getCurrentStep();
-        this.windowService.getCurrentStepObservable().subscribe(function (nextStep) {
-            _this.currentStep = nextStep;
-        });
     }
     MenuComponent.prototype.isItemActive = function (item) {
-        return item == this.currentStep;
+        return item == this.windowService.getCurrentStep();
     };
     MenuComponent.prototype.getStepsKeys = function () {
         return this.stories['stories'][this.currentStory] != undefined ? Object.keys(this.stories['stories'][this.currentStory]['steps']) : [];
@@ -45,6 +40,11 @@ var MenuComponent = (function () {
         }
     };
     MenuComponent.prototype.goHome = function () {
+        this.windowService.homeViewPreview = true;
+        this.windowService.goHome();
+    };
+    MenuComponent.prototype.goStoriesList = function () {
+        this.windowService.homeViewPreview = false;
         this.windowService.goHome();
     };
     __decorate([

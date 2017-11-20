@@ -208,11 +208,11 @@
           "collapsed": false,
           "info": [
             {
-              "title": "Infralittoral biogenic habitats in the Mediterranean - corralligenous bioconcretions",
+              "title": "Infralittoral biogenic habitats in the Mediterranean - <span class='italic'>corralligenous bioconcretions</span>",
               "credit": "",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/coral_infralitoral.zip",
-              "legend": "/assets/maps/legend_map.svg",
+              "legend": "/assets/corals/legend.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -433,7 +433,7 @@
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
-              "legend": "/assets/butterfiles/legend1.svg",
+              "legend": "/assets/butterflies/legend1.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -463,7 +463,7 @@
               "credit": "",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
-              "legend": "/assets/butterfiles/legend2.svg",
+              "legend": "/assets/butterflies/legend2.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -493,7 +493,7 @@
               "credit": "",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
-              "legend": "/assets/butterfiles/legend3.svg",
+              "legend": "/assets/butterflies/legend3.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -703,12 +703,12 @@
           "mapStyle": "mapbox://styles/cayetanobv/cj9sajpjj1uzs2srqx2he0yl6",
           "info": [
             {
-              "title": "Distribution of threatened (CR, EN, and VU) Chondrichthyans within the Mediterranean Sea",
+              "title": "Distribution of threatened (CR, EN, and VU) <span class='italic'>Chondrichthyans</span> within the Mediterranean Sea",
               "credit": "",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_thrt.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_thrt.zip",
-              "legend": "/assets/maps/legend_map.svg",
+              "legend": "/assets/sharks/legend1.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -734,7 +734,7 @@
               "credit": "",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
-              "legend": "/assets/maps/legend_map.svg",
+              "legend": "/assets/sharks/legend2.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -821,7 +821,7 @@
           },
           "next_story": {
             "background": {
-              "url": "assets/antelopees/image.png"
+              "url": "assets/antelopees/image.jpg"
             },
             "link": "antelopees",
             "title": "How many antelope species occur in North Africa"
@@ -834,7 +834,7 @@
         "cover": {
           "name": "Cover",
           "background": {
-            "url": "assets/antelopees/image.png",
+            "url": "assets/antelopees/image.jpg",
             "class": "kenburns"
           },
           "title": "How many antelope species occur in North Africa",
@@ -842,7 +842,7 @@
         },
         "intro": {
           "background": {
-            "url": "assets/antelopees/image.png",
+            "url": "assets/antelopees/image.jpg",
             "class": "kenburns"
           },
           "name": "Intro",
@@ -860,7 +860,7 @@
 
             {
               "type": "image",
-              "url": "/assets/antelopees/image.png",
+              "url": "/assets/antelopees/image.jpg",
               "credit": {
                 "footer": "Breve nota de pie",
                 "author": "Author"
@@ -1023,7 +1023,7 @@
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/gazella.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/gazella.zip",
-              "legend": "/assets/maps/legend_map.svg",
+              "legend": "/assets/antelopees/legend.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -1099,7 +1099,7 @@
         "skip": {
           "name": "Related",
           "background": {
-            "url": "assets/antelopees/image.png",
+            "url": "assets/antelopees/image.jpg",
             "class": ""
           },
           "contact_info": {
@@ -1221,7 +1221,7 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "As part of IPA-Med project, Dr. Karim Omar, environmental researcher and IUCN Red List Global Assessor, with the support of his team, has investigated environmental threats to the natural resources in two Egyptian Important Plant Areas (IPAs) and has provided some recommendations to address these ongoing issues.   <a target='blank' href='https://www.iucn.org/sites/dev/files/import/downloads/ipaegyptconsersuggestions_actionplans_finalversion.pdf'>Click here</a> to go to the report."
+              "value": "As part of IPA-Med project, Dr. Karim Omar, environmental researcher and IUCN Red List Global Assessor, with the support of his team, has investigated environmental threats to the natural resources in two Egyptian Important Plant Areas (IPAs) and has provided some recommendations to address these ongoing issues.   <a target='blank' href='https://www.iucn.org/sites/dev/files/import/downloads/ipaegyptconsersuggestions_actionplans_finalversion.pdf'> click here </a> to go to the report."
             },
             {
               "type": "image",
@@ -1245,7 +1245,7 @@
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/ipas.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/ipas.zip",
-              "legend": "/assets/plans/legend.svg",
+              "legend": "/assets/plants/legend.svg",
               "elements": [
                 {
                   "type": "paragraph",
@@ -1304,7 +1304,7 @@
             },
             {
               "type": "paragraph",
-              "value": "<ul><li><a href='http://www.medplantsnetwork.net/' target='blank'>Mediterranean Plant Network</a></li><li><b>Important Plant Areas of the south east Mediterranean region: priority sites for conservation</b>. To download this publication, please<a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_EN.pdf' target='blank'>click here</a>Available in <a target='blank' href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_EN.pdf'>English</a>, <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_FR.pdf' target='blank'>French</a> and <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_AR.pdf' target='blank'>Arabic</a>.</li><li><a href='http://top50.iucn-mpsg.org/' target='blank'>The Top 50 Mediterranean Island Plants UPDATE 2017</a></li></ul>"
+              "value": "<ul><li><a href='http://www.medplantsnetwork.net/' target='blank'>Mediterranean Plant Network</a></li><li><b>Important Plant Areas of the south east Mediterranean region: priority sites for conservation</b>. To download this publication, please<a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_EN.pdf' target='blank'> click here</a> Available in <a target='blank' href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_EN.pdf'>English</a>, <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_FR.pdf' target='blank'>French</a> and <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_AR.pdf' target='blank'>Arabic</a>.</li><li><a href='http://top50.iucn-mpsg.org/' target='blank'>The Top 50 Mediterranean Island Plants UPDATE 2017</a></li></ul>"
             }
           ]
         },

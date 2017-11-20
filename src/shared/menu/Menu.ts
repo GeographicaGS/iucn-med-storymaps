@@ -15,14 +15,10 @@ export class MenuComponent {
 
     constructor(private windowService: WindowService,
                 @Inject(StoryService) private storyService: StoryService) {
-        this.currentStep = this.windowService.getCurrentStep();
-        this.windowService.getCurrentStepObservable().subscribe((nextStep) => {
-            this.currentStep = nextStep;
-        });
     }
 
     isItemActive(item: string): boolean {
-        return item == this.currentStep;
+        return item == this.windowService.getCurrentStep();
     }
 
     getStepsKeys(){
@@ -39,6 +35,11 @@ export class MenuComponent {
         }
     }
     goHome(){
+        this.windowService.homeViewPreview = true;
+        this.windowService.goHome();
+    }
+    goStoriesList(){
+        this.windowService.homeViewPreview = false;
         this.windowService.goHome();
     }
 }

@@ -17,13 +17,14 @@
 		<div class="mapLayerWrapper" *ngFor="let info of item || []; let i=index">
 			<div class="titleWrapper">
 			    <div
+					*ngIf="item.length > 1"
 					class="btn small circle"
 					(click)="toggleLayer(info)"
 					[ngClass]="{selected: info.collapsed === false}"
 				>
 					{{ i + 1 }}
 				</div>
-				<div class="title" [ngClass]="{selected: info.collapsed === false}" (click)="toggleLayer(info)">{{info.title}}</div>
+				<div class="title" [ngClass]="{selected: info.collapsed === false, single:item.length == 1}" (click)="toggleLayer(info)" [innerHTML]="info.title"></div>
 			</div>
 		    <div class="info" [ngClass]="{hidden: info.collapsed === true}">
 		        <element-block [elements]="info.elements"></element-block>
