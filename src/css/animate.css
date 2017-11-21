@@ -212,6 +212,68 @@ body {
   -o-animation-name: bounceInDown;
   animation-name: bounceInDown;
 }
+@-webkit-keyframes bounceInDownLittle {
+  0% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(10px);
+  }
+  80% {
+    -webkit-transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes bounceInDownLittle {
+  0% {
+    -moz-transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(10px);
+  }
+  80% {
+    -moz-transform: translateY(-10px);
+  }
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes bounceInDownLittle {
+  0% {
+    -o-transform: translateY(-2000px);
+  }
+  60% {
+    -o-transform: translateY(10px);
+  }
+  80% {
+    -o-transform: translateY(-10px);
+  }
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+@keyframes bounceInDownLittle {
+  0% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.bounceInDownLittle {
+  -webkit-animation-name: bounceInDownLittle;
+  -moz-animation-name: bounceInDownLittle;
+  -o-animation-name: bounceInDownLittle;
+  animation-name: bounceInDownLittle;
+}
 @-webkit-keyframes bounceInLeft {
   0% {
     opacity: 0;
@@ -424,7 +486,7 @@ body {
 }
 @-webkit-keyframes bounceInUpLittle {
   0% {
-    -webkit-transform: translateY(150px);
+    -webkit-transform: translateY(30px);
   }
   60% {
     -webkit-transform: translateY(-10px);
@@ -438,7 +500,7 @@ body {
 }
 @-moz-keyframes bounceInUpLittle {
   0% {
-    -moz-transform: translateY(150px);
+    -moz-transform: translateY(30px);
   }
   60% {
     -moz-transform: translateY(-10px);
@@ -452,7 +514,7 @@ body {
 }
 @-o-keyframes bounceInUpLittle {
   0% {
-    -o-transform: translateY(150px);
+    -o-transform: translateY(30px);
   }
   60% {
     -o-transform: translateY(-10px);
@@ -466,7 +528,7 @@ body {
 }
 @keyframes bounceInUpLittle {
   0% {
-    transform: translateY(150px);
+    transform: translateY(30px);
   }
   60% {
     transform: translateY(-10px);
@@ -3525,15 +3587,45 @@ body {
   0% {
     -webkit-transform: scale3d(1, 1, 1);
   }
+  60% {
+    -webkit-transform: scale3d(15, 15, 15) translate3d(0, 0px, 0px);
+  }
   100% {
-    -webkit-transform: scale3d(100, 100, 100);
+    -webkit-transform: scale3d(10, 10, 10) translate3d(0, 0px, 0px);
   }
 }
 @-moz-keyframes scaleFull {
+  0% {
+    -moz-transform: scale3d(1, 1, 1);
+  }
+  60% {
+    -moz-transform: scale3d(15, 15, 15) translate3d(0, 0px, 0px);
+  }
+  100% {
+    -moz-transform: scale3d(10, 10, 10) translate3d(0, 0px, 0px);
+  }
 }
 @-o-keyframes scaleFull {
+  0% {
+    -o-transform: scale3d(1, 1, 1);
+  }
+  60% {
+    -o-transform: scale3d(15, 15, 15) translate3d(0, 0px, 0px);
+  }
+  100% {
+    -o-transform: scale3d(10, 10, 10) translate3d(0, 0px, 0px);
+  }
 }
 @keyframes scaleFull {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  60% {
+    transform: scale3d(15, 15, 15) translate3d(0, 0px, 0px);
+  }
+  100% {
+    transform: scale3d(10, 10, 10) translate3d(0, 0px, 0px);
+  }
 }
 .scaleFull {
   -webkit-animation-name: scaleFull;
