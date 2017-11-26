@@ -3835,77 +3835,51 @@ body {
 }
 @keyframes kenburns {
   0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  95% {
-    transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -80px, 0px);
+    transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
     animation-timing-function: ease-in;
-    opacity: 1;
+    opacity: 0.5;
   }
   100% {
     transform: scale3d(2, 2, 2) translate3d(-170px, -70px, 0px);
     opacity: 0;
   }
 }
-@-webkit-keyframes kenburns {
+@keyframes kenburns-home {
   0% {
-    opacity: 0;
-  }
-  5% {
+    transform: scale3d(1, 1, 1);
     opacity: 1;
   }
-  95% {
-    -webkit-transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -120px, 0px);
-    -webkit-animation-timing-function: ease-in;
+  17% {
+    transform: scale3d(1.1, 1.1, 1.1);
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+  35% {
+    opacity: 1;
+    transform: scale3d(1.2, 1.2, 1.2) translate3d(0, -140px, 0px);
+    animation-timing-function: ease-in;
+  }
+  70% {
+    transform: scale3d(1.8, 1.8, 1.8) translate3d(-30px, -100px, 0px);
+    animation-timing-function: ease-in;
     opacity: 1;
   }
-  100% {
-    -webkit-transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
-    opacity: 0;
+  85% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
   }
 }
-@-moz-keyframes kenburns {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  95% {
-    -moz-transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -120px, 0px);
-    -moz-animation-timing-function: ease-in;
-    opacity: 1;
-  }
-  100% {
-    -moz-transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
-    opacity: 0;
-  }
+.kenburns-anim {
+  -webkit-animation-name: kenburns-home;
+  -moz-animation-name: kenburns-home;
+  -o-animation-name: kenburns-home;
+  animation-name: kenburns-home;
 }
-@-o-keyframes kenburns {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  95% {
-    -o-transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -120px, 0px);
-    -o-animation-timing-function: ease-in;
-    opacity: 1;
-  }
-  100% {
-    -o-transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
-    opacity: 0;
-  }
-}
-.kenburns {
-  -webkit-animation-name: kenburns;
-  -moz-animation-name: kenburns;
-  -o-animation-name: kenburns;
-  animation-name: kenburns;
+.kenburns-home-anim {
+  -webkit-animation-name: kenburns-home;
+  -moz-animation-name: kenburns-home;
+  -o-animation-name: kenburns-home;
+  animation-name: kenburns-home;
 }
 @-webkit-keyframes scaleFull {
   0% {
@@ -4102,10 +4076,10 @@ body.blur:after {
 body.gradient:after {
   content: "";
   position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  left: -100px;
+  top: -100px;
+  right: -100px;
+  bottom: -100px;
   z-index: -1;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
@@ -4122,14 +4096,49 @@ body.kenburns:before {
   background-size: 150%;
   background-attachment: fixed;
   background-image: inherit;
-  -webkit-animation-name: kenburns;
-  -moz-animation-name: kenburns;
-  -o-animation-name: kenburns;
-  animation-name: kenburns;
+  -webkit-animation-name: kenburns-home;
+  -moz-animation-name: kenburns-home;
+  -o-animation-name: kenburns-home;
+  animation-name: kenburns-home;
   -webkit-animation-duration: 60s;
   -moz-animation-duration: 60s;
   -o-animation-duration: 60s;
   animation-duration: 60s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  z-index: -1;
+}
+body.kenburns-home:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: -150px;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-attachment: fixed;
+  background-image: inherit;
+  -webkit-animation-name: kenburns-home;
+  -moz-animation-name: kenburns-home;
+  -o-animation-name: kenburns-home;
+  animation-name: kenburns-home;
+  -webkit-animation-duration: 50s;
+  -moz-animation-duration: 50s;
+  -o-animation-duration: 50s;
+  animation-duration: 50s;
   -webkit-animation-delay: 0s;
   -moz-animation-delay: 0s;
   -o-animation-delay: 0s;
@@ -6237,7 +6246,7 @@ map > .component-container > div > .btn-row.top {
   top: 16px;
 }
 map > .component-container > div > .btn-row:not(.right) {
-  left: 32px;
+  left: 16px;
 }
 map > .component-container > div > .btn-row.right {
   right: 88px;

@@ -2,7 +2,7 @@
   "home": {
     "background": {
       "url": "assets/common/home-bg.jpg",
-      "class": "full-screen gradient kenburns home"
+      "class": "full-screen gradient kenburns-home home"
     },
     "columns": [
       {

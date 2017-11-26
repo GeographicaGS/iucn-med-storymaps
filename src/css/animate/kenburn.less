@@ -1,14 +1,8 @@
 @keyframes kenburns {
   0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  95% {
-    transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -80px, 0px);
+    transform: scale3d(1, 1, 1) translate3d(-0px, -0px, 0px);
     animation-timing-function: ease-in;
-    opacity: 1;
+    opacity: 0.5;
   }
   100% {
     transform: scale3d(2, 2, 2) translate3d(-170px, -70px, 0px);
@@ -16,64 +10,42 @@
   }
 }
 
-@-webkit-keyframes kenburns {
+@keyframes kenburns-home {
   0% {
-    opacity: 0;
-  }
-  5% {
+    transform: scale3d(1, 1, 1);
     opacity: 1;
   }
-  95% {
-    -webkit-transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -120px, 0px);
-    -webkit-animation-timing-function: ease-in;
+  17% {
+    transform: scale3d(1.1, 1.1, 1.1);
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+  35% {
+    opacity: 1;
+    transform: scale3d(1.2, 1.2, 1.2) translate3d(0, -140px, 0px);
+    animation-timing-function: ease-in;
+  }
+  70% {
+    transform: scale3d(1.8, 1.8, 1.8) translate3d(-30px, -100px, 0px);
+    animation-timing-function: ease-in;
     opacity: 1;
   }
-  100% {
-    -webkit-transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
-    opacity: 0;
+  85% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
   }
 }
 
-
-@-moz-keyframes kenburns {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  95% {
-    -moz-transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -120px, 0px);
-    -moz-animation-timing-function: ease-in;
-    opacity: 1;
-  }
-  100% {
-    -moz-transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
-    opacity: 0;
-  }
+.kenburns-anim{
+  -webkit-animation-name: kenburns-home;
+  -moz-animation-name: kenburns-home;
+  -o-animation-name: kenburns-home;
+  animation-name: kenburns-home;
 }
 
-@-o-keyframes kenburns {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  95% {
-    -o-transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -120px, 0px);
-    -o-animation-timing-function: ease-in;
-    opacity: 1;
-  }
-  100% {
-    -o-transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
-    opacity: 0;
-  }
-}
-
-.kenburns{
-  -webkit-animation-name: kenburns;
-  -moz-animation-name: kenburns;
-  -o-animation-name: kenburns;
-  animation-name: kenburns;
+.kenburns-home-anim{
+  -webkit-animation-name: kenburns-home;
+  -moz-animation-name: kenburns-home;
+  -o-animation-name: kenburns-home;
+  animation-name: kenburns-home;
 }
