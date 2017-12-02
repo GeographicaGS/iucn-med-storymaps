@@ -3,10 +3,10 @@
     -webkit-transform: scale3d(1, 1, 1);
   }
   60% {
-    -webkit-transform: scale3d(15, 15, 15) translate3d(0, 0px, 0px);
+    -webkit-transform: scale3d(2, 2, 2) translate3d(0, 0px, 0px);
   }
   100% {
-    -webkit-transform: scale3d(10, 10, 10) translate3d(0, 0px, 0px);
+    -webkit-transform: scale3d(2, 2, 2) translate3d(0, 0px, 0px);
   }
 }
 @-moz-keyframes scaleFull {
@@ -14,10 +14,10 @@
     -moz-transform: scale3d(1, 1, 1);
   }
   60% {
-    -moz-transform: scale3d(15, 15, 15) translate3d(0, 0px, 0px);
+    -moz-transform: scale3d(2, 2, 2) translate3d(0, 0px, 0px);
   }
   100% {
-    -moz-transform: scale3d(10, 10, 10) translate3d(0, 0px, 0px);
+    -moz-transform: scale3d(2, 2, 2) translate3d(0, 0px, 0px);
   }
 }
 @-o-keyframes scaleFull {
@@ -25,10 +25,10 @@
     -o-transform: scale3d(1, 1, 1);
   }
   60% {
-    -o-transform: scale3d(15, 15, 15) translate3d(0, 0px, 0px);
+    -o-transform: scale3d(2, 2, 2) translate3d(0, 0px, 0px);
   }
   100% {
-    -o-transform: scale3d(10, 10, 10) translate3d(0, 0px, 0px);
+    -o-transform: scale3d(2, 2, 2) translate3d(0, 0px, 0px);
   }
 }
 @keyframes scaleFull {
@@ -36,10 +36,10 @@
     transform: scale3d(1, 1, 1);
   }
   60% {
-    transform: scale3d(15, 15, 15) translate3d(0, 0px, 0px);
+    transform: scale3d(2, 2, 2) translate3d(0, 0px, 0px);
   }
   100% {
-    transform: scale3d(10, 10, 10) translate3d(0, 0px, 0px);
+    transform: scale3d(2, 2, 2) translate3d(0, 0px, 0px);
   }
 }
 .scaleFull {

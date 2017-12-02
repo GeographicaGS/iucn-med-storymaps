@@ -123,7 +123,7 @@ Thumbs.db
 /src/shared/steps/base/BaseStep.js.map
 /src/shared/steps/skip/SkipStep.js.map
 /src/shared/elements/info/Info.js
-/src/shared/elements/quote/Quote.js.map
+/src/shared/elements/quote/LearnMore.js.map.map
 /src/shared/elements/paragraph/Paragraph.js.map
 /src/shared/steps/cover/CoverStep.js.map
 /src/shared/steps/intro/IntroStep.js
@@ -144,7 +144,7 @@ Thumbs.db
 /src/shared/steps/home/HomeStep.js.map
 /src/app/main/MainComponent.js
 /src/shared/elements/base-element/BaseElement.js
-/src/shared/elements/quote/Quote.js
+/src/shared/elements/quote/LearnMore.js
 /src/shared/elements/info/Info.js.map
 /src/shared/steps/home/HomeStep.js
 /src/shared/elements/paragraph/Paragraph.js

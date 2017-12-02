@@ -1,0 +1,14 @@
+<h3 class="title">Do you want to learn more ? </h3>
+<ul>
+    <li *ngFor="let link of item.list">
+        <div class="img" [ngClass]="{ico: !hasImage(link)}">
+            <a target="_blank" *ngIf="hasHref(link) && hasImage(link)" [href]="link.href" [title]="link.title"><img [alt]="link.title" *ngIf="hasImage(link)" [src]="link.img"></a>
+            <img *ngIf="!hasHref(link) && hasImage(link)" [alt]="link.title" [src]="link.img">
+        </div>
+        <div class="info">
+            <div class="title" [innerHTML]="link.title"></div>
+            <div class="description" [innerHTML]="link.description"></div>
+            <a target="_blank" *ngIf="hasHref(link)" [href]="link.href">Learn more</a>
+        </div>
+    </li>
+</ul>

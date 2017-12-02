@@ -28,19 +28,6 @@ export class WindowService {
     bodyClassObserver: Observer<string>;
 
     constructor(@Inject(DOCUMENT) private document: any) {
-
-        // this.bodyBgUrlObservable = new Observable<string>((obs) => {
-        //     this.bodyBgUrlObserver = obs;
-        // });
-        // this.bodyClassObservable = new Observable<string>((obs) => {
-        //     this.bodyClassObserver = obs;
-        // });
-        // this.currentStepObservable = new Observable<string>((obs) => {
-        //     debugger;
-        //     this.currentStepObserver = obs;
-        // });
-
-
     }
 
     getScrollTop(): number {

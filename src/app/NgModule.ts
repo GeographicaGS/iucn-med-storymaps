@@ -25,6 +25,7 @@ import {TableComponent} from "../shared/elements/table/Table";
 import {StoryService} from './../services/StoryService';
 import {MapService} from "../services/MapService";
 import {WindowService} from "../services/WindowService";
+import {LearnMoreComponent} from "../shared/elements/learn-more/LearnMore";
 
 @NgModule({
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -48,6 +49,7 @@ import {WindowService} from "../services/WindowService";
         ConclusionStepComponent,
         SkipStepComponent,
         MenuComponent,
+        LearnMoreComponent,
         MainComponent
     ],
     providers: [
