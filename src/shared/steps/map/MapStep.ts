@@ -78,8 +78,8 @@ export class MapStepComponent extends BaseStepComponent {
         });
         this.mapService.map.scrollZoom.disable();
 
-        this.activeLayer = this.step.info[0];
         this.mapService.map.on('load', () => {
+            this.activeLayer = this.step.info[0];
             this.updateLayers(this.activeLayer);
         });
     }
@@ -125,8 +125,6 @@ export class MapStepComponent extends BaseStepComponent {
             this.toggleActiveLayer();
         }
         this.activeLayer = info;
-        this.currentLegend = this.activeLayer.legend;
-
         this.toggleActiveLayer();
     }
 
@@ -162,6 +160,10 @@ export class MapStepComponent extends BaseStepComponent {
         document.body.appendChild(anchor);
         anchor.click();
         document.body.removeChild(anchor);
+    }
+
+    getCurrentLegend() {
+        return this.activeLayer.legend;
     }
 
 }
