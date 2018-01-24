@@ -3850,21 +3850,31 @@ body {
     opacity: 1;
   }
   17% {
-    transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.27, 1.27, 1.27) translate3d(0, -30px, 0px);
     opacity: 1;
     animation-timing-function: ease-in;
   }
   35% {
     opacity: 1;
-    transform: scale3d(1.2, 1.2, 1.2) translate3d(0, -140px, 0px);
+    transform: scale3d(1.56, 1.56, 1.56) translate3d(0, -100px, 0px);
     animation-timing-function: ease-in;
   }
-  70% {
-    transform: scale3d(1.8, 1.8, 1.8) translate3d(-30px, -100px, 0px);
+  50% {
+    transform: scale3d(1.8, 1.8, 1.8) translate3d(-30px, -40px, 0px);
     animation-timing-function: ease-in;
     opacity: 1;
   }
-  85% {
+  65% {
+    transform: scale3d(1.56, 1.56, 1.56) translate3d(0, -100px, 0px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  83% {
+    transform: scale3d(1.27, 1.27, 1.27) translate3d(0, -30px, 0px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  100% {
     transform: scale3d(1, 1, 1);
     opacity: 1;
   }
@@ -4135,14 +4145,14 @@ body.kenburns-home:before {
   -moz-animation-name: kenburns-home;
   -o-animation-name: kenburns-home;
   animation-name: kenburns-home;
-  -webkit-animation-duration: 50s;
-  -moz-animation-duration: 50s;
-  -o-animation-duration: 50s;
-  animation-duration: 50s;
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
-  -o-animation-delay: 0s;
-  animation-delay: 0s;
+  -webkit-animation-duration: 90s;
+  -moz-animation-duration: 90s;
+  -o-animation-duration: 90s;
+  animation-duration: 90s;
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   -o-animation-fill-mode: both;
@@ -5070,6 +5080,59 @@ el-table.table .credit {
   line-height: 16px;
   margin-top: 5px;
 }
+el-learn-more {
+  display: block;
+}
+el-learn-more h3.title {
+  margin-left: 0;
+}
+el-learn-more ul {
+  padding: 0;
+}
+el-learn-more ul li {
+  margin-bottom: 24px;
+  padding: 0;
+  display: flex;
+}
+el-learn-more ul li:before {
+  display: none;
+}
+el-learn-more ul li .img {
+  flex: 0 0 94px;
+}
+el-learn-more ul li .img img {
+  width: 100%;
+}
+el-learn-more ul li .img.ico {
+  position: relative;
+}
+el-learn-more ul li .img.ico:before {
+  background-image: url('/assets/icon/arrow_white.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  transform: rotate(-90deg);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+el-learn-more ul li .info {
+  margin-left: 24px;
+  font-weight: 300;
+  font-family: 'Fira Sans', sans-serif;
+  flex: 1 0 calc(-88%);
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+el-learn-more ul li .info .title {
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Fira Sans', sans-serif;
+}
 cover .component-container {
   background: linear-gradient(180deg, rgba(33, 33, 33, 0) 40%, rgba(33, 33, 33, 0.75) 100%);
   position: relative;
@@ -5408,6 +5471,7 @@ home .content .preview > .title {
   text-align: center;
   margin-bottom: 16px;
   letter-spacing: 4px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 home .content .preview > .description {
   position: relative;
@@ -5441,6 +5505,7 @@ home .content .preview > .description {
   -o-animation-name: fadeInUp;
   animation-name: fadeInUp;
   max-width: 740px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 home .content .preview > .separator-row,
 home .content .preview > .subtitle2,
@@ -5479,6 +5544,7 @@ home .content .preview > .subtitle {
   width: 80%;
   max-width: 740px;
   text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 home .content .preview > .separator-row > div,
 home .content .preview > .subtitle2 > div,
@@ -6333,6 +6399,12 @@ conclusion h2 b {
   font-weight: extrabold;
   font-family: 'Fira Sans', sans-serif;
 }
+conclusion el-learn-more {
+  max-width: 740px;
+  width: 95%;
+  display: block;
+  margin: 0 auto 24px auto;
+}
 conclusion paragraph {
   font-weight: 300;
   font-family: 'Fira Sans', sans-serif;
@@ -6458,6 +6530,9 @@ conclusion a:before {
   left: 0;
   bottom: 3px;
   background-color: #66B7EA;
+}
+conclusion .donate {
+  text-align: center;
 }
 skip .closing-story-container {
   position: relative;

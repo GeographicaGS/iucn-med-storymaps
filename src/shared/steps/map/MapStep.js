@@ -85,8 +85,8 @@ var MapStepComponent = (function (_super) {
             center: this.center
         });
         this.mapService.map.scrollZoom.disable();
-        this.activeLayer = this.step.info[0];
         this.mapService.map.on('load', function () {
+            _this.activeLayer = _this.step.info[0];
             _this.updateLayers(_this.activeLayer);
         });
     };
@@ -131,7 +131,6 @@ var MapStepComponent = (function (_super) {
             this.toggleActiveLayer();
         }
         this.activeLayer = info;
-        this.currentLegend = this.activeLayer.legend;
         this.toggleActiveLayer();
     };
     MapStepComponent.prototype.zoomIn = function () {
@@ -164,6 +163,9 @@ var MapStepComponent = (function (_super) {
         document.body.appendChild(anchor);
         anchor.click();
         document.body.removeChild(anchor);
+    };
+    MapStepComponent.prototype.getCurrentLegend = function () {
+        return this.activeLayer.legend;
     };
     MapStepComponent = __decorate([
         core_1.Component({

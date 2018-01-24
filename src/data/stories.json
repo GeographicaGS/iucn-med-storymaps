@@ -100,7 +100,7 @@
           },
           {
             "type": "paragraph",
-            "value": "<a href='mailto:medspecies@iucn.org'>Contact us for more details.</a>"
+            "value": "<a href='mailto:uicnmed@iucn.org'>Contact us for more details.</a>"
           }
         ]
       }
@@ -134,8 +134,8 @@
               "type": "image",
               "url": "/assets/corals/intro.jpg",
               "credit": {
-                "footer": "Breve nota de pie",
-                "author": "Author"
+                "footer": "© Seaphotoart",
+                "author": "Dreamstime.com"
               }
             },
             {
@@ -146,17 +146,17 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The coralligenous is considered as the second benthic ecosystem in the Mediterranean and host 1700 species, among them 1300 algae, 1200 invertebrate species, and more than hundred fish species."
+              "value": "The <b>coralligenous</b> is considered as the second <b>benthic ecosystem in the Mediterranean</b> and host 1700 species, among them 1300 algae, 1200 invertebrate species, and more than hundred fish species."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The decline in habitat extent and quality make them to be classified as Near Threatened for Europe."
+              "value": "The decline in habitat extent and quality make them to be classified as <b>Near Threatened</b> for Europe."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "An important feature of this habitat to be considered also is that in the Mediterranean, up to 48% of the algae species living in them are endemics, according to the European Red List of Habitats, which covers information in the EU28, plus Iceland, Norway, Switzerland and the Balkan countries and their neighbouring seas."
+              "value": "An important feature of this habitat to be considered also is that in the <b>Mediterranean</b>, up to <b>48% of the algae species living in them are endemics</b>, according to the European Red List of Habitats, which covers information in the EU28, plus Iceland, Norway, Switzerland and the Balkan countries and their neighbouring seas."
             },
             {
               "type": "image",
@@ -185,7 +185,7 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "Coralline reefs with species like Paramuricea clavata, Eunicella verrucosa and Astroides calycularis, and of course the precious <b>Red Coral</b> (Corallium rubrum), are Mediterranean treasures that form part of our heritage."
+              "value": "Coralline reefs with species like <i>Paramuricea clavata</i>, <i>Eunicella verrucosa</i> and <i>Astroides calycularis</i>, and of course the precious <b>Red Coral</b> (<i>Corallium rubrum</i>), are Mediterranean treasures that form part of our heritage."
             },
             {
               "type": "paragraph",
@@ -197,7 +197,7 @@
               "url": "/assets/corals/intro2.jpg",
               "credit": {
                 "footer": "Red coral (<i>Corallium rubrum</i>), Sardinia, Italy.",
-                "author": ""
+                "author": "© WaterFrame | Alamy Stock Photo"
               }
             }
           ]
@@ -209,7 +209,7 @@
           "info": [
             {
               "title": "Infralittoral biogenic habitats in the Mediterranean - <span class='italic'>corralligenous bioconcretions</span>",
-              "credit": "",
+              "credit": "IUCN Med",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/coral_infralitoral.zip",
               "legend": "/assets/corals/legend.svg",
@@ -272,14 +272,40 @@
             {
               "type": "paragraph",
               "value": "<b>Oceana</b> comments on the <b>Action Plan for the conservation of the Coralligenous and other calcareous bio-concretions in the Mediterranean Sea</b> adopted by the Mediterranea states at the Cop18 Barcelona Convention."
+            },
+            {
+              "type": "learn-more",
+              "list": [
+                {
+                  "img": "/assets/corals/cover_Anthozoa.jpg",
+                  "title": "Overview of the conservation status of Mediterranean anthozoa",
+                  "href": "https://portals.iucn.org/library/node/46713"
+                },
+                {
+                  "title": "IUCN Mediterranean Marine Programme",
+                  "href": "https://www.iucn.org/regions/mediterranean/our-work/mediterranean-marine-programme"
+                },
+                {
+                  "title": "Mediterranean coralligenous habitats",
+                  "href": "https://forum.eionet.europa.eu/european-red-list-habitats/library/marine-habitats/mediterranean-sea/a5.6y-circalittoral-biogenic-habitats-mediterranean-corralligenous"
+                },
+                {
+                  "title": "European Red List of Habitats",
+                  "href": "http://ec.europa.eu/environment/nature/knowledge/redlist_en.htm"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "value": "<h3 class='donate'><a href='https://www.iucn.org/donate' target='_blank'>DONATE</a></h3>"
             }
           ]
         },
         "skip": {
           "name": "Related",
           "credit": {
-            "footer": "Gorgonian (Eunicella cavolini) at 35m depth",
-            "author": "Korinthiakos Gulf, Greece (K.Milonakis)"
+            "footer": "Gorgonian (<i>Eunicella cavolini</i>) at 35m depth",
+            "author": "Korinthiakos Gulf, Greece <i>©</i> K.Milonakis"
           },
           "contact_info": {
             "authors": [
@@ -291,7 +317,7 @@
             "author_link": "<a href=\"mailto:mariadelmar.otero@iucn.org\">IUCN Mediterranean Marine Programme</a>",
             "address": {
               "center_name": "IUCN Centre for Mediterranean Cooperation",
-              "info": "C/ Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tél +34 352 02 84 30<br>Fax +34 352 02 84 30<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
+              "info": "C/ Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tél +34 352 02 84 30<br>Fax +34 352 02 84 30<br><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
             }
           },
           "next_story": {
@@ -312,7 +338,7 @@
             "url": "assets/butterflies/image.jpg",
             "class": "kenburns",
             "credit": {
-              "footer": "Hespericus.",
+              "footer": "<i>Plebejus hespericus</i>, Spanish and Mediterranean endemic, listed as Least Concern",
               "author": ""
             }
           },
@@ -335,7 +361,7 @@
               "type": "image",
               "url": "/assets/butterflies/image.jpg",
               "credit": {
-                "footer": "Hespericus.",
+                "footer": "<i>Plebejus hespericus</i>, Spanish and Mediterranean endemic, listed as Least Concern",
                 "author": ""
               }
             },
@@ -388,19 +414,19 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for 'scales' and ptera means 'wings'. Their scaly wings are different from those of any other insects."
+              "value": "Butterflies and moths belong to the order Lepidoptera. Lepidos is Greek for 'scales' and ptera means 'wings'. Their <b>scaly wings</b> are different from those of any other insects."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "Scales play an important part in the natural history of butterflies. They enable the development of vivid or indistinct patterns to help them conceal or camouflage for mimicry and for warning potential predators. Besides providing insulation, dark patterns on wings help absorb the sunlight and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility, in order to prevent a predator from attacking."
+              "value": "Scales play an important part in the natural history of butterflies. They enable the development of vivid or indistinct patterns to help them conceal or camouflage for mimicry and for warning potential predators. Besides providing insulation, <b>dark patterns on wings</b> help <b>absorb the sunlight</b> and assist in regulating the body temperature. Bright and distinctive colour patterns in butterflies help communicate their toxicity or inedibility, in order to prevent a predator from attacking."
             },
             {
               "type": "image",
               "url": "/assets/butterflies/Mottenflugel_in_Mikroskop.jpg",
               "credit": {
-                "footer": "Breve nota de pie",
-                "author": "Author"
+                "footer": "Edge of a moth wing at about 200 times with polarizing filter. Cutout approx: 600μm x 600μm",
+                "author": "© Jan Homann"
               }
             },
             {
@@ -410,15 +436,7 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "<ul><li>Many butterflies have taste receptors on their feet. and they can see red, green, and yellow.</li><li>Antarctica is the only continent on which no Lepidoptera have been found.</li><li>Butterflies are unable to fly if their body temperature drops below 30ºC</li></ul>"
-            },
-            {
-              "type": "image",
-              "url": "/assets/butterflies/Karpathosgrayling_463608896.jpg",
-              "credit": {
-                "footer": "Breve nota de pie",
-                "author": "Author"
-              }
+              "value": "<ul><li>Many butterflies have taste receptors on their feet. and they can see red, green, and yellow.</li><li><b>Antarctica</b> is the only continent on which no Lepidoptera have been found.</li><li>Butterflies are <b>unable to fly</b> if their body temperature drops <b>below 30ºC</b></li></ul>"
             }
           ]
         },
@@ -429,7 +447,7 @@
           "info": [
             {
               "title": "Butterfly species richness in the Mediterranean region",
-              "credit": "",
+              "credit": "IUCN Med",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
@@ -460,7 +478,7 @@
             {
               "title": "Distribution of threatened butterflies in the Mediterranean region",
               "collapsed": true,
-              "credit": "",
+              "credit": "IUCN Med",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
               "legend": "/assets/butterflies/legend2.svg",
@@ -490,7 +508,7 @@
             {
               "title": "Species richness of endemic butterflies in the Mediterranean region ",
               "collapsed": true,
-              "credit": "",
+              "credit": "IUCN Med",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
               "legend": "/assets/butterflies/legend3.svg",
@@ -538,12 +556,42 @@
             },
             {
               "type": "paragraph",
-              "value": "<ul><li>Fully implementing <b>national and international legislation</b></li><li>Developing and implementing <b>habitat action plans</b> in areas where butterflies are threatened</li><li>Prioritizing field work and data collection for Data Deficient butterflies.</li></ul>"
+              "value": "<ul><li>Fully implementing <b>national and international legislation</b></li><li>Developing and implementing <b>habitat action plans</b> in areas where butterflies are threatened</li><li>Prioritizing field work and data collection for <b>Data Deficient</b> butterflies.</li></ul>"
             },
             {
               "type": "quote",
               "value": "a flower knows, when its butterfly will return, and if the moon walks out, the sky will understand; but now it hurts, to watch you leave so soon,when I don't know, if you will ever come back.",
               "credit": "<b>Sanober Khan</b>"
+            },
+            {
+              "type": "learn-more",
+              "list": [
+                {
+                  "img": "/assets/butterflies/med_butterflies_book.jpg",
+                  "title": "The status and distribution of Mediterranean butterflies",
+                  "href": "https://portals.iucn.org/library/node/46183"
+                },
+                {
+                  "title": "IUCN Butterfly Specialist Group",
+                  "href": "https://www.butterflyspecialistgroup.org/"
+                },
+                {
+                  "title": "Butterfly Conservation",
+                  "href": "https://butterfly-conservation.org/"
+                },
+                {
+                  "title": "Red Book of Butterflies in Turkey",
+                  "href": "http://www.dkm.org.tr/Dosyalar/YayinDosya_6I5UT0XB.pdf"
+                },
+                {
+                  "title": "Lista rossa delle farfalle italiane",
+                  "href": "http://pikaia.eu/pubblicata-la-lista-rossa-delle-farfalle-italiane/"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "value": "<h3 class='donate'><a href='https://www.iucn.org/donate' target='_blank'>DONATE</a></h3>"
             }
           ]
         },
@@ -592,8 +640,8 @@
             "url": "assets/sharks/image.jpg",
             "class": "kenburns",
             "credit": {
-              "footer": "Breve pie de foto. ",
-              "author": "AUTOR"
+              "footer": "Underwater view of a blue shark at the dive site Azores Banks, Pico Island, Azores.",
+              "author": " © Michael Valos| Dreamstime"
             }
           },
           "title": "Is the Mediterranean eating sharks away?",
@@ -620,7 +668,6 @@
               "type": "title",
               "value": "Summary of the Read List status of Chondrycthyans in the Mediterranean Sea"
             },
-
             {
               "type": "paragraph",
               "capitalize": false,
@@ -656,10 +703,10 @@
             },
             {
               "type": "image",
-              "url": "/assets/sharks/shark-fin-soup-chinese-food-cuisine-casserole-43443367.jpg",
+              "url": "/assets/sharks/image2.jpg",
               "credit": {
-                "footer": "Breve nota de pie",
-                "author": "Author"
+                "footer": "Angel Shark, Canary Islands / (Squatina squatina)",
+                "author": "© Arco / F. Schneider / Alamy Stock Photo"
               }
             },
             {
@@ -669,10 +716,10 @@
             },
             {
               "type": "image",
-              "url": "/assets/sharks/little-sharks-wholesale-auction-floor-fresh-fish-market-thailand-32623819.jpg",
+              "url": "/assets/sharks/image3.jpg",
               "credit": {
-                "footer": "Breve nota de pie",
-                "author": "Author"
+                "footer": "Dogfish died at Fishing Net Scyliorhinus canicula Vis Island Mediterranean Sea Croatia",
+                "author": "© WaterFrame / Alamy Stock Photo"
               }
             },
             {
@@ -704,7 +751,7 @@
           "info": [
             {
               "title": "Distribution of threatened (CR, EN, and VU) <span class='italic'>Chondrichthyans</span> within the Mediterranean Sea",
-              "credit": "",
+              "credit": "IUCN Med",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_thrt.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_thrt.zip",
@@ -731,7 +778,7 @@
             {
               "title": "Distribution of Data Deficient Chondrichthyans within the Mediterranean Sean",
               "collapsed": true,
-              "credit": "",
+              "credit": "IUCN Med",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
               "legend": "/assets/sharks/legend2.svg",
@@ -784,15 +831,45 @@
             },
             {
               "type": "paragraph",
-              "value": "The IUCN Red List promotes urgent actions towards these endangered species. With the use of better fishing gear and putting into practice protection measures to control bycatch, shark populations can be sustained while contributing to preservation of the whole Mediterranean ecosystem. "
+              "value": "The IUCN Red List promotes URGENT ACTION towards these endangered species. With the use of better fishing gear and putting into practice protection measures to control bycatch, shark populations can be sustained while contributing to preservation of the whole Mediterranean ecosystem. "
             },
             {
-              "type": "title",
-              "value": "Do you want to learn more?"
+              "type": "learn-more",
+              "list": [
+                {
+                  "img": "/assets/sharks/brochure_medredlist_sharks.jpg",
+                  "title": "The IUCN Mediterranean Red List of Sharks, Rays and Chimaeras",
+                  "href": "https://www.iucn.org/sites/dev/files/content/documents/brochure_medredlist_sharks.pdf"
+                },
+                {
+                  "title": "How is an IUCN Red List made?",
+                  "href": "http://www.iucnredlist.org/initiatives/mediterranean/assessment-process"
+                },
+                {
+                  "title": "What is IUCN-Med doing on species protection?",
+                  "href": "https://www.iucn.org/regions/mediterranean/our-work/mediterranean-species-programme"
+                },
+                {
+                  "title": "Mediterranean biodiversity assessments video",
+                  "href": "https://www.youtube.com/watch?v=EV0Wev-lWhw"
+                },
+                {
+                  "title": "Lista rossa delle farfalle italiane",
+                  "href": "http://pikaia.eu/pubblicata-la-lista-rossa-delle-farfalle-italiane/"
+                },
+                {
+                  "title": "Things you did not know about sharks",
+                  "href": "https://www.ranker.com/g00/list/shark-facts/michaelgraff?i10c.encReferrer="
+                },
+                {
+                  "title": "IUCN SSC Shark Specialist Group",
+                  "href": "http://www.iucnssg.org/"
+                }
+              ]
             },
             {
               "type": "paragraph",
-              "value": "<ul><li><a href='https://www.iucn.org/sites/dev/files/content/documents/brochure_medredlist_sharks.pdf' target='blank'>The IUCN Mediterranean Red List of Sharks, Rays and Chimaeras </a></li><li><a href='http://www.iucnredlist.org/initiatives/mediterranean/assessment-process' target='blank'>How is an IUCN Red List made?</a></li><li><a href='https://www.iucn.org/regions/mediterranean/our-work/mediterranean-species-programme' target='blank'>What is IUCN-Med doing on species protection?</a></li><li><a href='https://www.youtube.com/watch?v=EV0Wev-lWhw' target='blank'>Mediterranean biodiversity assessments video</a></li><li><a href='https://www.ranker.com/g00/list/shark-facts/michaelgraff?i10c.encReferrer=' target='blank'>Things you did not know about sharks</a></li></ul>"
+              "value": "<h3 class='donate'><a href='https://www.iucn.org/donate' target='_blank'>DONATE</a></h3>"
             }
           ]
         },
@@ -807,10 +884,6 @@
               {
                 "name": "Catherine Numa",
                 "departament": "Med Species Programme Coordinator"
-              },
-              {
-                "name": "Violeta Barrios",
-                "departament": "Med Species Programme Officer"
               }
             ],
             "author_link": "<a href=\"mailto:medspecies@iucn.org\">IUCN Mediterranean Species Programme </a>",
@@ -835,7 +908,11 @@
           "name": "Cover",
           "background": {
             "url": "assets/antelopees/image.jpg",
-            "class": "kenburns"
+            "class": "kenburns",
+            "credit": {
+              "footer": "Gazella dorcas",
+              "author": "© Tim Wacher"
+            }
           },
           "title": "How many antelope species occur in North Africa",
           "subtitle": "North Africa Savanna"
@@ -843,7 +920,11 @@
         "intro": {
           "background": {
             "url": "assets/antelopees/image.jpg",
-            "class": "kenburns"
+            "class": "kenburns",
+            "credit": {
+              "footer": "Gazella dorcas",
+              "author": "© Tim Wacher"
+            }
           },
           "name": "Intro",
           "elements": [
@@ -857,13 +938,12 @@
               "capitalize": false,
               "value": "Six species Gazelle family can be found throughout Africa. Many of these small, horned creatures <b>are endangered</b>, and their populations in the deserts, plains, and savannas of Africa are threatened due to hunting, farming, and loss of habitat."
             },
-
             {
               "type": "image",
-              "url": "/assets/antelopees/image.jpg",
+              "url": "/assets/antelopees/image2.jpg",
               "credit": {
-                "footer": "Breve nota de pie",
-                "author": "Author"
+                "footer": "Gazella cuvieri",
+                "author": "© Tim Wacher"
               }
             },
             {
@@ -883,7 +963,7 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "At Mediterranean level, the latest edition of the IUCN Red List (2008) shows that approximately 19% of Mediterranean known species are endangered and 1% is already extinct at regional level. "
+              "value": "At Mediterranean level, the latest edition of the <b>IUCN Red List (2008)</b> shows that approximately <b>19% of Mediterranean known species are endangered</b> and 1% is already extinct at regional level. "
             },
             {
               "type": "quote",
@@ -930,7 +1010,7 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "These species may be both called Idmi, but they are in fact two different species. The Arabian Gazelle is the idmi of the Arabian Peninsula, while Cuvier’s Gazelle is the <b>idmi</b> of North Africa."
+              "value": "These species may be both called Idmi, but <b>they are in fact two different species</b>. The Arabian Gazelle is the idmi of the Arabian Peninsula, while Cuvier’s Gazelle is the <b>idmi</b> of North Africa."
             },
             {
               "type": "table",
@@ -1019,7 +1099,7 @@
           "info": [
             {
               "title": "Antelope species distribution map",
-              "credit": "",
+              "credit": "IUCN Med",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/gazella.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/gazella.zip",
@@ -1064,7 +1144,6 @@
               "type": "paragraph",
               "value": "Conservation Strategies are useful tools to assess the conservation status of species and their habitats, and define <b>conservation priorities</b>. However, a main issue in Maghreb countries is the lack of experience, training and capacities for the design and implementation of Species Conservation Strategies for threatened species. ",
               "highlight": true
-
             },
             {
               "type": "paragraph",
@@ -1087,12 +1166,22 @@
               "value": "Also, some NGOs, such as the <a href='https://www.facebook.com/Tunisia-Wildlife-Conservation-Society-TWCS-222687077830464/' target='blank'>Tunisian Wildlife Conservation Society</a>, are developing reintroduction monitoring programme for the Gazella cuvieri. "
             },
             {
-              "type": "title",
-              "value": "Do you want to learn more?"
+              "type": "learn-more",
+              "list": [
+                {
+                  "img": "/assets/antelopees/brochure.jpg",
+                  "title": "FACT SHEET: Antelopes of North Africa and the Arabian Peninsula",
+                  "description": "IUCN has published Guidelines on Reintroductions (2013) that should be followed in all cases involving antelope species reintroductions and other conservation translocations in the region.<br> <a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/2017/en_gacelas_web_160_media_1.pdf'>English version</a>, <a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/fr_gacelas_web_160_media.pdf'>French</a> and <a href='https://www.iucn.org/sites/dev/files/content/documents/iucn_2017_antelopes_nafricaarabia_ar.pdf' target='blank'>Arabic"
+                },
+                {
+                  "title": "IUCN Antelope Specialist Group",
+                  "href": "https://www.iucn.org/ssc-groups/mammals/antelope-specialist-group"
+                }
+              ]
             },
             {
               "type": "paragraph",
-              "value": "<ul><li>FACT SHEET: Antelopes of North Africa and the Arabian Peninsula <a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/2017/en_gacelas_web_160_media_1.pdf'>English</a>, <a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/fr_gacelas_web_160_media.pdf'>French</a> and <a href='https://www.iucn.org/sites/dev/files/content/documents/iucn_2017_antelopes_nafricaarabia_ar.pdf' target='blank'>Arabic</li><li>IUCN has published <b>Guidelines on Reintroductions (2013)</b> that should be followed in all cases involving antelope species reintroductions and other conservation translocations in the region.</li></ul>"
+              "value": "<h3 class='donate'><a href='https://www.iucn.org/donate' target='_blank'>DONATE</a></h3>"
             }
           ]
         },
@@ -1104,10 +1193,6 @@
           },
           "contact_info": {
             "authors": [
-              {
-                "name": "Catherine Numa",
-                "departament": "Med Species Programme Coordinator"
-              },
               {
                 "name": "Violeta Barrios",
                 "departament": "Med Species Programme Officer"
@@ -1135,7 +1220,12 @@
           "name": "Cover",
           "background": {
             "url": "assets/plants/image.jpg",
-            "class": "kenburns"
+            "class": "kenburns",
+            "credit": {
+              "footer": "Gymnospermium scipetarum",
+              "author": "@Green home (Montenegro)",
+              "ico": false
+            }
           },
           "title": "Why are plants so important?",
           "subtitle": "Mediterranean plants"
@@ -1150,27 +1240,26 @@
             {
               "type": "paragraph",
               "capitalize": true,
-              "value": "Plants - their roots, branches, leaves, flowers and fruits, provide <b>essential goods and services</b> for humans and animals. They make oxygen into the atmosphere and capture carbon. They are a source of food, medicine, teas and spice. They offer shade and shelter and various habitats for many species, either big or small. Plants design the landscape, confirming crucial sceneries for the well-being of people. However, despite their fundamental <b>role in society and a live land</b>, not to say in the economy, important but disregarded plant areas are <b>disappearing</b> for various reasons, mostly because of changes in the use of land towards development."
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "<b>Mediterranean habitats</b> including the most precious areas of plant diversity."
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "To protect this amazing biodiversity, a conservation tool is promoted, the identification of <b>Important Plant Areas</b> (IPAs). Through this tool internationally important sites for wild plants and fungi are identified at national level using standard criteria.  The designation of IPAs aims to ensure that they are adequately protected and managed to allow the survival of their plants and habitats. "
+              "value": "Plants - their roots, branches, leaves, flowers and fruits, provide <b>essential goods and services</b> for humans and animals. They make oxygen into the atmosphere and capture carbon. They are a source of food, medicine, teas and spice. They offer shade and shelter and various habitats for many species, either big or small. Plants design the landscape, confirming crucial sceneries for the well-being of people. However, despite their fundamental <b>role in society and a live land</b>, not to say in the economy, important but disregarded plant areas are <b>disappearing</b> for various reasons, mostly because of changes in the use of land towards development."
             },
             {
               "type": "title",
               "value": "Facts and Figure"
             },
-
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The Mediterranean is in fact a biodiversity hotspot mostly because of its plant diversity.  Around 10% of the world’s vascular plants (25,000) are found in the Mediterranean Basin on less than 2% of the Earth’s surface."
+              "value": "To protect this amazing biodiversity, a conservation tool is promoted, the <a target='blank' href='http://www.keybiodiversityareas.org/home'>Key Biodiversity Areas</a> (KBAs)."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "The Mediterranean is in fact a biodiversity hotspot mostly because of its plant diversity. Around 10% of the world’s vascular plants (25,000) are found in the Mediterranean Basin on less than 2% of the Earth’s surface."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "At the same time Mediterranean habitats have been modified and sometimes destroyed to such extent that the Mediterranean as a hole is considered a worldwide hotspot (Myers 2000)."
             },
             {
               "type": "paragraph",
@@ -1181,28 +1270,22 @@
               "type": "image",
               "url": "/assets/plants/piechart_IPA_traz.svg",
               "credit": {
-                "footer": "Breve nota de pie",
+                "footer": "To protect this amazing biodiversity, a conservation tool is promoted, the Key <a href='http://www.keybiodiversityareas.org/home' target='blank'>Biodiversity Areas (KBAs)</a>. Key Biodiversity Areas (KBAs) are sites that contribute significantly to the global persistence of biodiversity. Since 2016, a partnership of institutions has joined efforts to agree a methodology that enable countries to identify KBAs. Through this tool, internationally important sites for biodiversity are identified using standard criteria. The following map shows the subset of KBAs identified for wild plants.",
                 "author": "",
                 "ico": false
               }
             },
-
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "About the 1st Mediterranean Plant Conservation Week held in Ulcinj (Montenegro) in October 2016:"
-            },
             {
               "type": "quote",
-              "value": "This highly interactive meeting provides an excellent opportunity to discuss the essential role of local people in conserving the Mediterranean flora and to explore cooperation across the region on supporting cultural practices of conservation and community conserved areas",
-              "credit": "<b>Gary Martin</b>, director of the Global Diversity Foundation."
+              "value": "To such an extent does nature delight and abound in variety that among her trees there is not one plant to be found which is exactly like another; and not only among the plants, but among the boughs, the leaves and the fruits, you will not find one which is exactly similar to another",
+              "credit": "<b>Leonardo Da Vinci</b>."
             },
             {
               "type": "image",
-              "url": "/assets/plants/every_flowes_is_a_sould_blossoming.png",
+              "url": "/assets/plants/2_Objetives_Allium carmeli_Banan_AlSheikh_Palestine.JPG",
               "credit": {
-                "footer": "Breve nota de pie",
-                "author": "Author"
+                "footer": "<i>Allium carmeli</i>",
+                "author": "@Banan AlSheikh"
               }
             },
             {
@@ -1212,7 +1295,16 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The 2016 summer during one of the monitoring sessions at Prespa Lake IPA, volunteers of the Macedonian Ecological Society have found a rare carnivorous plant species <i>Aldrovanda vesiculosa</i> (waterwheel plant) that has not been sighted in this locality for over 20 years."
+              "value": "The 2016 summer during one of the monitoring sessions at Prespa Lake IPA, volunteers of the Macedonian Ecological Society have found a rare carnivorous plant species <i>Aldrovanda vesiculosa</i> (waterwheel plant) that has not been sighted in this locality for over 20 years.."
+            },
+            {
+              "type": "image",
+              "url": "/assets/plants/image3.png",
+              "credit": {
+                "footer": "Thanks to monitoring sessions of the IpaMED project at Prespa Lake IPA (Madedonia), volunteers of the Macedonian Ecological Society have found, in August 2016, a rare carnivorous plant species Aldrovanda vesiculosa (waterwheel plant) that has not been sighted in this locality for over 20 years.",
+                "author": "",
+                "ico": false
+              }
             },
             {
               "type": "title",
@@ -1222,15 +1314,6 @@
               "type": "paragraph",
               "capitalize": false,
               "value": "As part of IPA-Med project, Dr. Karim Omar, environmental researcher and IUCN Red List Global Assessor, with the support of his team, has investigated environmental threats to the natural resources in two Egyptian Important Plant Areas (IPAs) and has provided some recommendations to address these ongoing issues.   <a target='blank' href='https://www.iucn.org/sites/dev/files/import/downloads/ipaegyptconsersuggestions_actionplans_finalversion.pdf'> click here </a> to go to the report."
-            },
-            {
-              "type": "image",
-              "url": "/assets/plants/image3.png",
-              "credit": {
-                "footer": "Breve nota de pie",
-                "author": "",
-                "ico": false
-              }
             }
           ]
         },
@@ -1241,7 +1324,7 @@
           "info": [
             {
               "title": "Important Plant Areas identified to date in Mediterranean countries",
-              "credit": "",
+              "credit": "IUCN Med",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/ipas.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/ipas.zip",
@@ -1250,14 +1333,14 @@
                 {
                   "type": "paragraph",
                   "capitalize": false,
-                  "value": "Green dots indicate the 207 IPAs identified in current project. Some 40% of the IPAs identified coincide with <b>key biodiversity areas</b> (KBA) in the region; which means that these sites are also vital for other species such as mammals, birds, freshwater fish and amphibians. Since 2016, a great majority of IPAs are also recognised as KBA"
+                  "value": "Subset of Key Biodiversity Areas identified for plants in the south and east Mediterranean. Green dots indicate the KBAs identified for plants (IUCN, 2017 in press). Most of these sites are also vital for other species such as mammals, birds, freshwater fish and amphibians."
                 }
               ],
               "layer": {
-                "id": "ipasgeojson",
+                "id": "mediterranean-kba-plantsgeojson",
                 "hidden": false,
                 "subLayers": [
-                  "ipasgeojson"
+                  "mediterranean-hotspot-boundarygeojson"
                 ]
               }
             }
@@ -1272,15 +1355,30 @@
               "type": "paragraph",
               "value": "But what can be done to halt and reverse the decline of the Mediterranean’s plants on which so much of our own well-being depends?",
               "highlight": true
-
+            },
+            {
+              "type": "title",
+              "value": "KNOWLEDGE"
             },
             {
               "type": "paragraph",
-              "value": "Public authorities can also <b>use Important Plants Areas</b> (IPA) as a knowledge and decision-making tool to help them integrate biodiversity considerations in urban and rural planning."
+              "value": "<ul><li>Documentation of the status and distribution of selected plants species and habitats, including list of selected restricted range endemics and habitat distribution to be used as tool for conservation and management.</li></ul>"
+            },
+            {
+              "type": "title",
+              "value": "ACTION"
             },
             {
               "type": "paragraph",
-              "value": "For countries either part of the EU or seeking accession as in the case of the Balkans, the <b>EU Nature Directives</b> provide powerful protection measures for IPAs that are also (or are likely to become) Natura 2000 sites. Always as far as they have been designed as such, and managed to reach its objective."
+              "value": "<ul><li>Include plant conservation into management actions of existing protected areas.</li><li>Involve a variety of stakeholder groups including civil society organizations, research institutions and public administrations.</li><li>Promote use of micro-reserves of flora for very restricted endemic species</li></ul>"
+            },
+            {
+              "type": "title",
+              "value": "POLICY"
+            },
+            {
+              "type": "paragraph",
+              "value": "<ul><li>Implement national legislation for the agreement of trade of species (<a target='blank' href='https://www.cites.org/'>Cites Convention</a>)</li><li>Implement national legislation for the agreement of sharing benefits (<a target='blank' href='https://www.cbd.int/abs/'>The Nagoya Protocol on Access and Benefit-sharing</a>)</li><li>Public authorities can also use Key Biodiversity Areas (KBAs) as a knowledge and decision-making tool to help them integrate biodiversity considerations in urban and rural planning.</li>"
             },
             {
               "type": "paragraph",
@@ -1288,23 +1386,41 @@
             },
             {
               "type": "paragraph",
-              "value": "A database containing information about biodiversity, threats, habitat and species status in IPAs in the Mediterranean region is gathering the work of the network’s members."
+              "value": "You as a scientist or as a plant conservation professional could <b>join IUCN Mediterranean Plant Specialist Group (IUCN/SSC)</b>. If you are interested in becoming a member of on the IUCN Mediterranean Plant Specialist Group (IUCN/SSC), please contact Bertrand Montmollin"
+            },
+            {
+              "type": "learn-more",
+              "list": [
+                {
+                  "title": "Mediterranean Plant Network",
+                  "href": "http://www.medplantsnetwork.net/",
+                  "description": "Joint initiative between IUCN Med and IUCN/SSC Medicinal Plant Specialist Group"
+                },
+                {
+                  "title": "Conserving wild plants in the South and East Mediterranean.",
+                  "href": "https://portals.iucn.org/library/sites/library/files/documents/2011-014.pdf"
+                },
+                {
+                  "title": "Trees and Shrubs of North Africa."
+                },
+                {
+                  "title": "Mediterranean Plant Conservation Week.",
+                  "href": "http://www.medplantsweek.uicnmed.org/public_html/medplantsweek/en/home/",
+                  "description": "Biannual event."
+                },
+                {
+                  "title": "Important Plant Areas of the south east Mediterranean region: priority sites for conservation",
+                  "description": "(Radford et al, IUCN 2011). Available in <a target='blank' href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_EN.pdf'>English version</a>, <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_FR.pdf' target='blank'>French</a> and <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_AR.pdf' target='blank'>Arabic</a>."
+                },
+                {
+                  "title": "The Top 50 Mediterranean Island Plants UPDATE 2017",
+                  "href": "http://top50.iucn-mpsg.org/"
+                }
+              ]
             },
             {
               "type": "paragraph",
-              "value": "Furthermore, <b>traditional practices</b> related to the harvest and management of food plants and fodder plants are a type of human intervention with a positive impact on preserving local biodiversity."
-            },
-            {
-              "type": "paragraph",
-              "value": "You as a scientist or as a plant conservation professional could <b>join IUCN Mediterranean Plant Specialist Group (IUCN/SSC)</b>. If you are interested in becoming a member of on the IUCN Mediterranean Plant Specialist Group (IUCN/SSC), please contact <a href='mailto:bertrand@montmollin.me' target='blank'>Bertrand Montmollin</a>"
-            },
-            {
-              "type": "title",
-              "value": "Do you want to learn more?"
-            },
-            {
-              "type": "paragraph",
-              "value": "<ul><li><a href='http://www.medplantsnetwork.net/' target='blank'>Mediterranean Plant Network</a></li><li><b>Important Plant Areas of the south east Mediterranean region: priority sites for conservation</b>. To download this publication, please<a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_EN.pdf' target='blank'> click here</a> Available in <a target='blank' href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_EN.pdf'>English</a>, <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_FR.pdf' target='blank'>French</a> and <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_AR.pdf' target='blank'>Arabic</a>.</li><li><a href='http://top50.iucn-mpsg.org/' target='blank'>The Top 50 Mediterranean Island Plants UPDATE 2017</a></li></ul>"
+              "value": "<h3 class='donate'><a href='https://www.iucn.org/donate' target='_blank'>DONATE</a></h3>"
             }
           ]
         },
@@ -1325,7 +1441,7 @@
                 "departament": "Med Species Programme Officer"
               }
             ],
-            "author_link": "<a href=\"mailto:teresa.gil@iucn.org\">IUCN Mediterranean Ecosystems Programme </a>",
+            "author_link": "<a href=\"mailto:marcos.valderrabano@iucn.org\">IUCN Mediterranean Ecosystems Programme </a>",
             "address": {
               "center_name": "IUCN Centre for Mediterranean Cooperation",
               "info": "C/ Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tél +34 352 02 84 30<br>Fax +34 352 02 84 30<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"

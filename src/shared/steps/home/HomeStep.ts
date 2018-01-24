@@ -167,6 +167,7 @@ export class HomeStepComponent extends BaseStepComponent {
     }
 
     goToStory(story: string) {
+        this.windowService.setBodyBgUrl(this.stories['stories'][story].steps.cover.background.url);
         this.scaling = story;
         this.scalingInProgress = true;
         this.goTo(story, 'cover');
@@ -177,19 +178,13 @@ export class HomeStepComponent extends BaseStepComponent {
     }
 
     goTo(story: string, step: string) {
-        setTimeout(() => {
-            this.unlockBackground();
-            this.clearBackgroundBlur();
-            this.clearBackgroundGradient();
-            this.clearBackgroundFullScreen();
-            this.windowService.setBodyBgUrl(this.getStoryBackgroundSrc(story));
-            this.windowService.setCurrentStory(story);
-
-            setTimeout(() => {
-                this.windowService.scrollToStep(step);
-                this.scalingInProgress = false;
-            }, 25);
-        }, 1000);
+        this.unlockBackground();
+        this.clearBackgroundBlur();
+        this.clearBackgroundGradient();
+        this.clearBackgroundFullScreen();
+        this.windowService.setBodyBgUrl(this.getStoryBackgroundSrc(story));
+        this.windowService.setCurrentStory(story);
+        this.windowService.scrollToStep(step);
     }
 
     showDescriptionImage(): boolean {

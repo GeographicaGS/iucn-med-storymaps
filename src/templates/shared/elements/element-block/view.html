@@ -5,5 +5,6 @@
         <el-quote *ngSwitchCase="'quote'" [item]="element"></el-quote>
         <h3 *ngSwitchCase="'title'" [innerHTML]="element.value" class="title"></h3>
         <el-table *ngSwitchCase="'table'" [item]="element" class="table"></el-table>
+        <el-learn-more *ngSwitchCase="'learn-more'" [item]="element"></el-learn-more>
     </div>
 </div>

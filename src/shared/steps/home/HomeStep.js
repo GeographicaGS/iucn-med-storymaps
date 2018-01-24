@@ -149,6 +149,7 @@ var HomeStepComponent = (function (_super) {
         return this.stories['stories'][story].steps.cover.background.url;
     };
     HomeStepComponent.prototype.goToStory = function (story) {
+        this.windowService.setBodyBgUrl(this.stories['stories'][story].steps.cover.background.url);
         this.scaling = story;
         this.scalingInProgress = true;
         this.goTo(story, 'cover');
@@ -157,19 +158,13 @@ var HomeStepComponent = (function (_super) {
         this.goTo(story, 'map');
     };
     HomeStepComponent.prototype.goTo = function (story, step) {
-        var _this = this;
-        setTimeout(function () {
-            _this.unlockBackground();
-            _this.clearBackgroundBlur();
-            _this.clearBackgroundGradient();
-            _this.clearBackgroundFullScreen();
-            _this.windowService.setBodyBgUrl(_this.getStoryBackgroundSrc(story));
-            _this.windowService.setCurrentStory(story);
-            setTimeout(function () {
-                _this.windowService.scrollToStep(step);
-                _this.scalingInProgress = false;
-            }, 25);
-        }, 1000);
+        this.unlockBackground();
+        this.clearBackgroundBlur();
+        this.clearBackgroundGradient();
+        this.clearBackgroundFullScreen();
+        this.windowService.setBodyBgUrl(this.getStoryBackgroundSrc(story));
+        this.windowService.setCurrentStory(story);
+        this.windowService.scrollToStep(step);
     };
     HomeStepComponent.prototype.showDescriptionImage = function () {
         return this.getWindowWidth() > 800 && this.getWindowHeight() > 750;

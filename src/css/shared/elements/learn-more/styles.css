@@ -1,0 +1,25 @@
+el-learn-more {
+  display: block;
+}
+el-learn-more ul li {
+  height: 164px;
+  display: flex;
+}
+el-learn-more ul li:before {
+  display: none;
+}
+el-learn-more ul li .img {
+  flex: 0 0 94px;
+}
+el-learn-more ul li .info {
+  flex: 1 0 auto;
+}
+.act-sheet-antelopes {
+  height: 0.51%;
+  width: 47.94%;
+  color: #52A6E7;
+  font-family: "Fira Sans";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}

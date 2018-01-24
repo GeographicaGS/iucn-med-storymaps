@@ -31,6 +31,7 @@ var Table_1 = require("../shared/elements/table/Table");
 var StoryService_1 = require('./../services/StoryService');
 var MapService_1 = require("../services/MapService");
 var WindowService_1 = require("../services/WindowService");
+var LearnMore_1 = require("../shared/elements/learn-more/LearnMore");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -57,6 +58,7 @@ var AppModule = (function () {
                 ConclusionStep_1.ConclusionStepComponent,
                 SkipStep_1.SkipStepComponent,
                 Menu_1.MenuComponent,
+                LearnMore_1.LearnMoreComponent,
                 MainComponent_1.MainComponent
             ],
             providers: [

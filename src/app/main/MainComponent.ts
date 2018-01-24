@@ -28,6 +28,7 @@ export class MainComponent {
                 @Inject(StoryService) private storyService: StoryService,
                 protected windowService: WindowService) {
 
+
         this.backgroundSrc = 'url(' + this.windowService.getBodyBgUrl() + ')';
         this.windowService.getBodyBgUrlObservable().subscribe((src) => {
             this.backgroundSrc = src;
