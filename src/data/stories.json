@@ -1220,7 +1220,12 @@
           "name": "Cover",
           "background": {
             "url": "assets/plants/image.jpg",
-            "class": "kenburns"
+            "class": "kenburns",
+            "credit": {
+              "footer": "Gymnospermium scipetarum",
+              "author": "@Green home (Montenegro)",
+              "ico": false
+            }
           },
           "title": "Why are plants so important?",
           "subtitle": "Mediterranean plants"
@@ -1235,17 +1240,7 @@
             {
               "type": "paragraph",
               "capitalize": true,
-              "value": "Plants - their roots, branches, leaves, flowers and fruits, provide <b>essential goods and services</b> for humans and animals. They make oxygen into the atmosphere and capture carbon. They are a source of food, medicine, teas and spice. They offer shade and shelter and various habitats for many species, either big or small. Plants design the landscape, confirming crucial sceneries for the well-being of people. However, despite their fundamental <b>role in society and a live land</b>, not to say in the economy, important but disregarded plant areas are <b>disappearing</b> for various reasons, mostly because of changes in the use of land towards development."
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "<b>Mediterranean habitats</b> including the most precious areas of plant diversity."
-            },
-            {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "To protect this amazing biodiversity, a conservation tool is promoted, the identification of <b>Important Plant Areas</b> (IPAs). Through this tool internationally important sites for wild plants and fungi are identified at national level using standard criteria.  The designation of IPAs aims to ensure that they are adequately protected and managed to allow the survival of their plants and habitats. "
+              "value": "Plants - their roots, branches, leaves, flowers and fruits, provide <b>essential goods and services</b> for humans and animals. They make oxygen into the atmosphere and capture carbon. They are a source of food, medicine, teas and spice. They offer shade and shelter and various habitats for many species, either big or small. Plants design the landscape, confirming crucial sceneries for the well-being of people. However, despite their fundamental <b>role in society and a live land</b>, not to say in the economy, important but disregarded plant areas are <b>disappearing</b> for various reasons, mostly because of changes in the use of land towards development."
             },
             {
               "type": "title",
@@ -1254,7 +1249,17 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The Mediterranean is in fact a biodiversity hotspot mostly because of its plant diversity.  Around 10% of the world’s vascular plants (25,000) are found in the Mediterranean Basin on less than 2% of the Earth’s surface."
+              "value": "To protect this amazing biodiversity, a conservation tool is promoted, the <a target='blank' href='http://www.keybiodiversityareas.org/home'>Key Biodiversity Areas</a> (KBAs)."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "The Mediterranean is in fact a biodiversity hotspot mostly because of its plant diversity. Around 10% of the world’s vascular plants (25,000) are found in the Mediterranean Basin on less than 2% of the Earth’s surface."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "At the same time Mediterranean habitats have been modified and sometimes destroyed to such extent that the Mediterranean as a hole is considered a worldwide hotspot (Myers 2000)."
             },
             {
               "type": "paragraph",
@@ -1265,27 +1270,22 @@
               "type": "image",
               "url": "/assets/plants/piechart_IPA_traz.svg",
               "credit": {
-                "footer": "Breve nota de pie",
+                "footer": "To protect this amazing biodiversity, a conservation tool is promoted, the Key <a href='http://www.keybiodiversityareas.org/home' target='blank'>Biodiversity Areas (KBAs)</a>. Key Biodiversity Areas (KBAs) are sites that contribute significantly to the global persistence of biodiversity. Since 2016, a partnership of institutions has joined efforts to agree a methodology that enable countries to identify KBAs. Through this tool, internationally important sites for biodiversity are identified using standard criteria. The following map shows the subset of KBAs identified for wild plants.",
                 "author": "",
                 "ico": false
               }
             },
             {
-              "type": "paragraph",
-              "capitalize": false,
-              "value": "About the 1st Mediterranean Plant Conservation Week held in Ulcinj (Montenegro) in October 2016:"
-            },
-            {
               "type": "quote",
-              "value": "This highly interactive meeting provides an excellent opportunity to discuss the essential role of local people in conserving the Mediterranean flora and to explore cooperation across the region on supporting cultural practices of conservation and community conserved areas",
-              "credit": "<b>Gary Martin</b>, director of the Global Diversity Foundation."
+              "value": "To such an extent does nature delight and abound in variety that among her trees there is not one plant to be found which is exactly like another; and not only among the plants, but among the boughs, the leaves and the fruits, you will not find one which is exactly similar to another",
+              "credit": "<b>Leonardo Da Vinci</b>."
             },
             {
               "type": "image",
-              "url": "/assets/plants/every_flowes_is_a_sould_blossoming.png",
+              "url": "/assets/plants/2_Objetives_Allium carmeli_Banan_AlSheikh_Palestine.JPG",
               "credit": {
-                "footer": "Breve nota de pie",
-                "author": "Author"
+                "footer": "<i>Allium carmeli</i>",
+                "author": "@Banan AlSheikh"
               }
             },
             {
@@ -1295,7 +1295,16 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The 2016 summer during one of the monitoring sessions at Prespa Lake IPA, volunteers of the Macedonian Ecological Society have found a rare carnivorous plant species <i>Aldrovanda vesiculosa</i> (waterwheel plant) that has not been sighted in this locality for over 20 years."
+              "value": "The 2016 summer during one of the monitoring sessions at Prespa Lake IPA, volunteers of the Macedonian Ecological Society have found a rare carnivorous plant species <i>Aldrovanda vesiculosa</i> (waterwheel plant) that has not been sighted in this locality for over 20 years.."
+            },
+            {
+              "type": "image",
+              "url": "/assets/plants/image3.png",
+              "credit": {
+                "footer": "Thanks to monitoring sessions of the IpaMED project at Prespa Lake IPA (Madedonia), volunteers of the Macedonian Ecological Society have found, in August 2016, a rare carnivorous plant species Aldrovanda vesiculosa (waterwheel plant) that has not been sighted in this locality for over 20 years.",
+                "author": "",
+                "ico": false
+              }
             },
             {
               "type": "title",
@@ -1305,15 +1314,6 @@
               "type": "paragraph",
               "capitalize": false,
               "value": "As part of IPA-Med project, Dr. Karim Omar, environmental researcher and IUCN Red List Global Assessor, with the support of his team, has investigated environmental threats to the natural resources in two Egyptian Important Plant Areas (IPAs) and has provided some recommendations to address these ongoing issues.   <a target='blank' href='https://www.iucn.org/sites/dev/files/import/downloads/ipaegyptconsersuggestions_actionplans_finalversion.pdf'> click here </a> to go to the report."
-            },
-            {
-              "type": "image",
-              "url": "/assets/plants/image3.png",
-              "credit": {
-                "footer": "Breve nota de pie",
-                "author": "",
-                "ico": false
-              }
             }
           ]
         },
@@ -1333,14 +1333,14 @@
                 {
                   "type": "paragraph",
                   "capitalize": false,
-                  "value": "Green dots indicate the 207 IPAs identified in current project. Some 40% of the IPAs identified coincide with <b>key biodiversity areas</b> (KBA) in the region; which means that these sites are also vital for other species such as mammals, birds, freshwater fish and amphibians. Since 2016, a great majority of IPAs are also recognised as KBA"
+                  "value": "Subset of Key Biodiversity Areas identified for plants in the south and east Mediterranean. Green dots indicate the KBAs identified for plants (IUCN, 2017 in press). Most of these sites are also vital for other species such as mammals, birds, freshwater fish and amphibians."
                 }
               ],
               "layer": {
-                "id": "ipasgeojson",
+                "id": "mediterranean-kba-plantsgeojson",
                 "hidden": false,
                 "subLayers": [
-                  "ipasgeojson"
+                  "mediterranean-hotspot-boundarygeojson"
                 ]
               }
             }
@@ -1357,12 +1357,28 @@
               "highlight": true
             },
             {
-              "type": "paragraph",
-              "value": "Public authorities can also <b>use Important Plants Areas</b> (IPA) as a knowledge and decision-making tool to help them integrate biodiversity considerations in urban and rural planning."
+              "type": "title",
+              "value": "KNOWLEDGE"
             },
             {
               "type": "paragraph",
-              "value": "For countries either part of the EU or seeking accession as in the case of the Balkans, the <b>EU Nature Directives</b> provide powerful protection measures for IPAs that are also (or are likely to become) Natura 2000 sites. Always as far as they have been designed as such, and managed to reach its objective."
+              "value": "<ul><li>Documentation of the status and distribution of selected plants species and habitats, including list of selected restricted range endemics and habitat distribution to be used as tool for conservation and management.</li></ul>"
+            },
+            {
+              "type": "title",
+              "value": "ACTION"
+            },
+            {
+              "type": "paragraph",
+              "value": "<ul><li>Include plant conservation into management actions of existing protected areas.</li><li>Involve a variety of stakeholder groups including civil society organizations, research institutions and public administrations.</li><li>Promote use of micro-reserves of flora for very restricted endemic species</li></ul>"
+            },
+            {
+              "type": "title",
+              "value": "POLICY"
+            },
+            {
+              "type": "paragraph",
+              "value": "<ul><li>Implement national legislation for the agreement of trade of species (<a target='blank' href='https://www.cites.org/'>Cites Convention</a>)</li><li>Implement national legislation for the agreement of sharing benefits (<a target='blank' href='https://www.cbd.int/abs/'>The Nagoya Protocol on Access and Benefit-sharing</a>)</li><li>Public authorities can also use Key Biodiversity Areas (KBAs) as a knowledge and decision-making tool to help them integrate biodiversity considerations in urban and rural planning.</li>"
             },
             {
               "type": "paragraph",
@@ -1370,26 +1386,31 @@
             },
             {
               "type": "paragraph",
-              "value": "A database containing information about biodiversity, threats, habitat and species status in IPAs in the Mediterranean region is gathering the work of the network’s members."
-            },
-            {
-              "type": "paragraph",
-              "value": "Furthermore, <b>traditional practices</b> related to the harvest and management of food plants and fodder plants are a type of human intervention with a positive impact on preserving local biodiversity."
-            },
-            {
-              "type": "paragraph",
-              "value": "You as a scientist or as a plant conservation professional could <b>join IUCN Mediterranean Plant Specialist Group (IUCN/SSC)</b>. If you are interested in becoming a member of on the IUCN Mediterranean Plant Specialist Group (IUCN/SSC), please contact <a href='mailto:bertrand@montmollin.me' target='blank'>Bertrand Montmollin</a>"
+              "value": "You as a scientist or as a plant conservation professional could <b>join IUCN Mediterranean Plant Specialist Group (IUCN/SSC)</b>. If you are interested in becoming a member of on the IUCN Mediterranean Plant Specialist Group (IUCN/SSC), please contact Bertrand Montmollin"
             },
             {
               "type": "learn-more",
               "list": [
                 {
                   "title": "Mediterranean Plant Network",
-                  "href": "http://www.medplantsnetwork.net/"
+                  "href": "http://www.medplantsnetwork.net/",
+                  "description": "Joint initiative between IUCN Med and IUCN/SSC Medicinal Plant Specialist Group"
+                },
+                {
+                  "title": "Conserving wild plants in the South and East Mediterranean.",
+                  "href": "https://portals.iucn.org/library/sites/library/files/documents/2011-014.pdf"
+                },
+                {
+                  "title": "Trees and Shrubs of North Africa."
+                },
+                {
+                  "title": "Mediterranean Plant Conservation Week.",
+                  "href": "http://www.medplantsweek.uicnmed.org/public_html/medplantsweek/en/home/",
+                  "description": "Biannual event."
                 },
                 {
                   "title": "Important Plant Areas of the south east Mediterranean region: priority sites for conservation",
-                  "description": "<a target='blank' href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_EN.pdf'>English version</a>, <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_FR.pdf' target='blank'>French</a> and <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_AR.pdf' target='blank'>Arabic</a>."
+                  "description": "(Radford et al, IUCN 2011). Available in <a target='blank' href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_EN.pdf'>English version</a>, <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_FR.pdf' target='blank'>French</a> and <a href='http://www.medplantsnetwork.net/wp-content/uploads/2017/03/Radford2011_AR.pdf' target='blank'>Arabic</a>."
                 },
                 {
                   "title": "The Top 50 Mediterranean Island Plants UPDATE 2017",
@@ -1420,7 +1441,7 @@
                 "departament": "Med Species Programme Officer"
               }
             ],
-            "author_link": "<a href=\"mailto:teresa.gil@iucn.org\">IUCN Mediterranean Ecosystems Programme </a>",
+            "author_link": "<a href=\"mailto:marcos.valderrabano@iucn.org\">IUCN Mediterranean Ecosystems Programme </a>",
             "address": {
               "center_name": "IUCN Centre for Mediterranean Cooperation",
               "info": "C/ Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tél +34 352 02 84 30<br>Fax +34 352 02 84 30<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
