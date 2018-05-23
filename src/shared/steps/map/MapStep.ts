@@ -23,7 +23,7 @@ export class MapStepComponent extends BaseStepComponent {
         super(elem, document, windowService);
         this.mapService.changes.subscribe(() => {
             this.initMap();
-        })
+        });
     }
 
     onResize(event: any) {

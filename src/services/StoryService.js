@@ -11,11 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var core_1 = require('@angular/core');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
-require('rxjs/add/operator/map');
+require("rxjs/add/operator/map");
 var rxjs_1 = require("rxjs");
-var StoryService = (function () {
+var StoryService = /** @class */ (function () {
     function StoryService(_http) {
         var _this = this;
         this._http = _http;
@@ -36,8 +37,8 @@ var StoryService = (function () {
     };
     StoryService = __decorate([
         core_1.Injectable(),
-        __param(0, core_1.Inject(http_1.Http)), 
-        __metadata('design:paramtypes', [http_1.Http])
+        __param(0, core_1.Inject(http_1.Http)),
+        __metadata("design:paramtypes", [http_1.Http])
     ], StoryService);
     return StoryService;
 }());

@@ -1,206 +1,214 @@
-import {Component, Input} from "@angular/core";
-import {BaseStepComponent} from "../base/BaseStep";
+import { AfterViewInit, Component, ElementRef, Inject, Input } from '@angular/core';
+import { BaseStepComponent } from '../base/BaseStep';
+import { WindowService } from '../../../services/WindowService';
+import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
-    selector: 'home',
-    templateUrl: '/templates/shared/steps/home/view.html',
+  selector: 'home',
+  templateUrl: '/templates/shared/steps/home/view.html',
 })
-export class HomeStepComponent extends BaseStepComponent {
-    @Input() stories: any = {};
+export class HomeStepComponent extends BaseStepComponent implements AfterViewInit {
+  @Input() stories: any = {};
 
-    scaling: string = '';
-    scalingInProgress: boolean = false;
-    search: string = '';
+  scaling: string = '';
+  scalingInProgress: boolean = false;
+  search: string = '';
 
-    ngAfterViewInit() {
-        // setting a timeout so that it works on safari .... 
-        setTimeout(() => {
-            this.checkBackground();
-        }, 100);
+  constructor(@Inject(ElementRef) protected element: ElementRef,
+              @Inject(DOCUMENT) protected document: any,
+              protected windowService: WindowService) {
+    super(element, document, windowService);
+  }
+
+  ngAfterViewInit() {
+    // setting a timeout so that it works on safari ....
+    setTimeout(() => {
+      this.checkBackground();
+    }, 100);
+  }
+
+  checkBackground() {
+    let _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
+    let _url = this.step.background != undefined && this.step.background.url != undefined ? this.step.background.url : '';
+    this.windowService.setBodyBgClass(_class);
+    this.windowService.setBodyBgUrl('url( ' + _url + ')');
+    if (!this.windowService.homeViewPreview && !this.windowService.aboutView) {
+      this.addBackgroundBlur();
     }
+  }
 
-    checkBackground() {
-        let _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
-        let _url = this.step.background != undefined && this.step.background.url != undefined ? this.step.background.url : '';
-        this.windowService.setBodyBgClass(_class);
-        this.windowService.setBodyBgUrl('url( ' + _url + ')');
-        if (!this.windowService.homeViewPreview && !this.windowService.aboutView) {
-            this.addBackgroundBlur();
-        }
-    }
+  addBackgroundBlur() {
+    let _class = this.windowService.getBodyClass();
+    this.windowService.setBodyBgClass(_class + ' blur');
+  }
 
-    addBackgroundBlur() {
-        let _class = this.windowService.getBodyClass();
-        this.windowService.setBodyBgClass(_class + ' blur');
-    }
+  clearBackgroundBlur() {
+    let _class = this.windowService.getBodyClass();
+    this.windowService.setBodyBgClass(_class.replace('blur', ''));
+  }
 
-    clearBackgroundBlur() {
-        let _class = this.windowService.getBodyClass();
-        this.windowService.setBodyBgClass(_class.replace('blur', ''));
-    }
+  clearBackgroundFullScreen() {
+    let _class = this.windowService.getBodyClass();
+    this.windowService.setBodyBgClass(_class.replace('full-screen', ''));
+  }
 
-    clearBackgroundFullScreen() {
-        let _class = this.windowService.getBodyClass();
-        this.windowService.setBodyBgClass(_class.replace('full-screen', ''));
-    }
+  clearBackgroundGradient() {
+    let _class = this.windowService.getBodyClass();
+    this.windowService.setBodyBgClass(_class.replace('gradient', ''));
+  }
 
-    clearBackgroundGradient() {
-        let _class = this.windowService.getBodyClass();
-        this.windowService.setBodyBgClass(_class.replace('gradient', ''));
-    }
+  unlockBackground() {
+    let _class = this.windowService.getBodyClass();
+    this.windowService.setBodyBgClass(_class.replace('locked', ''));
+  }
 
-    unlockBackground() {
-        let _class = this.windowService.getBodyClass();
-        this.windowService.setBodyBgClass(_class.replace('locked', ''));
-    }
+  getPreviewTitle(): string {
+    return this.stories.home.preview.title
+  }
 
-    getPreviewTitle(): string {
-        return this.stories.home.preview.title
-    }
+  hasPreviewTitle(): boolean {
+    return this.stories.home.preview.title != '';
+  }
 
-    hasPreviewTitle(): boolean {
-        return this.stories.home.preview.title != '';
-    }
+  getListTitle(): string {
+    return this.stories.home.list.title
+  }
 
-    getListTitle(): string {
-        return this.stories.home.list.title
-    }
+  showStoryList() {
+    this.windowService.homeViewPreview = false;
+    this.windowService.goHome();
+  }
 
-    showStoryList() {
-        this.windowService.homeViewPreview = false;
-        this.windowService.goHome();
-    }
+  showMoreInfo() {
+    this.windowService.clearBodyUrl();
+    this.unlockBackground();
+    this.clearBackgroundBlur();
+    this.clearBackgroundGradient();
+    this.windowService.aboutView = true;
+  }
 
-    showMoreInfo() {
-        this.windowService.clearBodyUrl();
-        this.unlockBackground();
-        this.clearBackgroundBlur();
-        this.clearBackgroundGradient();
-        this.windowService.aboutView = true;
-    }
+  isPreview(): boolean {
+    return this.windowService.homeViewPreview;
+  }
 
-    isPreview(): boolean {
-        return this.windowService.homeViewPreview;
-    }
+  isScaling(story: string): boolean {
+    return this.scaling == story;
+  }
 
-    isScaling(story: string): boolean {
-        return this.scaling == story;
-    }
+  hasSomeScaling(): boolean {
+    return this.scaling != '';
+  }
 
-    hasSomeScaling(): boolean {
-        return this.scaling != '';
-    }
+  getPreviewDescription(): string {
+    return this.stories.home.preview.description
+  }
 
-    getPreviewDescription(): string {
-        return this.stories.home.preview.description
-    }
+  getPreviewSubtitle(): string {
+    return this.stories.home.preview.subtitle
+  }
 
-    getPreviewSubtitle(): string {
-        return this.stories.home.preview.subtitle
-    }
+  getPreviewSubtitle2(): string {
+    return this.stories.home.preview.subtitle2
+  }
 
-    getPreviewSubtitle2(): string {
-        return this.stories.home.preview.subtitle2
-    }
+  getHomeAfterButton(): string {
+    return this.stories.home.afterButtons
+  }
 
-    getHomeAfterButton(): string {
-        return this.stories.home.afterButtons
-    }
+  getCenterContactInfo(): string {
+    return this.stories.home.footer.address.info;
+  }
 
-    getCenterContactInfo(): string {
-        return this.stories.home.footer.address.info;
-    }
+  hasAddress(): boolean {
+    return this.stories.home.footer.address !== undefined;
+  }
 
-    hasAddress(): boolean {
-        return this.stories.home.footer.address !== undefined;
-    }
+  getCenterName(): string {
+    return this.stories.home.footer.address.center_name;
+  }
 
-    getCenterName(): string {
-        return this.stories.home.footer.address.center_name;
-    }
+  getPreviewImageSrc(): string {
+    return this.stories.home.preview.img
+  }
 
-    getPreviewImageSrc(): string {
-        return this.stories.home.preview.img
-    }
+  homeHasColumns() {
+    return this.stories.home.columns instanceof Array;
+  }
 
-    homeHasColumns() {
-        return this.stories.home.columns instanceof Array;
-    }
+  hasCredit(): boolean {
+    return this.stories.home.footer.credit != undefined
+  }
 
-    hasCredit(): boolean {
-        return this.stories.home.footer.credit != undefined
-    }
+  showCredits(): boolean {
+    return this.hasCredit() && this.isPreview();
+  }
 
-    showCredits(): boolean {
-        return this.hasCredit() && this.isPreview();
-    }
+  hasDescription(): boolean {
+    return this.hasCredit() && this.stories.home.footer.credit.description != undefined
+  }
 
-    hasDescription(): boolean {
-        return this.hasCredit() && this.stories.home.footer.credit.description != undefined
-    }
+  showDescription(): boolean {
+    return this.hasDescription() && this.isPreview();
+  }
 
-    showDescription(): boolean {
-        return this.hasDescription() && this.isPreview();
-    }
+  showPreview(): void {
+    this.windowService.homeViewPreview = true;
+    this.clearBackgroundBlur();
+  }
 
-    showPreview(): void {
-        this.windowService.homeViewPreview = true;
-        this.clearBackgroundBlur();
+  getStoriesKeys(): string[] {
+    let keys = Object.keys(this.stories['stories']);
+    if (this.search !== '') {
+      keys = keys.filter((name: string) => {
+        return this.getStoryTitle(name).indexOf(this.search) > -1;
+      })
     }
+    return keys;
+  }
 
-    getStoriesKeys(): string[] {
-        let keys = Object.keys(this.stories['stories']);
-        if (this.search !== '') {
-            keys = keys.filter((name: string) => {
-                return this.getStoryTitle(name).indexOf(this.search) > -1;
-            })
-        }
-        return keys;
-    }
+  getStoryTitle(story: string): string {
+    return this.stories['stories'][story].steps.cover.title;
+  }
 
-    getStoryTitle(story: string): string {
-        return this.stories['stories'][story].steps.cover.title;
-    }
+  getStoryBackgroundSrc(story: string) {
+    return this.stories['stories'][story].steps.cover.background.url;
+  }
 
-    getStoryBackgroundSrc(story: string) {
-        return this.stories['stories'][story].steps.cover.background.url;
-    }
+  goToStory(story: string) {
+    this.windowService.setBodyBgUrl(this.stories['stories'][story].steps.cover.background.url);
+    this.scaling = story;
+    this.scalingInProgress = true;
+    this.goTo(story, 'cover');
+  }
 
-    goToStory(story: string) {
-        this.windowService.setBodyBgUrl(this.stories['stories'][story].steps.cover.background.url);
-        this.scaling = story;
-        this.scalingInProgress = true;
-        this.goTo(story, 'cover');
-    }
+  goToMap(story: string) {
+    this.goTo(story, 'map');
+  }
 
-    goToMap(story: string) {
-        this.goTo(story, 'map');
-    }
+  goTo(story: string, step: string) {
+    this.unlockBackground();
+    this.clearBackgroundBlur();
+    this.clearBackgroundGradient();
+    this.clearBackgroundFullScreen();
+    this.windowService.setBodyBgUrl(this.getStoryBackgroundSrc(story));
+    this.windowService.setCurrentStory(story);
+    this.windowService.scrollToStep(step);
+  }
 
-    goTo(story: string, step: string) {
-        this.unlockBackground();
-        this.clearBackgroundBlur();
-        this.clearBackgroundGradient();
-        this.clearBackgroundFullScreen();
-        this.windowService.setBodyBgUrl(this.getStoryBackgroundSrc(story));
-        this.windowService.setCurrentStory(story);
-        this.windowService.scrollToStep(step);
-    }
+  showDescriptionImage(): boolean {
+    return this.getWindowWidth() > 800 && this.getWindowHeight() > 750;
+  }
 
-    showDescriptionImage(): boolean {
-        return this.getWindowWidth() > 800 && this.getWindowHeight() > 750;
-    }
+  hasAuthors(story: string) {
+    return this.stories['stories'][story].steps.skip.contact_info.authors instanceof Array;
+  }
 
-    hasAuthors(story: string) {
-        return this.stories['stories'][story].steps.skip.contact_info.authors instanceof Array;
+  getAuthors(story: string) {
+    if (this.stories['stories'][story].steps.skip.contact_info.authors instanceof Array) {
+      return this.stories['stories'][story].steps.skip.contact_info.authors.map((item: any) => {
+        return item.name;
+      })
     }
-
-    getAuthors(story: string) {
-        if (this.stories['stories'][story].steps.skip.contact_info.authors instanceof Array) {
-            return this.stories['stories'][story].steps.skip.contact_info.authors.map((item: any) => {
-                return item.name;
-            })
-        }
-        return [];
-    }
+    return [];
+  }
 }

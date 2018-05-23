@@ -1,6 +1,6 @@
-import {Component, ElementRef, Inject, HostBinding, HostListener, Input} from "@angular/core";
-import {WindowService} from "../../services/WindowService";
-import {StoryService} from "../../services/StoryService";
+import {Component, ElementRef, Inject, HostBinding, HostListener, Input} from '@angular/core';
+import {WindowService} from '../../services/WindowService';
+import {StoryService} from '../../services/StoryService';
 
 @Component({
     selector: 'body',
@@ -11,11 +11,11 @@ export class MainComponent {
     stories: any = {};
     currentStory: string = '';
 
-    @HostBinding("style.background-image")
+    @HostBinding('style.background-image')
     @Input()
     backgroundSrc: string = '';
 
-    @HostBinding("class")
+    @HostBinding('class')
     @Input()
     bodyClass: string = 'full-screen';
 
@@ -27,8 +27,6 @@ export class MainComponent {
     constructor(@Inject(ElementRef) protected element: ElementRef,
                 @Inject(StoryService) private storyService: StoryService,
                 protected windowService: WindowService) {
-
-
         this.backgroundSrc = 'url(' + this.windowService.getBodyBgUrl() + ')';
         this.windowService.getBodyBgUrlObservable().subscribe((src) => {
             this.backgroundSrc = src;

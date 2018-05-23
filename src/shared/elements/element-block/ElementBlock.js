@@ -8,21 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var ElementBlockComponent = (function () {
+var ElementBlockComponent = /** @class */ (function () {
     function ElementBlockComponent() {
         this.elements = {};
     }
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], ElementBlockComponent.prototype, "elements", void 0);
     ElementBlockComponent = __decorate([
         core_1.Component({
             selector: 'element-block',
             templateUrl: '/templates/shared/elements/element-block/view.html',
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], ElementBlockComponent);
     return ElementBlockComponent;
 }());

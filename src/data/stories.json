@@ -116,7 +116,7 @@
             "class": "kenburns"
           },
           "title": "Do you know where the most beautiful Mediterranean diving secrets are?",
-          "subtitle": "Mediterranean corals"
+          "subtitle": "Mediterranean coralligenous environments"
         },
         "intro": {
           "background": {
@@ -128,7 +128,27 @@
             {
               "type": "paragraph",
               "capitalize": true,
-              "value": "Coralligenous habitats are often called <b>'coral gardens or forests'</b>. These colourful landscapes can be found growing on a variety of locations and at depths ranging from <b>20 to 200 meters.</b>. They are however known to be <b>decreasing in quality and quantity</b>, despite not counting with exhaustive information. They are <b>threatened</b> by pollution and various fishing techniques and gears that get entangled in the corals. The designation of <b>Marine Protected Areas<b/> and specific measures like the ban of trawling should help protect these submarine gardens."
+              "value": "The coralligenous environment is one of the <b>most typical</b> Mediterranean <b>underwater seascapes</b>.<br/>These colourful landscapes can be found growing on a variety of locations and at depths ranging from <b>20 to 200 meters.</b>"
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "They are also known to be one of the most <b>important habitats in the Mediterranean</b> because they can offer <b>shelter and subsistence</b> for many forms of marine life, and are considered important for fisheries and carbon cycling."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "Today, these habitats are mostly being <b>degraded and threatened</b> by pollution (e.g. wastewater discharge from the coast) and various bottom fishing techniques and gears that increase the re-suspension of sediments and affect the species living on it."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "The spread of <b>exotic algae, climate change</b> (increasing and unusual fluctuations of seawater temperature) and frequency of storms are also known to affect several key species that occur on these environments."
+            },
+            {
+              "type": "paragraph",
+              "capitalize": false,
+              "value": "The <b>designation of Marine Protected Areas</b> and specific measures to improve water quality and limit fishing activities should help <b>protect</b> these submarine gardens."
             },
             {
               "type": "image",
@@ -146,17 +166,17 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The <b>coralligenous</b> is considered as the second <b>benthic ecosystem in the Mediterranean</b> and host 1700 species, among them 1300 algae, 1200 invertebrate species, and more than hundred fish species."
+              "value": "The <b>coralligenous</b> is considered as the second <b>benthic ecosystem in the Mediterranean</b> and host 1700 species, among them 1300 algae, 1200 invertebrate species, and more than a hundred fish species. It also <b>holds</b> up to <b>48% of endemic algae species.</b>"
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The decline in habitat extent and quality make them to be classified as <b>Near Threatened</b> for Europe."
+              "value": "From 2013-2016, the <b>European Red List of Habitats</b> examined the extent and status of all the benthic marine habitats in the different European Seas including the Mediterranean."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "An important feature of this habitat to be considered also is that in the <b>Mediterranean</b>, up to <b>48% of the algae species living in them are endemics</b>, according to the European Red List of Habitats, which covers information in the EU28, plus Iceland, Norway, Switzerland and the Balkan countries and their neighbouring seas."
+              "value": "Among them, the decline observed of coralligenous habitats in their extent and quality make them to be classified as <b>Near Threatened</b> in European seas."
             },
             {
               "type": "image",
@@ -175,28 +195,28 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "Coralline reefs are considered hotspots of biodiversity and are extremely popular among <b>divers</b> due to their complex structure, noticeable biological wealth and high aesthetic value."
+              "value": "Coralline constructions are considered hotspots of biodiversity and are extremely popular among <b>divers</b>."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "Coralligenous bioconcretions or coralline reefs are mainly produced by the <b>accumulation of calcareous</b> encrusting algae growing and shaping these structures where a rich associated fauna flourish in dim light conditions."
+              "value": "They are mainly produced by the accumulation of <b>calcareous encrusting algae</b> growing and shaping unique formations where a rich associated fauna flourish under poor light conditions. In overhangs and big cavities animal communities of suspension feeders are dominated by different corals, sponges and bryozoans."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "Coralline reefs with species like <i>Paramuricea clavata</i>, <i>Eunicella verrucosa</i> and <i>Astroides calycularis</i>, and of course the precious <b>Red Coral</b> (<i>Corallium rubrum</i>), are Mediterranean treasures that form part of our heritage."
+              "value": "Coralligenous formations with species like the gorgonians <i>Paramuricea clavata</i>, <i>Eunicella verrucosa</i> and <i>Astroides calycularis</i>, and of course the precious <b>Red Coral</b> (<i>Corallium rubrum</i>), are Mediterranean treasures that form part of our heritage."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "Indeed, it is worth considering that that some of these ecosystems are estimated to take several thousand years to be built, as in the case of the corbels of Lithophylum algae, which constitute real natural monuments."
+              "value": "Indeed, it is worth considering that some of these ecosystems are estimated to take several thousand years to be built, as in the case of the constructions of Lithophylum algae in Sardinia, which constitute real natural monuments."
             },
             {
               "type": "image",
               "url": "/assets/corals/intro2.jpg",
               "credit": {
-                "footer": "Red coral (<i>Corallium rubrum</i>), Sardinia, Italy.",
+                "footer": "Red coral (<i>Corallium rubrum</i>) in the coralligenous Sardinia, Italy.",
                 "author": "© WaterFrame | Alamy Stock Photo"
               }
             }
@@ -208,8 +228,8 @@
           "collapsed": false,
           "info": [
             {
-              "title": "Infralittoral biogenic habitats in the Mediterranean - <span class='italic'>corralligenous bioconcretions</span>",
-              "credit": "IUCN Med",
+              "title": "Infralittoral biogenic habitats in the Mediterranean - <span class='italic'>Coralligenous bioconcretions</span>",
+              "credit": "IUCN-Med",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/coral_infralitoral.zip",
               "legend": "/assets/corals/legend.svg",
@@ -217,12 +237,7 @@
                 {
                   "type": "paragraph",
                   "capitalize": false,
-                  "value": "Coralligenous habitats are reported to occur primarily in the northern part of the Mediterranean basin, with few records from the eastern or southern basin. The availability of data and expertise meant that only countries on the northern shores of the Mediterranean together with Turkey, Malta and Cyprus were included in the Mediterranean Sea assessments."
-                },
-                {
-                  "type": "paragraph",
-                  "capitalize": false,
-                  "value": "There is a clear lack of data and knowledge for coralligenous habitats in the south and east of the Mediterranean."
+                  "value": "Coralligenous habitats are reported to occur primarily in the northern part of the Mediterranean basin, with few records from the eastern or southern basin where there is very limited knowledge."
                 }
               ],
               "layer": {
@@ -247,15 +262,15 @@
             },
             {
               "type": "paragraph",
-              "value": "The benign climate, gastronomic variety and various cultures inhabiting the area attract millions of visitors each year to the Mediterranean shores. Although the overall trend is unknown, we already know that shallow water coralligenous habitats are known to be decreasing in quality. It is therefore critical to <b>protect and promote</a> a healthy marine environment for them to maintain the Mediterranean as we know it today."
+              "value": "The benign climate, gastronomic variety and various cultures inhabiting the area attract millions of visitors each year to the Mediterranean shores."
             },
             {
               "type": "paragraph",
-              "value": "To reverse this trend towards disappearance, we need to join forces from several sectors in a concerted effort to protect their locations against pollution, trawling and fishing, or unsupervised anchoring among others. "
+              "value": "Its peoples, largely depend on the sea, as it provides them with food resources, fantastic beaches, cleaner air, jobs and a millennial connection for transport and travel among others.  However, what keeps the sea alive is not always on view: marine habitats like coralligenous in this case, are essential for the survival of many marine species, but also for people’s living. It is therefore critical to protect and promote a healthy marine environment for them to maintain the Mediterranean as we know it today."
             },
             {
               "type": "paragraph",
-              "value": "The designation of <b>Marine Protected Areas</b> and fisheries reserves are needed conservation of this habitat."
+              "value": "To reverse the current degradation of these environments, we need to join forces from several sectors in a concerted effort to protect their locations against pollution, malfishing practices and the spread of invasive species.. This should include a better design and enforcement of management activities, particularly for artisanal and recreational fisheries to help prevent the depletion of target fish and crustaceans with new quotas, control of users and surveillance and compliance of fishing regulations in these environments."
             },
             {
               "type": "paragraph",
@@ -271,14 +286,14 @@
             },
             {
               "type": "paragraph",
-              "value": "<b>Oceana</b> comments on the <b>Action Plan for the conservation of the Coralligenous and other calcareous bio-concretions in the Mediterranean Sea</b> adopted by the Mediterranea states at the Cop18 Barcelona Convention."
+              "value": "<b>Oceana</b> comments on the <b>Action Plan for the conservation of the Coralligenous and other calcareous bio-concretions in the Mediterranean Sea</b> adopted by the Mediterranean states at the Barcelona Convention."
             },
             {
               "type": "learn-more",
               "list": [
                 {
                   "img": "/assets/corals/cover_Anthozoa.jpg",
-                  "title": "Overview of the conservation status of Mediterranean anthozoa",
+                  "title": "Overview of the conservation status of Mediterranean anthozoan",
                   "href": "https://portals.iucn.org/library/node/46713"
                 },
                 {
@@ -644,8 +659,8 @@
               "author": " © Michael Valos| Dreamstime"
             }
           },
-          "title": "Is the Mediterranean eating sharks away?",
-          "subtitle": "Mediterranean Sea"
+          "title": "The end of the line for Mediterranean sharks and rays",
+          "subtitle": "Violeta Barrios, Mar Otero, Catherine Numa"
         },
         "intro": {
           "background": {
@@ -657,21 +672,21 @@
             {
               "type": "paragraph",
               "capitalize": true,
-              "value": "Sharks play an important role in the <b>food chain</b> of the oceans, but the numbers of these species in the Mediterranean are decreasing at an alarming rate. Beyond the global culinary demand for a whole array of sharks, rays and chimaeras, these species are commonly caught in nets during fishing expeditions. The northwestern part of the Mediterranean has recently experienced an intensive increase in fishing activity, and as a result, bycatch has become a major issue."
+              "value": "Sharks play an important role in the <b>food chain</b> of the oceans, but the numbers of these fishes in the Mediterranean are decreasing at an alarming rate. Beyond the global culinary demand for sharks and rays, the so called Elasmobranchs, many non-commercial species are commonly caught in nets during fishing expeditions. The northwestern part of the Mediterranean has over the years experienced an intensive increase in fishing activity, and as a result, bycatch has become a major issue."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "<b>Overfishing</b>, accidentally or on purpose, is also contributing to the disappearance of shark species in the Mediterranean. Current counts are quite low, and the sharks do not have ample time to mature and reproduce, so the conservation community is focused on reducing <b>accidental catch</b> and uncontrolled fishing behaviors."
+              "value": "<b>Overfishing</b>, accidentally or on purpose, is also contributing to the disappearance of shark and other cartilaginous species in the Mediterranean. Current counts are quite low, and the sharks and rays do not have sufficient time to mature and reproduce, so nowadays the conservation community is focused on reducing <b>accidental catch</b> as well as uncontrolled and damaging fishing behaviors."
             },
             {
               "type": "title",
-              "value": "Summary of the Read List status of Chondrycthyans in the Mediterranean Sea"
+              "value": "Summary of the conservation status of Chondrichthyans in the Mediterranean Sea"
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The most recent regional study conducted by the <b>IUCN Red List of Threatened Species</b> in 2016 raised a red flag on this alarming situation. Of the 73 shark species assessed during the last 10 years, 11 of them have seen their status worsen."
+              "value": "The class Chondrichthyes is a diverse group of cartilaginous fishes, including sharks, rays, skates, guitarfishes, sawfishes and chimaeras. The most recent regional reassessment conducted by <b>IUCN</b> in 2016 raised a red flag on their alarming situation in the Mediterranean Sea. Of the 73 cartilaginous fishes assessed 10 years ago, there is no sign of improvement and 11 of them have seen their status worsen."
             },
             {
               "type": "image",
@@ -685,7 +700,7 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "At least half of the rays (50%, 16 of 32 species) currently face an elevated risk of extinction, as well as 54% of sharks (22 of 41), whereas the only chimaera species (<i>Chimaera monstrosa</i>) is considered of Least Concern in the Mediterranean Sea. However, the threat level faced by these species may be worse than we think because of 13 remain Data Deficient. This means that their status needs to be further studied in order to evaluate appropriate protection measures."
+              "value": "At least half of the rays (50%, 16 of 32 species) and sharks (54%, 22 of 41 species), currently face an elevated risk of extinction, whereas the only chimaera species (Chimaera monstrosa) is considered as Near Threatened in the Mediterranean Sea. The threat level faced by many of these species may be worse than we think as data for 13 species are still with too scarce to conduct an evaluation and they are listed as Data Deficient. This means that their status needs to be further studied in order to evaluate appropriate protection measures."
             },
             {
               "type": "quote",
@@ -699,20 +714,12 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "The most commonly assumed  feature of sharks is their supposedly fierce nature. There are even initiatives recording <a href='https://www.flmnh.ufl.edu/fish/isaf/contributing-factors/highlight-white-sharks/mediterranean/' target='blank'>killings by sharks in the Mediterranean.</a> But these species do play an important part in maintaining the balance of life in the sea: their biology makes them natural predators that can be found in many restaurants along the Mediterranean. Mediterranean sharks, rays and chimaeras also serve to keep the oceans clean and form part of our natural heritage in need of protection."
-            },
-            {
-              "type": "image",
-              "url": "/assets/sharks/image2.jpg",
-              "credit": {
-                "footer": "Angel Shark, Canary Islands / (Squatina squatina)",
-                "author": "© Arco / F. Schneider / Alamy Stock Photo"
-              }
+              "value": "The most commonly assumed feature of sharks is their supposedly fierce nature. There are even initiatives recording <a href='https://www.flmnh.ufl.edu/fish/isaf/contributing-factors/highlight-white-sharks/mediterranean/' target='_blank'>kills by sharks in the Mediterranean</a>. But these species do play an important part in maintaining the balance and diversity of species in the sea. Mediterranean sharks, rays and chimaeras control species below them in the food chain helping to maintain a healthy ecosystem."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "<div><b>Lamniformes, the most threatened order</b></div>The Lamniformes (from the Greek word Lamna or 'fish of prey') are an order of sharks commonly known as mackerel sharks. This order includes some of the most familiar species of shark, such as the great white shark."
+              "value": "<div><b>Lamniformes, the most threatened order</b></div>The Lamniformes (from the Greek word Lamna or 'fish of prey') are an order of sharks commonly known as mackerel sharks. This order includes some of the most familiar species of shark, such as the great white shark. In the Mediterranean Sea, there are nine species of sharks belonging to the Lamniformes order, eight of them listed as Critically Endangered (5 species) or Endangered (3) in the IUCN Red List of Threatened Species."
             },
             {
               "type": "image",
@@ -725,7 +732,7 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "<div><b>Only in the mediterranean</b></div>Three species (<i>Leucoraja melitensis, Raja polystigma and Raja radula</i>) can be found nowhere else but inside the Mediterranean Sea."
+              "value": "<div><b>Only in the mediterranean</b></div>Three species of rays (<i>Leucoraja melitensis, Raja polystigma and Raja radula</i>) are endemic, thus is they can be found nowhere else but only in the Mediterranean Sea. Two of them are facing a high extinction risk."
             },
             {
               "type": "paragraph",
@@ -811,27 +818,27 @@
             {
               "type": "paragraph",
               "highlight": true,
-              "value": "Most sharks and rays are exceptionally vulnerable to overfishing, even if accidentally, because they tend to grow slowly, mature late, and produce few young.Market demands push fishermen to maintain interest in these species, even if only as bycatch, due to the common use of certain fishing gear. "
+              "value": "Most sharks and rays are exceptionally vulnerable to overfishing, even if accidentally, because they tend to grow slowly, mature late, and produce few offspring. Effective fisheries management is urgently needed if their populations are to recover and sustainable levels of exploitation are to be achieved in the region."
             },
             {
               "type": "paragraph",
-              "value": "In order to address these concerns, <b>governments</b> should provide increased  support for catch monitoring and data collection, regulate fishing gear, and establish fishing quotas and protected areas at the domestic level. Consumer awareness campaigns should be implemented to communicate the problems and challenges related to shark products. "
+              "value": "In order to address these concerns, <b>governments</b> should enhance programmes for catch monitoring and data collection, regulate fishing gear, and establish fishing quotas and protected areas at the domestic level. Consumer awareness campaigns should be implemented to communicate the problems and challenges related to shark products and other threatened cartilaginous fishes."
             },
             {
               "type": "paragraph",
-              "value": "<b>Fishermen communities</b> should also be made aware of alternative fish and their uses in order to promote conservation of the Mediterranean heritage."
+              "value": "<b>Fishermen communities</b> should also be made aware of the potentiality of other alternative fish and assist promoting consumer’s choice."
             },
             {
               "type": "paragraph",
-              "value": "In 2013, the European Union (EU) banned <b>removal of shark fins</b> on board vessels through Regulation No. 605/2013, in order to enhance enforcement of the 2003 EU ban on shark finning (Regulation No. 1185/2003) and facilitate improved shark fishery data collection."
+              "value": "In 2013, the European Union (EU) banned the <b>removal of shark</b> fins on board vessels through Regulation No. 605/2013, in order to enhance enforcement of the 2003 EU ban on shark finning (Regulation No. 1185/2003) and to facilitate shark fishery data collection."
             },
             {
               "type": "paragraph",
-              "value": "The General Fisheries Commission for the Mediterranean from <b>FAO</b> also recommended Mediterranean and Black Sea countries to invest in scientific research programmes aimed at identifying potential nursery areas and to consider time and area closures to protect juveniles of sharks and rays from fishing activities."
+              "value": "The General Fisheries Commission for the Mediterranean (GFCM) adopted a series of recommendations to invest in scientific research programmes in the Mediterranean and Black Seas. It also aims at identifying potential nursery areas and to consider time and area closures to protect juveniles of sharks and rays from fishing activities."
             },
             {
               "type": "paragraph",
-              "value": "The IUCN Red List promotes URGENT ACTION towards these endangered species. With the use of better fishing gear and putting into practice protection measures to control bycatch, shark populations can be sustained while contributing to preservation of the whole Mediterranean ecosystem. "
+              "value": "The IUCN Red List promotes URGENT ACTION towards these threatened species. With the use of better fishing gears and protection measures to control bycatch, some shark populations can be sustained into acceptable levels while contributing to the preservation of the whole Mediterranean ecosystem."
             },
             {
               "type": "learn-more",
@@ -840,6 +847,10 @@
                   "img": "/assets/sharks/brochure_medredlist_sharks.jpg",
                   "title": "The IUCN Mediterranean Red List of Sharks, Rays and Chimaeras",
                   "href": "https://www.iucn.org/sites/dev/files/content/documents/brochure_medredlist_sharks.pdf"
+                },
+                {
+                  "title": "IUCN SSC Shark Specialist Group",
+                  "href": "http://www.iucnssg.org/"
                 },
                 {
                   "title": "How is an IUCN Red List made?",
@@ -854,16 +865,8 @@
                   "href": "https://www.youtube.com/watch?v=EV0Wev-lWhw"
                 },
                 {
-                  "title": "Lista rossa delle farfalle italiane",
-                  "href": "http://pikaia.eu/pubblicata-la-lista-rossa-delle-farfalle-italiane/"
-                },
-                {
                   "title": "Things you did not know about sharks",
                   "href": "https://www.ranker.com/g00/list/shark-facts/michaelgraff?i10c.encReferrer="
-                },
-                {
-                  "title": "IUCN SSC Shark Specialist Group",
-                  "href": "http://www.iucnssg.org/"
                 }
               ]
             },
@@ -881,6 +884,14 @@
           },
           "contact_info": {
             "authors": [
+              {
+                "name": "Violeta Barrios,",
+                "departament": "Med Species Programme Coordinator"
+              },
+              {
+                "name": "Mar Otero",
+                "departament": "Med Species Programme Coordinator"
+              },
               {
                 "name": "Catherine Numa",
                 "departament": "Med Species Programme Coordinator"
@@ -981,10 +992,10 @@
             },
             {
               "type": "image",
-              "url": "/assets/antelopees/image2.png",
+              "url": "/assets/antelopees/image3.jpg",
               "credit": {
-                "footer": "Breve nota de pie",
-                "author": "Author"
+                "footer": "Gazella Arabica",
+                "author": "© Tim Wacher"
               }
             },
             {
@@ -993,18 +1004,18 @@
             },
             {
               "type": "image",
-              "url": "/assets/antelopees/image3.png",
+              "url": "/assets/antelopees/image4.jpg",
               "credit": {
-                "footer": "Breve nota de pie",
-                "author": "Author"
+                "footer": "Gazella Cuvieri",
+                "author": "© Teresa Abáigar CSIC"
               }
             },
             {
               "type": "image",
-              "url": "/assets/antelopees/image4.png",
+              "url": "/assets/antelopees/image5.jpg",
               "credit": {
-                "footer": "Breve nota de pie",
-                "author": "Author"
+                "footer": "Oryx Dammah",
+                "author": "© David Mallon"
               }
             },
             {

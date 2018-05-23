@@ -1,9 +1,14 @@
 "use strict";
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -16,28 +21,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var BaseStep_1 = require("../base/BaseStep");
-var mapbox_gl_1 = require('mapbox-gl');
+var mapbox_gl_1 = require("mapbox-gl");
 var MapService_1 = require("../../../services/MapService");
 var platform_browser_1 = require("@angular/platform-browser");
 var WindowService_1 = require("../../../services/WindowService");
-var MapStepComponent = (function (_super) {
+var MapStepComponent = /** @class */ (function (_super) {
     __extends(MapStepComponent, _super);
     function MapStepComponent(elem, document, windowService, mapService) {
-        var _this = this;
-        _super.call(this, elem, document, windowService);
-        this.document = document;
-        this.windowService = windowService;
-        this.mapService = mapService;
-        this.activeLayer = false;
-        this.zoom = 4.5;
-        this.center = [15.0, 38.0];
-        this.popup = false;
-        this.currentLegend = '';
-        this.mapService.changes.subscribe(function () {
+        var _this = _super.call(this, elem, document, windowService) || this;
+        _this.document = document;
+        _this.windowService = windowService;
+        _this.mapService = mapService;
+        _this.activeLayer = false;
+        _this.zoom = 4.5;
+        _this.center = [15.0, 38.0];
+        _this.popup = false;
+        _this.currentLegend = '';
+        _this.mapService.changes.subscribe(function () {
             _this.initMap();
         });
+        return _this;
     }
     MapStepComponent.prototype.onResize = function (event) {
         _super.prototype.onResize.call(this, event);
@@ -174,8 +180,9 @@ var MapStepComponent = (function (_super) {
         }),
         __param(0, core_1.Inject(core_1.ElementRef)),
         __param(1, core_1.Inject(platform_browser_1.DOCUMENT)),
-        __param(3, core_1.Inject(MapService_1.MapService)), 
-        __metadata('design:paramtypes', [core_1.ElementRef, Object, WindowService_1.WindowService, MapService_1.MapService])
+        __param(3, core_1.Inject(MapService_1.MapService)),
+        __metadata("design:paramtypes", [core_1.ElementRef, Object, WindowService_1.WindowService,
+            MapService_1.MapService])
     ], MapStepComponent);
     return MapStepComponent;
 }(BaseStep_1.BaseStepComponent));

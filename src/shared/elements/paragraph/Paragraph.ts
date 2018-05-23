@@ -1,26 +1,32 @@
-import {Component} from "@angular/core";
-import {BaseElementComponent} from "../base-element/BaseElement";
+import { Component, ElementRef, Inject } from '@angular/core';
+import { BaseElementComponent } from '../base-element/BaseElement';
+import { WindowService } from '../../../services/WindowService';
 
 @Component({
-    selector: 'paragraph',
-    templateUrl: '/templates/shared/elements/paragraph/view.html',
+  selector: 'paragraph',
+  templateUrl: '/templates/shared/elements/paragraph/view.html',
 })
 export class ParagraphComponent extends BaseElementComponent {
 
 
-    capitalized() :boolean{
-        return this.item.capitalize != undefined && this.item.capitalize;
-    }
+  constructor(@Inject(ElementRef) protected element: ElementRef,
+              @Inject(WindowService) protected windowService: WindowService) {
+    super(element, windowService)
+  }
 
-    highlight() :boolean{
-        return this.item.highlight != undefined && this.item.highlight;
-    }
+  capitalized(): boolean {
+    return this.item.capitalize != undefined && this.item.capitalize;
+  }
 
-    bold() :boolean{
-        return this.item.bold != undefined && this.item.bold;
-    }
+  highlight(): boolean {
+    return this.item.highlight != undefined && this.item.highlight;
+  }
 
-    semibold() :boolean{
-        return this.item.semibold != undefined && this.item.semibold;
-    }
+  bold(): boolean {
+    return this.item.bold != undefined && this.item.bold;
+  }
+
+  semibold(): boolean {
+    return this.item.semibold != undefined && this.item.semibold;
+  }
 }

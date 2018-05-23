@@ -15,8 +15,6 @@ export class SkipStepComponent extends BaseStepComponent {
                 protected windowService: WindowService,
                 protected mapService: MapService) {
             super(element, document, windowService);
-
-
     }
     showImage() {
         return true;
