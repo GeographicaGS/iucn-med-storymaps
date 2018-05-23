@@ -95,6 +95,17 @@ var HomeStepComponent = /** @class */ (function (_super) {
         this.clearBackgroundGradient();
         this.windowService.aboutView = true;
     };
+    HomeStepComponent.prototype.showMoreInfoAbout = function () {
+        var _this = this;
+        this.windowService.clearBodyUrl();
+        this.unlockBackground();
+        this.clearBackgroundBlur();
+        this.clearBackgroundGradient();
+        this.windowService.aboutView = true;
+        setTimeout(function () {
+            _this.windowService.scrollTo(99999);
+        }, 50);
+    };
     HomeStepComponent.prototype.isPreview = function () {
         return this.windowService.homeViewPreview;
     };

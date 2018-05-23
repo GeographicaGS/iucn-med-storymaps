@@ -87,6 +87,17 @@ export class HomeStepComponent extends BaseStepComponent implements AfterViewIni
     this.windowService.aboutView = true;
   }
 
+  showMoreInfoAbout() {
+    this.windowService.clearBodyUrl();
+    this.unlockBackground();
+    this.clearBackgroundBlur();
+    this.clearBackgroundGradient();
+    this.windowService.aboutView = true;
+    setTimeout(() => {
+      this.windowService.scrollTo(99999);
+    }, 50);
+  }
+
   isPreview(): boolean {
     return this.windowService.homeViewPreview;
   }

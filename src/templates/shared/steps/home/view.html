@@ -46,7 +46,7 @@
                 <div class="btn view-stories" (click)="showStoryList()">See Stories</div>
                 <div class="btn more-info" (click)="showMoreInfo()">About</div>
             </div>
-            <div class="after-buttons" [innerHTML]="getHomeAfterButton().value"></div>
+            <div class="after-buttons" [innerHTML]="getHomeAfterButton().value" (click)="showMoreInfoAbout()"></div>
 
         </div>
         <div class="list" *ngIf="!isPreview()">
@@ -96,7 +96,7 @@
                 <p class="center-address" [innerHTML]="getCenterContactInfo()"></p>
             </div>
             <div class="img">
-                <span>Founded by</span>
+                <span>Funded by</span>
                 <a [href]="stories.home.footer.founded.href" target="blank">
                     <img height="90" [src]="stories.home.footer.founded.img">
                 </a>

@@ -22,10 +22,10 @@
       "title": "The Mediterranean Journey",
       "subtitle": "CONSERVE BIODIVERSITY",
       "subtitle2": "From science to actions",
-      "description": "A platform for sharing knowledge and important GIS data on biodiversity conservation in the Mediterranean region."
+      "description": "A platform for sharing knowledge and valuable GIS data on biodiversity conservation in the Mediterranean region."
     },
     "afterButtons": {
-      "value": "<a target='blank' href='https://www.iucn.org/'>Interested in sharing specific data or stories on other platforms?</a>"
+      "value": "<a>Interested in sharing specific data or stories on other platforms?</a>"
     },
     "footer": {
       "elaborated": {
@@ -64,7 +64,7 @@
           },
           {
             "type": "paragraph",
-            "value": "The IUCN Center for Mediterranean Cooperation has designed and structured this collaborative storytelling and knowledge sharing platform to increase the visibility of information and data generated in collaboration with the peer review community in the region in recent years."
+            "value": "The IUCN Centre for Mediterranean Cooperation has designed and structured this collaborative storytelling and knowledge sharing platform to increase the visibility of information and data generated in collaboration with the expert conservation community in the region in recent years."
           }
         ]
       },
@@ -340,7 +340,7 @@
               "url": "assets/butterflies/image.jpg"
             },
             "link": "butterflies",
-            "title": "The case of the disappearing butteflies"
+            "title": "The case of the disappearing butterflies"
           }
         }
       }
@@ -357,7 +357,7 @@
               "author": ""
             }
           },
-          "title": "The case of the disappearing butteflies",
+          "title": "The case of the disappearing butterflies",
           "subtitle": "Mediterranean Butterflies"
         },
         "intro": {
@@ -908,7 +908,7 @@
               "url": "assets/antelopees/image.jpg"
             },
             "link": "antelopees",
-            "title": "How many antelope species occur in North Africa"
+            "title": "How many antelope species occur in North Africa ?"
           }
         }
       }
@@ -925,8 +925,8 @@
               "author": "© Tim Wacher"
             }
           },
-          "title": "How many antelope species occur in North Africa",
-          "subtitle": "North Africa Savanna"
+          "title": "How many antelope species occur in North Africa ?",
+          "subtitle": ""
         },
         "intro": {
           "background": {
@@ -969,7 +969,7 @@
             },
             {
               "type": "title",
-              "value": "Facts."
+              "value": "Facts"
             },
             {
               "type": "paragraph",
@@ -1174,7 +1174,7 @@
             },
             {
               "type": "paragraph",
-              "value": "Also, some NGOs, such as the <a href='https://www.facebook.com/Tunisia-Wildlife-Conservation-Society-TWCS-222687077830464/' target='blank'>Tunisian Wildlife Conservation Society</a>, are developing reintroduction monitoring programme for the Gazella cuvieri. "
+              "value": "IUCN has published Guidelines on Reintroductions (2013) that should be followed in all cases involving antelope species reintroductions and other conservation translocations in the region.<br> <a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/2017/en_gacelas_web_160_media_1.pdf'>English version</a>, <a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/fr_gacelas_web_160_media.pdf'>French</a> and <a href='https://www.iucn.org/sites/dev/files/content/documents/iucn_2017_antelopes_nafricaarabia_ar.pdf' target='blank'>Arabic"
             },
             {
               "type": "learn-more",
@@ -1182,7 +1182,6 @@
                 {
                   "img": "/assets/antelopees/brochure.jpg",
                   "title": "FACT SHEET: Antelopes of North Africa and the Arabian Peninsula",
-                  "description": "IUCN has published Guidelines on Reintroductions (2013) that should be followed in all cases involving antelope species reintroductions and other conservation translocations in the region.<br> <a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/2017/en_gacelas_web_160_media_1.pdf'>English version</a>, <a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/fr_gacelas_web_160_media.pdf'>French</a> and <a href='https://www.iucn.org/sites/dev/files/content/documents/iucn_2017_antelopes_nafricaarabia_ar.pdf' target='blank'>Arabic"
                 },
                 {
                   "title": "IUCN Antelope Specialist Group",
@@ -1445,11 +1444,11 @@
             "authors": [
               {
                 "name": "Teresa Gil",
-                "departament": "Med Species Programme Coordinator"
+                "departament": "Med Ecosystem Programme Assistant"
               },
               {
                 "name": "Marcos Valderrabano",
-                "departament": "Med Species Programme Officer"
+                "departament": "Med Ecosystems Programme Coordinator"
               }
             ],
             "author_link": "<a href=\"mailto:marcos.valderrabano@iucn.org\">IUCN Mediterranean Ecosystems Programme </a>",
