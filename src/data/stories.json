@@ -325,8 +325,7 @@
           "contact_info": {
             "authors": [
               {
-                "name": "María del Mar Otero",
-                "departament": "Med Marine Programme Officer"
+                "name": "María del Mar Otero"
               }
             ],
             "author_link": "<a href=\"mailto:mariadelmar.otero@iucn.org\">IUCN Mediterranean Marine Programme</a>",
@@ -623,12 +622,10 @@
           "contact_info": {
             "authors": [
               {
-                "name": "Catherine Numa",
-                "departament": "Med Species Programme Coordinator"
+                "name": "Catherine Numa"
               },
               {
-                "name": "Violeta Barrios",
-                "departament": "Med Species Programme Officer"
+                "name": "Violeta Barrios"
               }
             ],
             "author_link": "<a href=\"mailto:medspecies@iucn.org\">IUCN Mediterranean Species Programme </a>",
@@ -700,7 +697,7 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "At least half of the rays (50%, 16 of 32 species) and sharks (54%, 22 of 41 species), currently face an elevated risk of extinction, whereas the only chimaera species (Chimaera monstrosa) is considered as Near Threatened in the Mediterranean Sea. The threat level faced by many of these species may be worse than we think as data for 13 species are still with too scarce to conduct an evaluation and they are listed as Data Deficient. This means that their status needs to be further studied in order to evaluate appropriate protection measures."
+              "value": "At least half of the rays (50%, 16 of 32 species) and sharks (54%, 22 of 41 species), currently face an elevated risk of extinction, whereas the only chimaera species <i>(Chimaera monstrosa)</i> is considered as Near Threatened in the Mediterranean Sea. The threat level faced by many of these species may be worse than we think as data for 13 species are still with too scarce to conduct an evaluation and they are listed as Data Deficient. This means that their status needs to be further studied in order to evaluate appropriate protection measures."
             },
             {
               "type": "quote",
@@ -725,7 +722,7 @@
               "type": "image",
               "url": "/assets/sharks/image3.jpg",
               "credit": {
-                "footer": "Dogfish died at Fishing Net Scyliorhinus canicula Vis Island Mediterranean Sea Croatia",
+                "footer": "Small spotted catshark or Dogfish, <i>Scyliorhinus canicula</i>, caught at fishing nets in Croatia",
                 "author": "© WaterFrame / Alamy Stock Photo"
               }
             },
@@ -767,7 +764,17 @@
                 {
                   "type": "paragraph",
                   "capitalize": false,
-                  "value": "Over the past half-century 13 species have become locally extinct in various places. Geographically, local extinctions have been most prevalent in the northwestern Mediterranean waters of Spain, France, and Italy, and in the waters of the countries bordering the Adriatic Sea and northwestern African countries."
+                  "value": "Historically, the diversity of chondrichthyans was greatest in the western Mediterranean Sea, particularly, in the coastal waters of Morocco, Algeria, and Tunisia, which harbour between 57 and 69 species. Diversity is slightly lower in the northwest."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "When overlapping the Marine Protected Areas from MAPAMED, it is highlighted that one of the richest area for Chondrichthyans, the South-West of the Mediterranean, needs to increase protected marine areas."
+                },
+                {
+                  "type": "paragraph",
+                  "capitalize": false,
+                  "value": "Marine protected areas can offer the opportunity to regulate human activity in a way that benefits sharks and rays."
                 }
               ],
               "layer": {
@@ -885,16 +892,13 @@
           "contact_info": {
             "authors": [
               {
-                "name": "Violeta Barrios",
-                "departament": "Med Species Programme Coordinator"
+                "name": "Violeta Barrios"
               },
               {
-                "name": "Mar Otero",
-                "departament": "Med Species Programme Coordinator"
+                "name": "Mar Otero"
               },
               {
-                "name": "Catherine Numa",
-                "departament": "Med Species Programme Coordinator"
+                "name": "Catherine Numa"
               }
             ],
             "author_link": "<a href=\"mailto:medspecies@iucn.org\">IUCN Mediterranean Species Programme </a>",
@@ -1174,14 +1178,15 @@
             },
             {
               "type": "paragraph",
-              "value": "IUCN has published Guidelines on Reintroductions (2013) that should be followed in all cases involving antelope species reintroductions and other conservation translocations in the region.<br> <a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/2017/en_gacelas_web_160_media_1.pdf'>English version</a>, <a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/fr_gacelas_web_160_media.pdf'>French</a> and <a href='https://www.iucn.org/sites/dev/files/content/documents/iucn_2017_antelopes_nafricaarabia_ar.pdf' target='blank'>Arabic"
+              "value": "IUCN has published Guidelines on Reintroductions (2013) that should be followed in all cases involving antelope species reintroductions and other conservation translocations in the region."
             },
             {
               "type": "learn-more",
               "list": [
                 {
                   "img": "/assets/antelopees/brochure.jpg",
-                  "title": "FACT SHEET: Antelopes of North Africa and the Arabian Peninsula"
+                  "title": "FACT SHEET: Antelopes of North Africa and the Arabian Peninsula",
+                  "description": "<a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/2017/en_gacelas_web_160_media_1.pdf'>English version</a>, <a target='blank' href='https://www.iucn.org/sites/dev/files/content/documents/fr_gacelas_web_160_media.pdf'>French</a> and <a href='https://www.iucn.org/sites/dev/files/content/documents/iucn_2017_antelopes_nafricaarabia_ar.pdf' target='blank'>Arabic"
                 },
                 {
                   "title": "IUCN Antelope Specialist Group",
@@ -1204,8 +1209,7 @@
           "contact_info": {
             "authors": [
               {
-                "name": "Violeta Barrios",
-                "departament": "Med Species Programme Officer"
+                "name": "Violeta Barrios"
               }
             ],
             "author_link": "<a href=\"mailto:medspecies@iucn.org\">IUCN Mediterranean Species Programme </a>",
@@ -1443,12 +1447,10 @@
           "contact_info": {
             "authors": [
               {
-                "name": "Teresa Gil",
-                "departament": "Med Ecosystem Programme Assistant"
+                "name": "Teresa Gil"
               },
               {
-                "name": "Marcos Valderrabano",
-                "departament": "Med Ecosystems Programme Coordinator"
+                "name": "Marcos Valderrabano"
               }
             ],
             "author_link": "<a href=\"mailto:marcos.valderrabano@iucn.org\">IUCN Mediterranean Ecosystems Programme </a>",

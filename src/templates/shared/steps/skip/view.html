@@ -3,8 +3,8 @@
         <!--<info [item]="step.info"></info>-->
     </div>
     <div *ngIf="hasCredit()" class="credit-full">
-        <span class="credit">{{step.credit.footer}}</span>
-        <span class="author">{{step.credit.author}}</span>
+        <span class="credit" [innerHTML]="step.credit.footer"></span>
+        <span class="author" [innerHTML]="step.credit.author"></span>
     </div>
     <div *ngIf="hasInfo()" class="credit-info">
         <element-block [elements]="step.info.elements"></element-block>
