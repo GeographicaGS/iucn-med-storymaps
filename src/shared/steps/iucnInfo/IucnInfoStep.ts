@@ -1,12 +1,21 @@
-import {Component, Inject, Input, HostBinding, AfterViewInit} from "@angular/core";
+import { Component, Inject, Input, HostBinding, AfterViewInit, ElementRef } from '@angular/core';
 import {BaseStepComponent} from "../base/BaseStep";
+import { WindowService } from '../../../services/WindowService';
+import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
     selector: 'iucnInfo',
     templateUrl: '/templates/shared/steps/iucnInfo/view.html',
 })
 export class IucnInfoStepComponent extends BaseStepComponent {
-    @Input() stories: any = {};
+
+  constructor(@Inject(ElementRef) protected element: ElementRef,
+              @Inject(DOCUMENT) protected document: any,
+              protected windowService: WindowService) {
+    super(element, document, windowService);
+  }
+
+  @Input() stories: any = {};
 
     showTitle(): boolean {
         let offset = this.element.nativeElement.getBoundingClientRect();

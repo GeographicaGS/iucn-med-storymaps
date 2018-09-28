@@ -8,7 +8,7 @@ export class MapService {
     changes: EventEmitter<any> = new EventEmitter();
 
     constructor() {
-        (mapboxgl as any).accessToken = 'pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q'
+      (mapboxgl as any).accessToken = 'pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q'
     }
 
     reload() {

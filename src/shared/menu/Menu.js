@@ -11,10 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var WindowService_1 = require("../../services/WindowService");
 var StoryService_1 = require("../../services/StoryService");
-var MenuComponent = (function () {
+var MenuComponent = /** @class */ (function () {
     function MenuComponent(windowService, storyService) {
         this.windowService = windowService;
         this.storyService = storyService;
@@ -48,20 +49,21 @@ var MenuComponent = (function () {
         this.windowService.goHome();
     };
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], MenuComponent.prototype, "stories", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], MenuComponent.prototype, "currentStory", void 0);
     MenuComponent = __decorate([
         core_1.Component({
             selector: 'menu',
             templateUrl: '/templates/shared/menu/view.html',
         }),
-        __param(1, core_1.Inject(StoryService_1.StoryService)), 
-        __metadata('design:paramtypes', [WindowService_1.WindowService, StoryService_1.StoryService])
+        __param(1, core_1.Inject(StoryService_1.StoryService)),
+        __metadata("design:paramtypes", [WindowService_1.WindowService,
+            StoryService_1.StoryService])
     ], MenuComponent);
     return MenuComponent;
 }());

@@ -11,10 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var WindowService_1 = require("../../services/WindowService");
 var StoryService_1 = require("../../services/StoryService");
-var MainComponent = (function () {
+var MainComponent = /** @class */ (function () {
     function MainComponent(element, storyService, windowService) {
         var _this = this;
         this.element = element;
@@ -61,20 +62,20 @@ var MainComponent = (function () {
         return this.stories['stories'][this.currentStory]['steps'][step];
     };
     __decorate([
-        core_1.HostBinding("style.background-image"),
-        core_1.Input(), 
-        __metadata('design:type', String)
+        core_1.HostBinding('style.background-image'),
+        core_1.Input(),
+        __metadata("design:type", String)
     ], MainComponent.prototype, "backgroundSrc", void 0);
     __decorate([
-        core_1.HostBinding("class"),
-        core_1.Input(), 
-        __metadata('design:type', String)
+        core_1.HostBinding('class'),
+        core_1.Input(),
+        __metadata("design:type", String)
     ], MainComponent.prototype, "bodyClass", void 0);
     __decorate([
-        core_1.HostListener('window:scroll', []), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', []), 
-        __metadata('design:returntype', void 0)
+        core_1.HostListener('window:scroll', []),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
     ], MainComponent.prototype, "onScroll", null);
     MainComponent = __decorate([
         core_1.Component({
@@ -82,8 +83,10 @@ var MainComponent = (function () {
             templateUrl: '/templates/routes/home/view.html'
         }),
         __param(0, core_1.Inject(core_1.ElementRef)),
-        __param(1, core_1.Inject(StoryService_1.StoryService)), 
-        __metadata('design:paramtypes', [core_1.ElementRef, StoryService_1.StoryService, WindowService_1.WindowService])
+        __param(1, core_1.Inject(StoryService_1.StoryService)),
+        __metadata("design:paramtypes", [core_1.ElementRef,
+            StoryService_1.StoryService,
+            WindowService_1.WindowService])
     ], MainComponent);
     return MainComponent;
 }());

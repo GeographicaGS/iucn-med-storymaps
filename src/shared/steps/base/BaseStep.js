@@ -11,10 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var WindowService_1 = require("../../../services/WindowService");
-var BaseStepComponent = (function () {
+var BaseStepComponent = /** @class */ (function () {
     function BaseStepComponent(element, document, windowService) {
         this.element = element;
         this.document = document;
@@ -71,24 +72,24 @@ var BaseStepComponent = (function () {
         this.windowService.scrollToNextStep(this.element);
     };
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], BaseStepComponent.prototype, "step", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], BaseStepComponent.prototype, "name", void 0);
     __decorate([
-        core_1.HostListener('window:scroll', []), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', []), 
-        __metadata('design:returntype', void 0)
+        core_1.HostListener('window:scroll', []),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
     ], BaseStepComponent.prototype, "onScroll", null);
     __decorate([
-        core_1.HostListener('window:resize', ['$event']), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [Object]), 
-        __metadata('design:returntype', void 0)
+        core_1.HostListener('window:resize', ['$event']),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", void 0)
     ], BaseStepComponent.prototype, "onResize", null);
     BaseStepComponent = __decorate([
         core_1.Component({
@@ -96,8 +97,8 @@ var BaseStepComponent = (function () {
             templateUrl: '/templates/shared/steps/base/view.html',
         }),
         __param(0, core_1.Inject(core_1.ElementRef)),
-        __param(1, core_1.Inject(platform_browser_1.DOCUMENT)), 
-        __metadata('design:paramtypes', [core_1.ElementRef, Object, WindowService_1.WindowService])
+        __param(1, core_1.Inject(platform_browser_1.DOCUMENT)),
+        __metadata("design:paramtypes", [core_1.ElementRef, Object, WindowService_1.WindowService])
     ], BaseStepComponent);
     return BaseStepComponent;
 }());

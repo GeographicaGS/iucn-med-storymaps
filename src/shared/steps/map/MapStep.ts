@@ -1,6 +1,7 @@
 import {Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding} from "@angular/core";
 import {BaseStepComponent} from "../base/BaseStep";
-import {Map, Popup} from 'mapbox-gl';
+// import {Map, Popup} from 'mapbox-gl';
+import * as mapboxgl from 'mapbox-gl';
 import {MapService} from "../../../services/MapService";
 import {DOCUMENT} from "@angular/platform-browser";
 import {WindowService} from "../../../services/WindowService";
@@ -23,7 +24,7 @@ export class MapStepComponent extends BaseStepComponent {
         super(elem, document, windowService);
         this.mapService.changes.subscribe(() => {
             this.initMap();
-        })
+        });
     }
 
     onResize(event: any) {
@@ -33,14 +34,14 @@ export class MapStepComponent extends BaseStepComponent {
 
     lockMap() {
         this.windowService.setBodyBgClass('locked');
-        if (this.mapService.map instanceof Map) {
+        if (this.mapService.map instanceof mapboxgl.Map) {
             this.mapService.map.resize();
             this.mapService.map.scrollZoom.enable();
         }
     }
 
     unlockMap() {
-        if (this.mapService.map instanceof Map) {
+        if (this.mapService.map instanceof mapboxgl.Map) {
             this.mapService.map.scrollZoom.disable();
         }
     }
@@ -69,7 +70,7 @@ export class MapStepComponent extends BaseStepComponent {
         this.zoom = 4.5;
         this.center = [15.0, 38.0];
 
-        this.mapService.map = new Map({
+        this.mapService.map = new mapboxgl.Map({
             trackResize: false,
             container: 'map',
             style: this.step.mapStyle || 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
@@ -77,7 +78,6 @@ export class MapStepComponent extends BaseStepComponent {
             center: this.center
         });
         this.mapService.map.scrollZoom.disable();
-
         this.mapService.map.on('load', () => {
             this.activeLayer = this.step.info[0];
             this.updateLayers(this.activeLayer);
@@ -112,7 +112,7 @@ export class MapStepComponent extends BaseStepComponent {
                 count = properties.N_COUNT;
             }
 
-            this.popup = new Popup()
+            this.popup = new mapboxgl.Popup()
                 .setLngLat(e.lngLat)
                 .setHTML(count)
                 .addTo(this.mapService.map);

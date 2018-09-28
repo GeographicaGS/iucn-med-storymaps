@@ -5,14 +5,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var core_1 = require('@angular/core');
-var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
-var platform_browser_1 = require('@angular/platform-browser');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var platform_browser_dynamic_1 = require("@angular/platform-browser-dynamic");
+var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
-var forms_1 = require('@angular/forms');
+var forms_1 = require("@angular/forms");
 var MainComponent_1 = require("./main/MainComponent");
 var Menu_1 = require("./../shared/menu/Menu");
 var HomeStep_1 = require("../shared/steps/home/HomeStep");
@@ -28,11 +26,11 @@ var Paragraph_1 = require("./../shared/elements/paragraph/Paragraph");
 var Quote_1 = require("../shared/elements/quote/Quote");
 var Info_1 = require("../shared/elements/info/Info");
 var Table_1 = require("../shared/elements/table/Table");
-var StoryService_1 = require('./../services/StoryService');
+var StoryService_1 = require("./../services/StoryService");
 var MapService_1 = require("../services/MapService");
 var WindowService_1 = require("../services/WindowService");
 var LearnMore_1 = require("../shared/elements/learn-more/LearnMore");
-var AppModule = (function () {
+var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
@@ -69,8 +67,7 @@ var AppModule = (function () {
             bootstrap: [
                 MainComponent_1.MainComponent
             ]
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], AppModule);
     return AppModule;
 }());

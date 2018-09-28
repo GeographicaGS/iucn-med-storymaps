@@ -3,7 +3,7 @@
     <img width="100%" [src]="getBackgroundSrc()">
     <div *ngIf="hasCredit()" class="credit-full" [ngClass]="{'no-ico': !hasIco()}">
         <span class="credit" [innerHTML]="item.credit.footer"></span>
-        <span class="author">{{item.credit.author}}</span>
+        <span class="author" [innerHTML]="item.credit.author"></span>
     </div>
     <div *ngIf="hasInfo()" class="credit-info">
         <element-block [elements]="item.info.elements"></element-block>

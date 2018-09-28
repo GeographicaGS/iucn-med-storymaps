@@ -1,31 +1,38 @@
-import {Component} from "@angular/core";
-import {BaseElementComponent} from "../base-element/BaseElement";
+import { Component, ElementRef, Inject } from '@angular/core';
+import { BaseElementComponent } from '../base-element/BaseElement';
+import { WindowService } from '../../../services/WindowService';
 
 @Component({
-    selector: 'el-table',
-    templateUrl: '/templates/shared/elements/table/view.html',
+  selector: 'el-table',
+  templateUrl: '/templates/shared/elements/table/view.html',
 })
 export class TableComponent extends BaseElementComponent {
-    getHeaderTitle(key: string) {
-        return this.item.header[key] || '';
-    }
 
-    getHeaders() {
-        return this.getHeadersKeys().map((key: string) => {
-            return this.item.headers[key];
-        });
-    }
+  constructor(@Inject(ElementRef) protected element: ElementRef,
+              @Inject(WindowService) protected windowService: WindowService) {
+    super(element, windowService);
+  }
 
-    getHeadersKeys() {
-        return Object.keys(this.item.headers);
-    }
+  getHeaderTitle(key: string) {
+    return this.item.header[key] || '';
+  }
 
-    getRows() {
-        return this.item.rows;
-    }
+  getHeaders() {
+    return this.getHeadersKeys().map((key: string) => {
+      return this.item.headers[key];
+    });
+  }
 
-    getRowValue(row: any, key: string) {
-        return row[key] || '';
-    }
+  getHeadersKeys() {
+    return Object.keys(this.item.headers);
+  }
+
+  getRows() {
+    return this.item.rows;
+  }
+
+  getRowValue(row: any, key: string) {
+    return row[key] || '';
+  }
 
 }

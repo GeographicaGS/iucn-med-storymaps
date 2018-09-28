@@ -11,9 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var WindowService_1 = require("../../../services/WindowService");
-var BaseElementComponent = (function () {
+var BaseElementComponent = /** @class */ (function () {
     function BaseElementComponent(element, windowService) {
         this.element = element;
         this.windowService = windowService;
@@ -34,8 +35,8 @@ var BaseElementComponent = (function () {
     BaseElementComponent.prototype.ngAfterViewInit = function () {
     };
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
+        core_1.Input(),
+        __metadata("design:type", Object)
     ], BaseElementComponent.prototype, "item", void 0);
     BaseElementComponent = __decorate([
         core_1.Component({
@@ -43,8 +44,9 @@ var BaseElementComponent = (function () {
             templateUrl: '/templates/shared/elements/base-element/view.html',
         }),
         __param(0, core_1.Inject(core_1.ElementRef)),
-        __param(1, core_1.Inject(WindowService_1.WindowService)), 
-        __metadata('design:paramtypes', [core_1.ElementRef, WindowService_1.WindowService])
+        __param(1, core_1.Inject(WindowService_1.WindowService)),
+        __metadata("design:paramtypes", [core_1.ElementRef,
+            WindowService_1.WindowService])
     ], BaseElementComponent);
     return BaseElementComponent;
 }());
