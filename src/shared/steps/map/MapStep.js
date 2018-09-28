@@ -24,7 +24,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var BaseStep_1 = require("../base/BaseStep");
-var mapbox_gl_1 = require("mapbox-gl");
+// import {Map, Popup} from 'mapbox-gl';
+var mapboxgl = require("mapbox-gl");
 var MapService_1 = require("../../../services/MapService");
 var platform_browser_1 = require("@angular/platform-browser");
 var WindowService_1 = require("../../../services/WindowService");
@@ -51,13 +52,13 @@ var MapStepComponent = /** @class */ (function (_super) {
     };
     MapStepComponent.prototype.lockMap = function () {
         this.windowService.setBodyBgClass('locked');
-        if (this.mapService.map instanceof mapbox_gl_1.Map) {
+        if (this.mapService.map instanceof mapboxgl.Map) {
             this.mapService.map.resize();
             this.mapService.map.scrollZoom.enable();
         }
     };
     MapStepComponent.prototype.unlockMap = function () {
-        if (this.mapService.map instanceof mapbox_gl_1.Map) {
+        if (this.mapService.map instanceof mapboxgl.Map) {
             this.mapService.map.scrollZoom.disable();
         }
     };
@@ -83,7 +84,7 @@ var MapStepComponent = /** @class */ (function (_super) {
         var _this = this;
         this.zoom = 4.5;
         this.center = [15.0, 38.0];
-        this.mapService.map = new mapbox_gl_1.Map({
+        this.mapService.map = new mapboxgl.Map({
             trackResize: false,
             container: 'map',
             style: this.step.mapStyle || 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
@@ -125,7 +126,7 @@ var MapStepComponent = /** @class */ (function (_super) {
             if (!properties.count && properties.N_COUNT) {
                 count = properties.N_COUNT;
             }
-            _this.popup = new mapbox_gl_1.Popup()
+            _this.popup = new mapboxgl.Popup()
                 .setLngLat(e.lngLat)
                 .setHTML(count)
                 .addTo(_this.mapService.map);

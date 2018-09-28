@@ -31,15 +31,16 @@ cloudfront_distribution_config:
   # default_cache_behavior:
     # min_TTL: <%= 60 * 60 * 24 %>
   aliases:
-    quantity: 2
+    quantity: 3
     items:
       - iucn-med-storymaps.geographica.io
       - www.medconservationstorymaps.org
+      - www.mapconservationmaps.org
 
 routing_rules:
   - condition:
       http_error_code_returned_equals: "404"
     redirect:
-      host_name: www.medconservationstorymaps.org
+      host_name: www.mapconservationmaps.org
       replace_key_prefix_with: "#"
 #      http_redirect_code: 301

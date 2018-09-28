@@ -462,7 +462,7 @@
           "info": [
             {
               "title": "Butterfly species richness in the Mediterranean region",
-              "credit": "IUCN Med",
+              "credit": "IUCN-Med",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
@@ -493,7 +493,7 @@
             {
               "title": "Distribution of threatened butterflies in the Mediterranean region",
               "collapsed": true,
-              "credit": "IUCN Med",
+              "credit": "IUCN-Med",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
               "legend": "/assets/butterflies/legend2.svg",
@@ -523,7 +523,7 @@
             {
               "title": "Species richness of endemic butterflies in the Mediterranean region ",
               "collapsed": true,
-              "credit": "IUCN Med",
+              "credit": "IUCN-Med",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
               "legend": "/assets/butterflies/legend3.svg",
@@ -758,7 +758,7 @@
           "info": [
             {
               "title": "Distribution of threatened (CR, EN, and VU) <span class='italic'>Chondrichthyans</span> within the Mediterranean Sea",
-              "credit": "IUCN Med",
+              "credit": "IUCN-Med",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_thrt.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_thrt.zip",
@@ -785,7 +785,7 @@
             {
               "title": "Distribution of Data Deficient Chondrichthyans within the Mediterranean Sean",
               "collapsed": true,
-              "credit": "IUCN Med",
+              "credit": "IUCN-Med",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
               "legend": "/assets/sharks/legend2.svg",
@@ -885,7 +885,7 @@
           "contact_info": {
             "authors": [
               {
-                "name": "Violeta Barrios,",
+                "name": "Violeta Barrios",
                 "departament": "Med Species Programme Coordinator"
               },
               {
@@ -1110,7 +1110,7 @@
           "info": [
             {
               "title": "Antelope species distribution map",
-              "credit": "IUCN Med",
+              "credit": "IUCN-Med",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/gazella.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/gazella.zip",
@@ -1181,7 +1181,7 @@
               "list": [
                 {
                   "img": "/assets/antelopees/brochure.jpg",
-                  "title": "FACT SHEET: Antelopes of North Africa and the Arabian Peninsula",
+                  "title": "FACT SHEET: Antelopes of North Africa and the Arabian Peninsula"
                 },
                 {
                   "title": "IUCN Antelope Specialist Group",
@@ -1334,7 +1334,7 @@
           "info": [
             {
               "title": "Important Plant Areas identified to date in Mediterranean countries",
-              "credit": "IUCN Med",
+              "credit": "IUCN-Med",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/ipas.zip",
               "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/ipas.zip",
