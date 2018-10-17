@@ -754,7 +754,7 @@
           "mapStyle": "mapbox://styles/cayetanobv/cj9sajpjj1uzs2srqx2he0yl6",
           "info": [
             {
-              "title": "Distribution of threatened (CR, EN, and VU) <span class='italic'>Chondrichthyans</span> within the Mediterranean Sea",
+              "title": "Distribution of richness (CR, EN, and VU) <span class='italic'>Chondrichthyans</span> within the Mediterranean Sea",
               "credit": "IUCN-Med",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_thrt.zip",
