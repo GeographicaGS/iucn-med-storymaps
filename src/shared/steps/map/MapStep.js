@@ -93,15 +93,13 @@ var MapStepComponent = /** @class */ (function (_super) {
         });
         this.mapService.map.scrollZoom.disable();
         this.mapService.map.on('load', function () {
-            _this.activeLayer = _this.step.info[0];
-            _this.updateLayers(_this.activeLayer);
+            _this.updateLayers(_this.step.info[0]);
         });
     };
     MapStepComponent.prototype.toggleActiveLayer = function () {
         var _this = this;
         if (!this.activeLayer.layer.subLayers.length || !this.mapService.map)
             return;
-        var activePopup = {};
         if (this.popup)
             this.popup.remove();
         for (var _i = 0, _a = this.activeLayer.layer.subLayers; _i < _a.length; _i++) {

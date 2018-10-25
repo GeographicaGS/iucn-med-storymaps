@@ -79,15 +79,12 @@ export class MapStepComponent extends BaseStepComponent {
         });
         this.mapService.map.scrollZoom.disable();
         this.mapService.map.on('load', () => {
-            this.activeLayer = this.step.info[0];
-            this.updateLayers(this.activeLayer);
+            this.updateLayers(this.step.info[0]);
         });
     }
 
     toggleActiveLayer() {
         if (!this.activeLayer.layer.subLayers.length || !this.mapService.map) return;
-
-        let activePopup: any = {};
 
         if (this.popup) this.popup.remove();
         for (let sublayer of this.activeLayer.layer.subLayers) {
