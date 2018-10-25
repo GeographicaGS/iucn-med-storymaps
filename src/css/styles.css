@@ -11,7 +11,9 @@
 -------------------------------------------------------------------------------*/
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,400i,500,500i,600,600i,700,800,900|Merriweather:300,400,400i,700,700i,900,900i');
 @import url('https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
 html,
 body,
 body div,
@@ -3939,114 +3941,6 @@ body {
   -o-animation-name: scaleFull;
   animation-name: scaleFull;
 }
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Fira Sans Italic'), local('FiraSans-Italic'), url(https://fonts.gstatic.com/s/firasans/v8/va9C4kDNxMZdWfMOD5VvkrjJYTc.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: italic;
-  font-weight: 500;
-  src: local('Fira Sans Medium Italic'), local('FiraSans-MediumItalic'), url(https://fonts.gstatic.com/s/firasans/v8/va9f4kDNxMZdWfMOD5VvkrA6Qif4VFw.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: italic;
-  font-weight: 600;
-  src: local('Fira Sans SemiBold Italic'), local('FiraSans-SemiBoldItalic'), url(https://fonts.gstatic.com/s/firasans/v8/va9f4kDNxMZdWfMOD5VvkrAWRSf4VFw.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Fira Sans ExtraLight'), local('FiraSans-ExtraLight'), url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnWKneRhf_.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Fira Sans Light'), local('FiraSans-Light'), url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnPKreRhf_.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Fira Sans Regular'), local('FiraSans-Regular'), url(https://fonts.gstatic.com/s/firasans/v8/va9E4kDNxMZdWfMOD5Vvl4jO.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Fira Sans Medium'), local('FiraSans-Medium'), url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnZKveRhf_.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Fira Sans SemiBold'), local('FiraSans-SemiBold'), url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnSKzeRhf_.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Fira Sans Bold'), local('FiraSans-Bold'), url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnLK3eRhf_.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 800;
-  src: local('Fira Sans ExtraBold'), local('FiraSans-ExtraBold'), url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnMK7eRhf_.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 900;
-  src: local('Fira Sans Black'), local('FiraSans-Black'), url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnFK_eRhf_.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Merriweather';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Merriweather Italic'), local('Merriweather-Italic'), url(https://fonts.gstatic.com/s/merriweather/v19/u-4m0qyriQwlOrhSvowK_l5-eRZOf-c.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Merriweather';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Merriweather Bold Italic'), local('Merriweather-BoldItalic'), url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf4jvk.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Merriweather';
-  font-style: italic;
-  font-weight: 900;
-  src: local('Merriweather Black Italic'), local('Merriweather-BlackItalic'), url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR7NWPf4jvk.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Merriweather Light'), local('Merriweather-Light'), url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l521wRZWMf_.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v19/u-440qyriQwlOrhSvowK_l5-fCZJ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l52xwNZWMf_.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 900;
-  src: local('Merriweather Black'), local('Merriweather-Black'), url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l52_wFZWMf_.ttf) format('truetype');
-}
 .fira_sans {
   font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
@@ -5229,7 +5123,7 @@ el-learn-more ul li .info {
   margin-left: 24px;
   font-weight: 300;
   font-family: 'Fira Sans', sans-serif;
-  flex: 1 0 calc(100% - 188px);
+  flex: 1 0 calc(-88%);
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
@@ -7049,12 +6943,6 @@ skip .contact-info-container a {
 }
 .modalOverlay.open .modal input.wmsInput::-moz-focus-inner {
   border: 0;
-}
-@font-face {
-  font-family: 'Space Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Space Mono'), local('SpaceMono-Regular'), url(https://fonts.gstatic.com/s/spacemono/v3/i7dPIFZifjKcF5UAWdDRYEF8QA.ttf) format('truetype');
 }
 iucnInfo {
   -webkit-animation-duration: 1s;

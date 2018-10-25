@@ -93,7 +93,8 @@ var MapStepComponent = /** @class */ (function (_super) {
         });
         this.mapService.map.scrollZoom.disable();
         this.mapService.map.on('load', function () {
-            _this.updateLayers(_this.step.info[0]);
+            _this.activeLayer = _this.step.info[0];
+            _this.updateLayers(_this.activeLayer);
         });
     };
     MapStepComponent.prototype.toggleActiveLayer = function () {
