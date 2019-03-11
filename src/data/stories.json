@@ -652,7 +652,7 @@
             "url": "assets/sharks/image.jpg",
             "class": "kenburns",
             "credit": {
-              "footer": "Underwater view of a blue shark at the dive site Azores Banks, Pico Island, Azores.",
+              "footer": "Underwater view of a blue shark (Prionace glauca)",
               "author": " © Michael Valos| Dreamstime"
             }
           },
@@ -669,7 +669,7 @@
             {
               "type": "paragraph",
               "capitalize": true,
-              "value": "Sharks play an important role in the <b>food chain</b> of the oceans, but the numbers of these fishes in the Mediterranean are decreasing at an alarming rate. Beyond the global culinary demand for sharks and rays, the so called Elasmobranchs, many non-commercial species are commonly caught in nets during fishing expeditions. The northwestern part of the Mediterranean has over the years experienced an intensive increase in fishing activity, and as a result, bycatch has become a major issue."
+              "value": "Sharks play an important role in the <b>food chain</b> of the oceans, but the numbers of these fishes in the Mediterranean are decreasing at an alarming rate. Beyond the global culinary demand for sharks and rays, the so called Elasmobranchs, many non-commercial species are commonly caught in nets during fishing expeditions. The northwestern part of the Mediterranean has over the years experienced an intensive increase in fishing activity, and as a result, <b>bycatch</b> has become a major issue."
             },
             {
               "type": "paragraph",
@@ -729,32 +729,32 @@
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "<div><b>Only in the mediterranean</b></div>Three species of rays (<i>Leucoraja melitensis, Raja polystigma and Raja radula</i>) are endemic, thus is they can be found nowhere else but only in the Mediterranean Sea. Two of them are facing a high extinction risk."
+              "value": "<div><b>Only in the Mediterranean</b></div>Three species of rays (<i>Leucoraja melitensis, Raja polystigma and Raja radula</i>) are endemic, thus they can be found nowhere else but only in the Mediterranean Sea. Two of them are facing a high extinction risk."
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "<div><i>Leucoraja melitensis</i>:</div><ul><li>Maltese Skate, Maltese Ray</li><li>Critically Endangered</li></ul>"
+              "value": "<div>Maltese Skate <i>(Leucoraja melitensis)</i>:</div><ul></li><li>Critically Endangered</li></ul>"
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "<div><i>Raja radula</i>:</div><ul><li>Skate</li><li>Endangered</li></ul>"
+              "value": "<div>Skate <i>(Raja radula)</i>:</div><ul><li>Endangered</li></ul>"
             },
             {
               "type": "paragraph",
               "capitalize": false,
-              "value": "<div><i>Raja polystigma</i>:</div><ul><li>Speckled Skate, Speckled Ray</li><li>Least Concern</li></ul>"
+              "value": "<div>Speckled Ray <i>(Raja polystigma)</i>:</div><ul><li>Least Concern</li></ul>"
             }
           ]
         },
         "map": {
           "name": "Map",
           "collapsed": false,
-          "mapStyle": "mapbox://styles/cayetanobv/cj9sajpjj1uzs2srqx2he0yl6",
+          "mapStyle": "mapbox://styles/cayetanobv/cjszv85634lfz1fqtfhhz03yo",
           "info": [
             {
-              "title": "Distribution of richness (CR, EN, and VU) <span class='italic'>Chondrichthyans</span> within the Mediterranean Sea",
+              "title": "Distribution of <span class='italic'>Chondrichthyans</span> richness in the Mediterranean Sea",
               "credit": "IUCN-Med",
               "collapsed": false,
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_thrt.zip",
@@ -769,12 +769,12 @@
                 {
                   "type": "paragraph",
                   "capitalize": false,
-                  "value": "When overlapping the Marine Protected Areas from MAPAMED, it is highlighted that one of the richest area for Chondrichthyans, the South-West of the Mediterranean, needs to increase protected marine areas."
+                  "value": "When overlapping Marine Protected Areas from MAPAMED, it is highlighted that on of the richest areas for sharks and rays, the Southwest of the Mediterranean, needs to increase the coverage of protected marine areas."
                 },
                 {
                   "type": "paragraph",
                   "capitalize": false,
-                  "value": "Marine protected areas can offer the opportunity to regulate human activity in a way that benefits sharks and rays."
+                  "value": "Marine Protected Areas can offer the opportunity to regulate human activity in a way that benefits Chondrichthyans and local people."
                 }
               ],
               "layer": {
@@ -790,7 +790,7 @@
               }
             },
             {
-              "title": "Distribution of Data Deficient Chondrichthyans within the Mediterranean Sean",
+              "title": "In the Mediterranean Sea, up to two-thirds of Chondrichthyans may be threatened in the region, as the midpoint estimate suggests 65% of extant species for which sufficient data are available are threatened. Status uncertainty tends to be greatest along North African coasts, emphasizing the need for further research in this part of the Mediterranean region where species richness is also greatest. Although there are synoptic research surveys throughout the northern coastal waters of the Mediterranean Sea, there are no population time-series available from North African waters.",
               "collapsed": true,
               "credit": "IUCN-Med",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
@@ -837,7 +837,7 @@
             },
             {
               "type": "paragraph",
-              "value": "In 2013, the European Union (EU) banned the <b>removal of shark</b> fins on board vessels through Regulation No. 605/2013, in order to enhance enforcement of the 2003 EU ban on shark finning (Regulation No. 1185/2003) and to facilitate shark fishery data collection."
+              "value": "In 2013, the European Union (EU) banned the <b>removal of shark fins</b> on board vessels through Regulation No. 605/2013, in order to enhance enforcement of the 2003 EU ban on shark finning (Regulation No. 1185/2003) and to facilitate shark fishery data collection."
             },
             {
               "type": "paragraph",
@@ -853,7 +853,7 @@
                 {
                   "img": "/assets/sharks/brochure_medredlist_sharks.jpg",
                   "title": "The IUCN Mediterranean Red List of Sharks, Rays and Chimaeras",
-                  "href": "https://www.iucn.org/sites/dev/files/content/documents/brochure_medredlist_sharks.pdf"
+                  "href": "https://www.iucnredlist.org/assessment/process"
                 },
                 {
                   "title": "IUCN SSC Shark Specialist Group",
@@ -904,7 +904,7 @@
             "author_link": "<a href=\"mailto:medspecies@iucn.org\">IUCN Mediterranean Species Programme </a>",
             "address": {
               "center_name": "IUCN Centre for Mediterranean Cooperation",
-              "info": "C/ Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tél +34 352 02 84 30<br>Fax +34 352 02 84 30<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
+              "info": "Calle Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tel +34 952 028 430<br>Fax +34 952 028 145<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
             }
           },
           "next_story": {
@@ -1468,6 +1468,338 @@
           }
         }
       }
+    },
+    "freshwater": {
+        "steps": {
+          "cover": {
+            "name": "Cover",
+            "background": {
+              "url": "assets/freshwater/brachytemis.JPG",
+              "class": "kenburns",
+              "credit": {
+                "footer": "Brachythemis fuscopalliata",
+                "author": "@Jean-Pierre Boudol",
+                "ico": false
+              }
+            },
+            "title": "The Shape of Freshwater",
+            "subtitle": ""
+          },
+          "intro": {
+            "background": {
+              "url": "assets/freshwater/brachytemis.JPG",
+              "class": "kenburns"
+            },
+            "name": "Intro",
+            "elements": [
+              {
+                "type": "paragraph",
+                "capitalize": true,
+                "value": "It is not rocket science: we all depend on water, and the Mediterranean region is no exception. Yet, the availability and quality of water higly depends on the good functioning of <b>freshwater ecosystems</b>, such as wetlands, and on the <b>myriand of species</b> that play a key role in the equilibrium of these fragile and uncommon habitats."
+              },
+              {
+                "type": "title",
+                "value": "Facts and Figure"
+              },
+              {
+                "type": "paragraph",
+                "capitalize": false,
+                "value": "We tend to forget that freshwater ecosystems are a precious and endanIt ered resource: they cover less than 1% of the planet, yet are amongst the most diverse and threatened in the world. Water is a very scarce resource, and a tenth of all animal species, including half of the known fish species in the world and 35% of all vertebrates, live in freshwater."
+              },
+              {
+                "type": "image",
+                "url": "/assets/freshwater/freshwater_species.png",
+                "credit": {
+                  "footer": "Source: IUCN Red List of Threatened Species and WWF. 2018. Living It lanet Report - 2018: Aiming Higher.Grooten, M. and Almond, R.E.A.(Eds). WWF, Gland, Switzerland",
+                  "author": "",
+                  "ico": false
+                }
+              },
+              {
+                "type": "title",
+                "value": "Is freshwater biodiversity in a good shape?"
+              },
+              {
+                "type": "image",
+                "url":"/assets/freshwater/barada_1.JPG",
+                "credit":{
+                  "footer":"Barada Spring minnow (Pseudophoxinus syriacus), Critically Endangered (CR) endemic species of the Barada Spring, in Syria",
+                  "author": "@Joerg Freyhof"
+                }
+              },
+              {
+                "type": "paragraph",
+                "capitalize": false,
+                "value": "Unfortunately, no. Freshwater species are being lost at a greater rate than either marine or terrestrial species. In the Mediterranean, based on the categories and criteria of the <a href='https://www.iucnredlist.org/' target='_blank'>IUCN Red List of Threatened Species©</a>, more than a third of assessed freshwater species are already threatened with extinction, and 13 freshwater fishes are considered to have become extinct. This is probably the tip of the iceberg, as many more species disappear before we ever have the chance to describe or assess them."
+              },
+              {
+                "type": "image",
+                "url": "/assets/freshwater/threatened_species.png",
+                "credit": {
+                  "footer": "Source: IUCN Red List of threatened Species. ©Dragonfly icon made by Freepik from www.flaticon.com",
+                  "author": "",
+                  "ico": false
+                }
+              },
+              {
+                "type": "paragraph",
+                "capitalize": false,
+                "value": "These alarming rates are mainly due to the loss or degradation of these species’ habitats: the extraordinary web of life in freshwaters is boggling under pressures of human development, and loss of species and degradation of habitats has consequences for everyone."
+              },
+              {
+                "type": "image",
+                "url": "/assets/freshwater/barada.JPG",
+                "credit": {
+                  "footer": "The Barada Spring KBA, Syria. This spring was almost completely drained in 2008 to meet the growing needs for water. As a consequence the endemic fish species Pseudophoxinus syriacus (CR), is now possibly Extinct.",
+                  "author": "@Joerg Freyhof",
+                  "ico": true
+                }
+              },
+              {
+                "type": "title",
+                "value": "Curiosities: the richness of wetlands"
+              },
+              {
+                "type": "paragraph",
+                "capitalize": false,
+                "value": "Freshwater ecosystems provide income to some of the world’s poorest communities. It is estimated that the livelihoods of over 660 million people depend on wetlands – that is, land areas that are flooded with water either all the time, or seasonally - and that 70 billion USD-worth of goods and services are at stake if wetlands aren’t preserved. In relation to freshwater fishes, in Egypt at least 378,000 people depend directly on activities related to inland fisheries and/or aquaculture, an activity that generated around 355.7 million USD in 2009. Wetlands also support unique agricultural and fishing practices, salt harvesting techniques, traditional food and recipes and traditional and artisanal crafts that don’t exist anywhere else. When wetlands are lost it is the local population who bears the greatest cost but we all lose."
+              },
+              {
+                "type": "image",
+                "url": "/assets/freshwater/lima.JPG",
+                "credit": {
+                  "footer": "Field surveys",
+                  "author": "@Manuel Lima",
+                  "ico": true
+                }
+              },
+              {
+                "type": "paragraph",
+                "capitalize": false,
+                "value": "Freshwater ecosystems such as wetlands are also often nature’s solution to climate change, adaptation and mitigation, and a source of building materials and medicines, with an estimated 20,000 freshwater plant species currently in medicinal use."
+              },
+              {
+                "type": "quote",
+              "value": "“Protecting these habitats through site based conservation actions, such as KBAs, can provide a powerful tool to hel prevent species loss.”",
+              "credit": "<b>William Darwall</b>, Head of IUCN Freshwater Biodiversity Unit"
+              },
+              {
+                "type": "title",
+                "value": "KBA, a beacon of hope for the feature of the Mediterranean freshwater"
+              },
+              {
+                "type": "paragraph",
+                "capitalize": false,
+                "value": "A major bottleneck to conservation of freshwater ecosystems is the lack of information on where the most important sites of biodiversity are located. One of the most successful actions to uncork this situation has been the identification of KBAs. Key Biodiversity Areas, or KBAs, are ecosystems that contribute significantly to the global persistence of species. In the Mediterranean region, a total of <b>376 Freshwater Key Biodiversity Areas</b> have been identified so far. Flagging these webs of life provides fundamental information to inform and support a wide range of decision-making contexts, end-users and international conservation efforts for the wellbeing of freshwater ecosystems, such as the Ramsar Convention."
+              },
+              {
+                "type": "image",
+                "url": "/assets/freshwater/kba_standard.png"
+              },
+              {
+                "type": "title",
+                "value": "MedWet, Ramsar and KBAs: the case of Mediterranean wetlands"
+              },
+              {
+                "type": "paragraph",
+                "capitalize": false,
+                "value": "Since 1971, the intergovernmental treaty known as the <b>Ramsar Convention</b> provides the framework for national action and international cooperation for the conservation and wise use of wetlands and their resources. In the Mediterranean, wetlands are rich and diverse ecosystems, and an important number of Wetlands of International Importance (Ramsar sites) has been designated in the region. Currently, there are 281 Ramsar sites, covering over 185,000 km 2 , which represents only between 1.7 and 2.4% of the total area of the 27 Mediterranean and peri-Mediterranean countries that are Parties to the Ramsar Convention, and around 1 to 2% of wetlands in the world. One of the key actors of the Mediterranean wetlands landscape is the Mediterranean Wetlands Initiative (<b>MedWet</b>). In 2016, MedWet established a <b>Scientific and Technical Network (MedWet STN)</b> to enhance the implementation of the Ramsar Convention across the region and contribute effectively to the conservation and management of Mediterranean Ramsar Sites. The work of this network, organised in five working groups, focuses on five areas: climate change, inventories, ecosystem services, biodiversity and water. Maintaining and restoring the Mediterranean’s natural wetlands, and the benefits they provide to people, can make a considerable contribution to helping Mediterranean countries achieve many of the UN Sustainable Development Goals (SDGs) including for sustainable livelihoods, food and water security, notably for wetlands by delivering SDG Targets 6.6, 14.2, 15.1 and 15.5 and to providing effective “natural climate buffers”."
+              },
+              {
+                "type": "image",
+                "url": "/assets/freshwater/ramsar.png"
+              }
+            ]
+          },
+          "map":{
+            "name": "Map",
+            "collapsed": false,
+            "mapStyle": "mapbox://styles/cayetanobv/cjt42l7bb370d1fmq2gstwutw",
+            "info": [
+              {
+                "title": "Med freshwater KBA",
+                "credit": "IUCN-Med",
+                "collapsed": false,
+                "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/kba_freshwater.zip",
+                "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/kba_freshwater.zip",
+                "legend": "/assets/freshwater/legend1.svg",
+                "elements": [
+                  {
+                    "type": "paragraph",
+                    "capitalize": false,
+                    "value": "In the Mediterranean hotspot, a total of 376 Freshwater Key Biodiversity Areas have been identified following the KBA standard. These sites host species such as freshwater fishes, molluscs, odonata and aquatic plants, which are key within the food webs that support wetland ecosystems. Source: 2018 IUCN-Med and Mediterranean Wetland Observatory / Tour du Valat"
+                  }              
+                ],
+                "layer": {
+                  "id": "kba-freshwater",
+                  "hidden": false,
+                  "subLayers": [
+                    "kba-freshwater"
+                  ]
+                }
+              },
+              {
+                "title": "Ramsar sites within freshwater KBAs:",
+                "collapsed": true,
+                "credit": "IUCN-Med",
+                "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
+                "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
+                "legend": "/assets/freshwater/legend2.svg",
+                "elements": [
+                  {
+                    "type": "paragraph",
+                    "capitalize": false,
+                    "value": "In terms of area, only 15% of the total Mediterranean Ramsar sites area overlaps with freshwater KBAs. Out of 281 Ramsar sites found within the region, 65 match fully or partially the limits of freshwater KBAs. . Source: 2018 IUCN Med and Mediterranean Wetland Observatory / Tour du Valat"
+                  }
+                ],
+                "layer": {
+                  "id": "ramsar_areas",
+                  "hidden": true,
+                  "subLayers": [
+                    "ramsar_areas"
+                  ]
+                }
+              }
+            ]
+          },
+          "conclusion": {
+            "name": "Taking action",
+            "title": "<b>Taking action</b>",
+            "ico": "/assets/freshwater/taking_action.svg",
+            "elements": [
+              {
+                "type": "paragraph",
+                "value": "With the Mediterranean population estimated to rise to more than 500 million by 2025, the forecast is for an 18% increase in water demands, putting enormous pressure on freshwater ecosystems. Despite its tremendous diversity, its importance to people and the huge threats it faces, freshwater biodiversity is not receiving the attention and action it urgently requires. To keep working on the protection of freshwater ecosystems, more freshwater species need to be put on the map, as IUCN has already done for Africa and in the Mediterranean. In the Mediterranean region, we particularly need to strengthen biodiversity monitoring in the southern and eastern countries, and draw up and implement specific and concrete short-term action plans for threatened species and their habitats across the basin. It is urgent to improve water management, especially in relation to the over-abstraction of water from springs and ground water, dam construction and pollution from agriculture and urban areas. Increased efforts are also required to control and/or eradicate invasive alien species in freshwater systems.",
+                "highlight": true
+              },
+              {
+                "type": "quote",
+              "value": "Out of sight, but not out of mind: we all have a role to play in safeguarding freshwater ecosystems and biodiversity"
+              },
+              {
+                "type": "paragraph",
+                "value": "We need to target conservation and monitoring of these critical sites, which are not receiving the attention they deserve, and particularly to the freshwater species that are most at risk, including amphibians, reptiles, fish, molluscs, plants and arthropods. <b>The good shape of Mediterranean freshwater biodiversity is in our hands</b>, on bringing attention to these ecosystems and the urgent conservation action they require in order to prevent further loss in the region."
+              },
+              {
+                "type": "title",
+                "value": "Do you want to learn more?"
+              },
+              {
+                "type":"paragraph",
+                "value": "<i>Recent publications</i>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>Freshwater key biodiversity areas in the Mediterranean basin hotspot <a href='https://portals.iucn.org/library/node/44936' target='_blank'>(https://portals.iucn.org/library/node/44936)</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>Freshwater Key Biodiversity Areas in the north-western Mediterranean sub-region <a href='https://portals.iucn.org/library/node/47141' target='_blank'>(https://portals.iucn.org/library/node/47141)</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>A global standard for the identification of Key Biodiversity Areas : version 1.0 <a href='https://portals.iucn.org/library/node/46259' target='_blank'>(https://portals.iucn.org/library/node/46259)</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>Mediterranean Wetlands Outlook 2: Solutions for sustainable Mediterranean Wetlands, 2018<a href='https://medwet.org/wp-content/uploads/2018/10/MWO_2018_Technical-report.pdf' target='_blank'>(https://medwet.org/wp-content/uploads/2018/10/MWO_2018_Technical-report.pdf)</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>WWF. 2018. Living Planet Report - 2018: Aiming Higher.Grooten, M. and Almond, R.E.A.(Eds). WWF, Gland, Switzerland<a href='https://https://wwf.panda.org/knowledge_hub/all_publications/living_planet_report_2018/' target='_blank'>https://wwf.panda.org/knowledge_hub/all_publications/living_planet_report_2018/</a></li></ul>"
+              },
+              {
+                "type":"paragraph",
+                "value": "<i>Websites</i>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>IUCN Freshwater Biodiversity Unit<a href='https://www.iucn.org/theme/species/our-work/freshwater-biodiversity' target='_blank'>(https://www.iucn.org/theme/species/our-work/freshwater-biodiversity)</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>Freshwater on the IUCN Red List <a href='http://www.iucnredlist.org/initiatives/freshwater' target='_blank'>http://www.iucnredlist.org/initiatives/freshwater</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>The Ramsar Convention <a href='https://www.ramsar.org/' target='_blank'>https://www.ramsar.org/</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>MedWet STN <a href='https://medwet.org/the-scientific-and-technical-network/' target='_blank'>https://medwet.org/the-scientific-and-technical-network/</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>Tour du Valat <a href='https://tourduvalat.org/en/' target='_blank'>https://tourduvalat.org/en/</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>The Mediterranean Wetland Observatory <a href='https://medwet.org/observatory/' target='_blank'>https://medwet.org/observatory/</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>OffYourMap: The case of Coastal Wetlands <a href='http://offyourmap.org/' target='_blank'>http://offyourmap.org/</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>The Alliance for Freshwater Life <a href='https://allianceforfreshwaterlife.org/' target='_blank'>https://allianceforfreshwaterlife.org/</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>The European Freshwater Information Platform: Data, tools and resources for freshwater research <a href='http://www.freshwaterplatform.eu/' target='_blank'>http://www.freshwaterplatform.eu/</a></li></ul>"
+              },
+              {
+                "type":"paragraph",
+                "value": "<i>Projects</i>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>IUCN Med KBAs projects in the Douro (Portugal) and Sebou (Morocco) basins: <a href='https://www.iucn.org/regions/mediterranean/our-work/mediterranean-species-programme/biodiversity-status-and-trends/key-biodiversity-areas' target='_blank'>https://www.iucn.org/regions/mediterranean/our-work/mediterranean-species-programme/biodiversity-status-and-trends/key-biodiversity-areas</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>IUCN Med Impact evaluation of invasive species in freshwater ecosystems <a href='https://www.iucn.org/regions/mediterranean/our-work/mediterranean-species-programme/biodiversity-status-and-trends/invasive-species' target='_blank'>https://www.iucn.org/regions/mediterranean/our-work/mediterranean-species-programme/biodiversity-status-and-trends/invasive-species</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<ul><li>LIFE INVASAQUA Especies exóticas acuáticas invasoras de agua dulce y sistemas estuarinos: Sensibilización y Prevención en la Península Ibérica<a href='https://www.iucn.org/node/30878' target='_blank'>https://www.iucn.org/node/30878</a></li></ul>"
+              },
+              {
+                "type": "paragraph",
+                "value": "<h3 class='donate'><a href='https://www.iucn.org/donate' target='_blank'>DONATE</a></h3>"
+              }
+            ]
+          },
+          "skip": {
+            "name": "Related",
+            "background": {
+              "url": "assets/freshwater/resume.png",
+              "class": ""
+            },
+            "contact_info": {
+              "authors": [
+                {
+                  "name": "Teresa Gil"
+                },
+                {
+                  "name": "Marcos Valderrabano"
+                }
+              ],
+              "author_link": "<a href=\"mailto:marcos.valderrabano@iucn.org\">IUCN Mediterranean Ecosystems Programme </a>",
+              "address": {
+                "center_name": "IUCN Centre for Mediterranean Cooperation",
+                "info": "C/ Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tél +34 352 02 84 30<br>Fax +34 352 02 84 30<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
+              }
+            },
+            "next_story": {
+              "background": {
+                "url": "assets/corals/image.jpg"
+              },
+              "link": "corals",
+              "title": "Do you know where the most beautiful Mediterranean diving secrets are?"
+            }
+          }
+        }
     }
   }
 }

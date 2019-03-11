@@ -37,7 +37,7 @@
     "gulp-shell": "^0.6.3",
     "gulp-watch-less": "^1.0.1",
     "install": "^0.8.7",
-    "mapbox-gl": "^0.44.1",
+    "mapbox-gl": "0.44.1",
     "pump": "^1.0.2",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.1.0",
