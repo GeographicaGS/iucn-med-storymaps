@@ -1,166 +1,168 @@
-import {Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding} from "@angular/core";
-import {BaseStepComponent} from "../base/BaseStep";
+import { Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding } from '@angular/core';
+import { BaseStepComponent } from '../base/BaseStep';
 // import {Map, Popup} from 'mapbox-gl';
 import * as mapboxgl from 'mapbox-gl';
-import {MapService} from "../../../services/MapService";
-import {DOCUMENT} from "@angular/platform-browser";
-import {WindowService} from "../../../services/WindowService";
+import { MapService } from '../../../services/MapService';
+import { DOCUMENT } from '@angular/platform-browser';
+import { WindowService } from '../../../services/WindowService';
 
 @Component({
-    selector: 'map',
-    templateUrl: '/templates/shared/steps/map/view.html',
+  selector: 'map',
+  templateUrl: '/templates/shared/steps/map/view.html',
 })
 export class MapStepComponent extends BaseStepComponent {
-    activeLayer: any = false;
-    zoom: any = 4.5;
-    center: any = [15.0, 38.0];
-    popup: any = false;
-    currentLegend: string = '';
+  activeLayer: any = false;
+  zoom: any = 4.5;
+  center: any = [15.0, 38.0];
+  popup: any = false;
+  currentLegend: string = '';
 
-    constructor(@Inject(ElementRef)  elem: ElementRef,
-                @Inject(DOCUMENT) protected document: any,
-                protected windowService: WindowService,
-                @Inject(MapService) private mapService: MapService) {
-        super(elem, document, windowService);
-        this.mapService.changes.subscribe(() => {
-            this.initMap();
-        });
+  constructor(@Inject(ElementRef)  elem: ElementRef,
+              @Inject(DOCUMENT) protected document: any,
+              protected windowService: WindowService,
+              @Inject(MapService) private mapService: MapService) {
+    super(elem, document, windowService);
+    this.mapService.changes.subscribe(() => {
+      this.initMap();
+    });
+  }
+
+  onResize(event: any) {
+    super.onResize(event);
+    this.mapService.map.resize();
+  }
+
+  lockMap() {
+    this.windowService.setBodyBgClass('locked');
+    if (this.mapService.map instanceof mapboxgl.Map) {
+      this.mapService.map.resize();
+      this.mapService.map.scrollZoom.enable();
+    }
+  }
+
+  unlockMap() {
+    if (this.mapService.map instanceof mapboxgl.Map) {
+      this.mapService.map.scrollZoom.disable();
+    }
+  }
+
+  lockView() {
+    let offset = this.element.nativeElement.getBoundingClientRect();
+    let locked = this.windowService.scrollingDown() && offset.top < 100 && offset.top > -20
+      || !this.windowService.isScrollingActive() && offset.top == 0;
+    if (locked) {
+      this.windowService.setBodyBgUrl('none');
+      this.windowService.setBodyBgClass('locked');
+      this.lockMap();
+    } else {
+      this.unlockMap();
     }
 
-    onResize(event: any) {
-        super.onResize(event);
-        this.mapService.map.resize();
-    }
+    return locked;
+  }
 
-    lockMap() {
-        this.windowService.setBodyBgClass('locked');
-        if (this.mapService.map instanceof mapboxgl.Map) {
-            this.mapService.map.resize();
-            this.mapService.map.scrollZoom.enable();
-        }
-    }
+  ngAfterViewInit() {
+    super.ngAfterViewInit();
+    this.initMap();
+  }
 
-    unlockMap() {
-        if (this.mapService.map instanceof mapboxgl.Map) {
-            this.mapService.map.scrollZoom.disable();
-        }
-    }
+  initMap() {
+    this.zoom = 4.5;
+    this.center = [15.0, 38.0];
 
-    lockView() {
-        let offset = this.element.nativeElement.getBoundingClientRect();
-        let locked = this.windowService.scrollingDown() && offset.top < 100 && offset.top > -20
-            || !this.windowService.isScrollingActive() && offset.top == 0;
-        if (locked) {
-            this.windowService.setBodyBgUrl('none');
-            this.windowService.setBodyBgClass('locked');
-            this.lockMap();
-        } else {
-            this.unlockMap();
-        }
+    this.mapService.map = new mapboxgl.Map({
+      trackResize: false,
+      container: 'map',
+      style: this.step.mapStyle || 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
+      zoom: this.zoom,
+      center: this.center
+    });
+    this.mapService.map.scrollZoom.disable();
+    this.mapService.map.on('load', () => {
+      this.updateLayers(this.step.info.find((item: any) => !item.collapsed));
+    });
+  }
 
-        return locked;
-    }
+  toggleActiveLayer(currentLayer: any) {
+    if (!currentLayer.layer.subLayers.length || !this.mapService.map) return;
 
-    ngAfterViewInit() {
-        super.ngAfterViewInit();
-        this.initMap();
-    }
+    if (this.popup)
+      this.popup.remove();
 
-    initMap() {
-        this.zoom = 4.5;
-        this.center = [15.0, 38.0];
+    this.step.info.forEach((panel:any) => {
+      panel.layer.hidden = true;
+      panel.layer.subLayers.forEach((sublayer: string) => {
+        this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'none');
+      });
+    });
 
-        this.mapService.map = new mapboxgl.Map({
-            trackResize: false,
-            container: 'map',
-            style: this.step.mapStyle || 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
-            zoom: this.zoom,
-            center: this.center
-        });
-        this.mapService.map.scrollZoom.disable();
-        this.mapService.map.on('load', () => {
-            this.updateLayers(this.step.info[0]);
-        });
-    }
+    currentLayer.layer.subLayers.forEach((sublayer: string) => {
+      this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'visible');
+    });
+    currentLayer.layer.hidden = false;
+    this.activeLayer = currentLayer;
+    this.mapService.map.on('click', (e: any) => {
+      let features = this.mapService.map.queryRenderedFeatures(e.point, {layers: this.activeLayer.layer.subLayers});
+      if (!features.length) return;
 
-    toggleActiveLayer() {
-        if (!this.activeLayer.layer.subLayers.length || !this.mapService.map) return;
+      let properties = <any>{};
+      properties = features[0].properties;
+      let count = properties.count;
 
-        if (this.popup) this.popup.remove();
-        for (let sublayer of this.activeLayer.layer.subLayers) {
-            let visibility = this.mapService.map.getLayoutProperty(sublayer, 'visibility');
-            if (visibility === 'visible') {
-                this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'none');
-            } else {
-                this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'visible');
-            }
-        }
+      if (this.popup) this.popup.remove();
+      if (!properties.count && properties.N_COUNT) {
+        count = properties.N_COUNT;
+      }
 
-        this.mapService.map.on('click', (e: any) => {
-            let features = this.mapService.map.queryRenderedFeatures(e.point, {layers: this.activeLayer.layer.subLayers});
-            if (!features.length) return;
+      this.popup = new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(count)
+        .addTo(this.mapService.map);
 
-            let properties = <any>{};
-            properties = features[0].properties;
-            let count = properties.count;
+    });
+  }
 
-            if (this.popup) this.popup.remove();
-            if (!properties.count && properties.N_COUNT) {
-                count = properties.N_COUNT;
-            }
 
-            this.popup = new mapboxgl.Popup()
-                .setLngLat(e.lngLat)
-                .setHTML(count)
-                .addTo(this.mapService.map);
+  updateLayers(info: any = {}) {
+    this.toggleActiveLayer(info);
+  }
 
-        });
-    }
+  zoomIn() {
+    let currentZoom = this.mapService.map.getZoom();
+    let currentCenter = this.mapService.map.getCenter();
 
-    updateLayers(info: any = {}) {
-        if (this.activeLayer) {
-            this.toggleActiveLayer();
-        }
-        this.activeLayer = info;
-        this.toggleActiveLayer();
-    }
+    this.flyTo(currentCenter, currentZoom + 1);
+  }
 
-    zoomIn() {
-        let currentZoom = this.mapService.map.getZoom();
-        let currentCenter = this.mapService.map.getCenter();
+  zoomOut() {
+    let currentZoom = this.mapService.map.getZoom();
+    let currentCenter = this.mapService.map.getCenter();
 
-        this.flyTo(currentCenter, currentZoom + 1);
-    }
+    this.flyTo(currentCenter, currentZoom - 1);
+  }
 
-    zoomOut() {
-        let currentZoom = this.mapService.map.getZoom();
-        let currentCenter = this.mapService.map.getCenter();
+  flyTo(center: any = this.center, zoom: any = this.zoom) {
+    if (!this.mapService.map) return;
 
-        this.flyTo(currentCenter, currentZoom - 1);
-    }
+    this.mapService.map.flyTo({
+      center: center,
+      zoom: zoom,
+      speed: 0.6
+    });
+  }
 
-    flyTo(center: any = this.center, zoom: any = this.zoom) {
-        if (!this.mapService.map) return;
+  getShpFile(info: any = {}) {
+    let anchor = document.createElement('a');
+    anchor.href = info.shp;
+    anchor.target = '_blank';
+    anchor.download = info.shp;
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  }
 
-        this.mapService.map.flyTo({
-            center: center,
-            zoom: zoom,
-            speed: 0.6
-        });
-    }
-
-    getShpFile(info: any = {}) {
-        let anchor = document.createElement('a');
-        anchor.href = info.shp;
-        anchor.target = '_blank';
-        anchor.download = info.shp;
-        document.body.appendChild(anchor);
-        anchor.click();
-        document.body.removeChild(anchor);
-    }
-
-    getCurrentLegend() {
-        return this.activeLayer.legend;
-    }
+  getCurrentLegend() {
+    return this.activeLayer.legend;
+  }
 
 }
