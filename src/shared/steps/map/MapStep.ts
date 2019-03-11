@@ -79,24 +79,24 @@ export class MapStepComponent extends BaseStepComponent {
     });
     this.mapService.map.scrollZoom.disable();
     this.mapService.map.on('load', () => {
-      this.updateLayers(this.step.info.find(item => !item.collapsed));
+      this.updateLayers(this.step.info.find((item: any) => !item.collapsed));
     });
   }
 
-  toggleActiveLayer(currentLayer) {
+  toggleActiveLayer(currentLayer: any) {
     if (!currentLayer.layer.subLayers.length || !this.mapService.map) return;
 
     if (this.popup)
       this.popup.remove();
 
-    this.step.info.forEach(panel => {
+    this.step.info.forEach((panel:any) => {
       panel.layer.hidden = true;
-      panel.layer.subLayers.forEach(sublayer => {
+      panel.layer.subLayers.forEach((sublayer: string) => {
         this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'none');
       });
     });
 
-    currentLayer.layer.subLayers.forEach(sublayer => {
+    currentLayer.layer.subLayers.forEach((sublayer: string) => {
       this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'visible');
     });
     currentLayer.layer.hidden = false;
