@@ -1632,7 +1632,7 @@
                 ],
                 "layer": {
                   "id": "kba-freshwater",
-                  "hidden": false,
+                  "hidden": true,
                   "subLayers": [
                     "kba-freshwater"
                   ]
@@ -1654,7 +1654,7 @@
                 ],
                 "layer": {
                   "id": "ramsar_areas",
-                  "hidden": true,
+                  "hidden": false,
                   "subLayers": [
                     "ramsar_areas"
                   ]
