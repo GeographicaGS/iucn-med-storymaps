@@ -1657,7 +1657,7 @@
                   "id": "ramsar_areas",
                   "hidden": false,
                   "subLayers": [
-                    "ramsar_areas"
+                    "ramsar-note-areas"
                   ]
                 }
               }
