@@ -1634,7 +1634,8 @@
                   "id": "kba-freshwater",
                   "hidden": true,
                   "subLayers": [
-                    "kba-freshwater"
+                    "kba-freshwater",
+                    "kba-freshwater-detail"
                   ]
                 }
               },
@@ -1642,8 +1643,8 @@
                 "title": "Ramsar sites within freshwater KBAs",
                 "collapsed": true,
                 "credit": "IUCN-Med",
-                "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
-                "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
+                "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/ramsar_sites.zip",
+                "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/ramsar_sites.zip",
                 "legend": "/assets/freshwater/legend2.svg",
                 "elements": [
                   {
