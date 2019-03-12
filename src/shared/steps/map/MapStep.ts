@@ -105,19 +105,16 @@ export class MapStepComponent extends BaseStepComponent {
       let features = this.mapService.map.queryRenderedFeatures(e.point, {layers: this.activeLayer.layer.subLayers});
       if (!features.length) return;
 
-      let properties = <any>{};
-      properties = features[0].properties;
-      let count = properties.count;
+      const properties = <any>features[0].properties;
+      const content = properties.note || properties.count || properties.N_COUNT;
 
       if (this.popup) this.popup.remove();
-      if (!properties.count && properties.N_COUNT) {
-        count = properties.N_COUNT;
+      if (content) {
+        this.popup = new mapboxgl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(content)
+          .addTo(this.mapService.map);
       }
-
-      this.popup = new mapboxgl.Popup()
-        .setLngLat(e.lngLat)
-        .setHTML(count)
-        .addTo(this.mapService.map);
 
     });
   }
