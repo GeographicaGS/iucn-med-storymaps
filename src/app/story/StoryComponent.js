@@ -31,7 +31,6 @@ var StoryComponent = /** @class */ (function () {
         this.currentStep = 'cover';
         this.steps = [];
         this.subscription = new Subscription_1.Subscription();
-        this.scrollDown = false;
     }
     StoryComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -41,7 +40,7 @@ var StoryComponent = /** @class */ (function () {
                 _this.router.navigate(['/']);
             }
             else {
-                _this.currentStep = (_this.route.queryParams.getValue() || { step: 'cover' })['step'];
+                _this.currentStep = (_this.route.queryParams.value || { step: 'cover' })['step'];
                 _this.steps = Object.keys(_this.currentStory['steps']).map(function (key) { return Object.assign(_this.currentStory['steps'][key], { type: key }); });
             }
         });
@@ -54,9 +53,9 @@ var StoryComponent = /** @class */ (function () {
     };
     StoryComponent.prototype.onChangeScrollDown = function (down) {
         if (down === void 0) { down = false; }
-        this.scrollDown = down;
+        this.windowService.scrollDown = down;
     };
-    StoryComponent.prototype.onScroll = function ($event) {
+    StoryComponent.prototype.onScroll = function () {
         var _this = this;
         var keys = Object.keys(this.currentStory['steps']);
         var offset = document.documentElement.clientHeight * 0.3;
@@ -67,10 +66,11 @@ var StoryComponent = /** @class */ (function () {
             }
             var top = el.getBoundingClientRect().top;
             var bottom = el.getBoundingClientRect().bottom;
-            return _this.scrollDown && top > -20 && top < offset
-                || !_this.scrollDown && bottom > 20 && bottom < offset;
+            return _this.windowService.scrollingDown() && top > -20 && top < offset
+                || !_this.windowService.scrollingDown() && bottom > 20 && bottom < offset;
         });
         if (idx > -1) {
+            debugger;
             this.currentStep = keys[idx];
             this[this.currentStep].onScroll();
         }
@@ -86,7 +86,7 @@ var StoryComponent = /** @class */ (function () {
     };
     __decorate([
         core_1.ViewChild('scrollbar'),
-        __metadata("design:type", ngx_perfect_scrollbar_1.PerfectScrollbarDirective)
+        __metadata("design:type", ngx_perfect_scrollbar_1.PerfectScrollbarComponent)
     ], StoryComponent.prototype, "scrollbar", void 0);
     __decorate([
         core_1.ViewChild('cover'),

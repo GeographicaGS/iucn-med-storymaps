@@ -44,7 +44,6 @@ var MapStepComponent = /** @class */ (function (_super) {
         _this.center = [15.0, 38.0];
         _this.popup = false;
         _this.mapService.changes.subscribe(function () {
-            debugger;
             _this.initMap();
         });
         return _this;

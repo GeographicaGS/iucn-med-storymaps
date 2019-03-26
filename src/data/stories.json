@@ -318,6 +318,10 @@
         },
         "skip": {
           "name": "Related",
+          "background": {
+            "url": "assets/corals/corals_skip.jpg",
+            "class": ""
+          },
           "credit": {
             "footer": "Gorgonian (<i>Eunicella cavolini</i>) at 35m depth",
             "author": "Korinthiakos Gulf, Greece <i>©</i> K.Milonakis"

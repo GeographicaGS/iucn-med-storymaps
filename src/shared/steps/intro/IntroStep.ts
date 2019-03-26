@@ -18,9 +18,5 @@ export class IntroStepComponent extends BaseStepComponent {
     let offset = this.element.nativeElement.getBoundingClientRect();
     return (this.getWindowHeight() * 0.8) > (offset.top);
   }
-
-  onScroll() {
-    super.onScroll();
-  }
 }
 

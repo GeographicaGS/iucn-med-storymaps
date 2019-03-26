@@ -21,7 +21,6 @@ export class MapStepComponent extends BaseStepComponent implements AfterViewInit
               @Inject(MapService) private mapService: MapService) {
     super(elem, document, windowService);
     this.mapService.changes.subscribe(() => {
-      debugger;
       this.initMap();
     });
   }

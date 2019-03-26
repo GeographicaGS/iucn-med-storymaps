@@ -32,7 +32,7 @@ export class DataService {
   }
 
   getStory(slug = '') {
-    return this.data.getValue().stories[slug] || {};
+    return this.data.getValue().stories[slug] || null;
   }
 
   getStories() {

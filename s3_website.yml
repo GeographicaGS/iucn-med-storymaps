@@ -26,6 +26,9 @@ gzip:
   - .html
   - .css
   - .js
+  - .jpg
+  - .png
+  - .svg
 
 cloudfront_distribution_config:
   # default_cache_behavior:
