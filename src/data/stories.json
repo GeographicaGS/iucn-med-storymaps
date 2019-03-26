@@ -1477,8 +1477,8 @@
               "url": "assets/freshwater/skadar.JPG",
               "class": "kenburns",
               "credit": {
-                "footer": "Brachythemis fuscopalliata",
-                "author": "@Jean-Pierre Boudol",
+                "footer": "Inlet on Lake Skadar, Albania and Montenegro.This large Mediterranean lake and its associated catchment is a Freshwater Key Biodiversity Area (KBA) supporting at least 24 threatened or restricted range freshwater species.",
+                "author": "©Geert De Knijf.",
                 "ico": false
               }
             },
@@ -1504,9 +1504,9 @@
               },
               {
                 "type": "image",
-                "url": "/assets/freshwater/threatened.png",
+                "url": "/assets/freshwater/vertebrados.png",
                 "credit": {
-                  "footer": "Source: IUCN Red List of Threatened Species and WWF. 2018. Living Planet Report - 2018: Aiming Higher.Grooten, M. and Almond, R.E.A.(Eds). WWF, Gland, Switzerland",
+                  "footer": "Source: IUCN Red List of Threatened Species and WWF. 2018. Living Planet Report - 2018: Aiming Higher. Grooten, M. and Almond, R.E.A.(Eds). WWF, Gland, Switzerland",
                   "author": "",
                   "ico": false
                 }
@@ -1520,7 +1520,7 @@
                 "url":"/assets/freshwater/barada_1.JPG",
                 "credit":{
                   "footer":"Barada Spring minnow (<i>Pseudophoxinus syriacus</i>), Critically Endangered (CR) endemic species of the Barada Spring, in Syria",
-                  "author": "@Joerg Freyhof"
+                  "author": "©Jörg Freyhof"
                 }
               },
               {
@@ -1540,20 +1540,20 @@
               {
                 "type": "paragraph",
                 "capitalize": false,
-                "value": "These alarming rates are mainly due to the loss or degradation of these species’ habitats: the extraordinary web of life in freshwaters is boggling under pressures of human development, and loss of species and degradation of habitats has consequences for everyone."
+                "value": "These alarming rates are mainly due to the loss or degradation of these species’ habitats: the extraordinary web of life in freshwaters is buckling under pressures of human development, and loss of species and degradation of habitats has consequences for everyone."
               },
               {
                 "type": "image",
                 "url": "/assets/freshwater/barada.JPG",
                 "credit": {
                   "footer": "The Barada Spring KBA, Syria. This spring was almost completely drained in 2008 to meet the growing needs for water. As a consequence, the endemic fish species <i>Pseudophoxinus syriacus</i> (CR), is now possibly Extinct.",
-                  "author": "@Joerg Freyhof",
+                  "author": "©Jörg Freyhof <br>" ,
                   "ico": true
                 }
               },
               {
                 "type": "title",
-                "value": "Curiosities: the richness of wetlands"
+                "value": "<br>Curiosities: the richness of wetlands"
               },
               {
                 "type": "paragraph",
@@ -1565,7 +1565,7 @@
                 "url": "/assets/freshwater/lima.JPG",
                 "credit": {
                   "footer": "Field surveys",
-                  "author": "@Manuel Lima",
+                  "author": "©fManuel Lima",
                   "ico": true
                 }
               },
@@ -1576,8 +1576,8 @@
               },
               {
                 "type": "quote",
-              "value": "“Protecting these habitats through site based conservation actions, such as KBAs, can provide a powerful tool to hel prevent species loss.”",
-              "credit": "<b>William Darwall</b> <br> Head of IUCN Freshwater Biodiversity Unit"
+              "value": "“Protecting these habitats through site based conservation actions, such as within KBAs, can provide a powerful tool to help prevent species loss.”",
+              "credit": "<b>William Darwall</b> <br> Head of IUCN Freshwater Biodiversity Unit, IUCN Global Species Programme."
               },
               {
                 "type": "title",
@@ -1599,7 +1599,7 @@
               {
                 "type": "paragraph",
                 "capitalize": false,
-                "value": "Since 1971, the intergovernmental treaty known as the <b>Ramsar Convention</b> provides the framework for national action and international cooperation for the conservation and wise use of wetlands and their resources. <br>In the Mediterranean, wetlands are rich and diverse ecosystems, and an important number of Wetlands of International Importance (Ramsar sites) has been designated in the region. Currently, there are 281 Ramsar sites, covering over 185,000 km² , which represents only between 1.7 and 2.4% of the total area of the 27 Mediterranean and peri-Mediterranean countries that are Parties to the Ramsar Convention, and around 1 to 2% of wetlands in the world. <br>One of the key actors of the Mediterranean wetlands landscape is the Mediterranean Wetlands Initiative (<b>MedWet</b>). In 2016, MedWet established a <b>Scientific and Technical Network (MedWet STN)</b> to enhance the implementation of the Ramsar Convention across the region and contribute effectively to the conservation and management of Mediterranean Ramsar Sites. The work of this network, organised in five working groups, focuses on five areas: climate change, inventories, ecosystem services, biodiversity and water. <br>Maintaining and restoring the Mediterranean’s natural wetlands and the benefits they provide to people can make a considerable contribution to helping Mediterranean countries achieve many of the UN Sustainable Development Goals (SDGs),and more specifically targets 6.6, 14.2, 15.1 and 15.5, which tackle sustainable livelihoods, food and water security."
+                "value": "Since 1971, the intergovernmental treaty known as the <b>Ramsar Convention</b> provides the framework for national action and international cooperation for the conservation and wise use of wetlands and their resources.<br> <br>In the Mediterranean, wetlands are rich and diverse ecosystems, and an important number of Wetlands of International Importance (Ramsar sites) has been designated in the region. Currently, there are 281 Ramsar sites, covering over 185,000 km² , which represents only between 1.7 and 2.4% of the total area of the 27 Mediterranean and peri-Mediterranean countries that are Parties to the Ramsar Convention, and around 1 to 2% of wetlands in the world.<br> <br>One of the key actors of the Mediterranean wetlands landscape is the Mediterranean Wetlands Initiative (<b>MedWet</b>). In 2016, MedWet established a <b>Scientific and Technical Network (MedWet STN)</b> to enhance the implementation of the Ramsar Convention across the region and contribute effectively to the conservation and management of Mediterranean Ramsar Sites. The work of this network, organised in five working groups, focuses on five areas: climate change, inventories, ecosystem services, biodiversity and water. <br> <br>Maintaining and restoring the Mediterranean’s natural wetlands and the benefits they provide to people can make a considerable contribution to helping Mediterranean countries achieve many of the UN Sustainable Development Goals (SDGs),and more specifically targets 6.6, 14.2, 15.1 and 15.5, which tackle sustainable livelihoods, food and water security."
               },
               {
                 "type": "image",
@@ -1613,9 +1613,9 @@
             "mapStyle": "mapbox://styles/cayetanobv/cjt42l7bb370d1fmq2gstwutw",
             "info": [
               {
-                "title": "Med freshwater",
+                "title": "Important sites for freshwater biodiversity in the Mediterranean",
                 "credit": "IUCN-Med",
-                "legend": "/assets/maps/legend.png",
+                "legend": "/assets/maps/leyenda.png",
                 "collapsed": false,
                 "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Med_Ramsar_KBA.zip",
                 "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Med_Ramsar_KBA.zip",
@@ -1623,17 +1623,16 @@
                   {
                     "type": "paragraph",
                     "capitalize": false,
-                    "value": "<b>Med Freshwater KBA </b><br>In the Mediterranean hotspot, a total of 376 Freshwater Key Biodiversity Areas have been identified following the KBA standard. These sites host species such as freshwater fishes, molluscs, odonata and aquatic plants, which are key within the food webs that support wetland ecosystems. <br>Source: 2018 IUCN-Med and Mediterranean Wetland Observatory / Tour du Valat<br><br><b>Ramsar sites within freshwater KBAs</b><br>In terms of area, only 15% of the total Mediterranean Ramsar sites area overlaps with freshwater KBAs. Out of 281 Ramsar sites found within the region, 65 match fully or partially the limits of freshwater KBAs. <br> Source: 2018 IUCN Med and Mediterranean Wetland Observatory / Tour du Valat"
+                    "value": "<b>Freshwater KBA in the Mediterranean region</b><br>In the Mediterranean hotspot, a total of 376 Freshwater Key Biodiversity Areas have been identified and proposed following the KBA standard. These sites host species such as freshwater fishes, molluscs, odonata and aquatic plants, which are key within the food webs that support wetland ecosystems. <br>Source: 2018 IUCN-Med and Mediterranean Wetland Observatory / Tour du Valat<br><br><b>Ramsar sites and freshwater KBA in the Mediterranean</b><br>In terms of area, only 15% of the total Mediterranean Ramsar sites overlap with freshwater KBAs. Out of 281 Ramsar sites found within the region, 65 match fully or partially the limits of freshwater KBAs. <br> Source: 2018 IUCN Med and Mediterranean Wetland Observatory / Tour du Valat"
                   }
                 ],
                 "layer": {
                 "id": "kba-freshwater",
                 "hidden": false,
                 "subLayers": [
-                  "intersect",
-                  "ramsar-note-areas",
                   "kba-freshwater",
-                  "kba-freshwater-detail"
+                  "kba-freshwater-detail",
+                  "ramsar-note-areas"
                 ]
               }
             } 
@@ -1645,17 +1644,17 @@
             "elements": [
               {
                 "type": "paragraph",
-                "value": "With the Mediterranean population estimated to rise to more than 500 million by 2025, the forecast is for an 18% increase in water demands, putting enormous pressure on freshwater ecosystems. Despite its tremendous diversity, its importance to people and the huge threats it faces, freshwater biodiversity is not receiving the attention and action it urgently requires. <br>To keep working on the protection of freshwater ecosystems, more freshwater species need to be put on the map, as IUCN has already done for Africa and in the Mediterranean. In the Mediterranean region, we particularly need to strengthen biodiversity monitoring in the southern and eastern countries, and design and implement specific and concrete short-term action plans for threatened species and their habitats across the basin. It is urgent to improve water management, especially in relation to the over-abstraction of water from springs and ground water, dam construction and pollution from agriculture and urban areas. Increased efforts are also required to control and/or eradicate invasive alien species in freshwater systems.",
+                "value": "<br> <br>With the Mediterranean population estimated to rise to more than 500 million by 2025, the forecast is for an 18% increase in water demands, putting enormous pressure on freshwater ecosystems. Despite its tremendous diversity, its importance to people and the huge threats it faces, freshwater biodiversity is not receiving the attention and action it urgently requires. <br><br>To keep working on the protection of freshwater ecosystems, more freshwater species need to be put on the map, as IUCN has already done for Africa and in the Mediterranean. In the Mediterranean region, we particularly need to strengthen biodiversity monitoring in the southern and eastern countries, and design and implement specific and concrete short-term action plans for threatened species and their habitats across the basin. It is urgent to improve water management, especially in relation to the over-abstraction of water from springs and ground water, dam construction and pollution from agriculture and urban areas. Increased efforts are also required to control and/or eradicate invasive alien species in freshwater systems.",
                 "highlight": true
               },
               {
-                "type": "paragraph",
-              "value": "'Out of sight, but not out of mind: we all have a role to play in safeguarding freshwater ecosystems and biodiversity'",
-              "highlight": true
+              "type": "quote",
+              "value": "Out of sight, but not out of mind: we all have a role to play in safeguarding freshwater ecosystems and biodiversity.",
+              "credit":""
               },
               {
                 "type": "paragraph",
-                "value": "We need to target conservation and monitoring of these critical sites, which are not receiving the attention they deserve, and particularly to the freshwater species that are most at risk, including amphibians, reptiles, fish, molluscs, plants and arthropods. <b>The good shape of Mediterranean freshwater biodiversity is in our hands</b>, on bringing attention to these ecosystems and the urgent conservation action they require in order to prevent further loss in the region."
+                "value": "We need to target conservation and monitoring of these critical sites, which are not receiving the attention they deserve, and particularly to the freshwater species that are most at risk, including amphibians, reptiles, fish, molluscs, plants and arthropods.<br> <br> <b>The good shape of Mediterranean freshwater biodiversity is in our hands</b>, on bringing attention to these ecosystems and the urgent conservation action they require in order to prevent further loss in the region."
               },
               {
                 "type": "title",
@@ -1768,12 +1767,12 @@
                   "name": "Elisa Alcázar"
                 },
                 {
-                  "departament":"IUCN Mediterranean Marine Programme with the contribution of Mediterranean Wetlands Observatory/Tour de Valat"
+                  "departament":"IUCN Mediterranean Species Programme with the contribution of Mediterranean Wetlands Observatory/Tour de Valat"
                 }
               ],
               "address": {
                 "center_name": "IUCN Centre for Mediterranean Cooperation",
-                "info": "C/ Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tél +34 352 02 84 30<br>Fax +34 352 02 84 30<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
+                "info": "Calle Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tel +34 352 02 84 30<br><br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
               }
             },
             "next_story": {
