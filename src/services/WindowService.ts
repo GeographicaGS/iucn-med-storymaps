@@ -64,6 +64,7 @@ export class WindowService {
   }
 
   updateSocialMetaTags(title, description, image, url) {
+    url = `${window.location.protocol}//${window.location.host}/${url}`;
     this.meta.updateTag({property: 'og:title', content: title});
     this.meta.updateTag({property: 'og:image', content: image});
     this.meta.updateTag({property: 'og:url', content: url});
