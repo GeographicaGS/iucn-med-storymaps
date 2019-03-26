@@ -13,14 +13,14 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var WindowService_1 = require("../../services/WindowService");
 var DataService_1 = require("../../services/DataService");
 var router_1 = require("@angular/router");
 var MenuComponent = /** @class */ (function () {
-    function MenuComponent(windowService, router, storyService) {
-        this.windowService = windowService;
+    function MenuComponent(router, storyService) {
         this.router = router;
         this.storyService = storyService;
+        this.currentStep = 'cover';
+        this.scrollTo = new core_1.EventEmitter();
         this.steps = {};
     }
     Object.defineProperty(MenuComponent.prototype, "currentStory", {
@@ -31,7 +31,7 @@ var MenuComponent = /** @class */ (function () {
         configurable: true
     });
     MenuComponent.prototype.isItemActive = function (item) {
-        return item === this.windowService.getCurrentStep();
+        return item === this.currentStep;
     };
     MenuComponent.prototype.getStepsKeys = function () {
         return Object.keys(this.steps);
@@ -39,27 +39,29 @@ var MenuComponent = /** @class */ (function () {
     MenuComponent.prototype.getStepName = function (step) {
         return this.steps[step]['name'];
     };
-    MenuComponent.prototype.scrollTo = function (step) {
-        if (step.toLowerCase() === 'skip') {
-            this.windowService.scrollTo(9999);
-        }
-        else {
-            this.windowService.scrollToStep(step);
-        }
+    MenuComponent.prototype.onSectionClick = function (step) {
+        this.scrollTo.emit(step);
     };
     __decorate([
         core_1.Input(),
         __metadata("design:type", Object),
         __metadata("design:paramtypes", [Object])
     ], MenuComponent.prototype, "currentStory", null);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], MenuComponent.prototype, "currentStep", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], MenuComponent.prototype, "scrollTo", void 0);
     MenuComponent = __decorate([
         core_1.Component({
             selector: 'menu',
             templateUrl: '/templates/shared/menu/view.html',
         }),
-        __param(2, core_1.Inject(DataService_1.DataService)),
-        __metadata("design:paramtypes", [WindowService_1.WindowService,
-            router_1.Router,
+        __param(1, core_1.Inject(DataService_1.DataService)),
+        __metadata("design:paramtypes", [router_1.Router,
             DataService_1.DataService])
     ], MenuComponent);
     return MenuComponent;

@@ -5,7 +5,7 @@
     </div>
     <div class="bottom">
         <div>
-            <a *ngFor="let step of getStepsKeys()" class="btn {{step}} {{isItemActive(step) ? 'active' : ''}}"  [attr.data-content]="getStepName(step)" (click)="scrollTo(step)"></a>
+            <a *ngFor="let step of getStepsKeys()" class="btn {{step}} {{isItemActive(step) ? 'active' : ''}}"  [attr.data-content]="getStepName(step)" (click)="onSectionClick(step)"></a>
         </div>
     </div>
 </div>

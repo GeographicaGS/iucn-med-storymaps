@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.home = this.dataService.getHomeData();
-    this.windowService.scrollTo(1, 0);
     this.windowService.setBodyBgUrl(`url(${this.home.background.url})`);
     this.windowService.setBodyBgClass(this.home.background.class);
   }

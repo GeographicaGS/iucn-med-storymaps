@@ -15,6 +15,11 @@ var DataService_1 = require("../../services/DataService");
 var router_1 = require("@angular/router");
 var ngx_perfect_scrollbar_1 = require("ngx-perfect-scrollbar");
 var Subscription_1 = require("rxjs/Subscription");
+var CoverStep_1 = require("../../shared/steps/cover/CoverStep");
+var IntroStep_1 = require("../../shared/steps/intro/IntroStep");
+var MapStep_1 = require("../../shared/steps/map/MapStep");
+var ConclusionStep_1 = require("../../shared/steps/conclusion/ConclusionStep");
+var SkipStep_1 = require("../../shared/steps/skip/SkipStep");
 var StoryComponent = /** @class */ (function () {
     function StoryComponent(element, dataService, route, router, windowService) {
         this.element = element;
@@ -23,8 +28,10 @@ var StoryComponent = /** @class */ (function () {
         this.router = router;
         this.windowService = windowService;
         this.currentStory = null;
+        this.currentStep = 'cover';
         this.steps = [];
         this.subscription = new Subscription_1.Subscription();
+        this.scrollDown = false;
     }
     StoryComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -34,17 +41,73 @@ var StoryComponent = /** @class */ (function () {
                 _this.router.navigate(['/']);
             }
             else {
-                _this.windowService.setCurrentStep('cover');
+                _this.currentStep = (_this.route.queryParams.getValue() || { step: 'cover' })['step'];
                 _this.steps = Object.keys(_this.currentStory['steps']).map(function (key) { return Object.assign(_this.currentStory['steps'][key], { type: key }); });
             }
         });
     };
     StoryComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.onMenuClick(_this.currentStep);
+        }, 500);
+    };
+    StoryComponent.prototype.onChangeScrollDown = function (down) {
+        if (down === void 0) { down = false; }
+        this.scrollDown = down;
+    };
+    StoryComponent.prototype.onScroll = function ($event) {
+        var _this = this;
+        var keys = Object.keys(this.currentStory['steps']);
+        var offset = document.documentElement.clientHeight * 0.3;
+        var idx = keys.findIndex(function (key) {
+            var el = _this.element.nativeElement.querySelector("#" + key);
+            if (!el) {
+                return false;
+            }
+            var top = el.getBoundingClientRect().top;
+            var bottom = el.getBoundingClientRect().bottom;
+            return _this.scrollDown && top > -20 && top < offset
+                || !_this.scrollDown && bottom > 20 && bottom < offset;
+        });
+        if (idx > -1) {
+            this.currentStep = keys[idx];
+            this[this.currentStep].onScroll();
+        }
+    };
+    StoryComponent.prototype.onMenuClick = function (step) {
+        this.currentStep = step;
+        if (this.currentStep === 'skip') {
+            this.scrollbar.directiveRef.scrollToY(99999, 800);
+        }
+        else {
+            this.scrollbar.directiveRef.scrollToElement('#' + this.currentStep, 0, 800);
+        }
     };
     __decorate([
         core_1.ViewChild('scrollbar'),
-        __metadata("design:type", ngx_perfect_scrollbar_1.PerfectScrollbarComponent)
+        __metadata("design:type", ngx_perfect_scrollbar_1.PerfectScrollbarDirective)
     ], StoryComponent.prototype, "scrollbar", void 0);
+    __decorate([
+        core_1.ViewChild('cover'),
+        __metadata("design:type", CoverStep_1.CoverStepComponent)
+    ], StoryComponent.prototype, "cover", void 0);
+    __decorate([
+        core_1.ViewChild('intro'),
+        __metadata("design:type", IntroStep_1.IntroStepComponent)
+    ], StoryComponent.prototype, "intro", void 0);
+    __decorate([
+        core_1.ViewChild('map'),
+        __metadata("design:type", MapStep_1.MapStepComponent)
+    ], StoryComponent.prototype, "map", void 0);
+    __decorate([
+        core_1.ViewChild('conclusion'),
+        __metadata("design:type", ConclusionStep_1.ConclusionStepComponent)
+    ], StoryComponent.prototype, "conclusion", void 0);
+    __decorate([
+        core_1.ViewChild('skip'),
+        __metadata("design:type", SkipStep_1.SkipStepComponent)
+    ], StoryComponent.prototype, "skip", void 0);
     StoryComponent = __decorate([
         core_1.Component({
             selector: 'app-story',

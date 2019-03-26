@@ -9,6 +9,11 @@ import { Router } from '@angular/router';
   templateUrl: '/templates/routes/info/view.html',
 })
 export class IUCNInfoComponent {
+
+
+  home: any = {};
+  info: any = {};
+
   constructor(@Inject(ElementRef) protected element: ElementRef,
               @Inject(DOCUMENT) protected document: any,
               protected router: Router,
@@ -16,13 +21,9 @@ export class IUCNInfoComponent {
               protected windowService: WindowService) {
   }
 
-  home: any = {};
-  info: any = {};
-
   ngOnInit(): void {
     this.home = this.dataService.getHomeData();
     this.info = this.dataService.getIUCNInfoData();
-    this.windowService.scrollTo(1, 0);
     this.windowService.resetBackground();
   }
 

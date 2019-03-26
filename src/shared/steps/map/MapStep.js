@@ -27,7 +27,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var BaseStep_1 = require("../base/BaseStep");
-// import {Map, Popup} from 'mapbox-gl';
 var mapboxgl = require("mapbox-gl");
 var MapService_1 = require("../../../services/MapService");
 var platform_browser_1 = require("@angular/platform-browser");
@@ -36,6 +35,7 @@ var MapStepComponent = /** @class */ (function (_super) {
     __extends(MapStepComponent, _super);
     function MapStepComponent(elem, document, windowService, mapService) {
         var _this = _super.call(this, elem, document, windowService) || this;
+        _this.elem = elem;
         _this.document = document;
         _this.windowService = windowService;
         _this.mapService = mapService;
@@ -43,8 +43,8 @@ var MapStepComponent = /** @class */ (function (_super) {
         _this.zoom = 4.5;
         _this.center = [15.0, 38.0];
         _this.popup = false;
-        _this.currentLegend = '';
         _this.mapService.changes.subscribe(function () {
+            debugger;
             _this.initMap();
         });
         return _this;
@@ -80,7 +80,6 @@ var MapStepComponent = /** @class */ (function (_super) {
         return locked;
     };
     MapStepComponent.prototype.ngAfterViewInit = function () {
-        _super.prototype.ngAfterViewInit.call(this);
         this.initMap();
     };
     MapStepComponent.prototype.initMap = function () {
@@ -89,7 +88,7 @@ var MapStepComponent = /** @class */ (function (_super) {
         this.center = [15.0, 38.0];
         this.mapService.map = new mapboxgl.Map({
             trackResize: false,
-            container: 'map',
+            container: this.elem.nativeElement.querySelector('#map'),
             style: this.step.mapStyle || 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
             zoom: this.zoom,
             center: this.center

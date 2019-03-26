@@ -24,9 +24,9 @@ export class StoriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.stories = this.dataService.getStories();
-    const _class = this.windowService.getBodyClass();
-    this.windowService.setBodyBgClass(`${_class} blur`);
-    this.windowService.scrollTo(1, 0);
+    const home: any = this.dataService.getHomeData();
+    this.windowService.setBodyBgUrl(`url(${home.background.url})`);
+    this.windowService.setBodyBgClass(`${home.background.class} blur`);
   }
 
   isScaling(story: string): boolean {
@@ -64,15 +64,10 @@ export class StoriesComponent implements OnInit {
 
   goToMap(story: string) {
     this.goTo(story, 'map');
-
   }
 
   goTo(story: string, step: string) {
-    this.router.navigate(['/story', story]).then(() => {
-      setTimeout(() => {
-        this.windowService.scrollToStep(step);
-      }, 150);
-    });
+    this.router.navigate(['/story', story], {queryParams: {step: step}});
   }
 
   hasAuthors(story: string) {

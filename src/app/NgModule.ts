@@ -84,11 +84,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 export class AppModule {
 }
 
-let productionMode = false;
-
-// if (productionMode) {
 enableProdMode();
-// }
 
 const platform = platformBrowserDynamic();
 platform.bootstrapModule(AppModule);

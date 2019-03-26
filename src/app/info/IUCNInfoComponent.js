@@ -30,7 +30,6 @@ var IUCNInfoComponent = /** @class */ (function () {
     IUCNInfoComponent.prototype.ngOnInit = function () {
         this.home = this.dataService.getHomeData();
         this.info = this.dataService.getIUCNInfoData();
-        this.windowService.scrollTo(1, 0);
         this.windowService.resetBackground();
     };
     IUCNInfoComponent.prototype.aboutHasBlocks = function () {

@@ -17,10 +17,6 @@ var WindowService_1 = require("../../services/WindowService");
 var DataService_1 = require("../../services/DataService");
 var Subscription_1 = require("rxjs/Subscription");
 var MainComponent = /** @class */ (function () {
-    // @HostListener('window:scroll', [])
-    // onScroll() {
-    //   this.windowService.onScroll();
-    // }
     function MainComponent(element, storyService, windowService) {
         this.element = element;
         this.storyService = storyService;
@@ -32,10 +28,10 @@ var MainComponent = /** @class */ (function () {
     MainComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.backgroundSrc = 'url(' + this.windowService.getBodyBgUrl() + ')';
-        this.subscription.add(this.windowService.getBodyBgUrlObservable().subscribe(function (src) {
+        this.subscription.add(this.windowService.bodyBgUrl.subscribe(function (src) {
             _this.backgroundSrc = src;
         }));
-        this.subscription.add(this.windowService.getBodyClassObservable().subscribe(function (_class) {
+        this.subscription.add(this.windowService.bodyClass.subscribe(function (_class) {
             _this.bodyClass = _class;
         }));
     };

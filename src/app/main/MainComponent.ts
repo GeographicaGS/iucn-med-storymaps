@@ -20,11 +20,6 @@ export class MainComponent implements OnInit, OnDestroy {
   @Input()
   bodyClass = 'full-screen';
 
-  // @HostListener('window:scroll', [])
-  // onScroll() {
-  //   this.windowService.onScroll();
-  // }
-
   constructor(@Inject(ElementRef) protected element: ElementRef,
               @Inject(DataService) private storyService: DataService,
               protected windowService: WindowService) {
@@ -33,12 +28,12 @@ export class MainComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.backgroundSrc = 'url(' + this.windowService.getBodyBgUrl() + ')';
     this.subscription.add(
-      this.windowService.getBodyBgUrlObservable().subscribe((src) => {
+      this.windowService.bodyBgUrl.subscribe((src) => {
         this.backgroundSrc = src;
       })
     );
     this.subscription.add(
-      this.windowService.getBodyClassObservable().subscribe((_class) => {
+      this.windowService.bodyClass.subscribe((_class) => {
         this.bodyClass = _class;
       })
     );

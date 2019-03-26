@@ -1,7 +1,5 @@
-import { Injectable, Inject } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import 'rxjs/add/operator/map';
-import { Observer, Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/common';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
@@ -9,11 +7,6 @@ export class DataService {
   data: BehaviorSubject<any> = new BehaviorSubject(null);
 
   constructor(private http: Http) {
-  }
-
-  getObservable(): Observable<any> {
-    return Observable.of([]);
-    // return this.storiesObservable;
   }
 
   initData() {

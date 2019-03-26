@@ -31,9 +31,9 @@ var StoriesComponent = /** @class */ (function () {
     }
     StoriesComponent.prototype.ngOnInit = function () {
         this.stories = this.dataService.getStories();
-        var _class = this.windowService.getBodyClass();
-        this.windowService.setBodyBgClass(_class + " blur");
-        this.windowService.scrollTo(1, 0);
+        var home = this.dataService.getHomeData();
+        this.windowService.setBodyBgUrl("url(" + home.background.url + ")");
+        this.windowService.setBodyBgClass(home.background.class + " blur");
     };
     StoriesComponent.prototype.isScaling = function (story) {
         return this.scaling === story;
@@ -67,12 +67,7 @@ var StoriesComponent = /** @class */ (function () {
         this.goTo(story, 'map');
     };
     StoriesComponent.prototype.goTo = function (story, step) {
-        var _this = this;
-        this.router.navigate(['/story', story]).then(function () {
-            setTimeout(function () {
-                _this.windowService.scrollToStep(step);
-            }, 150);
-        });
+        this.router.navigate(['/story', story], { queryParams: { step: step } });
     };
     StoriesComponent.prototype.hasAuthors = function (story) {
         return this.stories[story].steps.skip.contact_info.authors instanceof Array;

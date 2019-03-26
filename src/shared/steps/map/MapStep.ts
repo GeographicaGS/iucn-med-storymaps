@@ -1,6 +1,5 @@
 import { Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding } from '@angular/core';
 import { BaseStepComponent } from '../base/BaseStep';
-// import {Map, Popup} from 'mapbox-gl';
 import * as mapboxgl from 'mapbox-gl';
 import { MapService } from '../../../services/MapService';
 import { DOCUMENT } from '@angular/platform-browser';
@@ -10,19 +9,19 @@ import { WindowService } from '../../../services/WindowService';
   selector: 'map',
   templateUrl: '/templates/shared/steps/map/view.html',
 })
-export class MapStepComponent extends BaseStepComponent {
+export class MapStepComponent extends BaseStepComponent implements AfterViewInit {
   activeLayer: any = false;
   zoom: any = 4.5;
   center: any = [15.0, 38.0];
   popup: any = false;
-  currentLegend: string = '';
 
-  constructor(@Inject(ElementRef)  elem: ElementRef,
+  constructor(@Inject(ElementRef) protected elem: ElementRef,
               @Inject(DOCUMENT) protected document: any,
               protected windowService: WindowService,
               @Inject(MapService) private mapService: MapService) {
     super(elem, document, windowService);
     this.mapService.changes.subscribe(() => {
+      debugger;
       this.initMap();
     });
   }
@@ -62,7 +61,6 @@ export class MapStepComponent extends BaseStepComponent {
   }
 
   ngAfterViewInit() {
-    super.ngAfterViewInit();
     this.initMap();
   }
 
@@ -72,7 +70,7 @@ export class MapStepComponent extends BaseStepComponent {
 
     this.mapService.map = new mapboxgl.Map({
       trackResize: false,
-      container: 'map',
+      container: this.elem.nativeElement.querySelector('#map'),
       style: this.step.mapStyle || 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
       zoom: this.zoom,
       center: this.center
@@ -89,7 +87,7 @@ export class MapStepComponent extends BaseStepComponent {
     if (this.popup)
       this.popup.remove();
 
-    this.step.info.forEach((panel:any) => {
+    this.step.info.forEach((panel: any) => {
       panel.layer.hidden = true;
       panel.layer.subLayers.forEach((sublayer: string) => {
         this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'none');

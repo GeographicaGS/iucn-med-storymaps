@@ -90,10 +90,7 @@ var AppModule = /** @class */ (function () {
     return AppModule;
 }());
 exports.AppModule = AppModule;
-var productionMode = false;
-// if (productionMode) {
 core_1.enableProdMode();
-// }
 var platform = platform_browser_dynamic_1.platformBrowserDynamic();
 platform.bootstrapModule(AppModule);
 //# sourceMappingURL=NgModule.js.map
