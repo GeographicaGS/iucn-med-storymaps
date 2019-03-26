@@ -37,14 +37,14 @@
     <div class="skip-container">
         <div class="component-container" [style.background-color]="getBackgroundColor()">
             <div class="image"
-                 (click)="goToNextStory()"
+                 [routerLink]="['/story', step.next_story.link]"
                  [style.background-image]="'url(' + step.next_story.background.url     + ')'"
                  [ngClass]="showImage() ? 'fadeIn':'fadeOut'"
             >
 
             </div>
             <h2
-                    (click)="goToNextStory()"
+                    [routerLink]="['/story', step.next_story.link]"
                     [ngClass]="showTitle() ? 'fadeInUp':'fadeOutDown'"
             >
                 {{step.next_story.title}}
@@ -52,7 +52,9 @@
             <div class="btn-row"
                  [ngClass]="showButton() ? 'bounceInUp':'bounceOutDown'"
             >
-                <a class="btn small circle" (click)="goToNextStory()"></a>
+                <a class="btn small circle"
+                   [routerLink]="['/story', step.next_story.link]"
+                ></a>
                 <span>Read this story</span>
             </div>
         </div>

@@ -1,8 +1,11 @@
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -24,7 +27,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var BaseStep_1 = require("../base/BaseStep");
-// import {Map, Popup} from 'mapbox-gl';
 var mapboxgl = require("mapbox-gl");
 var MapService_1 = require("../../../services/MapService");
 var platform_browser_1 = require("@angular/platform-browser");
@@ -33,6 +35,7 @@ var MapStepComponent = /** @class */ (function (_super) {
     __extends(MapStepComponent, _super);
     function MapStepComponent(elem, document, windowService, mapService) {
         var _this = _super.call(this, elem, document, windowService) || this;
+        _this.elem = elem;
         _this.document = document;
         _this.windowService = windowService;
         _this.mapService = mapService;
@@ -40,7 +43,6 @@ var MapStepComponent = /** @class */ (function (_super) {
         _this.zoom = 4.5;
         _this.center = [15.0, 38.0];
         _this.popup = false;
-        _this.currentLegend = '';
         _this.mapService.changes.subscribe(function () {
             _this.initMap();
         });
@@ -65,7 +67,7 @@ var MapStepComponent = /** @class */ (function (_super) {
     MapStepComponent.prototype.lockView = function () {
         var offset = this.element.nativeElement.getBoundingClientRect();
         var locked = this.windowService.scrollingDown() && offset.top < 100 && offset.top > -20
-            || !this.windowService.isScrollingActive() && offset.top == 0;
+            || !this.windowService.isScrollingActive() && offset.top === 0;
         if (locked) {
             this.windowService.setBodyBgUrl('none');
             this.windowService.setBodyBgClass('locked');
@@ -77,7 +79,6 @@ var MapStepComponent = /** @class */ (function (_super) {
         return locked;
     };
     MapStepComponent.prototype.ngAfterViewInit = function () {
-        _super.prototype.ngAfterViewInit.call(this);
         this.initMap();
     };
     MapStepComponent.prototype.initMap = function () {
@@ -86,57 +87,52 @@ var MapStepComponent = /** @class */ (function (_super) {
         this.center = [15.0, 38.0];
         this.mapService.map = new mapboxgl.Map({
             trackResize: false,
-            container: 'map',
+            container: this.elem.nativeElement.querySelector('#map'),
             style: this.step.mapStyle || 'mapbox://styles/cayetanobv/cj0do9yow001q2smnpjsp8wtq',
             zoom: this.zoom,
             center: this.center
         });
         this.mapService.map.scrollZoom.disable();
         this.mapService.map.on('load', function () {
-            _this.updateLayers(_this.step.info[0]);
+            _this.updateLayers(_this.step.info.find(function (item) { return !item.collapsed; }));
         });
     };
-    MapStepComponent.prototype.toggleActiveLayer = function () {
+    MapStepComponent.prototype.toggleActiveLayer = function (currentLayer) {
         var _this = this;
-        if (!this.activeLayer.layer.subLayers.length || !this.mapService.map)
+        if (!currentLayer.layer.subLayers.length || !this.mapService.map)
             return;
         if (this.popup)
             this.popup.remove();
-        for (var _i = 0, _a = this.activeLayer.layer.subLayers; _i < _a.length; _i++) {
-            var sublayer = _a[_i];
-            var visibility = this.mapService.map.getLayoutProperty(sublayer, 'visibility');
-            if (visibility === 'visible') {
-                this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'none');
-            }
-            else {
-                this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'visible');
-            }
-        }
+        this.step.info.forEach(function (panel) {
+            panel.layer.hidden = true;
+            panel.layer.subLayers.forEach(function (sublayer) {
+                _this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'none');
+            });
+        });
+        currentLayer.layer.subLayers.forEach(function (sublayer) {
+            _this.mapService.map.setLayoutProperty(sublayer, 'visibility', 'visible');
+        });
+        currentLayer.layer.hidden = false;
+        this.activeLayer = currentLayer;
         this.mapService.map.on('click', function (e) {
             var features = _this.mapService.map.queryRenderedFeatures(e.point, { layers: _this.activeLayer.layer.subLayers });
             if (!features.length)
                 return;
-            var properties = {};
-            properties = features[0].properties;
-            var count = properties.count;
+            var properties = features[0].properties;
+            var content = properties.note || properties.count || properties.N_COUNT;
             if (_this.popup)
                 _this.popup.remove();
-            if (!properties.count && properties.N_COUNT) {
-                count = properties.N_COUNT;
+            if (content) {
+                _this.popup = new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML(content)
+                    .addTo(_this.mapService.map);
             }
-            _this.popup = new mapboxgl.Popup()
-                .setLngLat(e.lngLat)
-                .setHTML(count)
-                .addTo(_this.mapService.map);
         });
     };
     MapStepComponent.prototype.updateLayers = function (info) {
         if (info === void 0) { info = {}; }
-        if (this.activeLayer) {
-            this.toggleActiveLayer();
-        }
-        this.activeLayer = info;
-        this.toggleActiveLayer();
+        this.toggleActiveLayer(info);
     };
     MapStepComponent.prototype.zoomIn = function () {
         var currentZoom = this.mapService.map.getZoom();

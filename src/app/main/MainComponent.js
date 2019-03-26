@@ -14,78 +14,54 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var WindowService_1 = require("../../services/WindowService");
-var StoryService_1 = require("../../services/StoryService");
+var DataService_1 = require("../../services/DataService");
+var Subscription_1 = require("rxjs/Subscription");
+var platform_browser_1 = require("@angular/platform-browser");
 var MainComponent = /** @class */ (function () {
-    function MainComponent(element, storyService, windowService) {
-        var _this = this;
+    function MainComponent(element, storyService, meta, windowService) {
         this.element = element;
         this.storyService = storyService;
+        this.meta = meta;
         this.windowService = windowService;
-        this.stories = {};
-        this.currentStory = '';
+        this.subscription = new Subscription_1.Subscription();
         this.backgroundSrc = '';
         this.bodyClass = 'full-screen';
-        this.backgroundSrc = 'url(' + this.windowService.getBodyBgUrl() + ')';
-        this.windowService.getBodyBgUrlObservable().subscribe(function (src) {
-            _this.backgroundSrc = src;
-        });
-        this.windowService.getBodyClassObservable().subscribe(function (_class) {
-            _this.bodyClass = _class;
-        });
-        this.currentStory = this.windowService.getCurrentStory();
-        this.storyService.getObservable().subscribe(function (stories) {
-            _this.stories = stories;
-        });
-        this.windowService.getCurrentStoryObservable().subscribe(function (currentStory) {
-            _this.currentStory = currentStory;
-        });
+        meta.addTag({ property: 'og:title', content: '' });
+        meta.addTag({ property: 'og:description', content: '' });
     }
-    MainComponent.prototype.onScroll = function () {
-        this.windowService.onScroll();
+    MainComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.backgroundSrc = 'url(' + this.windowService.getBodyBgUrl() + ')';
+        this.subscription.add(this.windowService.bodyBgUrl.subscribe(function (src) {
+            _this.backgroundSrc = src;
+        }));
+        this.subscription.add(this.windowService.bodyClass.subscribe(function (_class) {
+            _this.bodyClass = _class;
+        }));
     };
-    MainComponent.prototype.isStoryLoaded = function () {
-        return this.stories['stories'] != undefined && this.stories['stories'][this.currentStory] != undefined;
-    };
-    MainComponent.prototype.areStoriesLoaded = function () {
-        return this.stories['home'] != undefined && this.stories['iucnInfo'].show != true;
-    };
-    MainComponent.prototype.isHomeView = function () {
-        return this.areStoriesLoaded() && !this.isStoryLoaded() && !this.windowService.aboutView;
-    };
-    MainComponent.prototype.isIucnInfoLoaded = function () {
-        return this.stories['iucnInfo'] !== undefined && this.windowService.aboutView;
-    };
-    MainComponent.prototype.getStepsKeys = function () {
-        return this.stories['stories'] != undefined && this.stories['stories'][this.currentStory] != undefined ? Object.keys(this.stories['stories'][this.currentStory]['steps']) : [];
-    };
-    MainComponent.prototype.getStep = function (step) {
-        return this.stories['stories'][this.currentStory]['steps'][step];
+    MainComponent.prototype.ngOnDestroy = function () {
+        this.subscription.unsubscribe();
     };
     __decorate([
         core_1.HostBinding('style.background-image'),
         core_1.Input(),
-        __metadata("design:type", String)
+        __metadata("design:type", Object)
     ], MainComponent.prototype, "backgroundSrc", void 0);
     __decorate([
         core_1.HostBinding('class'),
         core_1.Input(),
-        __metadata("design:type", String)
+        __metadata("design:type", Object)
     ], MainComponent.prototype, "bodyClass", void 0);
-    __decorate([
-        core_1.HostListener('window:scroll', []),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], MainComponent.prototype, "onScroll", null);
     MainComponent = __decorate([
         core_1.Component({
             selector: 'body',
-            templateUrl: '/templates/routes/home/view.html'
+            template: '<router-outlet></router-outlet>'
         }),
         __param(0, core_1.Inject(core_1.ElementRef)),
-        __param(1, core_1.Inject(StoryService_1.StoryService)),
+        __param(1, core_1.Inject(DataService_1.DataService)),
         __metadata("design:paramtypes", [core_1.ElementRef,
-            StoryService_1.StoryService,
+            DataService_1.DataService,
+            platform_browser_1.Meta,
             WindowService_1.WindowService])
     ], MainComponent);
     return MainComponent;

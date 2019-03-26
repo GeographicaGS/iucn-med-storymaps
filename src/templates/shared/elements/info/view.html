@@ -24,7 +24,7 @@
 				>
 					{{ i + 1 }}
 				</div>
-				<div class="title" [ngClass]="{selected: info.collapsed === false, single:item.length == 1}" (click)="toggleLayer(info)" [innerHTML]="info.title"></div>
+				<div class="title" [ngClass]="{selected: info.collapsed === false, single:item.length === 1}" (click)="toggleLayer(info)" [innerHTML]="info.title"></div>
 			</div>
 		    <div class="info" [ngClass]="{hidden: info.collapsed === true}">
 		        <element-block [elements]="info.elements"></element-block>

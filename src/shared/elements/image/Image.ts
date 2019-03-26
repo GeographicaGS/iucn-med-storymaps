@@ -15,11 +15,11 @@ export class ImageComponent extends BaseElementComponent {
   }
 
   getBackgroundSrc(): string {
-        return this.item.url != undefined ? this.item.url : 'none';
+        return this.item.url !== undefined ? this.item.url : 'none';
     }
 
     hasIco() {
-        return this.item.credit.ico == undefined || this.item.credit.ico;
+        return this.item.credit.ico === undefined || this.item.credit.ico;
     }
 
 }

@@ -15,18 +15,18 @@ export class ParagraphComponent extends BaseElementComponent {
   }
 
   capitalized(): boolean {
-    return this.item.capitalize != undefined && this.item.capitalize;
+    return this.item.capitalize !== undefined && this.item.capitalize;
   }
 
   highlight(): boolean {
-    return this.item.highlight != undefined && this.item.highlight;
+    return this.item.highlight !== undefined && this.item.highlight;
   }
 
   bold(): boolean {
-    return this.item.bold != undefined && this.item.bold;
+    return this.item.bold !== undefined && this.item.bold;
   }
 
   semibold(): boolean {
-    return this.item.semibold != undefined && this.item.semibold;
+    return this.item.semibold !== undefined && this.item.semibold;
   }
 }

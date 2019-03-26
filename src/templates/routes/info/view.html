@@ -1,0 +1,84 @@
+<perfect-scrollbar>
+    <div class="component-container">
+        <div class="shared-link">
+            <div>
+                <span>share</span>
+            </div>
+            <div>
+                <a class="btn small circle fb-link" target="_blank"
+                   href="https://www.facebook.com/sharer/sharer.php?u={{document.location.href}}"></a>
+            </div>
+            <div>
+                <a class="btn small circle tw-link" target="_blank"
+                   href="http://twitter.com/share?&url={{document.location.href}}"></a>
+            </div>
+        </div>
+        <div class="logo" [routerLink]="['/']">
+
+        </div>
+
+        <div class="content" [style.minHeight.px]="windowService.getWindowHeight()"
+             [style.width.px]="windowService.getWindowWidth()">
+            <div class="wrapper">
+                <div [ngClass]="'fadeIn title'">{{info.title}}</div>
+                <div [ngClass]="'fadeIn separator-row'">
+                    <div class="separator"></div>
+                    <div class="content-separator">to</div>
+                    <div class="separator"></div>
+                </div>
+                <div [ngClass]="'fadeIn subtitle'">
+                    <div class="content-subtitle">{{info.subtitle}}</div>
+                </div>
+                <div [ngClass]="'fadeIn description'">
+                    {{info.description}}
+                </div>
+
+            </div>
+            <div class="blocks" *ngIf="aboutHasBlocks()">
+                <element-block *ngFor="let block of info.blocks" [elements]="block.elements"></element-block>
+            </div>
+            <div class="close-subtitle" [innerHTML]="info.closeSubtitle"></div>
+
+        </div>
+        <div class="btn-row">
+            <div class="btn view-stories" [routerLink]="['/stories']">See Stories</div>
+            <div class="btn go-home" [routerLink]="['/']">Home</div>
+        </div>
+        <div class="footer">
+            <div class="block">
+                <div class="img">
+                    <span>Elaborated by</span>
+                    <img height="90" [src]="home.footer.elaborated.img">
+                </div>
+                <div class="address-container" *ngIf="hasAddress()">
+                    <div class="center-name">{{getCenterName()}}</div>
+                    <p class="center-address" [innerHTML]="getCenterContactInfo()"></p>
+                </div>
+                <div class="img">
+                    <span>Funded by</span>
+                    <img height="90" [src]="home.footer.founded.img">
+                </div>
+            </div>
+
+
+            <div class="credit-container" *ngIf="hasCredit()">
+                <span class="left-link" [innerHTML]="home.footer.credit.iucn"></span>
+                <div class="right-link">
+                    <span [innerHTML]="home.footer.credit.geographica"></span>
+                    <div class="geo">
+                        <a href="https://geographica.gs" target="_blank">
+                            <img class="small" src="/assets/icon/GEOGRAPHICA_ALT-NEG-24.svg" alt="geographica">
+                            <svg class="arrow" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        height="24" width="24" xml:space="preserve">
+                        <polyline stroke-miterlimit="10" points="24.146,17.854 17.5,11.207 10.854,17.854 "/>
+                        <line stroke-miterlimit="10" x1="17.5" y1="11.207" x2="17.5" y2="25.5"/>
+                      </svg>
+                        </a>
+                        <img class="big" src="/assets/icon/GEOGRAPHICA_COM_POS-52x68.svg" alt="geographica">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</perfect-scrollbar>

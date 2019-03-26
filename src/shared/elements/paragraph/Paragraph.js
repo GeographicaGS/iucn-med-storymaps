@@ -1,8 +1,11 @@
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -34,16 +37,16 @@ var ParagraphComponent = /** @class */ (function (_super) {
         return _this;
     }
     ParagraphComponent.prototype.capitalized = function () {
-        return this.item.capitalize != undefined && this.item.capitalize;
+        return this.item.capitalize !== undefined && this.item.capitalize;
     };
     ParagraphComponent.prototype.highlight = function () {
-        return this.item.highlight != undefined && this.item.highlight;
+        return this.item.highlight !== undefined && this.item.highlight;
     };
     ParagraphComponent.prototype.bold = function () {
-        return this.item.bold != undefined && this.item.bold;
+        return this.item.bold !== undefined && this.item.bold;
     };
     ParagraphComponent.prototype.semibold = function () {
-        return this.item.semibold != undefined && this.item.semibold;
+        return this.item.semibold !== undefined && this.item.semibold;
     };
     ParagraphComponent = __decorate([
         core_1.Component({

@@ -18,6 +18,6 @@
     </div>
 </div>
 <div *ngIf="hasBackgroundCredit();" class="credit-full">
-    <span class="credit">{{step.background.credit.footer}}</span>
+    <span class="credit" [innerHTML]="step.background.credit.footer"></span>
     <span class="author">{{step.background.credit.author}}</span>
 </div>

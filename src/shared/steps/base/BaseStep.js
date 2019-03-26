@@ -20,9 +20,10 @@ var BaseStepComponent = /** @class */ (function () {
         this.element = element;
         this.document = document;
         this.windowService = windowService;
+        this.scrollNext = new core_1.EventEmitter();
     }
+    // @HostListener('window:scroll', [])
     BaseStepComponent.prototype.onScroll = function () {
-        this.checkStep();
         this.checkBackground();
     };
     BaseStepComponent.prototype.onResize = function (event) {
@@ -31,23 +32,13 @@ var BaseStepComponent = /** @class */ (function () {
         var offset = this.element.nativeElement.getBoundingClientRect();
         if (this.windowService.scrollingDown() && (offset.top) <= this.getWindowHeight() ||
             !this.windowService.scrollingDown() && (offset.bottom) < (this.getWindowHeight() + offset.height)) {
-            var _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
-            var _url = this.step.background != undefined && this.step.background.url != undefined ? this.step.background.url : '';
+            var _class = this.step.background !== undefined && this.step.background.class !== undefined ? this.step.background.class : '';
+            var _url = this.step.background !== undefined && this.step.background.url !== undefined ? this.step.background.url : '';
             this.windowService.setBodyBgClass(_class);
             this.windowService.setBodyBgUrl('url(' + _url + ')');
         }
     };
-    BaseStepComponent.prototype.checkStep = function () {
-        var offset = this.getWindowHeight() * 0.3;
-        var top = this.element.nativeElement.getBoundingClientRect().top;
-        var bottom = this.element.nativeElement.getBoundingClientRect().bottom;
-        if (this.windowService.scrollingDown() && top > -20 && top < offset
-            || !this.windowService.scrollingDown() && bottom > 20 && bottom < offset) {
-            this.windowService.setCurrentStep(this.element.nativeElement.tagName.toLowerCase());
-        }
-    };
     BaseStepComponent.prototype.ngAfterViewInit = function () {
-        this.windowService.addStep(this.element);
         this.onScroll();
     };
     BaseStepComponent.prototype.getWindowHeight = function () {
@@ -57,34 +48,28 @@ var BaseStepComponent = /** @class */ (function () {
         return document.documentElement.clientWidth - 72;
     };
     BaseStepComponent.prototype.hasTitle = function () {
-        return this.step.title != undefined;
+        return this.step.title !== undefined;
     };
     BaseStepComponent.prototype.hasInfo = function () {
-        return this.step.info != undefined;
+        return this.step.info !== undefined;
     };
     BaseStepComponent.prototype.getBackgroundColor = function () {
-        return this.step.backgroundColor != undefined ? this.step.backgroundColor : 'inherit';
+        return this.step.backgroundColor !== undefined ? this.step.backgroundColor : 'inherit';
     };
     BaseStepComponent.prototype.hasBackgroundCredit = function () {
-        return this.step.background.credit != undefined;
+        return this.step.background.credit !== undefined;
     };
     BaseStepComponent.prototype.goNextStep = function () {
-        this.windowService.scrollToNextStep(this.element);
+        this.scrollNext.emit();
     };
     __decorate([
         core_1.Input(),
         __metadata("design:type", Object)
     ], BaseStepComponent.prototype, "step", void 0);
     __decorate([
-        core_1.Input(),
+        core_1.Output(),
         __metadata("design:type", Object)
-    ], BaseStepComponent.prototype, "name", void 0);
-    __decorate([
-        core_1.HostListener('window:scroll', []),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], BaseStepComponent.prototype, "onScroll", null);
+    ], BaseStepComponent.prototype, "scrollNext", void 0);
     __decorate([
         core_1.HostListener('window:resize', ['$event']),
         __metadata("design:type", Function),

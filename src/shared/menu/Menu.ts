@@ -1,45 +1,44 @@
-import {Component, Inject, Input} from "@angular/core";
-import {WindowService} from "../../services/WindowService";
-import {StoryService} from "../../services/StoryService";
+import { Component, EventEmitter, Inject, Input, OnInit, Output } from '@angular/core';
+import { WindowService } from '../../services/WindowService';
+import { DataService } from '../../services/DataService';
+import { Router } from '@angular/router';
 
 @Component({
-    selector: 'menu',
-    templateUrl: '/templates/shared/menu/view.html',
+  selector: 'menu',
+  templateUrl: '/templates/shared/menu/view.html',
 })
 export class MenuComponent {
-    currentStep: string = 'cover';
-    @Input()
-    stories: any = {};
-    @Input()
-    currentStory: any = {};
 
-    constructor(private windowService: WindowService,
-                @Inject(StoryService) private storyService: StoryService) {
-    }
+  @Input()
+  set currentStory(value: any) {
+    this.steps = value.steps || {};
+  }
 
-    isItemActive(item: string): boolean {
-        return item == this.windowService.getCurrentStep();
-    }
+  @Input()
+  currentStep = 'cover';
 
-    getStepsKeys(){
-        return this.stories['stories'][this.currentStory] != undefined ? Object.keys(this.stories['stories'][this.currentStory]['steps']) : [];
-    }
-    getStepName(step : string){
-        return this.stories['stories'][this.currentStory]['steps'][step]['name'];
-    }
-    scrollTo(step: string) {
-        if (step.toLowerCase() == 'skip'){
-            this.windowService.scrollTo(9999);
-        }else{
-            this.windowService.scrollToStep(step);
-        }
-    }
-    goHome(){
-        this.windowService.homeViewPreview = true;
-        this.windowService.goHome();
-    }
-    goStoriesList(){
-        this.windowService.homeViewPreview = false;
-        this.windowService.goHome();
-    }
+  @Output()
+  scrollTo = new EventEmitter<string>();
+
+  steps = {};
+
+  constructor(protected router: Router,
+              @Inject(DataService) private storyService: DataService) {
+  }
+
+  isItemActive(item: string): boolean {
+    return item === this.currentStep;
+  }
+
+  getStepsKeys() {
+    return Object.keys(this.steps);
+  }
+
+  getStepName(step: string) {
+    return this.steps[step]['name'];
+  }
+
+  onSectionClick(step: string) {
+    this.scrollTo.emit(step);
+  }
 }

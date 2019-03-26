@@ -14,13 +14,13 @@ export class BaseElementComponent implements AfterViewInit{
     }
 
     hasInfo(): boolean {
-        return this.item.info != undefined
-            && this.item.info.elements != undefined
+        return this.item.info !== undefined
+            && this.item.info.elements !== undefined
             && this.item.info.elements.length > 0
     }
 
     hasCredit(): boolean {
-        return this.item.credit != undefined;
+        return this.item.credit !== undefined;
     }
 
     showContent(): boolean {

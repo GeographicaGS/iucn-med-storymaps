@@ -1,0 +1,59 @@
+<div class="nav-bar">
+    <menu
+            [currentStory]="currentStory"
+            [currentStep]="currentStep"
+            (scrollTo)="onMenuClick($event)"
+
+    ></menu>
+</div>
+<perfect-scrollbar
+        class="main-container"
+        #scrollbar
+        [perfectScrollbar]
+        (psScrollY)="onScroll($event)"
+        (psScrollDown)="onChangeScrollDown(true)"
+        (psScrollUp)="onChangeScrollDown(true)"
+>
+    <div *ngFor="let step of steps">
+        <div [ngSwitch]="step.type">
+            <cover
+                    id="cover"
+                    #cover
+                    *ngSwitchCase="'cover'"
+                    [step]="step"
+                    (scrollNext)="onMenuClick('intro')"
+
+
+            ></cover>
+            <intro
+                    id="intro"
+                    #intro
+                    *ngSwitchCase="'intro'"
+                    [step]="step"
+                    (scrollNext)="onMenuClick('map')"
+
+            ></intro>
+            <map
+                    id="map"
+                    #map
+                    *ngSwitchCase="'map'"
+                    [step]="step"
+                    (scrollNext)="onMenuClick('conclusion')"
+
+            ></map>
+            <conclusion
+                    id="conclusion"
+                    #conclusion
+                    *ngSwitchCase="'conclusion'"
+                    [step]="step"
+                    (scrollNext)="onMenuClick('skip')"
+            ></conclusion>
+            <skip
+                    id="skip"
+                    #skip
+                    *ngSwitchCase="'skip'"
+                    [step]="step"
+            ></skip>
+        </div>
+    </div>
+</perfect-scrollbar>
