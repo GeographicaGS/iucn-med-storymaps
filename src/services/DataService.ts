@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/common';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class DataService {
@@ -14,7 +14,7 @@ export class DataService {
       if (this.data.getValue() !== null) {
         return resolve(true);
       } else {
-        this.http.get('data/stories.json').toPromise().then((response: Response) => {
+        this.http.get('data/stories.json').toPromise().then((response: any) => {
           this.data.next(response.json());
           resolve(true);
         });

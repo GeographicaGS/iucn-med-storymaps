@@ -107,7 +107,7 @@
     ]
   },
   "stories": {
-    "corals": {
+    "Mediterranean_coralligenous_environments": {
       "steps": {
         "cover": {
           "name": "Cover",
@@ -338,13 +338,13 @@
             "background": {
               "url": "assets/butterflies/image.jpg"
             },
-            "link": "butterflies",
+            "link": "Mediterranean_Butterflies",
             "title": "The case of the disappearing butterflies"
           }
         }
       }
     },
-    "butterflies": {
+    "Mediterranean_Butterflies": {
       "steps": {
         "cover": {
           "name": "Cover",
@@ -638,13 +638,13 @@
             "background": {
               "url": "assets/sharks/image.jpg"
             },
-            "link": "sharks",
+            "link": "Sharks_in_the_mediterranean",
             "title": "the Mediterranean eating its sharks?"
           }
         }
       }
     },
-    "sharks": {
+    "Sharks_in_the_mediterranean": {
       "steps": {
         "cover": {
           "name": "Cover",
@@ -911,13 +911,13 @@
             "background": {
               "url": "assets/antelopees/image.jpg"
             },
-            "link": "antelopees",
+            "link": "Antelopes_in_the_north_Africa",
             "title": "How many antelope species occur in North Africa ?"
           }
         }
       }
     },
-    "antelopees": {
+    "Antelopes_in_the_north_Africa": {
       "steps": {
         "cover": {
           "name": "Cover",
@@ -1222,13 +1222,13 @@
             "background": {
               "url": "assets/plants/image.jpg"
             },
-            "link": "plants",
+            "link": "Mediterranean_plants",
             "title": "Why are plants so important?"
           }
         }
       }
     },
-    "plants": {
+    "Mediterranean_plants": {
       "steps": {
         "cover": {
           "name": "Cover",
@@ -1463,13 +1463,13 @@
             "background": {
               "url": "assets/corals/image.jpg"
             },
-            "link": "corals",
+            "link": "Mediterranean_coralligenous_environments",
             "title": "Do you know where the most beautiful Mediterranean diving secrets are?"
           }
         }
       }
     },
-    "freshwater": {
+    "FreshwaterKBA": {
         "steps": {
           "cover": {
             "name": "Cover",
@@ -1779,7 +1779,7 @@
               "background": {
                 "url": "assets/corals/image.jpg"
               },
-              "link": "corals",
+              "link": "Mediterranean_coralligenous_environments",
               "title": "Do you know where the most beautiful Mediterranean diving secrets are?"
             }
           }
