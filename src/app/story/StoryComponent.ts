@@ -48,7 +48,7 @@ export class StoryComponent implements OnInit, AfterViewInit {
         this.windowService.updateSocialMetaTags(
           this.currentStory.steps.cover.title,
           this.currentStory.steps.cover.subtitle,
-          this.currentStory.steps.background.src,
+          this.currentStory.steps.cover.background.url,
           document.location.href,
         );
         this.currentStep = ((this.route.queryParams as any).value || {step: 'cover'})['step'];

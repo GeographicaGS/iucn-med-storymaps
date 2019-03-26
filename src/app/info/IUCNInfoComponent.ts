@@ -28,7 +28,7 @@ export class IUCNInfoComponent {
     this.windowService.updateSocialMetaTags(
       this.home.preview.title,
       this.home.preview.description,
-      this.home.background.src,
+      this.home.background.url,
       document.location.href,
     );
   }

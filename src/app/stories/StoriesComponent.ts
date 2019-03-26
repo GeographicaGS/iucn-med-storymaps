@@ -30,7 +30,7 @@ export class StoriesComponent implements OnInit {
     this.windowService.updateSocialMetaTags(
       home.preview.title,
       home.preview.description,
-      home.background.src,
+      home.background.url,
       document.location.href,
     );
   }
