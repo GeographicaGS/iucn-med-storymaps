@@ -1630,9 +1630,9 @@
                 "id": "kba-freshwater",
                 "hidden": false,
                 "subLayers": [
-                  "ramsar-note-areas",
                   "kba-freshwater",
-                  "kba-freshwater-detail"
+                  "kba-freshwater-detail",
+                  "ramsar-note-areas"
                 ]
               }
             } 
