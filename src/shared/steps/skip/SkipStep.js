@@ -1,8 +1,11 @@
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -27,39 +30,29 @@ var BaseStep_1 = require("../base/BaseStep");
 var platform_browser_1 = require("@angular/platform-browser");
 var WindowService_1 = require("../../../services/WindowService");
 var MapService_1 = require("../../../services/MapService");
+var router_1 = require("@angular/router");
 var SkipStepComponent = /** @class */ (function (_super) {
     __extends(SkipStepComponent, _super);
-    function SkipStepComponent(element, document, windowService, mapService) {
+    function SkipStepComponent(element, document, windowService, router, mapService) {
         var _this = _super.call(this, element, document, windowService) || this;
         _this.element = element;
         _this.document = document;
         _this.windowService = windowService;
+        _this.router = router;
         _this.mapService = mapService;
         return _this;
     }
     SkipStepComponent.prototype.showImage = function () {
         return true;
-        // let offset = this.element.nativeElement.getBoundingClientRect();
-        // return !this.windowService.scrollingDown() || ((this.getWindowHeight() * -1.5)) > offset.top;
     };
     SkipStepComponent.prototype.showTitle = function () {
         return true;
-        // let offset = this.element.nativeElement.getBoundingClientRect();
-        // return !this.windowService.scrollingDown() || ((this.getWindowHeight() * -1.6)) > offset.top;
     };
     SkipStepComponent.prototype.showButton = function () {
         return true;
-        // let offset = this.element.nativeElement.getBoundingClientRect();
-        // return !this.windowService.scrollingDown() || ((this.getWindowHeight() * -1.7)) > offset.top
-    };
-    SkipStepComponent.prototype.goToNextStory = function () {
-        this.windowService.setCurrentStory(this.step.next_story.link);
-        this.windowService.setCurrentStep('cover');
-        this.windowService.scrollTo(1, 0);
-        this.mapService.reload();
     };
     SkipStepComponent.prototype.hasAuthors = function () {
-        return this.step.contact_info != undefined && this.step.contact_info.authors != undefined && this.step.contact_info.authors.length > 0;
+        return this.step.contact_info !== undefined && this.step.contact_info.authors !== undefined && this.step.contact_info.authors.length > 0;
     };
     SkipStepComponent.prototype.getAuthors = function () {
         if (this.hasAuthors()) {
@@ -74,10 +67,10 @@ var SkipStepComponent = /** @class */ (function (_super) {
         return '';
     };
     SkipStepComponent.prototype.hasContactInfo = function () {
-        return this.step.contact_info != undefined;
+        return this.step.contact_info !== undefined;
     };
     SkipStepComponent.prototype.hasAddress = function () {
-        return this.step.contact_info != undefined && this.step.contact_info.address != undefined;
+        return this.step.contact_info !== undefined && this.step.contact_info.address !== undefined;
     };
     SkipStepComponent.prototype.getCenterName = function () {
         if (this.hasAddress()) {
@@ -92,7 +85,7 @@ var SkipStepComponent = /** @class */ (function (_super) {
         return '';
     };
     SkipStepComponent.prototype.hasCredit = function () {
-        return this.step.credit != undefined;
+        return this.step.credit !== undefined;
     };
     SkipStepComponent = __decorate([
         core_1.Component({
@@ -102,6 +95,7 @@ var SkipStepComponent = /** @class */ (function (_super) {
         __param(0, core_1.Inject(core_1.ElementRef)),
         __param(1, core_1.Inject(platform_browser_1.DOCUMENT)),
         __metadata("design:paramtypes", [core_1.ElementRef, Object, WindowService_1.WindowService,
+            router_1.Router,
             MapService_1.MapService])
     ], SkipStepComponent);
     return SkipStepComponent;

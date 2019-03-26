@@ -14,56 +14,53 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var WindowService_1 = require("../../services/WindowService");
-var StoryService_1 = require("../../services/StoryService");
+var DataService_1 = require("../../services/DataService");
+var router_1 = require("@angular/router");
 var MenuComponent = /** @class */ (function () {
-    function MenuComponent(windowService, storyService) {
+    function MenuComponent(windowService, router, storyService) {
         this.windowService = windowService;
+        this.router = router;
         this.storyService = storyService;
-        this.currentStep = 'cover';
-        this.stories = {};
-        this.currentStory = {};
+        this.steps = {};
     }
+    Object.defineProperty(MenuComponent.prototype, "currentStory", {
+        set: function (value) {
+            this.steps = value.steps || {};
+        },
+        enumerable: true,
+        configurable: true
+    });
     MenuComponent.prototype.isItemActive = function (item) {
-        return item == this.windowService.getCurrentStep();
+        return item === this.windowService.getCurrentStep();
     };
     MenuComponent.prototype.getStepsKeys = function () {
-        return this.stories['stories'][this.currentStory] != undefined ? Object.keys(this.stories['stories'][this.currentStory]['steps']) : [];
+        return Object.keys(this.steps);
     };
     MenuComponent.prototype.getStepName = function (step) {
-        return this.stories['stories'][this.currentStory]['steps'][step]['name'];
+        return this.steps[step]['name'];
     };
     MenuComponent.prototype.scrollTo = function (step) {
-        if (step.toLowerCase() == 'skip') {
+        if (step.toLowerCase() === 'skip') {
             this.windowService.scrollTo(9999);
         }
         else {
             this.windowService.scrollToStep(step);
         }
     };
-    MenuComponent.prototype.goHome = function () {
-        this.windowService.homeViewPreview = true;
-        this.windowService.goHome();
-    };
-    MenuComponent.prototype.goStoriesList = function () {
-        this.windowService.homeViewPreview = false;
-        this.windowService.goHome();
-    };
     __decorate([
         core_1.Input(),
-        __metadata("design:type", Object)
-    ], MenuComponent.prototype, "stories", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], MenuComponent.prototype, "currentStory", void 0);
+        __metadata("design:type", Object),
+        __metadata("design:paramtypes", [Object])
+    ], MenuComponent.prototype, "currentStory", null);
     MenuComponent = __decorate([
         core_1.Component({
             selector: 'menu',
             templateUrl: '/templates/shared/menu/view.html',
         }),
-        __param(1, core_1.Inject(StoryService_1.StoryService)),
+        __param(2, core_1.Inject(DataService_1.DataService)),
         __metadata("design:paramtypes", [WindowService_1.WindowService,
-            StoryService_1.StoryService])
+            router_1.Router,
+            DataService_1.DataService])
     ], MenuComponent);
     return MenuComponent;
 }());

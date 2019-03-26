@@ -1,0 +1,48 @@
+<div class="component-container">
+    <div class="shared-link">
+        <div>
+            <span>share</span>
+        </div>
+        <div>
+            <a class="btn small circle fb-link" target="_blank"
+               href="https://www.facebook.com/sharer/sharer.php?u={{document.location.href}}"></a>
+        </div>
+        <div>
+            <a class="btn small circle tw-link" target="_blank"
+               href="http://twitter.com/share?&url={{document.location.href}}"></a>
+        </div>
+    </div>
+    <div class="logo" routerLink="/">
+
+    </div>
+    <div class="content fullWidth">
+        <div class="list">
+            <div class="search-container">
+                <input type="text" (keyup)="search = $event.currentTarget.value" [value]="search" placeholder="search Story Map…">
+            </div>
+            <div class="separator"></div>
+            <div class="stories-container" [ngClass]="scaling !== '' ? 'scale' : ''">
+                <div *ngFor="let story of getStoriesKeys(); let i = index" class="story-block"
+                     [ngClass]="scalingInProgress && !isScaling(story) ? 'hidden' : ''">
+                    <div>
+                        <a class="image"
+                           [ngStyle]="{ 'background-image': 'url('+getStoryBackgroundSrc(story)+')' }"
+                           (click)="goToStory(story)"
+                           [ngClass]="isScaling(story) ? 'scale' : ''"
+                        >
+                        </a>
+                        <div class="block-info" *ngIf="!scalingInProgress">
+                            <a class="title" (click)="goToStory(story)">
+                                {{getStoryTitle(story)}}
+                            </a>
+                            <a (click)="goToMap(story)" class="btn small circle see-map"></a>
+                            <div class="authors" *ngIf="hasAuthors(story)">By
+                                <span *ngFor="let author of getAuthors(story)">{{author}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

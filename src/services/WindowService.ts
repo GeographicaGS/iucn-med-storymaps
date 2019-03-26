@@ -4,20 +4,15 @@ import {Observable, Observer} from "rxjs";
 
 @Injectable()
 export class WindowService {
-    homeViewPreview: boolean = true;
-    aboutView: boolean = false;
     scrollInterval: any;
     stepsMap: any = [];
     scrollDown: boolean = true;
     lastScroll: number = -1;
 
     currentStep: string = '';
-    currentStepObservable: Observable<string>;
     currentStepObserver: Observer<string>;
 
     currentStory: string = '';
-    currentStoryObservable: Observable<string>;
-    currentStoryObserver: Observer<string>;
 
     bodyBgUrl: string = '';
     bodyBgUrlObservable: Observable<string>;
@@ -58,41 +53,9 @@ export class WindowService {
 
     setCurrentStep(currentStep: string) {
         this.currentStep = currentStep;
-        if (this.currentStepObserver != undefined) {
+        if (this.currentStepObserver !== undefined) {
             this.currentStepObserver.next(this.currentStep);
         }
-    }
-
-    getCurrentStoryObservable(): Observable<string> {
-        //I dont know why not instance right into constructor
-        if (this.currentStoryObservable == undefined) {
-            this.currentStoryObservable = new Observable<string>((obs) => {
-                this.currentStoryObserver = obs;
-            });
-        }
-        return this.currentStoryObservable;
-    }
-
-    getCurrentStory(): string {
-        return this.currentStory;
-    }
-
-    setCurrentStory(currentStory: string) {
-        this.currentStory = currentStory;
-        if (this.currentStoryObserver != undefined) {
-            this.currentStoryObserver.next(this.currentStory);
-        }
-    }
-
-    getCurrentStepObservable(): Observable<string> {
-        //I dont know why not instance right into constructor
-        if (this.currentStepObservable == undefined) {
-            this.currentStepObservable = new Observable<string>((obs) => {
-                this.currentStepObserver = obs;
-            });
-
-        }
-        return this.currentStepObservable;
     }
 
     getCurrentStep(): string {
@@ -100,7 +63,7 @@ export class WindowService {
     }
 
     getBodyBgUrlObservable(): Observable<string> {
-        if (this.bodyBgUrlObservable == undefined) {
+        if (this.bodyBgUrlObservable === undefined) {
             this.bodyBgUrlObservable = new Observable<string>((obs) => {
                 this.bodyBgUrlObserver = obs;
             });
@@ -123,7 +86,7 @@ export class WindowService {
     }
 
     getBodyClassObservable(): Observable<string> {
-        if (this.bodyClassObservable == undefined) {
+        if (this.bodyClassObservable === undefined) {
             this.bodyClassObservable = new Observable<string>((obs) => {
                 this.bodyClassObserver = obs;
             });
@@ -143,7 +106,7 @@ export class WindowService {
     addStep(step: ElementRef) {
         let found = false;
         for (let index in this.stepsMap) {
-            if (this.stepsMap[index].nativeElement.tagName == step.nativeElement.tagName) {
+            if (this.stepsMap[index].nativeElement.tagName === step.nativeElement.tagName) {
                 this.stepsMap[index] = step;
                 found = true;
                 break;
@@ -157,20 +120,9 @@ export class WindowService {
         });
     }
 
-    getStepOffset(step: string) {
-        let offset = {};
-        for (let index in this.stepsMap) {
-            if (this.stepsMap[index].nativeElement.tagName.toLowerCase() == step) {
-                offset = this.stepsMap[index].nativeElement.getBoundingClientRect();
-                break;
-            }
-        }
-        return offset;
-    }
-
     scrollToNextStep(currentStep: ElementRef) {
         for (let index in this.stepsMap) {
-            if (this.stepsMap[index].nativeElement.tagName == currentStep.nativeElement.tagName && this.stepsMap[Number(index) + 1] != undefined) {
+            if (this.stepsMap[index].nativeElement.tagName === currentStep.nativeElement.tagName && this.stepsMap[Number(index) + 1] !== undefined) {
                 let top = this.stepsMap[Number(index) + 1].nativeElement.getBoundingClientRect().top + this.getScrollTop();
                 this.scrollTo(top, 250);
                 break;
@@ -180,7 +132,7 @@ export class WindowService {
 
     scrollToStep(tagName: string, duration: number = 600) {
         for (let index in this.stepsMap) {
-            if (this.stepsMap[index].nativeElement.tagName.toLowerCase() == tagName) {
+            if (this.stepsMap[index].nativeElement.tagName.toLowerCase() === tagName) {
                 let top = this.stepsMap[index].nativeElement.getBoundingClientRect().top + this.getScrollTop();
                 this.scrollTo(top, duration);
                 break;
@@ -196,7 +148,7 @@ export class WindowService {
                 behavior: 'smooth'
             });
         } catch (e) {
-            if (this.document.scrollingElement.scrollTop == to)
+            if (this.document.scrollingElement.scrollTop === to)
                 return;
 
             let start: number = this.document.scrollingElement.scrollTop;
@@ -207,7 +159,7 @@ export class WindowService {
             this.scrollInterval = setInterval(() => {
 
                 if (
-                    this.document.scrollingElement.scrollTop !== to && (currPos == undefined ||
+                    this.document.scrollingElement.scrollTop !== to && (currPos === undefined ||
                     currPos < this.document.documentElement.scrollHeight)
                 ) {
                     count = count + 1;
@@ -227,13 +179,11 @@ export class WindowService {
     }
 
     isScrollingActive(): boolean {
-        return this.scrollInterval != undefined;
+        return this.scrollInterval !== undefined;
     }
 
-    goHome() {
-        this.aboutView = false;
-        this.setCurrentStep('cover');
-        this.setCurrentStory('');
-        this.scrollTo(1, 0);
+    resetBackground() {
+        this.setBodyBgClass('');
+        this.setBodyBgUrl('');
     }
 }

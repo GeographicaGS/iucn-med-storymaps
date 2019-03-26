@@ -12,42 +12,42 @@
                href="http://twitter.com/share?&url={{document.location.href}}"></a>
         </div>
     </div>
-    <div class="logo" (click)="goHome()">
+    <div class="logo" [routerLink]="['/']">
 
     </div>
 
     <div class="content" [style.minHeight.px]="windowService.getWindowHeight()"
          [style.width.px]="windowService.getWindowWidth()">
         <div class="wrapper">
-            <div [ngClass]="'fadeIn title'">{{step.title}}</div>
+            <div [ngClass]="'fadeIn title'">{{info.title}}</div>
             <div [ngClass]="'fadeIn separator-row'">
                 <div class="separator"></div>
                 <div class="content-separator">to</div>
                 <div class="separator"></div>
             </div>
             <div [ngClass]="'fadeIn subtitle'">
-                <div class="content-subtitle">{{step.subtitle}}</div>
+                <div class="content-subtitle">{{info.subtitle}}</div>
             </div>
             <div [ngClass]="'fadeIn description'">
-                {{step.description}}
+                {{info.description}}
             </div>
 
         </div>
         <div class="blocks" *ngIf="aboutHasBlocks()">
-            <element-block *ngFor="let block of step.blocks" [elements]="block.elements"></element-block>
+            <element-block *ngFor="let block of info.blocks" [elements]="block.elements"></element-block>
         </div>
-        <div class="close-subtitle" [innerHTML]="step.closeSubtitle"></div>
+        <div class="close-subtitle" [innerHTML]="info.closeSubtitle"></div>
 
     </div>
     <div class="btn-row">
-        <div class="btn view-stories" (click)="showStoryList()">See Stories</div>
-        <div class="btn go-home" (click)="goHome()">Home</div>
+        <div class="btn view-stories" [routerLink]="['/stories']">See Stories</div>
+        <div class="btn go-home" [routerLink]="['/']">Home</div>
     </div>
     <div class="footer">
         <div class="block">
             <div class="img">
                 <span>Elaborated by</span>
-                <img height="90" [src]="stories.home.footer.elaborated.img">
+                <img height="90" [src]="home.footer.elaborated.img">
             </div>
             <div class="address-container" *ngIf="hasAddress()">
                 <div class="center-name">{{getCenterName()}}</div>
@@ -55,18 +55,15 @@
             </div>
             <div class="img">
                 <span>Funded by</span>
-                <img height="90" [src]="stories.home.footer.founded.img">
+                <img height="90" [src]="home.footer.founded.img">
             </div>
         </div>
 
 
         <div class="credit-container" *ngIf="hasCredit()">
-
-        </div>
-        <div class="credit-container" *ngIf="showCredits()">
-            <span class="left-link" [innerHTML]="stories.home.footer.credit.iucn"></span>
+            <span class="left-link" [innerHTML]="home.footer.credit.iucn"></span>
             <div class="right-link">
-                <span [innerHTML]="stories.home.footer.credit.geographica"></span>
+                <span [innerHTML]="home.footer.credit.geographica"></span>
                 <div class="geo">
                     <a href="https://geographica.gs" target="_blank">
                         <img class="small" src="/assets/icon/GEOGRAPHICA_ALT-NEG-24.svg" alt="geographica">

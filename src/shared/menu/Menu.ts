@@ -1,45 +1,43 @@
-import {Component, Inject, Input} from "@angular/core";
-import {WindowService} from "../../services/WindowService";
-import {StoryService} from "../../services/StoryService";
+import { Component, Inject, Input, OnInit } from '@angular/core';
+import { WindowService } from '../../services/WindowService';
+import { DataService } from '../../services/DataService';
+import { Router } from '@angular/router';
 
 @Component({
-    selector: 'menu',
-    templateUrl: '/templates/shared/menu/view.html',
+  selector: 'menu',
+  templateUrl: '/templates/shared/menu/view.html',
 })
 export class MenuComponent {
-    currentStep: string = 'cover';
-    @Input()
-    stories: any = {};
-    @Input()
-    currentStory: any = {};
 
-    constructor(private windowService: WindowService,
-                @Inject(StoryService) private storyService: StoryService) {
-    }
+  @Input()
+  set currentStory(value: any) {
+    this.steps = value.steps || {};
+  }
 
-    isItemActive(item: string): boolean {
-        return item == this.windowService.getCurrentStep();
-    }
+  steps = {};
 
-    getStepsKeys(){
-        return this.stories['stories'][this.currentStory] != undefined ? Object.keys(this.stories['stories'][this.currentStory]['steps']) : [];
+  constructor(private windowService: WindowService,
+              protected router: Router,
+              @Inject(DataService) private storyService: DataService) {
+  }
+
+  isItemActive(item: string): boolean {
+    return item === this.windowService.getCurrentStep();
+  }
+
+  getStepsKeys() {
+    return Object.keys(this.steps);
+  }
+
+  getStepName(step: string) {
+    return this.steps[step]['name'];
+  }
+
+  scrollTo(step: string) {
+    if (step.toLowerCase() === 'skip') {
+      this.windowService.scrollTo(9999);
+    } else {
+      this.windowService.scrollToStep(step);
     }
-    getStepName(step : string){
-        return this.stories['stories'][this.currentStory]['steps'][step]['name'];
-    }
-    scrollTo(step: string) {
-        if (step.toLowerCase() == 'skip'){
-            this.windowService.scrollTo(9999);
-        }else{
-            this.windowService.scrollToStep(step);
-        }
-    }
-    goHome(){
-        this.windowService.homeViewPreview = true;
-        this.windowService.goHome();
-    }
-    goStoriesList(){
-        this.windowService.homeViewPreview = false;
-        this.windowService.goHome();
-    }
+  }
 }

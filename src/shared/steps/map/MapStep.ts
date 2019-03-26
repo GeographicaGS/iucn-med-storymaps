@@ -49,7 +49,7 @@ export class MapStepComponent extends BaseStepComponent {
   lockView() {
     let offset = this.element.nativeElement.getBoundingClientRect();
     let locked = this.windowService.scrollingDown() && offset.top < 100 && offset.top > -20
-      || !this.windowService.isScrollingActive() && offset.top == 0;
+      || !this.windowService.isScrollingActive() && offset.top === 0;
     if (locked) {
       this.windowService.setBodyBgUrl('none');
       this.windowService.setBodyBgClass('locked');

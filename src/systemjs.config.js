@@ -1,12 +1,11 @@
 (function (global) {
   System.config({
     path: {
-      'app ' : 'src',
-      'assets' : 'app:/assets',
-      'templates' : 'app:/templates',
+      'app ': 'src',
+      'assets': 'app:/assets',
+      'guard': 'app:/guard',
+      'templates': 'app:/templates',
       'node_modules/': '../../node_modules/'
-
-
     },
     // map tells the System loader where to look for things
     map: {
@@ -23,12 +22,16 @@
       '@angular/forms': 'node_modules/@angular/forms/bundles/forms.umd.js',
       'mapbox-gl': 'node_modules/mapbox-gl/dist',
       'rxjs': 'node_modules/rxjs',
-      'core-js-shim':'node_modules/core-js/client/shim.js',
-      'zone':'node_modules/zone.js/dist/zone.js',
-      'core-js':'node_modules/core-js/',
-      'reflect':'node_modules/reflect-metadata/Reflect.js',
-      'system-polyfills':'node_modules/systemjs/dist/system-polyfills.js',
-      'es6-promise':'node_modules/es6-promise/dist/es6-promise.js'
+      'traceur': 'node_modules/traceur/bin/traceur.js',
+      'ngx-perfect-scrollbar': 'node_modules/ngx-perfect-scrollbar/',
+      'resize-observer-polyfill': 'node_modules/resize-observer-polyfill/',
+      'perfect-scrollbar': 'node_modules/perfect-scrollbar/',
+      'core-js-shim': 'node_modules/core-js/client/shim.js',
+      'zone': 'node_modules/zone.js/dist/zone.js',
+      'core-js': 'node_modules/core-js/',
+      'reflect': 'node_modules/reflect-metadata/Reflect.js',
+      'system-polyfills': 'node_modules/systemjs/dist/system-polyfills.js',
+      'es6-promise': 'node_modules/es6-promise/dist/es6-promise.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -45,12 +48,26 @@
       routes: {
         defaultExtension: 'js'
       },
+      guard: {
+        defaultExtension: 'js'
+      },
       shared: {
         defaultExtension: 'js'
       },
-
       rxjs: {
         main: './Rx.js',
+        defaultExtension: 'js'
+      },
+      'ngx-perfect-scrollbar': {
+        main: './dist/index.js',
+        defaultExtension: 'js'
+      },
+      'resize-observer-polyfill': {
+        main: './dist/ResizeObserver.js',
+        defaultExtension: 'js'
+      },
+      'perfect-scrollbar': {
+        main: './src/index.js',
         defaultExtension: 'js'
       },
       'system-polyfills': {

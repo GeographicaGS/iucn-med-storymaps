@@ -1,25 +1,97 @@
-<div class="nav-bar">
-    <menu *ngIf="isStoryLoaded()" [stories]="stories" [currentStory]="currentStory"></menu>
-</div>
-<div class="main-container">
+<div class="component-container">
+    <div class="shared-link">
+        <div>
+            <span>share</span>
+        </div>
+        <div>
+            <a class="btn small circle fb-link" target="_blank"
+               href="https://www.facebook.com/sharer/sharer.php?u={{document.location.href}}"></a>
+        </div>
+        <div>
+            <a class="btn small circle tw-link" target="_blank"
+               href="http://twitter.com/share?&url={{document.location.href}}"></a>
+        </div>
+    </div>
+    <div class="logo">
 
-    <home *ngIf="isHomeView()" [stories]="stories" [step]="stories.home" [name]="home"></home>
-    
-    <iucnInfo
-        *ngIf="isIucnInfoLoaded()"
-        [stories]="stories"
-        [step]="stories.iucnInfo"
-        [name]="iucnInfo"
-    ></iucnInfo>
-    
-    <div *ngFor="let step of getStepsKeys()">
-        <div [ngSwitch]="step">
-            <cover *ngSwitchCase="'cover'" [step]="getStep(step)" [name]="step"></cover>
-            <intro *ngSwitchCase="'intro'" [step]="getStep(step)" [name]="step"></intro>
-            <map *ngSwitchCase="'map'" [step]="getStep(step)" [name]="step"></map>
-            <conclusion *ngSwitchCase="'conclusion'" [step]="getStep(step)" [name]="step"></conclusion>
-            <skip *ngSwitchCase="'skip'" [step]="getStep(step)" [name]="step"></skip>
+    </div>
+    <div class="content">
+        <div class="preview">
+            <div class="title">{{getPreviewTitle()}}</div>
+            <div class="separator-row">
+                <div class="separator"></div>
+                <div class="content-subtitle">to</div>
+                <div class="separator"></div>
+            </div>
+            <div class="subtitle">
+                <div class="content-subtitle">{{getPreviewSubtitle()}}</div>
+            </div>
+            <div class="subtitle2">
+                <div class="content-subtitle">{{getPreviewSubtitle2()}}</div>
+            </div>
+            <div class="description">
+                {{getPreviewDescription()}}
+            </div>
+
+            <div class="columns" *ngIf="homeHasColumns()">
+                <div class="col-md-4" *ngFor="let column of home.columns">
+                    <i [ngClass]="column.ico"></i>
+                    <div [innerHTML]="column.title" class="column-title"></div>
+                    <div [innerHTML]="column.description" class="column-info"></div>
+                </div>
+            </div>
+
+
+            <div class="btn-row">
+                <div class="btn view-stories" [routerLink]="['/stories']">See Stories</div>
+                <div class="btn more-info" [routerLink]="['/info']">About</div>
+            </div>
+            <div class="after-buttons" [innerHTML]="getHomeAfterButton().value" [routerLink]="['/info']"></div>
+
+        </div>
+    </div>
+
+    <div class="rightPhotoDescription" *ngIf="hasDescription()">
+        {{home.background.credit.description}}
+    </div>
+    <div class="footer">
+        <div class="block">
+            <div class="img">
+                <span>Elaborated by</span>
+                <a [href]="home.footer.elaborated.href" target="blank">
+                    <img height="90" [src]="home.footer.elaborated.img">
+                </a>
+            </div>
+            <div class="address-container" *ngIf="hasAddress()">
+                <div class="center-name">{{getCenterName()}}</div>
+                <p class="center-address" [innerHTML]="getCenterContactInfo()"></p>
+            </div>
+            <div class="img">
+                <span>Funded by</span>
+                <a [href]="home.footer.founded.href" target="blank">
+                    <img height="90" [src]="home.footer.founded.img">
+                </a>
+            </div>
+        </div>
+
+
+        <div class="credit-container" *ngIf="hasCredits()">
+            <span class="left-link" [innerHTML]="home.footer.credit.iucn"></span>
+            <div class="right-link">
+                <span [innerHTML]="home.footer.credit.geographica"></span>
+                <div class="geo">
+                    <a href="https://geographica.gs" target="_blank">
+                        <img class="small" src="/assets/icon/GEOGRAPHICA_ALT-NEG-24.svg" alt="geographica">
+                        <svg class="arrow" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        height="24" width="24" xml:space="preserve">
+                        <polyline stroke-miterlimit="10" points="24.146,17.854 17.5,11.207 10.854,17.854 "/>
+                        <line stroke-miterlimit="10" x1="17.5" y1="11.207" x2="17.5" y2="25.5"/>
+                      </svg>
+                    </a>
+                    <img class="big" src="/assets/icon/GEOGRAPHICA_COM_POS-52x68.svg" alt="geographica">
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
-

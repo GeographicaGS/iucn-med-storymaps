@@ -10,11 +10,8 @@ var core_1 = require("@angular/core");
 var platform_browser_dynamic_1 = require("@angular/platform-browser-dynamic");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
-var forms_1 = require("@angular/forms");
 var MainComponent_1 = require("./main/MainComponent");
 var Menu_1 = require("./../shared/menu/Menu");
-var HomeStep_1 = require("../shared/steps/home/HomeStep");
-var IucnInfoStep_1 = require("../shared/steps/iucnInfo/IucnInfoStep");
 var IntroStep_1 = require("../shared/steps/intro/IntroStep");
 var CoverStep_1 = require("../shared/steps/cover/CoverStep");
 var MapStep_1 = require("../shared/steps/map/MapStep");
@@ -26,10 +23,23 @@ var Paragraph_1 = require("./../shared/elements/paragraph/Paragraph");
 var Quote_1 = require("../shared/elements/quote/Quote");
 var Info_1 = require("../shared/elements/info/Info");
 var Table_1 = require("../shared/elements/table/Table");
-var StoryService_1 = require("./../services/StoryService");
+var DataService_1 = require("../services/DataService");
 var MapService_1 = require("../services/MapService");
 var WindowService_1 = require("../services/WindowService");
 var LearnMore_1 = require("../shared/elements/learn-more/LearnMore");
+var IUCNInfoComponent_1 = require("./info/IUCNInfoComponent");
+var HomeComponent_1 = require("./home/HomeComponent");
+var StoryComponent_1 = require("./story/StoryComponent");
+var RoutingModule_1 = require("./RoutingModule");
+var StoryGuard_1 = require("../guard/StoryGuard");
+var StoriesComponent_1 = require("./stories/StoriesComponent");
+var ngx_perfect_scrollbar_1 = require("ngx-perfect-scrollbar");
+var DEFAULT_PERFECT_SCROLLBAR_CONFIG = {
+    suppressScrollX: true,
+    wheelSpeed: 2,
+    wheelPropagation: true,
+    minScrollbarLength: 20
+};
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -37,9 +47,10 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA],
             imports: [
-                forms_1.FormsModule,
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
+                RoutingModule_1.RoutingModule,
+                ngx_perfect_scrollbar_1.PerfectScrollbarModule
             ],
             declarations: [
                 Info_1.InfoComponent,
@@ -48,8 +59,6 @@ var AppModule = /** @class */ (function () {
                 Paragraph_1.ParagraphComponent,
                 ElementBlock_1.ElementBlockComponent,
                 Image_1.ImageComponent,
-                HomeStep_1.HomeStepComponent,
-                IucnInfoStep_1.IucnInfoStepComponent,
                 IntroStep_1.IntroStepComponent,
                 CoverStep_1.CoverStepComponent,
                 MapStep_1.MapStepComponent,
@@ -57,12 +66,21 @@ var AppModule = /** @class */ (function () {
                 SkipStep_1.SkipStepComponent,
                 Menu_1.MenuComponent,
                 LearnMore_1.LearnMoreComponent,
-                MainComponent_1.MainComponent
+                MainComponent_1.MainComponent,
+                IUCNInfoComponent_1.IUCNInfoComponent,
+                HomeComponent_1.HomeComponent,
+                StoriesComponent_1.StoriesComponent,
+                StoryComponent_1.StoryComponent,
             ],
             providers: [
+                StoryGuard_1.StoryGuard,
                 WindowService_1.WindowService,
                 MapService_1.MapService,
-                StoryService_1.StoryService
+                DataService_1.DataService,
+                {
+                    provide: ngx_perfect_scrollbar_1.PERFECT_SCROLLBAR_CONFIG,
+                    useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+                }
             ],
             bootstrap: [
                 MainComponent_1.MainComponent

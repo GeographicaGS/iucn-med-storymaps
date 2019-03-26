@@ -50,13 +50,19 @@ body {
   background-size: cover;
   background-attachment: fixed;
 
+  app-story {
+    display: flex;
+    justify-content: space-between;
+  }
   .nav-bar {
     flex: 0 0 72px;
   }
   .main-container {
     flex: 1 0 auto;
     height: 100%;
+    position: relative;
   }
+
   &.full-screen {
     position: relative;
     z-index: -1;

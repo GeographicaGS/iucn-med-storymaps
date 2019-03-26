@@ -39,8 +39,8 @@ export class BaseStepComponent implements AfterViewInit {
             this.windowService.scrollingDown() && (offset.top) <= this.getWindowHeight() ||
             !this.windowService.scrollingDown() && (offset.bottom) < (this.getWindowHeight() + offset.height)
         ) {
-            let _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
-            let _url = this.step.background != undefined && this.step.background.url != undefined ? this.step.background.url : '';
+            let _class = this.step.background !== undefined && this.step.background.class !== undefined ? this.step.background.class : '';
+            let _url = this.step.background !== undefined && this.step.background.url !== undefined ? this.step.background.url : '';
             this.windowService.setBodyBgClass(_class);
             this.windowService.setBodyBgUrl('url(' + _url + ')');
         }
@@ -72,19 +72,19 @@ export class BaseStepComponent implements AfterViewInit {
     }
 
     hasTitle(): boolean {
-        return this.step.title != undefined;
+        return this.step.title !== undefined;
     }
 
     hasInfo(): boolean {
-        return this.step.info != undefined;
+        return this.step.info !== undefined;
     }
 
     getBackgroundColor(): string {
-        return this.step.backgroundColor != undefined ? this.step.backgroundColor : 'inherit';
+        return this.step.backgroundColor !== undefined ? this.step.backgroundColor : 'inherit';
     }
 
     hasBackgroundCredit(): boolean {
-        return this.step.background.credit != undefined;
+        return this.step.background.credit !== undefined;
     }
 
     goNextStep() {

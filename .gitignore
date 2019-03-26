@@ -132,7 +132,7 @@ Thumbs.db
 /src/shared/menu/Menu.js.map
 /src/shared/elements/image/Image.js
 /src/shared/elements/image/Image.js.map
-/src/services/StoryService.js
+/src/services/DataService.js
 /src/shared/steps/intro/IntroStep.js.map
 /src/shared/menu/Menu.js
 /src/shared/elements/base-element/BaseElement.js.map
@@ -142,7 +142,7 @@ Thumbs.db
 /src/shared/steps/skip/SkipStep.js
 /src/shared/steps/cover/CoverStep.js
 /src/shared/steps/home/HomeStep.js.map
-/src/app/main/MainComponent.js
+/src/app/main/StoryComponent.js
 /src/shared/elements/base-element/BaseElement.js
 /src/shared/elements/quote/LearnMore.js
 /src/shared/elements/info/Info.js.map
@@ -151,10 +151,10 @@ Thumbs.db
 /src/services/WindowService.js
 /src/shared/steps/conclusion/ConclusionStep.js
 /src/shared/steps/conclusion/ConclusionStep.js.map
-/src/app/main/MainComponent.js.map
+/src/app/main/StoryComponent.jss.map
 /src/shared/steps/map/MapStep.js.map
 /src/app/NgModule.js.map
-/src/services/StoryService.js.map
+/src/services/DataService.js.map
 /src/shared/steps/base/BaseStep.js
 /src/app/NgModule.js
 /src/shared/elements/element-block/ElementBlock.js

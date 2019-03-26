@@ -31,8 +31,8 @@ var BaseStepComponent = /** @class */ (function () {
         var offset = this.element.nativeElement.getBoundingClientRect();
         if (this.windowService.scrollingDown() && (offset.top) <= this.getWindowHeight() ||
             !this.windowService.scrollingDown() && (offset.bottom) < (this.getWindowHeight() + offset.height)) {
-            var _class = this.step.background != undefined && this.step.background.class != undefined ? this.step.background.class : '';
-            var _url = this.step.background != undefined && this.step.background.url != undefined ? this.step.background.url : '';
+            var _class = this.step.background !== undefined && this.step.background.class !== undefined ? this.step.background.class : '';
+            var _url = this.step.background !== undefined && this.step.background.url !== undefined ? this.step.background.url : '';
             this.windowService.setBodyBgClass(_class);
             this.windowService.setBodyBgUrl('url(' + _url + ')');
         }
@@ -57,16 +57,16 @@ var BaseStepComponent = /** @class */ (function () {
         return document.documentElement.clientWidth - 72;
     };
     BaseStepComponent.prototype.hasTitle = function () {
-        return this.step.title != undefined;
+        return this.step.title !== undefined;
     };
     BaseStepComponent.prototype.hasInfo = function () {
-        return this.step.info != undefined;
+        return this.step.info !== undefined;
     };
     BaseStepComponent.prototype.getBackgroundColor = function () {
-        return this.step.backgroundColor != undefined ? this.step.backgroundColor : 'inherit';
+        return this.step.backgroundColor !== undefined ? this.step.backgroundColor : 'inherit';
     };
     BaseStepComponent.prototype.hasBackgroundCredit = function () {
-        return this.step.background.credit != undefined;
+        return this.step.background.credit !== undefined;
     };
     BaseStepComponent.prototype.goNextStep = function () {
         this.windowService.scrollToNextStep(this.element);

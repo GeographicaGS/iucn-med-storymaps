@@ -28,11 +28,11 @@ export class InfoComponent extends BaseElementComponent {
   }
 
   hasCredits() {
-    return this.item.credit != undefined;
+    return this.item.credit !== undefined;
   }
 
   ngAfterViewInit() {
-    if (this.item.collapsed != undefined) {
+    if (this.item.collapsed !== undefined) {
       this.collapsed = this.item.collapsed;
     }
     super.ngAfterViewInit();

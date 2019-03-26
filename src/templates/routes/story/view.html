@@ -1,0 +1,17 @@
+<div class="nav-bar">
+    <menu [currentStory]="currentStory"></menu>
+</div>
+<div class="main-container">
+    <perfect-scrollbar #scrollbar>
+        <div *ngFor="let step of steps">
+            <div [ngSwitch]="step.type">
+                <cover #cover *ngSwitchCase="'cover'" [step]="step" [name]="step.type"></cover>
+                <intro #intro *ngSwitchCase="'intro'" [step]="step" [name]="step.type"></intro>
+                <map #map *ngSwitchCase="'map'" [step]="step" [name]="step.type"></map>
+                <conclusion #conclusion *ngSwitchCase="'conclusion'" [step]="step" [name]="step.type"></conclusion>
+                <skip #skip *ngSwitchCase="'skip'" [step]="step" [name]="step.type"></skip>
+            </div>
+        </div>
+    </perfect-scrollbar>
+
+</div>

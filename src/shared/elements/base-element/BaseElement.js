@@ -21,12 +21,12 @@ var BaseElementComponent = /** @class */ (function () {
         this.item = {};
     }
     BaseElementComponent.prototype.hasInfo = function () {
-        return this.item.info != undefined
-            && this.item.info.elements != undefined
+        return this.item.info !== undefined
+            && this.item.info.elements !== undefined
             && this.item.info.elements.length > 0;
     };
     BaseElementComponent.prototype.hasCredit = function () {
-        return this.item.credit != undefined;
+        return this.item.credit !== undefined;
     };
     BaseElementComponent.prototype.showContent = function () {
         var offset = this.element.nativeElement.getBoundingClientRect();
