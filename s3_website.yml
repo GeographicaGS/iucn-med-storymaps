@@ -41,11 +41,9 @@ cloudfront_distribution_config:
       - www.mapconservationmaps.org
       - www.medconservationmaps.org
 
-routing_rules:
-  - condition:
-      http_error_code_returned_equals: "404"
-    redirect:
-#      host_name: www.mapconservationmaps.org
-      host_name: www.medconservationmaps.org
-      replace_key_prefix_with: "#"
-#      http_redirect_code: 301
+#routing_rules:
+#  - condition:
+#      http_error_code_returned_equals: "404"
+#    redirect:
+#      host_name: www.medconservationmaps.org
+#      replace_key_prefix_with: "#"

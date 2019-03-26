@@ -16,14 +16,18 @@ var core_1 = require("@angular/core");
 var WindowService_1 = require("../../services/WindowService");
 var DataService_1 = require("../../services/DataService");
 var Subscription_1 = require("rxjs/Subscription");
+var platform_browser_1 = require("@angular/platform-browser");
 var MainComponent = /** @class */ (function () {
-    function MainComponent(element, storyService, windowService) {
+    function MainComponent(element, storyService, meta, windowService) {
         this.element = element;
         this.storyService = storyService;
+        this.meta = meta;
         this.windowService = windowService;
         this.subscription = new Subscription_1.Subscription();
         this.backgroundSrc = '';
         this.bodyClass = 'full-screen';
+        meta.addTag({ property: 'og:title', content: '' });
+        meta.addTag({ property: 'og:description', content: '' });
     }
     MainComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -57,6 +61,7 @@ var MainComponent = /** @class */ (function () {
         __param(1, core_1.Inject(DataService_1.DataService)),
         __metadata("design:paramtypes", [core_1.ElementRef,
             DataService_1.DataService,
+            platform_browser_1.Meta,
             WindowService_1.WindowService])
     ], MainComponent);
     return MainComponent;

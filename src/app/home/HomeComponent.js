@@ -28,6 +28,7 @@ var HomeComponent = /** @class */ (function () {
         this.home = this.dataService.getHomeData();
         this.windowService.setBodyBgUrl("url(" + this.home.background.url + ")");
         this.windowService.setBodyBgClass(this.home.background.class);
+        this.windowService.updateSocialMetaTags(this.home.preview.title, this.home.preview.description, this.home.background.src, document.location.href);
     };
     HomeComponent.prototype.getPreviewTitle = function () {
         return this.home.preview.title;

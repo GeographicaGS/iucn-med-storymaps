@@ -1,7 +1,8 @@
-import { Component, ElementRef, Inject, HostBinding, HostListener, Input, OnInit, OnDestroy } from '@angular/core';
+import { Component, ElementRef, Inject, HostBinding, Input, OnInit, OnDestroy } from '@angular/core';
 import { WindowService } from '../../services/WindowService';
 import { DataService } from '../../services/DataService';
 import { Subscription } from 'rxjs/Subscription';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'body',
@@ -22,7 +23,10 @@ export class MainComponent implements OnInit, OnDestroy {
 
   constructor(@Inject(ElementRef) protected element: ElementRef,
               @Inject(DataService) private storyService: DataService,
+              protected meta: Meta,
               protected windowService: WindowService) {
+    meta.addTag({property: 'og:title', content: ''});
+    meta.addTag({property: 'og:description', content: ''});
   }
 
   ngOnInit(): void {

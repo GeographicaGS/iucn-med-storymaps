@@ -27,6 +27,12 @@ export class StoriesComponent implements OnInit {
     const home: any = this.dataService.getHomeData();
     this.windowService.setBodyBgUrl(`url(${home.background.url})`);
     this.windowService.setBodyBgClass(`${home.background.class} blur`);
+    this.windowService.updateSocialMetaTags(
+      home.preview.title,
+      home.preview.description,
+      home.background.src,
+      document.location.href,
+    );
   }
 
   isScaling(story: string): boolean {

@@ -22,6 +22,12 @@ export class HomeComponent implements OnInit {
     this.home = this.dataService.getHomeData();
     this.windowService.setBodyBgUrl(`url(${this.home.background.url})`);
     this.windowService.setBodyBgClass(this.home.background.class);
+    this.windowService.updateSocialMetaTags(
+      this.home.preview.title,
+      this.home.preview.description,
+      this.home.background.src,
+      document.location.href,
+    );
   }
 
   getPreviewTitle(): string {

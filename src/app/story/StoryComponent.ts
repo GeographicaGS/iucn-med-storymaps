@@ -45,6 +45,12 @@ export class StoryComponent implements OnInit, AfterViewInit {
       if (!this.currentStory) {
         this.router.navigate(['/']);
       } else {
+        this.windowService.updateSocialMetaTags(
+          this.currentStory.steps.cover.title,
+          this.currentStory.steps.cover.subtitle,
+          this.currentStory.steps.background.src,
+          document.location.href,
+        );
         this.currentStep = ((this.route.queryParams as any).value || {step: 'cover'})['step'];
         this.steps = Object.keys(this.currentStory['steps']).map(key => Object.assign(this.currentStory['steps'][key], {type: key}));
       }

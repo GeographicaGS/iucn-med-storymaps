@@ -40,6 +40,7 @@ var StoryComponent = /** @class */ (function () {
                 _this.router.navigate(['/']);
             }
             else {
+                _this.windowService.updateSocialMetaTags(_this.currentStory.steps.cover.title, _this.currentStory.steps.cover.subtitle, _this.currentStory.steps.background.src, document.location.href);
                 _this.currentStep = (_this.route.queryParams.value || { step: 'cover' })['step'];
                 _this.steps = Object.keys(_this.currentStory['steps']).map(function (key) { return Object.assign(_this.currentStory['steps'][key], { type: key }); });
             }
