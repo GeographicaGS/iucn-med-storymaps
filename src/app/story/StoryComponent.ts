@@ -81,7 +81,6 @@ export class StoryComponent implements OnInit, AfterViewInit {
         || !this.windowService.scrollingDown() && bottom > 20 && bottom < offset;
     });
     if (idx > -1) {
-      debugger;
       this.currentStep = keys[idx];
       this[this.currentStep].onScroll();
     }
