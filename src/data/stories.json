@@ -794,7 +794,7 @@
               }
             },
             {
-              "title": "In the Mediterranean Sea, up to two-thirds of Chondrichthyans may be threatened in the region, as the midpoint estimate suggests 65% of extant species for which sufficient data are available are threatened. Status uncertainty tends to be greatest along North African coasts, emphasizing the need for further research in this part of the Mediterranean region where species richness is also greatest. Although there are synoptic research surveys throughout the northern coastal waters of the Mediterranean Sea, there are no population time-series available from North African waters.",
+              "title": "Distribution of Data Deficient Chondrichthyans in the Mediterranean Sea",
               "collapsed": true,
               "credit": "IUCN-Med",
               "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
@@ -804,7 +804,7 @@
                 {
                   "type": "paragraph",
                   "capitalize": false,
-                  "value": "The principal driver of decline and local extinction is overfishing. Most species are taken as retained valuable bycatch in small-scale and large-scale trawl and net multispecies fisheries. Historically, the number of threatened species was very high with as many as 33 to 38 threatened species found in 100 km2 cells in the coastal waters of the western and central Mediterranean Sea."
+                  "value": "In the Mediterranean Sea, up to two-thirds of Chondrichthyans may be threatened in the region, as the midpoint estimate suggests 65% of extant species for which sufficient data are available are threatened. Status uncertainty tends to be greatest along North African coasts, emphasizing the need for further research in this part of the Mediterranean region where species richness is also greatest. Although there are synoptic research surveys throughout the northern coastal waters of the Mediterranean Sea, there are no population time-series available from North African waters.The principal driver of decline and local extinction is overfishing. Most species are taken as retained valuable bycatch in small-scale and large-scale trawl and net multispecies fisheries. Historically, the number of threatened species was very high with as many as 33 to 38 threatened species found in 100 km2 cells in the coastal waters of the western and central Mediterranean Sea."
                 }
               ],
               "layer": {
@@ -1002,7 +1002,7 @@
               "type": "image",
               "url": "/assets/antelopees/image3.jpg",
               "credit": {
-                "footer": "<i>Gazella Arabica</i>",
+                "footer": "<i>Gazella arabica</i>",
                 "author": "© Tim Wacher"
               }
             },
@@ -1014,7 +1014,7 @@
               "type": "image",
               "url": "/assets/antelopees/image4.jpg",
               "credit": {
-                "footer": "<i>Gazella Cuvieri</i>",
+                "footer": "<i>Gazella cuvieri</i>",
                 "author": "© Teresa Abáigar CSIC"
               }
             },
