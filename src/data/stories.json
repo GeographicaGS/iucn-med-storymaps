@@ -656,7 +656,7 @@
             "url": "assets/sharks/image.jpg",
             "class": "kenburns",
             "credit": {
-              "footer": "Underwater view of a blue shark (Prionace glauca)",
+              "footer": "Underwater view of a blue shark (<i>Prionace glauca</i>)",
               "author": " © Michael Valos| Dreamstime"
             }
           },
@@ -929,7 +929,7 @@
             "url": "assets/antelopees/image.jpg",
             "class": "kenburns",
             "credit": {
-              "footer": "Gazella dorcas",
+              "footer": "<i>Gazella dorcas</i>",
               "author": "© Tim Wacher"
             }
           },
@@ -941,7 +941,7 @@
             "url": "assets/antelopees/image.jpg",
             "class": "kenburns",
             "credit": {
-              "footer": "Gazella dorcas",
+              "footer": "<i>Gazella dorcas</i>",
               "author": "© Tim Wacher"
             }
           },
@@ -961,7 +961,7 @@
               "type": "image",
               "url": "/assets/antelopees/image2.jpg",
               "credit": {
-                "footer": "Gazella cuvieri",
+                "footer": "<i>Gazella cuvieri</i>",
                 "author": "© Tim Wacher"
               }
             },
@@ -1002,7 +1002,7 @@
               "type": "image",
               "url": "/assets/antelopees/image3.jpg",
               "credit": {
-                "footer": "Gazella Arabica",
+                "footer": "<i>Gazella Arabica</i>",
                 "author": "© Tim Wacher"
               }
             },
@@ -1014,7 +1014,7 @@
               "type": "image",
               "url": "/assets/antelopees/image4.jpg",
               "credit": {
-                "footer": "Gazella Cuvieri",
+                "footer": "<i>Gazella Cuvieri</i>",
                 "author": "© Teresa Abáigar CSIC"
               }
             },
@@ -1022,7 +1022,7 @@
               "type": "image",
               "url": "/assets/antelopees/image5.jpg",
               "credit": {
-                "footer": "Oryx Dammah",
+                "footer": "<i>Oryx dammah</i>",
                 "author": "© David Mallon"
               }
             },
@@ -1240,7 +1240,7 @@
             "url": "assets/plants/image.jpg",
             "class": "kenburns",
             "credit": {
-              "footer": "Gymnospermium scipetarum",
+              "footer": "<i>Gymnospermium scipetarum</i>",
               "author": "@Green home (Montenegro)",
               "ico": false
             }
