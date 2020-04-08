@@ -23,7 +23,8 @@
       'mapbox-gl': 'node_modules/mapbox-gl/dist',
       'rxjs': 'node_modules/rxjs',
       'traceur': 'node_modules/traceur/bin/traceur.js',
-      'ngx-perfect-scrollbar': 'node_modules/ngx-perfect-scrollbar/',
+        'ng-simple-slideshow': 'node_modules/ng-simple-slideshow/',
+        'ngx-perfect-scrollbar': 'node_modules/ngx-perfect-scrollbar/',
       'resize-observer-polyfill': 'node_modules/resize-observer-polyfill/',
       'perfect-scrollbar': 'node_modules/perfect-scrollbar/',
       'core-js-shim': 'node_modules/core-js/client/shim.js',
@@ -56,6 +57,10 @@
       },
       rxjs: {
         main: './Rx.js',
+        defaultExtension: 'js'
+      },
+      'ng-simple-slideshow': {
+        main: './ng-simple-slideshow.js',
         defaultExtension: 'js'
       },
       'ngx-perfect-scrollbar': {

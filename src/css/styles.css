@@ -5191,6 +5191,20 @@ el-table.table .credit {
   line-height: 16px;
   margin-top: 5px;
 }
+el-slideshow.slideshow {
+  display: block;
+  margin: 48px auto;
+  position: relative;
+}
+el-slideshow.slideshow:not(.full-width) {
+  max-width: 740px;
+}
+el-slideshow.slideshow .caption {
+  font-family: 'Merriweather', sans-serif;
+}
+el-slideshow.slideshow li:before {
+  content: '';
+}
 el-learn-more {
   display: block;
 }
