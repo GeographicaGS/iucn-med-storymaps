@@ -75,9 +75,9 @@ var StoriesComponent = /** @class */ (function () {
     };
     StoriesComponent.prototype.getAuthors = function (story) {
         if (this.stories[story].steps.skip.contact_info.authors instanceof Array) {
-            return this.stories[story].steps.skip.contact_info.authors.map(function (item) {
-                return item.name;
-            });
+            return this.stories[story].steps.skip.contact_info.authors
+                .filter(function (i) { return i.name; })
+                .map(function (item) { return item.name; });
         }
         return [];
     };
