@@ -1791,6 +1791,880 @@
           }
         }
       }
+    },
+    "Unwelcomed_guests": {
+      "steps": {
+          "cover": {
+              "name": "Cover",
+              "background": {
+                  "url": "assets/unwelcomed_guests/cover_photo_options/imagen_1.jpg",
+                  "class": "kenburns",
+                  "credit": {
+                      "author": "© Photo by Matthew Kosloski on Unsplash ",
+                      "ico": false
+                  }
+              },
+              "title": "Unwelcomed guests",
+              "subtitle": "Interactions and impacts of Invasive Aliens Species in Mediterranean wetlands"
+          },
+          "intro": {
+              "background": {
+                  "url": "assets/unwelcomed_guests/cover_photo_options/imagen_1.jpg",
+                  "class": "kenburns"
+              },
+              "name": "Intro",
+              "elements": [
+                  {
+                      "type": "paragraph",
+                      "capitalize": true,
+                      "value": "Sometimes, whether accidentally or intentionally, plants or animals may be introduced by humans into an area where they wouldn´t be present naturally. Some of these species may settle down and spread. They may compete against native species, prey on them or even disrupt ecosystem processes. In the worst cases, they can end up driving native species' extinction and provoking ecological devastation. These unwelcomed guests are known as Invasive Alien Species (IAS) and Mediterranean wetlands are unfortunately also familiar with their intrusions"
+                  },
+                  {
+                      "type": "title",
+                      "value": "<b>Who is wetlands’ worst enemy?</b>"
+                  },
+                  {
+                      "type": "image",
+                      "url": "assets/unwelcomed_guests/imagen_2.png",
+                      "credit": {
+                          "footer": "Source: Mediterranean Wetlands Outlook 2: Solutions for sustainable Mediterranean Wetlands, 2018, Tour du Valat, France.",
+                          "author": "Infographic: Cecilia Saura Drago",
+                          "ico": false
+                      }
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "Wetlands are degrading and disappearing at an alarming rate, faster than any other ecosystem <sup>1</sup>. The Mediterranean region is no exception to this situation, with almost half of its wetlands having disappeared since 1970 due to a variety of pressures. Unfortunately, invasive alien species don’t play the ‘good guys’ in this plot: according to the <a target='blank' href='https://www.iucnredlist.org/'>IUCN Red List of Threatened Species<sup>TM</sup></a>, IAS are one of the top five threats that drive species to Extinction. To the experts in this field, this is not new: IAS have meant a threat ever since 1500 A.D.<sup>2</sup>"
+                  },
+                  {
+                      "type": "image",
+                      "url": "assets/unwelcomed_guests/imagen_3.png",
+                      "credit": {
+                          "footer": "Invasive species contributed to the extinction of 347 species out of 946 taxa assessed as Extinct or Extinct in the Wild in the IUCN Red List.Source:<a target='blank' href='https://www.iucnredlist.org./'>https://www.iucnredlist.org./</a>,",
+                          "author": "Infographic: Cecilia Saura Drago. Icons: Piktochart, Threat by Smashicons, Fishing icon by surang.",
+                          "ico": false
+                      }
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "As a result, the <a target='blank' href='https://www.cbd.int/invasive/'>UN Convention on Biological Diversity</a>, the UN 2030 Agenda for Sustainable Development <a target='blank' href='https://sustainabledevelopment.un.org/sdg15'>(Target 15.8)</a>, as well as the Ramsar Convention on Wetlands <a target='blank' href='https://www.ramsar.org/the-ramsar-strategic-plan-2016-24'>(Target 4 under Strategic Goal 1)</a>, have all recognized the importance of preventing the introduction of IAS and managing their impacts."
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "The 2030 Agenda for Sustainable Development has set Target <b>#15.8</b> specifically on IAS: <i>“By 2020, introduce measures to prevent the introduction and significantly reduce the impact of invasive alien species on land and water ecosystems and control or eradicate the priority species”.</i>"
+                  },
+                  {
+                      "type": "image",
+                      "url": "/assets/unwelcomed_guests/imagen_4.png",
+                      "credit": {
+                          "footer": "",
+                          "author": "",
+                          "ico": false
+                      }
+                  },
+                  {
+                      "type": "title",
+                      "value": "<b>Who or what are these threatening guests?</b>"
+                  },
+                  {
+                      "type": "image",
+                      "url": "/assets/unwelcomed_guests/imagen_5.png",
+                      "credit": {
+                          "footer": "Ten examples of IAS present in the Mediterranean region (from left to right): hottentot fig <i>(Carpobrotus edulis),</i> yellow-bellied slider turtle <i>(Trachemys scripta),</i> coypu <i>Myocastor coypus),</i> Adam’s needle <i>(Yucca filamentosa),</i> European carp <i>(Cyprinus carpio),</i> marsh frog <i>(Rana ridibunda),</i> giant reed <i>(Arundo donax),</i> small-flowered tamarix <i>(Tamarix parviflora), Eucalyptus</i> and tree of heaven <i>(Ailanthus altissima).</i>",
+                          "author": "Photo credits: here.",
+                          "ico": true
+                      }
+                  },
+                  {
+                      "type": "quote",
+                      "value": "IUCN, International Union for Conservation of Nature, describes invasive alien species (IAS) as “animals, plants or other organisms introduced by man into places out of their natural range of distribution, where they become established and disperse, generating a negative impact on the local ecosystem and species.”",
+                      "credit": ""
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "Their impact lies way beyond species extinction: the latest <a target='blank' href='https://ipbes.net/system/tdf/inline/files/ipbes_global_assessment_report_summary_for_policymakers.pdf?file=1&type=node&id=36213'>IPBES Global Assessment Report</a>, identified IAS as one of the top five global culprits driving negative change in nature around the world – with numbers having risen by 70% since 1970 across 21 countries."
+                  },
+                  {
+                      "type": "slideshow",
+                      "images": [
+                          {
+                              "url": "/assets/unwelcomed_guests/carousel/imagen_6.png"
+                          },
+                          {
+                              "url": "/assets/unwelcomed_guests/carousel/imagen_6_1.png"
+                          },
+                          {
+                              "url": "/assets/unwelcomed_guests/carousel/imagen_6_2.png"
+                          },
+                          {
+                              "url": "/assets/unwelcomed_guests/carousel/imagen_6_3.png"
+                          },
+                          {
+                              "url": "/assets/unwelcomed_guests/carousel/imagen_6_4.png"
+                          },
+                          {
+                              "url": "/assets/unwelcomed_guests/carousel/imagen_6_5.png"
+                          },
+                          {
+                              "url": "/assets/unwelcomed_guests/carousel/imagen_6_6.png"
+                          },
+                          {
+                              "url": "/assets/unwelcomed_guests/carousel/imagen_6_7.png"
+                          }
+                      ]
+                  },
+                  {
+                      "type": "title",
+                      "value": "<b>Invasive alien species curiosities</b>"
+                  },
+                  {
+                      "type": "image",
+                      "url": "/assets/unwelcomed_guests/imagen_7.png"
+                  },
+                  {
+                      "type": "title",
+                      "value": "<b>How to halt their spread?</b>"
+                  },
+                  {
+                      "type": "image",
+                      "url": "/assets/unwelcomed_guests/imagen_8.png",
+                      "credit": {
+                          "footer": "Source: Wittenberg, R., Cock, M.J.W. (eds.) 2001. Invasive Alien Species: A Toolkit of Best Prevention and Management Practices. CAB International, Wallingford, Oxon, UK, xvii - 228.",
+                          "author": "Infographic: Cecilia Saura Drago",
+                          "ico": true
+                      }
+                  },
+                  {
+                      "type": "title",
+                      "capitalize": false,
+                      "value": "<b>Forewarned is forearmed</b>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "Controlling and eradicating most invasive species is problematic - almost impossible. Chemical and mechanical management options are often ineffective in the long-term, impractical, prohibitively costly, and even illegal. All factors considered, <b>prevention remains the most cost-efficient approach.</b>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "Guiding principles for invasive alien species management, based on a ‘hierarchical approach’, call for prevention as the first line of defence. However, when prevention fails, early detection and rapid response are required, followed by eradication as the best option to manage established species, and finally permanent management when the other options are not applicable <sup>7</sup>."
+                  },
+                  {
+                      "type": "title",
+                      "capitalize": false,
+                      "value": "<b>Scientia potentia est</b>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "Detecting IAS, harmonizing, sharing and improving our knowledge about IAS taxa is mandatory to deliver a fast and effective response to the adverse situation which they may cause. Today several knowledge tools have been developed for this purpose:"
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "<ul><li><a target ='blank' href='https://www.iucn.org/theme/species/our-work/invasive-species/eicat'>EICAT - Environmental Impact Classification of Alien Taxa:</a> The Invasive Species Specialist Group within the IUCN Species Survival Commission has developed this <a target ='blank' href='https://www.iucn.org/theme/species/our-work/invasive-species/eicat'>global standard</a>,which identifies and classifies alien species into five categories according to the magnitude of their detrimental impact. The EICAT standard facilitates comparisons but also predictions of the level of impacts across regions and taxonomic groups, thus helping to prioritize management actions and evaluate them at later stages.</li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "<ul><li><a target ='blank' href='http://www.griis.org/'>GRIIS - The Global Register of Introduced and Invasive Species:</a> This global catalogue provides the first checklists of introduced (naturalised) and invasive species country-wise. Over 11,000 records of species are currently in the 20 sample countries alone, with environmental impact evidence for just over 20% of these.</li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "On the other hand, the <a target ='blank' href= 'https://rsis.ramsar.org/'>Ramsar Sites Information Service</a>, an online resource with updated information on wetlands internationally recognized for their importance, facilitates key data provided by countries about IAS impacts to the wetlands worldwide."
+                  }
+              ]
+          },
+          "map": {
+              "name": "Map",
+              "collapsed": false,
+              "mapStyle": "mapbox://styles/cayetanobv/ck8pu9hid0eeg1jo49ac0d0cc",
+              "info": [
+                  {
+                      "title": "Mediterranean Ramsar sites",
+                      "credit": "IUCN-Med",
+                      "legend": "/assets/maps/leyenda_u_g.png",
+                      "collapsed": false,
+                      "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/map_fresh_invasive_species.zip",
+                      "wms": "https://api.mapbox.com/styles/v1/cayetanobv/ck8pu9hid0eeg1jo49ac0d0cc/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
+                      "elements": [
+                          {
+                              "type": "paragraph",
+                              "capitalize": false,
+                              "value": "Many Mediterranean wetlands are Ramsar Sites. They cover 185,000 km<sup>2</sup> in the region, which represents only between 1.7 and 2.4% of the total area of the 27 Mediterranean and peri-Mediterranean countries that are Parties to the Ramsar Convention, and around 1 to 2% of wetlands in the world."
+                          }
+                      ],
+                      "layer": {
+                          "id": "mediterranean-unwelcomed-guest",
+                          "hidden": false,
+                          "subLayers": [
+                              "mediterranean-unwelcomed-guest",
+                              "ramsar-note-areas"
+                          ]
+                      }
+                  },
+                  {
+                      "title": "Mediterranean Ramsar sites that have reported IAS as a threat",
+                      "credit": "IUCN-Med",
+                      "legend": "/assets/maps/leyenda_u_g.png",
+                      "collapsed": false,
+                      "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/map_fresh_invasive_species.zip",
+                      "wms": "https://api.mapbox.com/styles/v1/cayetanobv/ck8pu9hid0eeg1jo49ac0d0cc/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
+                      "elements": [
+                          {
+                              "type": "paragraph",
+                              "capitalize": false,
+                              "value": "The Ramsar Convention urges countries to identify, prevent, eradicate and control invasive alien wetland species. In the Mediterranean, several Parties to the Ramsar Convention are reporting IAS as a key threat for a number of important sites via the Ramsar Sites Information Service, as shown in this map with data as per November 2019."
+                          }
+                      ],
+                      "layer": {
+                          "id": "mediterranean-unwelcomed-guest",
+                          "hidden": false,
+                          "subLayers": [
+                              "mediterranean-unwelcomed-guest",
+                              "ramsar-note-areas"
+                          ]
+                      }
+                  },
+                  {
+                      "title": "",
+                      "credit": "IUCN-Med",
+                      "legend": "/assets/maps/leyenda_u_g.png",
+                      "collapsed": false,
+                      "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/map_fresh_invasive_species.zip",
+                      "wms": "https://api.mapbox.com/styles/v1/cayetanobv/ck8pu9hid0eeg1jo49ac0d0cc/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
+                      "elements": [
+                          {
+                              "type": "paragraph",
+                              "capitalize": false,
+                              "value": "Many more Ramsar sites are currently affected by IAS. The Ramsar Convention lacks specific provisions to stop current and prevent future expansion of IAS on its sites. Hence, getting more information is critical to obtain a better picture of the situation, which can be translated into actions on the ground."
+                          }
+                      ],
+                      "layer": {
+                          "id": "mediterranean-unwelcomed-guest",
+                          "hidden": false,
+                          "subLayers": [
+                              "mediterranean-unwelcomed-guest",
+                              "ramsar-note-areas"
+                          ]
+                      }
+                  }
+              ]
+          },
+          "conclusion": {
+              "name": "Taking action",
+              "title": "<b>Taking action</b>",
+              "elements": [
+                  {
+                      "type": "paragraph",
+                      "value": "Several initiatives are currently being developed in the Mediterranean to tackle IAS:",
+                      "highlight": true
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><a target = ‘blank’ href=’http://www.lifeinvasaqua.com/’>INVASAQUA <i> - Raising awareness in the Iberian Peninsula</i></a><br> Prevention is key in the fight against IAS, and raising awareness about them is one of the key steps in that sense. The EU LIFE project INVASAQUA targets IAS in rivers, lakes and estuaries of Spain and Portugal that threaten the survival of native flora and fauna. A mix of activities (communication campaigns, museum exhibitions) and tools for early warning and rapid response (EWRR) are being developed with the aim to enhance the management of IAS in freshwater and estuarine habitats of the Iberian Peninsula, and raise public awareness about them. The IUCN Centre for Mediterranean Cooperation holds a key role in many activities of this project, and particularly in the implementation of the <a target = ‘blank’ href=’ https://www.iucn.org/theme/species/our-work/invasive-species/eicat’>EICAT standard for freshwater invasives.</a></br></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><a target = ‘blank’ href=’https://lifeasap.eu/index.php/en/’>Life ASAP <i> – Raising awareness in Italy</i></a><br> The project Life ASAP (Alien Species Awareness Program), co-financed by the European Commission, aims to increase awareness about IAS and promote their proper management in Italy, targeting a wide range of stakeholders and citizens: from protected areas and zoos staff to airport travelers, public institutions, science museums and schools. Citizen science events have been carried out throughout Italy with their project Smart App ASAP, and a quite successful itinerant laboratory for kids (Alien alarm!) has also been developed.</br></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><a target = ‘blank’ href=’https://medwetmanagers.net/the-network/’>MeRSiM-Network <i> - Wetland managers: a key role on the ground</i></a><br> Wetland managers are on the frontline to deal with IAS. Conscious of this reality, the Mediterranean Wetlands Initiative (MedWet) is building the Mediterranean Ramsar Site Managers Network (MeRSiM-Net), which aims to facilitate the exchange of knowledge, experiences and management practices in Mediterranean Ramsar Sites, and serve as a platform for mutual support in terms of technical advice and problem solving.</br></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><a target = ‘blank’ href=’https://ec.europa.eu/jrc/en/news/new-application-tracking-invasive-alien-species-your-smartphone’>Mobile app<i> – Spot and stop an invasive species!</i></a><br> The citizen science mobile application “Invasive Alien Species Europe”, developed by the Joint Research Centre of the European Commission, enables everyone to collect and share information on 49 Invasive Alien Species of interest in the European Union. Users can send the exact location of a sighting of an IAS and a photo via the app.</br></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><i>Fighting mosquito infestations in Cyprus and Croatia</i><br> The <a target = ‘blank’ href=’http://civ.iptpo.hr/?lang=en’>Center for Invasive Species</a> (CIV) in Poreč, Croatia, identifies, maps, and monitors several IAS in the area of Poreč and Istria, including invasive mosquito species such as the tiger mosquito (Aedes albopictus). The CIV has produced a wide range of raising awareness activities and conservation tools, such as interactive online maps showing the main mosquito breeding sites.</br><br> On the other hand,<a target = ‘blank’ href=’https://www.ceh.ac.uk/news-and-media/news/study-will-support-species-and-environment-key-international-wetland-site-cyprus’>several institutions</a> are leading activities in the Lake Akrotiri in Cyprus, one of the most important wetlands in Eastern Mediterranean due to its function as bird migration stopover, particularly for flamingos. This Ramsar site hosts projects that monitor interactions of IAS with local species, such as mosquitos and non-native mosquitofish, and also <a target = ‘blank’ href=’https://www.ris-ky.eu/poms-ky’>pollinating insects and non-native plants.</a></br></li></ul>"
+                  },
+                  {
+                      "type": "title",
+                      "value": "Do you want to learn more?"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i>Publications</i>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>Mediterranean Wetlands Outlook 2: Solutions for sustainable Mediterranean Wetlands, 2018 <a target ='blank' href='https://medwet.org/wp-content/uploads/2018/10/MWO_2018_Technical-report.pdf'>https://medwet.org/wp-content/uploads/2018/10/MWO_2018_Technical-report.pdf</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>1</sup> Ramsar Convention on Wetlands. (2018). Global Wetland Outlook: State of the World’s Wetlands and their Services to People. Gland, Switzerland: Ramsar Convention Secretariat <a target ='blank' href='https://medwet.org/wp-content/uploads/2018/09/Ramsar_gwo_english_web.pdf'>https://medwet.org/wp-content/uploads/2018/09/Ramsar_gwo_english_web.pdf</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>2</sup> Bellard C, Cassey P, Blackburn TM. 2016 Alien species as a driver of recent extinctions. Biol. Lett. 12: 20150623 <a target ='blank' href='https://royalsocietypublishing.org/doi/10.1098/rsbl.2015.0623'>https://royalsocietypublishing.org/doi/10.1098/rsbl.2015.0623</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>IPBES Global Assessment Report 2019 <a target ='blank' href='https://ipbes.net/system/tdf/inline/files/ipbes_global_assessment_report_summary_for_policymakers.pdf?file=1&type=node&id=36213'>https://ipbes.net/system/tdf/inline/files/ipbes_global_assessment_report_summary_for_policymakers.pdf?file=1&type=node&id=36213</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>3</sup> Villafuerte, R. & Delibes-Mateos, M. 2019. Oryctolagus cuniculus. The IUCN Red List of Threatened Species 2019: e.T41291A45189779 <a target ='blank' href='https://dx.doi.org/10.2305/IUCN.UK.2019-3.RLTS.T41291A45189779.en'>https://dx.doi.org/10.2305/IUCN.UK.2019-3.RLTS.T41291A45189779.en</a> Downloaded on 27 March 2020.</li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>4</sup> Holm L, Doll J, Holm E, Pancho J, Herberger J, 1997. World Weeds. Natural Histories and Distribution. New York, USA: John Wiley and Sons, Inc.</li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>5</sup> CABI, 2020. Eichhornia crassipes. In: Invasive Species Compendium. Wallingford, UK: CAB International. <a target ='blank' href='https://www.cabi.org/isc'>https://www.cabi.org/isc</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>6</sup> European Commission 2017. Invasive Alien Species of Union concern <a target ='blank' href='https://ec.europa.eu/environment/nature/pdf/IAS_brochure_species.pdf'>https://ec.europa.eu/environment/nature/pdf/IAS_brochure_species.pdf</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>7</sup> Wittenberg, R., Cock, M.J.W. (eds.) 2001. Invasive Alien Species: A Toolkit of Best Prevention and Management Practices. CAB International, Wallingford, Oxon, UK, xvii - 228 <a target ='blank' href='https://portals.iucn.org/library/sites/library/files/documents/2001-040.pdf'>https://portals.iucn.org/library/sites/library/files/documents/2001-040.pdf</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>European Environment Agency. Technical report No 16/2012: The impacts of invasive alien species in Europe. Luxembourg: Publications Office of the European Union, 2012. <a target ='blank' href='https://www.eea.europa.eu/publications/impacts-of-invasive-alien-species/'>https://www.eea.europa.eu/publications/impacts-of-invasive-alien-species/</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>Message by IPPC Secretary Jingyuan Xia in the occasion of the International Day for Biological Diversity 2019 <a target ='blank' href='https://www.ippc.int/en/news/message-by-ippc-secretary-jingyuan-xia-in-the-occasion-of-the-international-day-for-biological-diversity-2019/'>https://www.ippc.int/en/news/message-by-ippc-secretary-jingyuan-xia-in-the-occasion-of-the-international-day-for-biological-diversity-2019/</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>Schlaepfer MA (2018) Do non-native species contribute to biodiversity?. PLOS Biology 16(4): e2005568 <a target ='blank' href='https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2005568'>https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2005568</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>WWF. 2018. Living Planet Report - 2018: Aiming Higher.Grooten, M. and Almond, R.E.A.(Eds). WWF, Gland, Switzerland <a target ='blank' href='https://https://wwf.panda.org/knowledge_hub/all_publications/living_planet_report_2018/'>https://wwf.panda.org/knowledge_hub/all_publications/living_planet_report_2018/</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i>Websites</i>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>IUCN work on Invasive Alien Species <a target ='blank' href='https://www.iucn.org/theme/species/our-work/invasive-species'>https://www.iucn.org/theme/species/our-work/invasive-species</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>IUCN Invasive Species Specialist Group <a target ='blank' href='http://www.issg.org/is_what_are_their_impacts.htm'>http://www.issg.org/is_what_are_their_impacts.htm </a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>The Ramsar Convention on Wetlands <a target ='blank' href='https://www.ramsar.org/'>https://www.ramsar.org/</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>MedWet STN <a target ='blank' href='https://medwet.org/the-scientific-and-technical-network/'> https://medwet.org/the-scientific-and-technical-network/</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>UN Convention on Biological Diversity <a target ='blank' href='https://www.cbd.int/invasive/'> https://www.cbd.int/invasive/</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li> UN 2030 Agenda for Sustainable Development <a target ='blank' href='https://sustainabledevelopment.un.org/post2015/transformingourworld'> https://sustainabledevelopment.un.org/post2015/transformingourworld</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li> The Mediterranean Wetland Observatory <a target ='blank' href='https://medwet.org/observatory/'> https://medwet.org/observatory/</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>European Environment Agency: Invasive alien species: a growing problem for environment and health <a target ='blank' href='https://www.eea.europa.eu/highlights/invasive-alien-species-a-growing'>https://www.eea.europa.eu/highlights/invasive-alien-species-a-growing</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>IPBES Thematic assessment of invasive alien species and their control <a target ='blank' href='https://ipbes.net/invasive-alien-species-assessment'>https://ipbes.net/invasive-alien-species-assessment</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>OffYourMap: The case of Coastal Wetlands <a target ='blank' href='http://offyourmap.org/'>http://offyourmap.org/</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>The European Freshwater Information Platform: Data, tools and resources for freshwater research <a href='http://www.freshwaterplatform.eu/’ target='_blank'>http://www.freshwaterplatform.eu/ </a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i>Tools</i>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li>IUCN Red List of Threatened Species<sup>TM</sup> <a href=' https://www.iucnredlist.org/’ target='_blank'> https://www.iucnredlist.org/ </a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li> EICAT - Environmental Impact Classification of Alien Taxa <a target ='blank' href='https://www.iucn.org/theme/species/our-work/invasive-species/eicat'>https://www.iucn.org/theme/species/our-work/invasive-species/eicat</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li> GRIIS - The Global Register of Introduced and Invasive Species <a target ='blank' href='http://www.griis.org/'>http://www.griis.org/</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li> Ramsar Sites Information Service <a target ='blank' href='https://rsis.ramsar.org/'>https://rsis.ramsar.org/ </a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li> MeRSiM-Network <a target ='blank' href='https://medwetmanagers.net/the-network/'>https://medwetmanagers.net/the-network/ </a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li> Mobile app Invasive Alien Species Europe <a target ='blank' href='https://ec.europa.eu/jrc/en/news/new-application-tracking-invasive-alien-species-your-smartphone'>https://ec.europa.eu/jrc/en/news/new-application-tracking-invasive-alien-species-your-smartphone</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i>Projects</i>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li> LIFE INVASAQUA  <a target ='blank' href='http://www.lifeinvasaqua.com/'>http://www.lifeinvasaqua.com/ </a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li> Life ASAP <a target ='blank' href='https://lifeasap.eu/index.php/en/'> https://lifeasap.eu/index.php/en/</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li> CIV - Center for Invasive Species in Poreč, Croatia <a target ='blank' href='http://civ.iptpo.hr/?lang=en'>http://civ.iptpo.hr/?lang=en </a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li> IAS in Lake Akrotiri, Cyprus <a target ='blank' href='https://www.ceh.ac.uk/news-and-media/news/study-will-support-species-and-environment-key-international-wetland-site-cyprus'> https://www.ceh.ac.uk/news-and-media/news/study-will-support-species-and-environment-key-international-wetland-site-cyprus</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i>Illustrative material and photo credits:</i>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "GIS maps by Elisa Alcázar <br>Infographics by Cecilia Saura Drago / Piktochart<br>IAS photo mosaic (from left to right):"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i> Carpobrotus edulis,</i> Tel Aviv. Photo: Merike Linnamägi in NOBANIS. Available from <a target ='blank' href='www.NOBANIS.org'>www.NOBANIS.org</a> Data of access 4.3.2020"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i> Trachemys script.</i> Photo: Henrik Bringsøe in NOBANIS. Available from <a target ='blank' href='www.NOBANIS.org'>www.NOBANIS.org</a><br>Data of access 4.3.2020"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i> Myocastor Coypus.</i> Photo: Bo Oelenschlaeger Madsen, NOBANIS. Available from <a target ='blank' href='www.NOBANIS.org'>www.NOBANIS.org</a><br>Data of access 4.3.2020"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i> Yucca filamentosa.</i> Photo: Tangopaso / Public domain"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i> Cyprinus carpio.</i> Photo: George Chernilevsky <a target ='blank' href='https://creativecommons.org/licenses/by-sa/3.0'>(https://creativecommons.org/licenses/by-sa/3.0)</a>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i> Rana ridibunda.</i> Photo: Andreas Thomsen / CC BY-SA <a target ='blank' href='https://creativecommons.org/licenses/by-sa/3.0'>(https://creativecommons.org/licenses/by-sa/3.0)</a>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i> Arundo donax.</i> Photo: Donkey shot / CC BY-SA <a target ='blank' href='https://creativecommons.org/licenses/by-sa/3.0'>(https://creativecommons.org/licenses/by-sa/3.0)</a>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i> Tamarix parviflora.</i> Photo: Krzysztof Ziarnek, Kenraiz / CC BY-SA <a target ='blank' href='https://creativecommons.org/licenses/by-sa/4.0'>(https://creativecommons.org/licenses/by-sa/4.0)</a>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i> Eucalyptus.</i> Photo: Fir0002 CC-BY-SA-3.0-migrated <a target ='blank' href='https://creativecommons.org/licenses/by-sa/3.0/deed.en'>(https://creativecommons.org/licenses/by-sa/3.0/deed.en)</a>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<i> Ailanthus altissima.</i> Photo: H. Zell / CC BY-SA <a target ='blank' href='https://creativecommons.org/licenses/by-sa/3.0'>(https://creativecommons.org/licenses/by-sa/3.0)</a>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<h3 class='donate'><a href='https://www.iucn.org/donate' target='_blank'>DONATE</a></h3>"
+                  }
+              ]
+          },
+          "skip": {
+              "name": "Related",
+              "background": {
+                  "url": "assets/unwelcomed_guests/cover_photo_options/imagen_9.jpg",
+                  "class": ""
+              },
+              "contact_info": {
+                  "authors": [
+                      {
+                          "name": "Violeta Barrios"
+                      },
+                      {
+                          "name": "Flavio Monti,"
+                      },
+                      {
+                          "name": "Elisa Alcázar"
+                      },
+                      {
+                          "name": "&"
+                      },
+                      {
+                          "name": "Cecilia Saura Drago"
+                      },
+                      {
+                          "name": "for"
+                      },
+                      {
+                          "departament": "IUCN Centre for Mediterranean Cooperation"
+                      },
+                      {
+                          "departament": "with the contribution of Ramsar MedWet STN Biodiversity SG and (in alphabetical order):"
+                      },
+                      {
+                          "departament": "Sidi Imad Cherkaoui, Geert De Knijf, Thomas Galewski, Peter Gyenge, Jasmina"
+                      },
+                      {
+                          "departament": "Krpo-Cetkovic, Eva Papastergiadou, Jodey M. Peyton, Elena Tricarico, Mirela Uzelac."
+                      }
+                  ],
+                  "address": {
+                      "center_name": "IUCN Centre for Mediterranean Cooperation",
+                      "info": "Calle Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tel +34 352 02 84 30<br>Fax +34 352 02 84 30 <br><a href=\"mailto:medspecies@iucn.org\">medspecies@iucn.org</a><br><br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
+                  }
+              },
+              "next_story": {
+                  "background": {
+                      "url": "assets/the_legacy_of_the_land/imagen_1.jpg"
+                  },
+                  "link": "The_legacy_of_the_land",
+                  "title": "The legacy of the land"
+              }
+          }
+      }
+    },
+    "The_legacy_of_the_land": {
+      "steps": {
+          "cover": {
+              "name": "Cover",
+              "background": {
+                  "url": "assets/the_legacy_of_the_land/imagen_1.jpg",
+                  "class": "kenburns",
+                  "credit": {
+                      "footer": "Photo by <a target='blank'href='https://unsplash.com/@saeedsid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Saeed Siddiqui</a> on <a target='blank'href='https://unsplash.com/@saeedsid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>",
+                      "ico": false
+                  }
+              },
+              "title": "The legacy of the land",
+              "subtitle": "Biodiversity in the Mediterranean agricultural landscapes"
+          },
+          "intro": {
+              "background": {
+                  "url": "assets/the_legacy_of_the_land/imagen_1.jpg",
+                  "class": "kenburns"
+              },
+              "name": "Intro",
+              "elements": [
+                  {
+                      "type": "paragraph",
+                      "capitalize": true,
+                      "value": "Cereals, vegetables, citrus fruits, olive orchards and vines.The fertile grounds of the Mediterranean have been harvested for centuries, feeding civilisations, shaping landscapes, cultures and societies. With their practices, farmers, herders and fishers have built agricultural wisdom across generations, influencing the unique biodiversity of the Mediterranean region."
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "Today, the Mediterranean is under intense pressure from a variety of human activities, and has become a priority for conservation. Mediterranean biodiversity is being lost at an unprecedented rate, and one of the primary drivers of this decline, particularly in terrestrial environments, is known to be agriculture . However, could agriculture be also part of the solution?"
+                  },
+                  {
+                      "type": "title",
+                      "capitalize": false,
+                      "value": "<b>An inextricable bond </b>"
+                  },
+                  {
+                      "type": "title",
+                      "value": "<i>“Biodiversity is the basis of agriculture” <br>UN Convention on Biological Diversity<sup>ii</sup></i>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "If biodiversity thrives, so does agriculture: Biodiversity generates multiple ecosystem services - the direct and indirect benefits that people obtain from ecosystems - of which agriculture, as many other fields, relies on. Biodiversity is the source of all crops and domesticated livestock, and the variety within them."
+                  },
+                  {
+                      "type": "image",
+                      "url": "assets/the_legacy_of_the_land/imagen_2.jpg",
+                      "credit": {
+                          "footer": "Soil biodiversity is also essential for farming systems.<sup>iii</sup>",
+                          "author": "Photo by <a target='blank'href='https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Markus Spiske</a> on <a target='blank'href='https://unsplash.com/s/photos/soil?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>",
+                          "ico": true
+                      }
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "From vertebrates to microorganisms, the agricultural landscapes hold a tremendous variety of species that have a profound and positive impact on Earth’s habitability.<sup>iv</sup> Hence, sustainable and well-managed agriculture systems can actually play a key role to improve biodiversity conservation, and we can see examples of the potential of these practices today."
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "The agricultural landscapes of the Mediterranean region are a legacy of thousands of years of farmers, herders and fishers’ experience: they developed a myriad of species and varieties of crops for human consumption, adapting their practices to local environments, traditions and customs. These traditional practices haven proved to achieve a balanced, sustainable productivity in harmony with nature, preserving species, ecosystems and genetic diversity."
+                  },
+                  {
+                      "type": "image",
+                      "url": "assets/the_legacy_of_the_land/imagen_3.png"
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "In the Mediterranean, it is worth mentioning that there are also countless cultural and sustainable practices that shape structural elements such as field margins, hedgerows, stonewalls, patches of woodland or scrub and small rivers. However, the relationships between biodiversity, practice, and structural elements still needs to be further explored and documented."
+                  },
+                  {
+                      "type": "title",
+                      "capitalize": false,
+                      "value": "<b>Curiosities</b>"
+                  },
+                  {
+                      "type": "image",
+                      "url": "assets/the_legacy_of_the_land/imagen_4.png"
+                  },
+                  {
+                      "type": "title",
+                      "capitalize": false,
+                      "value": "<b>The threat and the opportunity</b>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "Nowadays, agricultural landscapes are evolving in two opposite directions: abandonment or intensification. Traditional farming practices are giving way to a more profitable, intensive agriculture, which is provoking the loss of biodiversity that used to thrive in these landscapes."
+                  },
+                  {
+                      "type": "image",
+                      "url": "assets/the_legacy_of_the_land/imagen_5.png",
+                      "credit": {
+                          "footer": "<i>Figure 2 Some facts and figures regarding the loss of genetic diversity and the decline of species related to agriculture nowadays. Source: FAO</i>",
+                          "ico": true
+                      }
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "In the Mediterranean basin, as in many other parts of the world, the lack of crop diversity is quite apparent: over 85 % of the total agricultural production focuses only on cereals, vegetables, and citrus fruits<sup>v</sup>. Olive orchards and vines are important crops as well, as the following map shows. "
+                  },
+                  {
+                      "type": "image",
+                      "url": "assets/the_legacy_of_the_land/imagen_6.jpg",
+                      "credit": {
+                          "footer": "Source: <a target='blank'href='https://www.grida.no/resources/5906'>GRID-Arendal</a>",
+                          "ico": true
+                      }
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "All in all, the current trends are reducing the resilience of agricultural systems to adapt to variations, causing instability. In addition, they are threatening numerous wild species of plants and animals that depend on agrosilvopastoral practices in different ways, in an often complex and multidirectional relation."
+                  },
+                  {
+                      "type": "image",
+                      "url": "assets/the_legacy_of_the_land/imagen_7.jpg",
+                      "credit": {
+                          "footer": "Transhumance, a practice of moving livestock from one grazing ground to another in a seasonal cycle, typically to lowlands in winter and highlands in summer. Considered a form of pastoralism, this traditional practice, currently threatened, brings many benefits to agricultural landscapes<sup>vi</sup>.",
+                          "author": "Photo by <a target='blank'href='https://unsplash.com/@albertobigoni?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Alberto Bigoni</a> on <a target='blank'href='https://unsplash.com/@albertobigoni?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>",
+                          "ico": true
+                      }
+                  },
+                  {
+                      "type": "paragraph",
+                      "capitalize": false,
+                      "value": "When managed sustainably and knowledgeably, biodiversity provides the necessary resources for agriculture to thrive while having a minimal negative impact on the environment<sup>vii</sup>. Many traditional practices have proved to be sustainable benefiting biodiversity at a large. Unfortunately, this invaluable heritage is being lost for different economic social and economic reasons, often influenced by lower productivity and profitability. To stop the loss of these practices, it is decisive to recognize the benefits they provide, and develop mechanisms to enhance them."
+                  }
+              ]
+          },
+          "map": {
+              "name": "Map",
+              "mapStyle": "mapbox://styles/cayetanobv/ck8yfr1wt04iu1iogahtjyw72",
+              "collapsed": false,
+              "info": [
+                  {
+                      "title": "",
+                      "credit": "IUCN-Med",
+                      "collapsed": false,
+                      "shp": "",
+                      "wms": "",
+                      "legend": "",
+                      "elements": [
+                          {
+                              "type": "paragraph",
+                              "capitalize": false,
+                              "value": "This map includes a compilation of different scientific papers documenting agricultural practices in the Mediterranean region that benefit different species of fauna and flora at three different levels: plot, farm and landscape. It is important to highlight that applying one specific practice is not enough to increase the associated biodiversity, as the agroecosystems are complex and interlinked in many different ways. "
+                          },
+                          {
+                              "type": "paragraph",
+                              "capitalize": false,
+                              "value": "<u><i>Plot level:</i></u> Practices affecting mostly species with low mobility. Here, maintaining ground cover has proven to benefit biodiversity."
+                          },
+                          {
+                              "type": "paragraph",
+                              "capitalize": false,
+                              "value": "<u><i>Farm level:</i></u>Practices that include structural elements, like stonewalls, dead standing trees, solitary trees or field margins. Some of the practices at farm level benefit some species but harm others."
+                          },
+                          {
+                              "type": "paragraph",
+                              "capitalize": false,
+                              "value": "<u><i>Landscape level:</i></u> Some species of birds or bats only benefit from heterogeneous landscapes, as these articles describe."
+                          },
+                          {
+                              "type": "paragraph",
+                              "capitalize": false,
+                              "value": "<u><i>Special sites:</i></u> Places were many practices are being performed simultaneously or are working to better understand the link between practices and biodiversity."
+                          }
+                      ],
+                      "layer": {
+                          "id": "",
+                          "hidden": false,
+                          "subLayers": [
+                              ""
+                          ]
+                      }
+                  }
+              ]
+          },
+          "conclusion": {
+              "name": "Taking action",
+              "title": "Taking <b>action</b>",
+              "elements": [
+                  {
+                      "type": "paragraph",
+                      "value": "The MAVA Foundation - a major funding partner of conservation projects - has created a programme to promote “cultural practices that shape the cultural landscapes which in turn, harbour biodiversity and preserve natural capital” in the Mediterranean Basin.  IUCN-Med participates in this programme with several partners, developing actions that will improve the knowledge and monitoring of biodiversity.  Activities are held mainly in five pilot landscapes: the Moroccan High Atlas, the Island of Lemnos in Greece, agricultural terraces in the Lebanese Al-Shouf Cedar Nature Reserve, grazing pastures of Portugal (Montados) and Spain (Dehesas), and the island of Menorca in Spain. This programme will also provide more examples of agricultural practices benefiting biodiversity across the Mediterranean region.",
+                      "highlight": true
+                  },
+                  {
+                      "type": "title",
+                      "value": "Do you want to learn more?"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><a href='https://whc.unesco.org/en/culturallandscape/' target='_blank'> UNESCO Cultural landscapes</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><a href='http://mava-foundation.org/oaps/promoting-sustainable-land-use-practices-2/' target='_blank'> M6 MAVA-Promoting sustainable land use practices</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><a href='https://www.rootedeveryday.org/' target='_blank'>Rooted everyday</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><a href='https://www.iucn.org/regions/mediterranean/projects/current-projects/knowledge-and-monitoring-biodiversity-0' target='_blank'>Biodiversity Knowledge and Monitoring-IUCN Med</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><a href='https://www.iucn.org/news/mediterranean/201905/can-agricultural-practices-help-preserve-biodiversity-mediterranean-cultural-landscapes' target='_blank'> Can agricultural practices help preserve biodiversity</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><a href='https://www.bioversityinternational.org/mainstreaming-agrobiodiversity/' target='_blank'> https://www.bioversityinternational.org/mainstreaming-agrobiodiversity/</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><a href='http://www.fao.org/3/y5609e/y5609e02.htm' target='_blank'>http://www.fao.org/3/y5609e/y5609e02.htm</a></li></ul>"
+                  },
+                  {
+                      "type": "title",
+                      "value": "<b>Fact sheet and report WE&B</b>"
+                  },
+                  {
+                      "type": "title",
+                      "value": "<b>LOGOS of all the partners of the project</b>"
+                  },
+                  {
+                      "type": "image",
+                      "url": "assets/the_legacy_of_the_land/imagen_8.jpg"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>i</sup>IUCN Centre for Mediterranean Cooperation.<a href='https://www.iucn.org/sites/dev/files/content/documents/infografia_uicn_med_a3_nov29.pdf' target='_blank'>The Mediterranean, a global priority for conservation.</a>Infographic, November 2018.</li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>ii</sup>Secretariat of the Convention on Biological Diversity (2008).<a href='http://www.fao.org/fileadmin/templates/soilbiodiversity/Downloadable_files/P020080603430792943555.pdf' target='_blank'>Biodiversity and Agriculture: Safeguarding Biodiversity and Securing Food for the World.</a> Montreal, 56 pages </li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>iii</sup><a href='https://www.globalsoilbiodiversity.org/' target='_blank'>https://www.globalsoilbiodiversity.org/</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>iv</sup>Ed. Hamilton S, Doll J & Robertson G. “The ecology of agricultural landscapes: long term research on the path to sustainability” 2015, Oxford University press.</li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>v</sup><a href='http://wedocs.unep.org/bitstream/handle/20.500.11822/386/soed2009_eng.pdf?sequence=3&isallowed=y' target='_blank'>UNEP/MAP-Plan Bleu: State of the Environment and Development in the Mediterranean,</a>UNEP/MAP-Plan Bleu, Athens, 2009</li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>vi</sup>Aryal S., Maraseni T., Cockfield G., de Bruyn L.L. (2018)<a href='https://link.springer.com/chapter/10.1007/978-3-319-94232-2_2' target='_blank'> Transhumance, Livestock Mobility and Mutual Benefits Between Crop and Livestock Production.</a>In: Lichtfouse E. (eds) Sustainable Agriculture Reviews 31. Sustainable Agriculture Reviews, vol 31. Springer, Cham</li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>vii</sup>Biodiversity International, 2017. <a href='https://www.bioversityinternational.org/mainstreaming-agrobiodiversity/' target='_blank'>Mainstreaming Agrobiodiversity in Sustainable Food Systems: Scientific Foundations for an Agrobiodiversity Index. </a>Biodiversity International, Rome, Italy.</li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<ul><li><sup>viii</sup><a href='https://ec.europa.eu/environment/archives/business/assets/pdf/sectors/FINAL_Agriculture.pdf' target='_blank'>https://ec.europa.eu/environment/archives/business/assets/pdf/sectors/FINAL_Agriculture.pdf</a></li></ul>"
+                  },
+                  {
+                      "type": "paragraph",
+                      "value": "<h3 class='donate'><a href='https://www.iucn.org/donate' target='_blank'>DONATE</a></h3>"
+                  }
+              ]
+          },
+          "skip": {
+              "name": "Related",
+              "background": {
+                  "url": "",
+                  "class": ""
+              },
+              "contact_info": {
+                  "authors": [
+                      {
+                          "name": "Mercedes Muñoz"
+                      },
+                      {
+                          "name": "&"
+                      },
+                      {
+                          "name": "Cecilia Saura Drago"
+                      },
+                      {
+                          "name": "for"
+                      },
+                      {
+                          "departament": "IUCN Centre for Mediterranean Cooperation <br>"
+                      },
+                      {
+                          "departament": "with the contribution of XXXXXX"
+                      }
+                  ],
+                  "address": {
+                      "center_name": "IUCN Centre for Mediterranean Cooperation",
+                      "info": "Calle Marie Curie 22<br>29590 Campanillas<br>Malaga, Spain<br><br>Tel +34 352 02 84 30<br>Fax +34 352 02 84 30 <br><a href=\"http://www.iucn.org/mediterranean\" target=\"blank\">www.iucn.org/mediterranean</a>"
+                  }
+              },
+              "next_story": {
+                  "background": {
+                      "url": "assets/corals/image.jpg"
+                  },
+                  "link": "Mediterranean_coralligenous_environments",
+                  "title": "Do you know where the most beautiful Mediterranean diving secrets are?"
+              }
+          }
+      }
     }
   }
 }

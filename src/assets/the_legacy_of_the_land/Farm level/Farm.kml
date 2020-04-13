@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Farm level</name>
+    <Style id="icon-1501-817717-normal">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-6.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1501-817717-highlight">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-6.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1501-817717">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1501-817717-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1501-817717-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1501-880E4F-normal">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-3.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1501-880E4F-highlight">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-3.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1501-880E4F">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1501-880E4F-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1501-880E4F-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1501-A52714-normal">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-1.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1501-A52714-highlight">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-1.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1501-A52714">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1501-A52714-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1501-A52714-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1501-E65100-normal">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-2.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1501-E65100-highlight">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-2.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1501-E65100">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1501-E65100-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1501-E65100-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1501-F9A825-normal">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-4.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1501-F9A825-highlight">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-4.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1501-F9A825">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1501-F9A825-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1501-F9A825-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1501-FFD600-normal">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-5.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1501-FFD600-highlight">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-5.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1501-FFD600">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1501-FFD600-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1501-FFD600-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>Fallow rotation</name>
+      <description><![CDATA[Fallow have a positive impact on plant species diversity.<br>Fallow land practice allows the recovery of soil after cultivation for some years by not growing crops. <br>Full article:<br>https://www.sciencedirect.com/science/article/abs/pii/S016788091530133X]]></description>
+      <styleUrl>#icon-1501-A52714</styleUrl>
+      <Point>
+        <coordinates>
+          -8.051943,37.672447,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Grazing</name>
+      <description><![CDATA[Moderate grazing benefits the assemblage of ground-feeding birds and it promotes winter bird habitat quality.<br>Full article:<br>https://www.sciencedirect.com/science/article/abs/pii/S0167880918304353]]></description>
+      <styleUrl>#icon-1501-E65100</styleUrl>
+      <Point>
+        <coordinates>
+          -8.252385,38.419755,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Grazing</name>
+      <description><![CDATA[Moderate grazing in forest has a positive impact on structure and species diversity<br>Full article:<br>https://www.sciencedirect.com/science/article/abs/pii/S0167880906004130 ]]></description>
+      <styleUrl>#icon-1501-E65100</styleUrl>
+      <Point>
+        <coordinates>
+          -0.257955,42.143489,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mowing</name>
+      <description><![CDATA[Low mowing frequency on steep slopes maintain and improve wild plant diversity<br>Full article:<br>https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0076167 ]]></description>
+      <styleUrl>#icon-1501-880E4F</styleUrl>
+      <Point>
+        <coordinates>
+          12.166789,45.92962,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Organic farming</name>
+      <description><![CDATA[Organic farming slightly increase arthropod biomass. Weed abundance and diversity is positively related with organic farming. <br>Full article:<br>https://www.sciencedirect.com/science/article/abs/pii/S016788091100082X ]]></description>
+      <styleUrl>#icon-1501-F9A825</styleUrl>
+      <Point>
+        <coordinates>
+          -3.558901,40.525525,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Structural elements-Dry-stone walls</name>
+      <description><![CDATA[Common redstart occurrence was positively associated with hedge and tree rows, dry-stone walls, marginal habitats and diversity of land cover<br>Full article:<br>https://www.sciencedirect.com/science/article/abs/pii/S0167880918300343]]></description>
+      <styleUrl>#icon-1501-FFD600</styleUrl>
+      <Point>
+        <coordinates>
+          11.181936,45.987399,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Structural elements-Field margins</name>
+      <description><![CDATA[Importance of preserving varied typologies of complex ecological infrastructures (hedges, strips) to keep diversified spiders communities<br>Full article:<br>https://www.sciencedirect.com/science/article/abs/pii/S0167880918302603]]></description>
+      <styleUrl>#icon-1501-FFD600</styleUrl>
+      <Point>
+        <coordinates>
+          -2.663111,42.379977,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Structural elements-Field margins</name>
+      <description><![CDATA[Butterfly diversity showed positive correlation to greater amount of field margins, number of trees and large shrubs.<br>Full article:<br>https://www.sciencedirect.com/science/article/abs/pii/S0167880911003276]]></description>
+      <styleUrl>#icon-1501-FFD600</styleUrl>
+      <Point>
+        <coordinates>
+          -5.6756396,42.3310768,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Structural elements-Field margins</name>
+      <description><![CDATA[Wide margins with high flowering plant richness, supports a dense and diverse bee community<br>Full article:<br>https://www.sciencedirect.com/science/article/abs/pii/S0167880917302906]]></description>
+      <styleUrl>#icon-1501-FFD600</styleUrl>
+      <Point>
+        <coordinates>
+          2.165705,42.090165,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Structural elements-Isolated trees</name>
+      <description><![CDATA[Isolated trees have direct effect on soil properties, indirectly influencing plant and collembolan assemblages. <br><br>Full article:<br>https://www.sciencedirect.com/science/article/abs/pii/S0167880915000092]]></description>
+      <styleUrl>#icon-1501-FFD600</styleUrl>
+      <Point>
+        <coordinates>
+          9.252215,41.033717,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tillage</name>
+      <description><![CDATA[Soil tillage highly influence arthropods variation. With different response depending on taxa<br>Full article:<br>https://www.sciencedirect.com/science/article/abs/pii/S016788091530164X]]></description>
+      <styleUrl>#icon-1501-817717</styleUrl>
+      <Point>
+        <coordinates>
+          25.14784,35.413995,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
