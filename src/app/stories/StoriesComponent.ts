@@ -82,9 +82,9 @@ export class StoriesComponent implements OnInit {
 
   getAuthors(story: string) {
     if (this.stories[story].steps.skip.contact_info.authors instanceof Array) {
-      return this.stories[story].steps.skip.contact_info.authors.map((item: any) => {
-        return item.name;
-      });
+      return this.stories[story].steps.skip.contact_info.authors
+          .filter((i: any) => i.name)
+          .map((item: any) => item.name);
     }
     return [];
   }

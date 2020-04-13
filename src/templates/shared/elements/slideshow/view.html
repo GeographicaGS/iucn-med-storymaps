@@ -1,0 +1,13 @@
+<div class="container-component" [class.full-width]="isFullWidth()" [ngClass]="showContent() ? 'fadeInUp' : 'fadeOutDown'">
+    <slideshow
+        [height]="getHeight()"
+        [autoPlay]="false"
+        [showArrows]="true"
+        [imageUrls]="getImageSources()"
+        [lazyLoad]="getImageSources()?.length > 1"
+        [autoPlayWaitForLazyLoad]="true"
+        [showDots]="true"
+        [backgroundSize]="'contain'"
+    >
+    </slideshow>
+</div>

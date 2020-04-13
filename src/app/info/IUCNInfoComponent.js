@@ -31,7 +31,7 @@ var IUCNInfoComponent = /** @class */ (function () {
         this.home = this.dataService.getHomeData();
         this.info = this.dataService.getIUCNInfoData();
         this.windowService.resetBackground();
-        this.windowService.updateSocialMetaTags(this.home.preview.title, this.home.preview.description, this.home.background.src, document.location.href);
+        this.windowService.updateSocialMetaTags(this.home.preview.title, this.home.preview.description, this.home.background.url, document.location.href);
     };
     IUCNInfoComponent.prototype.aboutHasBlocks = function () {
         return Array.isArray(this.info.blocks);

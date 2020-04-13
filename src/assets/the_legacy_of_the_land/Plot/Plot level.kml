@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Plot level</name>
+    <Style id="icon-1739-4E342E-normal">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-1.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1739-4E342E-highlight">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-1.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1739-4E342E">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1739-4E342E-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1739-4E342E-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>Ground vegetation cover</name>
+      <description><![CDATA[Organic systems enhance the abundance of arachnids and the richness is positively influenced by the amount of ground vegetation cover.<br>Full article:<br>https://www.sciencedirect.com/science/article/pii/S0167880917303626]]></description>
+      <styleUrl>#icon-1739-4E342E</styleUrl>
+      <Point>
+        <coordinates>
+          3.7617484,43.6759434,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ground vegetation cover</name>
+      <description><![CDATA[Herbaceous cover favoured insectivorous birds richness in spring<br>Full article:<br>https://www.sciencedirect.com/science/article/abs/pii/S0167880918304092]]></description>
+      <styleUrl>#icon-1739-4E342E</styleUrl>
+      <Point>
+        <coordinates>
+          1.60167,41.821907,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ground vegetation cover</name>
+      <description><![CDATA[The flower community positively influenced directly and indirectly the diversity of wild-pollinators<br>Full article:<br>https://www.sciencedirect.com/science/article/abs/pii/S0167880918301865]]></description>
+      <styleUrl>#icon-1739-4E342E</styleUrl>
+      <Point>
+        <coordinates>
+          2.90859,39.640925,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ground vegetation cover</name>
+      <description><![CDATA[Presence of cover vegetation affect the epigeal insect abundance <br>Full article:<br>https://www.sciencedirect.com/science/article/abs/pii/S0167880919301859]]></description>
+      <styleUrl>#icon-1739-4E342E</styleUrl>
+      <Point>
+        <coordinates>
+          -3.123648,42.075517,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ground vegetation cover</name>
+      <description><![CDATA[Plant varieties in the grass mixes provided varying species of pollinators<br>Full article:<br>https://pdfs.semanticscholar.org/79b0/41e7f83ab2d7974a867a55a56038c167e9ef.pdf ]]></description>
+      <styleUrl>#icon-1739-4E342E</styleUrl>
+      <Point>
+        <coordinates>
+          24.781754,42.155708,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

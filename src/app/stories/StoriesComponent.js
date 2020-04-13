@@ -34,7 +34,7 @@ var StoriesComponent = /** @class */ (function () {
         var home = this.dataService.getHomeData();
         this.windowService.setBodyBgUrl("url(" + home.background.url + ")");
         this.windowService.setBodyBgClass(home.background.class + " blur");
-        this.windowService.updateSocialMetaTags(home.preview.title, home.preview.description, home.background.src, document.location.href);
+        this.windowService.updateSocialMetaTags(home.preview.title, home.preview.description, home.background.url, document.location.href);
     };
     StoriesComponent.prototype.isScaling = function (story) {
         return this.scaling === story;
@@ -75,9 +75,9 @@ var StoriesComponent = /** @class */ (function () {
     };
     StoriesComponent.prototype.getAuthors = function (story) {
         if (this.stories[story].steps.skip.contact_info.authors instanceof Array) {
-            return this.stories[story].steps.skip.contact_info.authors.map(function (item) {
-                return item.name;
-            });
+            return this.stories[story].steps.skip.contact_info.authors
+                .filter(function (i) { return i.name; })
+                .map(function (item) { return item.name; });
         }
         return [];
     };
