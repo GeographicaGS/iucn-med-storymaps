@@ -1,0 +1,102 @@
+{
+"type": "FeatureCollection",
+"name": "Landscape level",
+"crs": { "type": "name", 
+		 "properties": 
+		 { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" 
+		 } 
+		 },
+"features": [
+{ "type": "Feature", 
+  "properties": 
+  { "Name": "Landscape heterogeneity",
+	"description": "Heterogeneous agricultural landscapes guarantee food resources for beneficial insects such as syrphid larvae during periods of scarcity<br>Full article:<br>https:\/\/www.sciencedirect.com\/science\/article\/abs\/pii\/S0167880916304650" 
+  }, 
+	"geometry": 
+	{ 
+	"type": "Point", 
+	"coordinates": [
+	-7.183707, 41.436758 
+	] 
+	} 
+	},
+{ "type": "Feature",
+  "properties": 
+  { "Name": "Landscape heterogeneity",
+    "description": "The effectiveness of extensive agriculture to recover biodiversity depend on the landscape context <br>Full article:<br>https:\/\/www.sciencedirect.com\/science\/article\/abs\/pii\/S016788091930057X  " 
+  }, 
+  "geometry": 
+  { 
+  "type": "Point", 
+  "coordinates": [
+  -4.159956, 37.449052 
+  ] 
+  } 
+},
+{ "type": "Feature",
+  "properties": 
+  { "Name": "Landscape heterogeneity",
+    "description": "Bat activity was significantly higher on plots located close to hedgerows and rivers<br>Full article:<br>https:\/\/www.sciencedirect.com\/science\/article\/pii\/S0167880917303626" 
+  }, 
+	"geometry": 
+	{
+	"type": "Point",
+	"coordinates": [
+	3.7590509, 43.6776759 
+	] 
+	} 
+},
+{ "type": "Feature", 
+"properties": 
+{ "Name": "Landscape heterogeneity",
+  "description": "Ecological management of plots and edges leads to greater contribution to the presence and circulation of biodiversity in the agricultural matrix.<br>Full article:<br>https:\/\/www.sciencedirect.com\/science\/article\/abs\/pii\/S016788091530013X" 
+}, 
+  "geometry": 
+  { 
+  "type": "Point", 
+  "coordinates": [
+  5.311439, 43.627018 
+  ]
+  } 
+},
+{ "type": "Feature",
+  "properties": 
+  { "Name": "Landscape heterogeneity",
+    "description": "Spiders in olive groves were influenced mostly by management and composition of the surrounding landscape.<br>Full article:<br>https:\/\/www.sciencedirect.com\/science\/article\/abs\/pii\/S0167880916300573 " 
+  }, 
+    "geometry": 
+	{ 
+	"type": "Point",
+	"coordinates": [
+	10.577715, 43.801343 
+	] 
+	} 
+},
+{ "type": "Feature",
+  "properties": 
+  { "Name": "Landscape heterogeneity",
+  "description": "Natural habitats had a positive effect on wild bee communities at the landscape scale<br>Full article:<br>https:\/\/www.researchgate.net\/publication\/240580159_Diversity_patterns_of_wild_bees_in_almond_orchards_and_their_surrounding_landscape " 
+  }, 
+  "geometry": 
+  { 
+  "type": "Point",
+  "coordinates": [
+  34.945909, 31.724985 
+  ] 
+  } 
+  },
+{ "type": "Feature",
+  "properties": 
+  { "Name": "Mosaic landscape",
+  "description": "The richest carnivore assemblages and highest abundances were in mosaic landscapes (arable lands, forstes and shrubland).<br>Full article:<br>https:\/\/www.sciencedirect.com\/science\/article\/abs\/pii\/S0167880909000796" 
+  }, 
+  "geometry": 
+  {
+  "type": "Point",
+  "coordinates": [
+  -8.7164835, 37.5697952 
+  ] 
+  } 
+  }
+]
+}

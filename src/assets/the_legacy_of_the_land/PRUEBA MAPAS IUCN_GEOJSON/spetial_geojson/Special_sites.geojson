@@ -1,0 +1,71 @@
+{
+"type": "FeatureCollection",
+"name": "Special sites",
+"crs": { "type": "name", 
+		 "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", 
+  "properties": 
+  { "Name": "Dehesa", 
+	"description": "Dehesa in Spanish and Montado in Portuguese are agrosyvopastoral systems and cultural landscapes<br>http:\/\/www.pastos.es\/<br>https:\/\/www.wwf.es\/<br>https:\/\/www.natureza-portugal.org\/<br>https:\/\/www.rootedeveryday.org\/projects\/dehesas-and-montados-spain-portugal\/" },
+	"geometry": 
+	{ "type": "Point", 
+	  "coordinates": [ -6.182807, 39.995185 ] } },
+{ "type": "Feature", 
+"properties": 
+{ "Name": "Agdals (High Atlas)", 
+  "description": "Agro-sylvo-pastoral system based on communal property. It prohibits access to the natural resource during a period of time through out the year. i.e. During the flowering period access is prohibited, when fruits are fallen from the trees collection is allowed, after that livestock entrance is allowed. This structure is flexible depending on natural conditions.<br>https:\/\/www.global-diversity.org\/<br>https:\/\/www.rootedeveryday.org\/projects\/high-atlas-morocco\/" }, 
+  "geometry": 
+  { "type": "Point", 
+    "coordinates": [ -6.778917, 32.462179 ] } },
+{ "type": "Feature",
+  "properties": 
+  { "Name": "Mandras (Lemnos)", 
+    "description": "Mandras: pastoral shelter house which until the end of the 20th century, served as a place of production and residence, playing an important role in the formation of the socio-economic relations. Mandras were surrounded by an orchard and dry-stone walls. <br>www.med-ina.org<br>https:\/\/www.rootedeveryday.org\/projects\/lemnos-greece\/" },
+	"geometry": 
+	{ "type": "Point", 
+	  "coordinates": [ 25.1708922, 39.9597608 ] } },
+{ "type": "Feature", 
+  "properties": 
+  { "Name": "Dry stone walls (Menorca)",
+    "description": "Menorca island is a mosaic landscape with over 12.000 km of dry stone walls<br>https:\/\/www.rootedeveryday.org\/projects\/menorca-spain\/<br>https:\/\/www.gobmenorca.com\/" }, 
+	"geometry": 
+	{ "type": "Point", 
+	  "coordinates": [ 4.1469205, 39.9670629 ] } },
+{ "type": "Feature",
+ "properties": 
+ { "Name": "Hima (Shouf Biosphere reserve)", 
+ "description": "Hima: Traditional management system using sustainable land patterns.<br>And pastoral system with ancient governance system and diverse a large agricultural diversity. <br>http:\/\/shoufcedar.org\/<br>https:\/\/www.spnl.org\/<br>https:\/\/www.rootedeveryday.org\/projects\/shouf-lebanon\/" },
+ "geometry": 
+ { "type": "Point",
+ "coordinates": [ 35.788959, 33.81849 ] } },
+{ "type": "Feature", 
+"properties": 
+{ "Name": "Montado",
+ "description": "Environmental mosaicism in spatially structured managed landscapes <br>Full article:<br>https:\/\/www.sciencedirect.com\/science\/article\/abs\/pii\/S0167880916306260" }, 
+ "geometry": 
+ { "type": "Point",
+ "coordinates": [ -9.178779, 38.788243 ] } },
+{ "type": "Feature",
+ "properties": 
+ { "Name": "Communal pasturelands", 
+ "description": "Public renting dehesa systems used as communal pasture lands. <br><br>Full article:<br>https:\/\/www.sciencedirect.com\/science\/article\/abs\/pii\/S0167880916304558" },
+ "geometry": 
+ { "type": "Point",
+ "coordinates": [ -3.509724, 42.992842 ] } },
+{ "type": "Feature", 
+"properties": 
+{ "Name": "Communal pastoral governance (Sierra Nevada)",
+ "description": "pastoral governance of communal pasture land and transhumance. Presence of the the local Segureña sheep breeds. The communal pastoral governance norms and rules can contribute to avoid overstocking in alpine pastures, while at the same time it can avoid secondary succession" },
+ "geometry": 
+ { "type": "Point",
+ "coordinates": [ -3.3887848, 37.0952371 ] } },
+{ "type": "Feature",
+ "properties": 
+ { "Name": "Cabannina cattle (Liguria)", 
+ "description": "Local Cabannina cattle breed, which through its capacity to digest lignin and grazing, avoids secondary succession and contributes to pasture and landscape diversity. The breed spends its first six years in the mountain regions following which it is moved to the coast of Liguria.<br>https:\/\/www.fondazioneslowfood.com\/en\/slow-food-presidia\/cabannina-cow\/" },
+ "geometry": 
+ { "type": "Point",
+ "coordinates": [ 8.259853, 44.4070381 ] } }
+]
+}
