@@ -1,7 +1,0 @@
-En esta carpeta se incluyen los siguientes shapefiles:
-
-- Mediterranean_ramsar_sites.shp: Es la capa de los sitios Ramsar que están dentro de la región Mediterrénea teniendo en cuenta la línea del hotspot (tal que definida para Freshwater species distribution and analysis).
-
-Al usar esta capa hay que incluir Tour de Valat en los créditos ya que fueron quienes pasaron a Violeta en 2018 capa Ramsar solo para este de análisis con KBA. Para otro uso, preguntar a Thomas Galewski y Anis de TdV.
-
-- Mediterranean_unwelcomed_guest.shp: Es la capa de los sitios Ramsar que han informado que las IAS son una amenaza dentro de la Región Mediterránea 

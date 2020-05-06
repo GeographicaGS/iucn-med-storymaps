@@ -232,6 +232,7 @@
                             "credit": "IUCN-Med",
                             "collapsed": false,
                             "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/coral_infralitoral.zip",
+                            "wms": "https://api.mapbox.com/styles/v1/cayetanobv/cj3k9a1e0000i2rpi9as4is0m/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
                             "legend": "/assets/corals/legend.svg",
                             "elements": [
                                 {
@@ -468,7 +469,7 @@
                             "credit": "IUCN-Med",
                             "collapsed": false,
                             "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/All_species_count.zip",
-                            "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+                            "wms": "https://api.mapbox.com/styles/v1/cayetanobv/cj0do9yow001q2smnpjsp8wtq/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
                             "legend": "/assets/butterflies/legend1.svg",
                             "elements": [
                                 {
@@ -498,7 +499,7 @@
                             "collapsed": true,
                             "credit": "IUCN-Med",
                             "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Theatened_richness_count.zip",
-                            "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+                            "wms": "https://api.mapbox.com/styles/v1/cayetanobv/cj0do9yow001q2smnpjsp8wtq/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
                             "legend": "/assets/butterflies/legend2.svg",
                             "elements": [
                                 {
@@ -528,7 +529,7 @@
                             "collapsed": true,
                             "credit": "IUCN-Med",
                             "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
-                            "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Endemic_richness_count_hex.zip",
+                            "wms": "https://api.mapbox.com/styles/v1/cayetanobv/cj0do9yow001q2smnpjsp8wtq/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
                             "legend": "/assets/butterflies/legend3.svg",
                             "elements": [
                                 {
@@ -762,7 +763,7 @@
                             "credit": "IUCN-Med",
                             "collapsed": false,
                             "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_thrt.zip",
-                            "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_thrt.zip",
+                            "wms": "https://api.mapbox.com/styles/v1/cayetanobv/cjszv85634lfz1fqtfhhz03yo/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
                             "legend": "/assets/sharks/legend1.svg",
                             "elements": [
                                 {
@@ -798,7 +799,7 @@
                             "collapsed": true,
                             "credit": "IUCN-Med",
                             "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
-                            "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/chondrichthyans_dd.zip",
+                            "wms": "https://api.mapbox.com/styles/v1/cayetanobv/cjncztz9z0rvn2sphh0drl5wp/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
                             "legend": "/assets/sharks/legend2.svg",
                             "elements": [
                                 {
@@ -1121,7 +1122,7 @@
                             "credit": "IUCN-Med",
                             "collapsed": false,
                             "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/gazella.zip",
-                            "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/gazella.zip",
+                            "wms": "https://api.mapbox.com/styles/v1/cayetanobv/cj9seijg51yr32roxztm8bw67/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
                             "legend": "/assets/antelopees/legend.svg",
                             "elements": [
                                 {
@@ -1345,7 +1346,7 @@
                             "credit": "IUCN-Med",
                             "collapsed": false,
                             "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/ipas.zip",
-                            "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/ipas.zip",
+                            "wms": "https://api.mapbox.com/styles/v1/cayetanobv/cj1oxmm42004q2ss6fa6g6b1v/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
                             "legend": "/assets/plants/legend.svg",
                             "elements": [
                                 {
@@ -1465,10 +1466,10 @@
                     },
                     "next_story": {
                         "background": {
-                            "url": "assets/corals/image.jpg"
+                            "url": "assets/freshwater/skadar.JPG"
                         },
-                        "link": "Mediterranean_coralligenous_environments",
-                        "title": "Do you know where the most beautiful Mediterranean diving secrets are?"
+                        "link": "FreshwaterKBA",
+                        "title": "The Shape of Freshwater"
                     }
                 }
             }
@@ -1622,7 +1623,7 @@
                             "legend": "/assets/maps/leyenda.png",
                             "collapsed": false,
                             "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Med_Ramsar_KBA.zip",
-                            "wms": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/Med_Ramsar_KBA.zip",
+                            "wms": "https://api.mapbox.com/styles/v1/cayetanobv/cjt42l7bb370d1fmq2gstwutw/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
                             "elements": [
                                 {
                                     "type": "paragraph",
@@ -1784,10 +1785,10 @@
                     },
                     "next_story": {
                         "background": {
-                            "url": "assets/corals/image.jpg"
+                            "url": "assets/unwelcomed_guests/cover_photo_options/imagen_1.jpg"
                         },
-                        "link": "Mediterranean_coralligenous_environments",
-                        "title": "Do you know where the most beautiful Mediterranean diving secrets are?"
+                        "link": "Unwelcomed_guests",
+                        "title": "Unwelcomed guests"
                     }
                 }
             }
@@ -1968,7 +1969,7 @@
                             "credit": "IUCN-Med",
                             "legend": "/assets/unwelcomed_guests/leyenda_u_g_ramsar.png",
                             "collapsed": false,
-                            "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/map_fresh_invasive_species.zip",
+                            "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/map_fresh_invasive_species_ramsar.zip",
                             "wms": "https://api.mapbox.com/styles/v1/cayetanobv/ck8pu9hid0eeg1jo49ac0d0cc/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
                             "elements": [
                                 {
@@ -1981,7 +1982,7 @@
                                 "id": "ramsar",
                                 "hidden": false,
                                 "subLayers": [
-                                    "ramsar-note-areas"
+                                    "ramsar-note-areas-2blyzh"
                                 ]
                             }
                         },
@@ -1990,7 +1991,7 @@
                             "credit": "IUCN-Med",
                             "legend": "/assets/unwelcomed_guests/leyenda_u_g_invasive.png",
                             "collapsed": true,
-                            "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/map_fresh_invasive_species.zip",
+                            "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/map_fresh_invasive_species_IAS.zip",
                             "wms": "https://api.mapbox.com/styles/v1/cayetanobv/ck8pu9hid0eeg1jo49ac0d0cc/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
                             "elements": [
                                 {
@@ -2003,7 +2004,7 @@
                                 "id": "Group",
                                 "hidden": true,
                                 "subLayers": [
-                                    "mediterranean-unwelcomed-gues"
+                                    "mediterranean-unwelcomed-gues-10ja9p"
                                 ]
                             }
                         },
@@ -2012,7 +2013,7 @@
                             "credit": "IUCN-Med",
                             "legend": "/assets/unwelcomed_guests/leyenda_u_g_invasive.png",
                             "collapsed": true,
-                            "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/map_fresh_invasive_species.zip",
+                            "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/map_fresh_invasive_species_IAS.zip",
                             "wms": "https://api.mapbox.com/styles/v1/cayetanobv/ck8pu9hid0eeg1jo49ac0d0cc/wmts?access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
                             "elements": [
                                 {
@@ -2025,7 +2026,7 @@
                                 "id": "Group",
                                 "hidden": true,
                                 "subLayers": [
-                                    "mediterranean-unwelcomed-gues"
+                                    "mediterranean-unwelcomed-gues-10ja9p"
                                 ]
                             }
                         }
@@ -2481,15 +2482,15 @@
                 },
                 "map": {
                     "name": "Map",
-                    "mapStyle": "mapbox://styles/cayetanobv/ck8yfr1wt04iu1iogahtjyw72",
+                    "mapStyle": "mapbox://styles/cayetanobv/ck9l4mup60hd61imrwkehvyl9",
                     "collapsed": false,
                     "info": [
                         {
                             "title": "",
                             "credit": "IUCN-Med",
                             "collapsed": false,
-                            "shp": "",
-                            "wms": "",
+                            "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/map_the_legacy_of_the_land.zip",
+                            "wms": "https://api.mapbox.com/styles/v1/cayetanobv/ck9l4mup60hd61imrwkehvyl9.html?fresh=true&title=view&access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
                             "legend": "/assets/the_legacy_of_the_land/leyenda_3.png",
                             "elements": [
                                 {
@@ -2519,11 +2520,21 @@
                                 }
                             ],
                             "layer": {
-                                "id": "Landcape-level",
+                                "id": "Level",
                                 "hidden": true,
                                 "subLayers": [
+                                    "plot-level",
+                                    "fallow-rotation",
+                                    "grazing",
+                                    "mowing",
+                                    "organic",
+                                    "structural-dry-stone",
+                                    "structural-field-margins",
+                                    "structural-isolated-trees",
+                                    "tillage",
                                     "heterogeneity-land",
-                                    "mosaic-landcape"
+                                    "mosaic-landcape",
+                                    "special-sites"
                                 ]
                             }
                         }
