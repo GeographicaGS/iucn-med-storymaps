@@ -1,6 +1,7 @@
 import { Component, ElementRef, Inject } from '@angular/core';
 import { BaseElementComponent } from '../base-element/BaseElement';
 import { WindowService } from '../../../services/WindowService';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'paragraph',
@@ -10,8 +11,9 @@ export class ParagraphComponent extends BaseElementComponent {
 
 
   constructor(@Inject(ElementRef) protected element: ElementRef,
-              @Inject(WindowService) protected windowService: WindowService) {
-    super(element, windowService)
+              @Inject(WindowService) protected windowService: WindowService,
+              private sanitized: DomSanitizer) {
+    super(element, windowService);
   }
 
   capitalized(): boolean {
@@ -28,5 +30,9 @@ export class ParagraphComponent extends BaseElementComponent {
 
   semibold(): boolean {
     return this.item.semibold !== undefined && this.item.semibold;
+  }
+
+  safeValue(value: string) {
+    return this.sanitized.bypassSecurityTrustHtml(value);
   }
 }
