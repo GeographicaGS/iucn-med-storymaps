@@ -28,12 +28,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var BaseElement_1 = require("../base-element/BaseElement");
 var WindowService_1 = require("../../../services/WindowService");
+var platform_browser_1 = require("@angular/platform-browser");
 var ParagraphComponent = /** @class */ (function (_super) {
     __extends(ParagraphComponent, _super);
-    function ParagraphComponent(element, windowService) {
+    function ParagraphComponent(element, windowService, sanitized) {
         var _this = _super.call(this, element, windowService) || this;
         _this.element = element;
         _this.windowService = windowService;
+        _this.sanitized = sanitized;
         return _this;
     }
     ParagraphComponent.prototype.capitalized = function () {
@@ -48,6 +50,9 @@ var ParagraphComponent = /** @class */ (function (_super) {
     ParagraphComponent.prototype.semibold = function () {
         return this.item.semibold !== undefined && this.item.semibold;
     };
+    ParagraphComponent.prototype.safeValue = function (value) {
+        return this.sanitized.bypassSecurityTrustHtml(value);
+    };
     ParagraphComponent = __decorate([
         core_1.Component({
             selector: 'paragraph',
@@ -56,7 +61,8 @@ var ParagraphComponent = /** @class */ (function (_super) {
         __param(0, core_1.Inject(core_1.ElementRef)),
         __param(1, core_1.Inject(WindowService_1.WindowService)),
         __metadata("design:paramtypes", [core_1.ElementRef,
-            WindowService_1.WindowService])
+            WindowService_1.WindowService,
+            platform_browser_1.DomSanitizer])
     ], ParagraphComponent);
     return ParagraphComponent;
 }(BaseElement_1.BaseElementComponent));
