@@ -694,7 +694,7 @@
                             "type": "image",
                             "url": "/assets/sharks/sharks_bars.svg",
                             "credit": {
-                                "footer": "This table doesn not include the four vagrant or Lesseipsian migrant species that have been considered Not Applicable (NA) for the Mediterranean region.",
+                                "footer": "This table does not include the four vagrant or Lesseipsian migrant species that have been considered Not Applicable (NA) for the Mediterranean region.",
                                 "author": "",
                                 "ico": false
                             }
@@ -2007,7 +2007,12 @@
                                 {
                                     "type": "paragraph",
                                     "capitalize": false,
-                                    "value": "The Ramsar Convention urges countries to identify, prevent, eradicate and control invasive alien wetland species. In the Mediterranean, several Parties to the Ramsar Convention are reporting IAS as a key threat for a number of important sites via the Ramsar Sites Information Service, as shown in this map with data as per November 2019. <p> Many more Ramsar sites are currently affected by IAS. The Ramsar Convention lacks specific provisions to stop current and prevent future expansion of IAS on its sites. Hence, getting more information is critical to obtain a better picture of the situation, which can be translated into actions on the ground.</p>"
+                                    "value": "The Ramsar Convention urges countries to identify, prevent, eradicate and control invasive alien wetland species. In the Mediterranean, several Parties to the Ramsar Convention are reporting IAS as a key threat for a number of important sites via the Ramsar Sites Information Service, as shown in this map with data as per November 2019."
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "capitalize": false,
+                                    "value": "<p>Many more Ramsar sites are currently affected by IAS. The Ramsar Convention lacks specific provisions to stop current and prevent future expansion of IAS on its sites. Hence, getting more information is critical to obtain a better picture of the situation, which can be translated into actions on the ground.</p>"
                                 }
                             ],
                             "layer": {
@@ -2400,7 +2405,12 @@
                         },
                         {
                             "type": "image",
-                            "url": "assets/the_legacy_of_the_land/imagen_4.png"
+                            "url": "assets/the_legacy_of_the_land/imagen_15.png",
+                            "credit": {
+                                "footer": "Also: for more information on Mediterranean butterflies, check this <a target='blank'href='http://www.medconservationmaps.org/story/Mediterranean_Butterflies?step=cover'>storymap!</a>",
+                                "author": "",
+                                "ico": false
+                            }
                         },
                         {
                             "type": "title",
@@ -2414,7 +2424,7 @@
                         },
                         {
                             "type": "image",
-                            "url": "assets/the_legacy_of_the_land/imagen_5.png",
+                            "url": "assets/the_legacy_of_the_land/imagen_001.png",
                             "credit": {
                                 "footer": "Some facts and figures regarding the loss of genetic diversity and the decline of species related to agriculture nowadays. Infographic: IUCN. Source: FAO(2018)<sup>v</sup>",
                                 "ico": true
@@ -2552,6 +2562,11 @@
                         {
                             "type": "title",
                             "value": "<b>LOGOS of all the partners of the project</b>"
+                        },
+                        {
+                            "type": "paragraph",
+                            "capitalize": false,
+                            "value": "<p><img src=/assets/the_legacy_of_the_land/imagen_14.jpg WIDTH=150></p>"
                         },
                         {
                             "type": "paragraph",
