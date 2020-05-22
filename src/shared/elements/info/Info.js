@@ -38,6 +38,7 @@ var InfoComponent = /** @class */ (function (_super) {
         _this.modalOpen = false;
         _this.wmsValue = '';
         _this.wmsCopied = null;
+        _this.right = false;
         _this.manageLayers = new core_1.EventEmitter();
         _this.downloadShp = new core_1.EventEmitter();
         return _this;
@@ -113,6 +114,10 @@ var InfoComponent = /** @class */ (function (_super) {
         core_1.Input(),
         __metadata("design:type", Boolean)
     ], InfoComponent.prototype, "wmsCopied", void 0);
+    __decorate([
+        core_1.HostBinding('class.right'), core_1.Input(),
+        __metadata("design:type", Object)
+    ], InfoComponent.prototype, "right", void 0);
     __decorate([
         core_1.Output(),
         __metadata("design:type", core_1.EventEmitter)

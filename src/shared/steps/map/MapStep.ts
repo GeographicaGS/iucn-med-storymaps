@@ -1,9 +1,10 @@
-import { Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding } from '@angular/core';
+import { Component, Inject, Renderer, ElementRef, AfterViewInit, HostBinding, OnDestroy } from '@angular/core';
 import { BaseStepComponent } from '../base/BaseStep';
 import * as mapboxgl from 'mapbox-gl';
 import { MapService } from '../../../services/MapService';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT, DomSanitizer } from '@angular/platform-browser';
 import { WindowService } from '../../../services/WindowService';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'map',
@@ -18,16 +19,20 @@ export class MapStepComponent extends BaseStepComponent implements AfterViewInit
   constructor(@Inject(ElementRef) protected elem: ElementRef,
               @Inject(DOCUMENT) protected document: any,
               protected windowService: WindowService,
-              @Inject(MapService) private mapService: MapService) {
+              @Inject(MapService) private mapService: MapService,
+              private sanitizer: DomSanitizer) {
     super(elem, document, windowService);
-    this.mapService.changes.subscribe(() => {
-      this.initMap();
-    });
+  }
+
+  isIframe(): boolean {
+    return !!this.step.iframeUrl;
   }
 
   onResize(event: any) {
     super.onResize(event);
-    this.mapService.map.resize();
+    if (!this.isIframe()) {
+        this.mapService.map.resize();
+    }
   }
 
   lockMap() {
@@ -60,7 +65,12 @@ export class MapStepComponent extends BaseStepComponent implements AfterViewInit
   }
 
   ngAfterViewInit() {
-    this.initMap();
+      if (!this.isIframe()) {
+          this.mapService.changes.subscribe(() => {
+              this.initMap();
+          });
+          this.initMap();
+      }
   }
 
   initMap() {

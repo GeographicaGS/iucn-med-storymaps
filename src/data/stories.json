@@ -1479,7 +1479,7 @@
                 "cover": {
                     "name": "Cover",
                     "background": {
-                        "url": "assets/freshwater/skadar.JPG",
+                        "url": "assets/freshwater/skadar.jpg",
                         "class": "kenburns",
                         "credit": {
                             "footer": "Inlet on Lake Skadar, Albania and Montenegro.This large Mediterranean lake and its associated catchment is a Freshwater Key Biodiversity Area (KBA) supporting at least 24 threatened or restricted range freshwater species.",
@@ -1492,7 +1492,7 @@
                 },
                 "intro": {
                     "background": {
-                        "url": "assets/freshwater/skadar.JPG",
+                        "url": "assets/freshwater/skadar.jpg",
                         "class": "kenburns"
                     },
                     "name": "Intro",
@@ -1522,7 +1522,7 @@
                         },
                         {
                             "type": "image",
-                            "url": "/assets/freshwater/barada_1.JPG",
+                            "url": "/assets/freshwater/barada_1.jpg",
                             "credit": {
                                 "footer": "Barada Spring minnow (<i>Pseudophoxinus syriacus</i>), Critically Endangered (CR) endemic species of the Barada Spring, in Syria",
                                 "author": "© Jörg Freyhof"
@@ -1549,7 +1549,7 @@
                         },
                         {
                             "type": "image",
-                            "url": "/assets/freshwater/barada.JPG",
+                            "url": "/assets/freshwater/barada.jpg",
                             "credit": {
                                 "footer": "The Barada Spring KBA, Syria. This spring was almost completely drained in 2008 to meet the growing needs for water. As a consequence, the endemic fish species <i>Pseudophoxinus syriacus</i> (CR), is now possibly Extinct.",
                                 "author": "© Jörg Freyhof <br>",
@@ -1567,7 +1567,7 @@
                         },
                         {
                             "type": "image",
-                            "url": "/assets/freshwater/lima.JPG",
+                            "url": "/assets/freshwater/lima.jpg",
                             "credit": {
                                 "footer": "Field surveys",
                                 "author": "© Manuel Lima",
@@ -2485,7 +2485,7 @@
                 },
                 "map": {
                     "name": "Map",
-                    "mapStyle": "mapbox://styles/cayetanobv/ck9l4mup60hd61imrwkehvyl9",
+                    "iframeUrl": "https://www.google.com/maps/d/embed?mid=1s4v3S0-uTPlNbGUof4WZTCdoqhE9W-ax",
                     "collapsed": false,
                     "info": [
                         {
@@ -2494,7 +2494,6 @@
                             "collapsed": false,
                             "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/map_the_legacy_of_the_land.zip",
                             "wms": "https://api.mapbox.com/styles/v1/cayetanobv/ck9l4mup60hd61imrwkehvyl9.html?fresh=true&title=view&access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
-                            "legend": "/assets/the_legacy_of_the_land/leyenda_3.png",
                             "elements": [
                                 {
                                     "type": "paragraph",
@@ -2516,25 +2515,7 @@
                                     "capitalize": false,
                                     "value": "<u><i>Special sites:</i></u> Places were many practices are being performed simultaneously or are working to better understand the link between practices and biodiversity."
                                 }
-                            ],
-                            "layer": {
-                                "id": "Level",
-                                "hidden": true,
-                                "subLayers": [
-                                    "plot-level",
-                                    "fallow-rotation",
-                                    "grazing",
-                                    "mowing",
-                                    "organic",
-                                    "structural-dry-stone",
-                                    "structural-field-margins",
-                                    "structural-isolated-trees",
-                                    "tillage",
-                                    "heterogeneity-land",
-                                    "mosaic-landcape",
-                                    "special-sites"
-                                ]
-                            }
+                            ]
                         }
                     ]
                 },
@@ -2553,10 +2534,12 @@
                         },
                         {
                             "type": "paragraph",
+                            "useStyle": true,
                             "value": "The Centre for Mediterranean Cooperation of the International Union for the Conservation of Nature (IUCN-Med) is in the process of developing a new strategic line of work, which will aim to enable <b style=\"color: #66B6E9\">positive feedbacks</b> between agriculture and biodiversity, and to ensure that practitioners receive sufficient <b style=\"color: #66B6E9\">socio-economic support</b> to maintain the positive practices for biodiversity."
                         },
                         {
                             "type": "paragraph",
+                            "useStyle": true,
                             "value": "The MAVA Foundation - a major funding partner of conservation projects - has created a programme to promote <b style=\"color: #66B6E9\">“cultural practices that shape the cultural landscapes which in turn, harbour biodiversity and preserve natural capital”</b> in the Mediterranean basin. IUCN-Med participates in this programme with several partners, developing actions that will improve the knowledge and monitoring of biodiversity.  Activities are held mainly in five pilot landscapes: the Moroccan High Atlas, the island of Lemnos in Greece, agricultural terraces in the Lebanese Al-Shouf Cedar Nature Reserve, grazing pastures of Portugal (Montados) and Spain (Dehesas), and the island of Menorca in Spain. This programme will also provide more examples of agricultural practices benefiting biodiversity across the Mediterranean region."
                         },
                         {

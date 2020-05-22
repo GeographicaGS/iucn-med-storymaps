@@ -33,24 +33,27 @@ var platform_browser_1 = require("@angular/platform-browser");
 var WindowService_1 = require("../../../services/WindowService");
 var MapStepComponent = /** @class */ (function (_super) {
     __extends(MapStepComponent, _super);
-    function MapStepComponent(elem, document, windowService, mapService) {
+    function MapStepComponent(elem, document, windowService, mapService, sanitizer) {
         var _this = _super.call(this, elem, document, windowService) || this;
         _this.elem = elem;
         _this.document = document;
         _this.windowService = windowService;
         _this.mapService = mapService;
+        _this.sanitizer = sanitizer;
         _this.activeLayer = false;
         _this.zoom = 4.5;
         _this.center = [15.0, 38.0];
         _this.popup = false;
-        _this.mapService.changes.subscribe(function () {
-            _this.initMap();
-        });
         return _this;
     }
+    MapStepComponent.prototype.isIframe = function () {
+        return !!this.step.iframeUrl;
+    };
     MapStepComponent.prototype.onResize = function (event) {
         _super.prototype.onResize.call(this, event);
-        this.mapService.map.resize();
+        if (!this.isIframe()) {
+            this.mapService.map.resize();
+        }
     };
     MapStepComponent.prototype.lockMap = function () {
         this.windowService.setBodyBgClass('locked');
@@ -79,7 +82,13 @@ var MapStepComponent = /** @class */ (function (_super) {
         return locked;
     };
     MapStepComponent.prototype.ngAfterViewInit = function () {
-        this.initMap();
+        var _this = this;
+        if (!this.isIframe()) {
+            this.mapService.changes.subscribe(function () {
+                _this.initMap();
+            });
+            this.initMap();
+        }
     };
     MapStepComponent.prototype.initMap = function () {
         var _this = this;
@@ -177,7 +186,8 @@ var MapStepComponent = /** @class */ (function (_super) {
         __param(1, core_1.Inject(platform_browser_1.DOCUMENT)),
         __param(3, core_1.Inject(MapService_1.MapService)),
         __metadata("design:paramtypes", [core_1.ElementRef, Object, WindowService_1.WindowService,
-            MapService_1.MapService])
+            MapService_1.MapService,
+            platform_browser_1.DomSanitizer])
     ], MapStepComponent);
     return MapStepComponent;
 }(BaseStep_1.BaseStepComponent));
