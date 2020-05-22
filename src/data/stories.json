@@ -2534,10 +2534,12 @@
                         },
                         {
                             "type": "paragraph",
+                            "useStyle": true,
                             "value": "The Centre for Mediterranean Cooperation of the International Union for the Conservation of Nature (IUCN-Med) is in the process of developing a new strategic line of work, which will aim to enable <b style=\"color: #66B6E9\">positive feedbacks</b> between agriculture and biodiversity, and to ensure that practitioners receive sufficient <b style=\"color: #66B6E9\">socio-economic support</b> to maintain the positive practices for biodiversity."
                         },
                         {
                             "type": "paragraph",
+                            "useStyle": true,
                             "value": "The MAVA Foundation - a major funding partner of conservation projects - has created a programme to promote <b style=\"color: #66B6E9\">“cultural practices that shape the cultural landscapes which in turn, harbour biodiversity and preserve natural capital”</b> in the Mediterranean basin. IUCN-Med participates in this programme with several partners, developing actions that will improve the knowledge and monitoring of biodiversity.  Activities are held mainly in five pilot landscapes: the Moroccan High Atlas, the island of Lemnos in Greece, agricultural terraces in the Lebanese Al-Shouf Cedar Nature Reserve, grazing pastures of Portugal (Montados) and Spain (Dehesas), and the island of Menorca in Spain. This programme will also provide more examples of agricultural practices benefiting biodiversity across the Mediterranean region."
                         },
                         {
