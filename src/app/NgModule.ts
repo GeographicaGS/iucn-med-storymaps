@@ -32,6 +32,7 @@ import { StoriesComponent } from './stories/StoriesComponent';
 import { PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { SlideshowComponent } from '../shared/elements/slideshow/Slideshow';
 import { SlideshowModule } from 'ng-simple-slideshow';
+import { CachedSrcDirective } from '../shared/directives/cachedSrc.directive';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -69,6 +70,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     HomeComponent,
     StoriesComponent,
     StoryComponent,
+    CachedSrcDirective
   ],
   providers: [
     StoryGuard,

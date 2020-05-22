@@ -261,4 +261,58 @@ info {
       }
     }
   }
+
+    &.collapsed.right {
+        > .btn-row {
+            top: 230px;
+
+            a.btn {
+                right: 16px;
+                left: auto;
+            }
+        }
+    }
+
+    &.right {
+        flex-flow: column;
+        padding-top: 60px;
+
+        > .btn-row {
+            opacity: 0;
+            position: fixed;
+            right: 0;
+            z-index: 1;
+            top: auto;
+            transition: all 0.25s ease-in-out;
+
+            a.btn {
+                right: 16px;
+                left: auto;
+            }
+        }
+
+        > .component-container {
+            padding-top: 124px;
+            padding-right: 50px;
+            padding-left: 0;
+            right: 0;
+            float: right;
+            background: linear-gradient(-90deg, fade(@oscuro, 70%) 0%, fade(@oscuro, 0%) 100%);
+            .animated(0.6s, 0.1s);
+            .fadeIn();
+
+            > .allMapLayers {
+                float: right;
+                text-align: right;
+
+                .mapLayerWrapper > .btn-row {
+                    padding-right: 19px;
+                }
+            }
+
+            .btn {
+                margin-left: auto !important;
+            }
+        }
+    }
 }

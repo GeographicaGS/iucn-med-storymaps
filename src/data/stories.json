@@ -2485,7 +2485,7 @@
                 },
                 "map": {
                     "name": "Map",
-                    "mapStyle": "mapbox://styles/cayetanobv/ck9l4mup60hd61imrwkehvyl9",
+                    "iframeUrl": "https://www.google.com/maps/d/embed?mid=1s4v3S0-uTPlNbGUof4WZTCdoqhE9W-ax",
                     "collapsed": false,
                     "info": [
                         {
@@ -2494,7 +2494,6 @@
                             "collapsed": false,
                             "shp": "https://s3-eu-west-1.amazonaws.com/iucn-med-storymaps.geographica.io/static/shp/map_the_legacy_of_the_land.zip",
                             "wms": "https://api.mapbox.com/styles/v1/cayetanobv/ck9l4mup60hd61imrwkehvyl9.html?fresh=true&title=view&access_token=pk.eyJ1IjoiY2F5ZXRhbm9idiIsImEiOiJEMWUzLVpRIn0.PD0U3GevSGwVUPrRCT360Q",
-                            "legend": "/assets/the_legacy_of_the_land/leyenda_3.png",
                             "elements": [
                                 {
                                     "type": "paragraph",
@@ -2516,25 +2515,7 @@
                                     "capitalize": false,
                                     "value": "<u><i>Special sites:</i></u> Places were many practices are being performed simultaneously or are working to better understand the link between practices and biodiversity."
                                 }
-                            ],
-                            "layer": {
-                                "id": "Level",
-                                "hidden": true,
-                                "subLayers": [
-                                    "plot-level",
-                                    "fallow-rotation",
-                                    "grazing",
-                                    "mowing",
-                                    "organic",
-                                    "structural-dry-stone",
-                                    "structural-field-margins",
-                                    "structural-isolated-trees",
-                                    "tillage",
-                                    "heterogeneity-land",
-                                    "mosaic-landcape",
-                                    "special-sites"
-                                ]
-                            }
+                            ]
                         }
                     ]
                 },

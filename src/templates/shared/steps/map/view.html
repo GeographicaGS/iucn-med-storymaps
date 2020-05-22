@@ -1,17 +1,18 @@
 <div class="component-container" [style.height.px]="getWindowHeight()" [style.width.px]="getWindowWidth()">
-    <div [ngClass]="lockView() ? 'step-locked' : ''">
+    <div [ngClass]="lockView() ? 'step-locked' : ''" [class.right]="isIframe()">
         <info
+            [right]="isIframe()"
             *ngIf="hasInfo()"
             [item]="step.info"
             [collapsed]="false"
             (manageLayers)="updateLayers($event)"
             (downloadShp)="getShpFile($event)"
         ></info>
-        <div id="map" class="map" [style.height.px]="getWindowHeight()">
+        <div *ngIf="!isIframe()" id="map" class="map" [style.height.px]="getWindowHeight()"></div>
 
-        </div>
+        <iframe *ngIf="isIframe()" id="iframe" class="map" [cachedSrc]="step.iframeUrl" [style.width.px]="getWindowWidth()" [style.height.px]="getWindowHeight()" frameborder="0"></iframe>
 
-        <div class="btn-row top right">
+        <div *ngIf="!isIframe()" class="btn-row top right">
             <a class="btn small circle resetBbox" (click)="flyTo()"></a>
             <div class="zoomControl">
                 <a class="btn small circle zoomIn" (click)="zoomIn()"></a>
@@ -19,11 +20,11 @@
             </div>
         </div>
 
-        <div class="btn-row">
+        <div class="btn-row" [class.right]="isIframe()">
             <a class="btn small circle next-step" (click)="goNextStep()"></a>
         </div>
 
-        <div class="btn-row right legend">
+        <div *ngIf="!isIframe()" class="btn-row right legend">
             <img [src]="getCurrentLegend()" />
         </div>
     </div>

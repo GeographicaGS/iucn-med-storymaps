@@ -5125,6 +5125,67 @@ info.collapsed .btn-row .summary .btn {
 info.collapsed .btn-row .summary .btn.selected {
   border: 2px solid transparent;
 }
+info.collapsed.right > .btn-row {
+  top: 230px;
+}
+info.collapsed.right > .btn-row a.btn {
+  right: 16px;
+  left: auto;
+}
+info.right {
+  flex-flow: column;
+  padding-top: 60px;
+}
+info.right > .btn-row {
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  top: auto;
+  transition: all 0.25s ease-in-out;
+}
+info.right > .btn-row a.btn {
+  right: 16px;
+  left: auto;
+}
+info.right > .component-container {
+  padding-top: 124px;
+  padding-right: 50px;
+  padding-left: 0;
+  right: 0;
+  float: right;
+  background: linear-gradient(-90deg, rgba(33, 33, 33, 0.7) 0%, rgba(33, 33, 33, 0) 100%);
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -o-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+info.right > .component-container > .allMapLayers {
+  float: right;
+  text-align: right;
+}
+info.right > .component-container > .allMapLayers .mapLayerWrapper > .btn-row {
+  padding-right: 19px;
+}
+info.right > .component-container .btn {
+  margin-left: auto !important;
+}
 el-table.table {
   display: block;
   margin: 48px auto;
@@ -6491,7 +6552,8 @@ map {
 map .mapboxgl-canvas-container.mapboxgl-interactive canvas {
   outline: none;
 }
-map #map {
+map #map,
+map #iframe {
   z-index: 5;
   position: static;
   width: 100%;
@@ -6514,6 +6576,9 @@ map > .component-container .step-locked {
   width: 100%;
   height: 100%;
   z-index: 9999;
+}
+map > .component-container .step-locked.right info > .btn-row {
+  opacity: 1;
 }
 map > .component-container > div > .btn-row {
   position: absolute;

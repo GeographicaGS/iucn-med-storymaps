@@ -36,6 +36,7 @@ var StoriesComponent_1 = require("./stories/StoriesComponent");
 var ngx_perfect_scrollbar_1 = require("ngx-perfect-scrollbar");
 var Slideshow_1 = require("../shared/elements/slideshow/Slideshow");
 var ng_simple_slideshow_1 = require("ng-simple-slideshow");
+var cachedSrc_directive_1 = require("../shared/directives/cachedSrc.directive");
 var DEFAULT_PERFECT_SCROLLBAR_CONFIG = {
     suppressScrollX: true,
     wheelSpeed: 2,
@@ -75,6 +76,7 @@ var AppModule = /** @class */ (function () {
                 HomeComponent_1.HomeComponent,
                 StoriesComponent_1.StoriesComponent,
                 StoryComponent_1.StoryComponent,
+                cachedSrc_directive_1.CachedSrcDirective
             ],
             providers: [
                 StoryGuard_1.StoryGuard,

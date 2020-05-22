@@ -14,6 +14,7 @@ export class InfoComponent extends BaseElementComponent {
   @Input() modalOpen: boolean = false;
   @Input() wmsValue: string = '';
   @Input() wmsCopied: boolean = null;
+  @HostBinding('class.right') @Input() right = false;
 
   @Output() manageLayers: EventEmitter<any> = new EventEmitter();
   @Output() downloadShp: EventEmitter<any> = new EventEmitter();

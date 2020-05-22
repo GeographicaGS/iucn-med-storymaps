@@ -3,6 +3,6 @@
         <span>{{item.value[0]}}</span><span [innerHTML]="item.value.substring(1)"></span>
     </div>
     <div *ngIf="!capitalized()">
-        <span [innerHTML]="safeValue(item.value)"></span>
+        <span [innerHTML]="item.value.includes('style') ? safeValue(item.value) : item.value"></span>
     </div>
 </div>
