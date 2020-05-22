@@ -1479,7 +1479,7 @@
                 "cover": {
                     "name": "Cover",
                     "background": {
-                        "url": "assets/freshwater/skadar.JPG",
+                        "url": "assets/freshwater/skadar.jpg",
                         "class": "kenburns",
                         "credit": {
                             "footer": "Inlet on Lake Skadar, Albania and Montenegro.This large Mediterranean lake and its associated catchment is a Freshwater Key Biodiversity Area (KBA) supporting at least 24 threatened or restricted range freshwater species.",
@@ -1492,7 +1492,7 @@
                 },
                 "intro": {
                     "background": {
-                        "url": "assets/freshwater/skadar.JPG",
+                        "url": "assets/freshwater/skadar.jpg",
                         "class": "kenburns"
                     },
                     "name": "Intro",
@@ -1522,7 +1522,7 @@
                         },
                         {
                             "type": "image",
-                            "url": "/assets/freshwater/barada_1.JPG",
+                            "url": "/assets/freshwater/barada_1.jpg",
                             "credit": {
                                 "footer": "Barada Spring minnow (<i>Pseudophoxinus syriacus</i>), Critically Endangered (CR) endemic species of the Barada Spring, in Syria",
                                 "author": "© Jörg Freyhof"
@@ -1549,7 +1549,7 @@
                         },
                         {
                             "type": "image",
-                            "url": "/assets/freshwater/barada.JPG",
+                            "url": "/assets/freshwater/barada.jpg",
                             "credit": {
                                 "footer": "The Barada Spring KBA, Syria. This spring was almost completely drained in 2008 to meet the growing needs for water. As a consequence, the endemic fish species <i>Pseudophoxinus syriacus</i> (CR), is now possibly Extinct.",
                                 "author": "© Jörg Freyhof <br>",
@@ -1567,7 +1567,7 @@
                         },
                         {
                             "type": "image",
-                            "url": "/assets/freshwater/lima.JPG",
+                            "url": "/assets/freshwater/lima.jpg",
                             "credit": {
                                 "footer": "Field surveys",
                                 "author": "© Manuel Lima",
