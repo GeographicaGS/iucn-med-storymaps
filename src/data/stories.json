@@ -2549,12 +2549,12 @@
                         {
                             "type": "paragraph",
                             "capitalize": false,
-                            "value": "<p><img src=/assets/the_legacy_of_the_land/imagen_14.jpg WIDTH=150></p>"
+                            "value": "<p><img src=/assets/the_legacy_of_the_land/imagen_12.jpg WIDTH=150 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/imagen_13.png WIDTH=100 HEIGHT=100></p>"
                         },
                         {
                             "type": "paragraph",
                             "capitalize": false,
-                            "value": "<p><img src=/assets/the_legacy_of_the_land/imagen_8_1.jpg WIDTH=750 HEIGHT=100></p>"
+                            "value": "<p><img src=/assets/the_legacy_of_the_land/logo_1.png WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_2.jpg WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_3.jpg WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_4.png WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_5.jpg WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_6.png WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_7.jpg WIDTH=100 HEIGHT=100></p>"
                         },
                         {
                             "type": "title",
