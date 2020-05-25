@@ -2554,7 +2554,7 @@
                         {
                             "type": "paragraph",
                             "capitalize": false,
-                            "value": "<p><img src=/assets/the_legacy_of_the_land/logo_1.png WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_2.jpg WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_3.jpg WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_4.png WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_5.jpg WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_6.png WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_7.jpg WIDTH=100 HEIGHT=100></p>"
+                            "value": "<p><img src=/assets/the_legacy_of_the_land/logo_panda.png WIDTH=110 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_2.jpg WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_3.jpg WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_4.png WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_5.jpg WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_6.png WIDTH=100 HEIGHT=100> <img src=/assets/the_legacy_of_the_land/logo_7.jpg WIDTH=100 HEIGHT=100></p>"
                         },
                         {
                             "type": "title",
